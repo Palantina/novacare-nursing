@@ -12,13 +12,13 @@ export default function SiteHeader() {
           <Image
             src="/NovaCare_Logo.svg"
             alt="NovaCare Nursing Logo"
-            width={220}   // bigger
+            width={220}   // ✅ larger
             height={100}
             priority
           />
         </Link>
 
-        {/* Nav links on the RIGHT, large & spaced */}
+        {/* Nav links on the RIGHT */}
         <nav className="flex items-center gap-12 text-white text-xl font-semibold">
           <Link href="/about" className="hover:opacity-80 transition">About</Link>
           <Link href="/services" className="hover:opacity-80 transition">Services</Link>
