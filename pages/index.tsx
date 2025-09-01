@@ -21,24 +21,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen" style={{ backgroundColor: brand.bg, color: brand.text }}>
-        {/* ===== HEADER (float-based, cannot wrap under) ===== */}
-        <header style={{ backgroundColor: brand.blue }} className="shadow-sm">
-          <div className="mx-auto max-w-6xl px-4 py-4">
-            {/* clearfix */}
-            <div style={{ zoom: 1, overflow: "hidden" }}>
-              {/* Logo (left) */}
-              <div style={{ float: "left" }}>
-                <Link href="/" className="flex items-center gap-2">
-                  <img
-                    src="/NovaCare_Logo.svg"
-                    alt="NovaCare Nursing Logo"
-                    width={230}
-                    height={104}
-                    style={{ display: "block" }}
-                  />
-                </Link>
-              </div>
+      <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+  <Link
+    href="/contact"
+    className="rounded-xl px-6 py-3 font-semibold"
+    style={{ backgroundColor: brand.gold, color: brand.blue }}
+  >
+    Book a Consultation
+  </Link>
+  <Link
+    href="/services"
+    className="rounded-xl px-6 py-3 font-semibold"
+    style={{ backgroundColor: brand.gold, color: brand.blue }}
+  >
+    View Services
+  </Link>
+  <Link
+    href="/about"
+    className="rounded-xl px-6 py-3 font-semibold"
+    style={{ backgroundColor: brand.gold, color: brand.blue }}
+  >
+    Learn More
+  </Link>
+</div>
+
 
               {/* Nav (right) */}
               <nav
