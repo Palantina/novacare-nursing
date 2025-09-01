@@ -25,37 +25,45 @@ export default function SiteHeader() {
           />
         </Link>
 
-        {/* Desktop nav (Home centered, gold, underline on hover only) */}
+        {/* Desktop nav (Home centered, gold, hover underline) */}
         <nav
-          className="hidden md:flex flex-1 justify-center font-bold whitespace-nowrap"
+          className="hidden lg:flex flex-1 justify-center font-bold whitespace-nowrap"
           style={{ color: brandGold }}
           aria-label="Primary"
         >
           <Link
             href="/"
-            className="text-xl lg:text-2xl hover:underline underline-offset-4 decoration-[2px] transition"
+            className="text-xl hover:underline underline-offset-4 decoration-[2px] transition"
           >
             Home
           </Link>
         </nav>
 
-        {/* Spacer to balance layout */}
-        <div className="hidden md:block w-[220px]" />
+        {/* Spacer to balance layout on desktop */}
+        <div className="hidden lg:block w-[220px]" />
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger (right) — clean icon, no white box */}
         <button
-          className="md:hidden text-white pr-4"
+          className="lg:hidden text-white pr-2"
           aria-label="Open menu"
-          onClick={() => setOpen((v) => !v)}
-          style={{ fontSize: 26, lineHeight: 1 }}
+          aria-expanded={open}
+          onClick={() => setOpen(v => !v)}
+          style={{
+            fontSize: 26,
+            lineHeight: 1,
+            background: "transparent",
+            border: "none",
+            padding: 0,
+          }}
         >
+          {/* simple hamburger glyph */}
           ☰
         </button>
       </div>
 
-      {/* Mobile menu (Home only, hover underline) */}
+      {/* Mobile menu (Home only) */}
       <div
-        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+        className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${
           open ? "max-h-24" : "max-h-0"
         }`}
       >
