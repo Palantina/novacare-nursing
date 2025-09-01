@@ -22,28 +22,46 @@ export default function Home() {
       </Head>
 
       <div className="min-h-screen" style={{ backgroundColor: brand.bg, color: brand.text }}>
-        {/* ✅ FIXED HEADER: no wrapping, logo left, nav right */}
+        {/* HEADER — grid layout ensures logo left, nav right */}
         <header style={{ backgroundColor: brand.blue }} className="shadow-sm">
-          <div className="mx-auto max-w-6xl px-4 py-4">
-            <div className="flex items-center justify-between w-full whitespace-nowrap">
-              {/* Logo (left, bigger, no shrink) */}
-              <Link href="/" className="flex items-center gap-2 shrink-0">
-                <img
-                  src="/NovaCare_Logo.svg"
-                  alt="NovaCare Nursing Logo"
-                  width={230}
-                  height={104}
-                  style={{ display: "block" }}
-                />
-              </Link>
+          <div
+            className="mx-auto max-w-6xl px-4 py-4"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto 1fr",
+              alignItems: "center",
+              columnGap: "24px",
+            }}
+          >
+            {/* Left: Logo (no shrink) */}
+            <Link href="/" className="flex items-center gap-2" style={{ minWidth: 0 }}>
+              <img
+                src="/NovaCare_Logo.svg"
+                alt="NovaCare Nursing Logo"
+                width={230}
+                height={104}
+                style={{ display: "block" }}
+              />
+            </Link>
 
-              {/* Nav (right, responsive sizes/gaps, no wrap) */}
-              <nav className="flex items-center whitespace-nowrap gap-6 sm:gap-8 md:gap-12 text-base sm:text-lg md:text-xl font-semibold text-white">
-                <Link href="/about" className="hover:opacity-80 transition">About</Link>
-                <Link href="/services" className="hover:opacity-80 transition">Services</Link>
-                <Link href="/contact" className="hover:opacity-80 transition">Contact</Link>
-              </nav>
-            </div>
+            {/* Right: Nav (always right-aligned, single line) */}
+            <nav
+              style={{
+                justifySelf: "end",
+                display: "flex",
+                alignItems: "center",
+                gap: "48px",          // wide gaps on desktop
+                whiteSpace: "nowrap", // never wrap under the logo
+                fontWeight: 700,
+                fontSize: "20px",     // desktop size
+                color: "white",
+              }}
+              className="sm:gap-8 sm:text-lg md:gap-12 md:text-xl"
+            >
+              <Link href="/about" className="hover:opacity-80 transition">About</Link>
+              <Link href="/services" className="hover:opacity-80 transition">Services</Link>
+              <Link href="/contact" className="hover:opacity-80 transition">Contact</Link>
+            </nav>
           </div>
         </header>
 
