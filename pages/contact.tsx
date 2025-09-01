@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
-// ✅ Your live Formspree endpoint
+// Your live Formspree endpoint
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mandbwgk";
 
 export default function Contact() {
@@ -23,7 +23,6 @@ export default function Contact() {
         headers: { "Accept": "application/json" },
         body: data,
       });
-
       if (res.ok) {
         setStatus("success");
         form.reset();
@@ -39,17 +38,21 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact | NovaCare Nursing</title>
+        <meta
+          name="description"
+          content="Contact NovaCare Nursing — premium private home nursing in Hobart & surrounds. Discreet, compassionate, and skilled care."
+        />
       </Head>
+
       <SiteHeader />
 
-      <main className="mx-auto max-w-4xl px-4 py-10">
-        <h1 className="text-3xl font-bold text-center" style={{ color: brand.blue }}>Get in Touch</h1>
-        <p className="text-center opacity-80 mt-2">We’ll respond promptly and confidentially.</p>
+      <main className="mx-auto max-w-4xl px-4 py-12">
+        <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: brand.blue }}>
+          Get in Touch
+        </h1>
+        <p className="text-center opacity-80 mt-3">We’ll respond promptly and confidentially.</p>
 
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white p-6 rounded-2xl shadow-sm border space-y-4 mt-8"
-        >
+        <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-sm border space-y-4 mt-10">
           <div>
             <label className="block text-sm font-medium">Name</label>
             <input name="name" required className="mt-1 block w-full rounded-md border border-gray-300 p-2" />
@@ -78,15 +81,20 @@ export default function Contact() {
 
           {status === "success" && (
             <p className="text-green-700 text-sm mt-2">
-              ✅ Thank you for reaching out. Your message has been sent successfully — we will respond promptly.
+              ✅ Thank you — your message has been sent successfully. We’ll respond promptly.
             </p>
           )}
           {status === "error" && (
             <p className="text-red-700 text-sm mt-2">
-              ❌ Something went wrong. Please try again later or call us directly.
+              ❌ Something went wrong. Please try again or call 0488 086 271.
             </p>
           )}
         </form>
+
+        <div className="mt-10 text-center text-sm opacity-80">
+          <p>📍 Hobart and surrounds, Tasmania</p>
+          <p>📞 <a href="tel:+61488086271" className="underline">0488 086 271</a> &nbsp; | &nbsp; ✉ <a href="mailto:info@novacarenursing.com.au" className="underline">info@novacarenursing.com.au</a></p>
+        </div>
       </main>
 
       <SiteFooter />
