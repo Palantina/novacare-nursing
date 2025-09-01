@@ -12,6 +12,7 @@ const brand = {
 export default function Home() {
   return (
     <>
+      {/* SEO + favicon */}
       <Head>
         <title>NovaCare Nursing | Premium Home Nursing in Hobart</title>
         <meta
@@ -24,32 +25,41 @@ export default function Home() {
         <meta property="og:url" content="https://www.novacarenursing.com.au" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       </Head>
 
       <div className="min-h-screen" style={{ backgroundColor: brand.bg, color: brand.text }}>
-        {/* Header: logo centered absolutely */}
-        <header className="relative bg-white shadow-sm">
-          {/* Centered logo container */}
-          <div className="mx-auto max-w-6xl px-4 py-5">
-            <div className="relative h-[80px]">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src="/NovaCare_Logo.svg"
-                  alt="NovaCare Nursing Logo"
-                  width={200}
-                  height={90}
-                  priority
-                />
-              </div>
-            </div>
+        {/* HEADER: Blue banner with logo left, nav right */}
+        <header style={{ backgroundColor: brand.blue }} className="shadow-sm">
+          <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/NovaCare_Logo.svg"
+                alt="NovaCare Nursing Logo"
+                width={160}
+                height={70}
+                priority
+              />
+            </Link>
+
+            {/* Navigation */}
+            <nav className="flex items-center gap-6">
+              <Link href="#about" className="text-white font-medium hover:opacity-80 transition">
+                About
+              </Link>
+              <Link href="#services" className="text-white font-medium hover:opacity-80 transition">
+                Services
+              </Link>
+              <Link href="#contact" className="text-white font-medium hover:opacity-80 transition">
+                Contact
+              </Link>
+            </nav>
           </div>
         </header>
 
-        {/* Top blue band with no text */}
-        <section className="h-[36vh]" style={{ backgroundColor: brand.blue }} />
-
-        {/* Hero (light section) */}
-        <section className="mx-auto max-w-6xl px-4 -mt-16">
+        {/* HERO */}
+        <section className="mx-auto max-w-6xl px-4 mt-8">
           <div className="rounded-2xl bg-white shadow-sm border border-gray-100 p-8 md:p-12">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-center" style={{ color: brand.blue }}>
               Premium Nursing, Heartfelt Care — at Home
@@ -91,8 +101,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services */}
-        <section id="services" className="mx-auto max-w-6xl px-4 py-12">
+        {/* VALUE PROPS */}
+        <section className="mx-auto max-w-6xl px-4 py-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Premium, Discreet Care", desc: "High-end service with warmth and respect." },
+              { title: "Home Comfort & Dignity", desc: "Care tailored to your routines and needs." },
+              { title: "Continuity & Reliability", desc: "One trusted nurse — consistent support." },
+              { title: "Evidence-Based Practice", desc: "Clinical excellence with a human touch." },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100">
+                <h3 className="font-semibold text-lg" style={{ color: brand.blue }}>{item.title}</h3>
+                <p className="mt-2 text-sm opacity-80">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section id="services" className="mx-auto max-w-6xl px-4 pb-6">
           <h2 className="text-3xl font-bold font-serif text-center" style={{ color: brand.blue }}>
             Services
           </h2>
@@ -114,16 +141,14 @@ export default function Home() {
               },
             ].map((s) => (
               <div key={s.title} className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100">
-                <h3 className="font-semibold text-xl" style={{ color: brand.blue }}>
-                  {s.title}
-                </h3>
+                <h3 className="font-semibold text-xl" style={{ color: brand.blue }}>{s.title}</h3>
                 <p className="mt-2 text-sm opacity-90">{s.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* About */}
+        {/* ABOUT */}
         <section id="about" className="mx-auto max-w-6xl px-4 pb-12">
           <div className="rounded-2xl bg-white shadow-sm border border-gray-100 p-8 md:p-10">
             <h2 className="text-3xl font-bold font-serif text-center" style={{ color: brand.blue }}>
@@ -164,7 +189,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA strip */}
+        {/* CTA STRIP */}
         <section id="contact" className="py-10" style={{ backgroundColor: brand.blue, color: "white" }}>
           <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
@@ -186,7 +211,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
+        {/* FOOTER */}
         <footer className="bg-white">
           <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
