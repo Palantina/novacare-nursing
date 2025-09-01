@@ -97,7 +97,8 @@ export default function Contact() {
         </div>
       </main>
 
-      <SiteFooter />
-    </>
+      <SiteFooter hideContactInfo />
+
+  </>
   );
 }
