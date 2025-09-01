@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import SiteHeader from "../components/SiteHeader";
+// NOTE: no SiteHeader import now
+// import SiteFooter if you have it; otherwise remove its usage below
 import SiteFooter from "../components/SiteFooter";
 
 const brand = {
@@ -21,12 +22,38 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
         {/* Remove this line if favicon-32x32.png is not uploaded */}
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        {/* <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> */}
       </Head>
 
       <div className="min-h-screen" style={{ backgroundColor: brand.bg, color: brand.text }}>
-        {/* ✅ New header */}
-        <SiteHeader />
+        {/* --- INLINE HEADER (debug) --- */}
+        <header style={{ backgroundColor: brand.blue }} className="shadow-sm">
+          <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+            {/* Left: Logo (bigger & bolder) */}
+            <Link href="/" className="flex items-center gap-2 shrink-0">
+              {/* If your logo isn't visible, this text proves the header is new */}
+              <span className="sr-only">NovaCare Nursing</span>
+              <img
+                src="/NovaCare_Logo.svg"
+                alt="NovaCare Nursing Logo"
+                width={220}
+                height={100}
+                style={{ display: "block" }}
+              />
+            </Link>
+
+            {/* Right: Nav (large font, big gaps) */}
+            <nav className="flex items-center gap-12 text-white text-xl font-semibold">
+              <Link href="/about" className="hover:opacity-80 transition">About</Link>
+              <Link href="/services" className="hover:opacity-80 transition">Services</Link>
+              <Link href="/contact" className="hover:opacity-80 transition">Contact</Link>
+            </nav>
+          </div>
+
+          {/* Tiny debug tag so we KNOW this header is active */}
+          <div className="text-center text-white/70 text-xs pb-2">v2 header active</div>
+        </header>
+        {/* --- /INLINE HEADER --- */}
 
         {/* Hero */}
         <section className="mx-auto max-w-6xl px-4 mt-8">
@@ -77,6 +104,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
+        {/** If you don't have SiteFooter yet, remove the next line */}
         <SiteFooter />
 
         {/* Sticky mobile CTA */}
