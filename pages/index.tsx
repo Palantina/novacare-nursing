@@ -2,119 +2,206 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+const brand = {
+  blue: "#0B2D5C",
+  gold: "#C6A662",
+  bg: "#F7F4EF",
+  text: "#232323",
+};
+
 export default function Home() {
   return (
     <>
-      {/* SEO + Favicon */}
       <Head>
         <title>NovaCare Nursing | Premium Home Nursing in Hobart</title>
         <meta
           name="description"
-          content="NovaCare Nursing provides discreet, professional, and compassionate private nursing in Hobart & surrounds. Registered Nurse Palantina Hughes offers premium in-home care, post-operative support, chronic care, and palliative services."
+          content="Premium, discreet and compassionate private nursing in Hobart & surrounds. Post-op care, chronic & complex care, and palliative support by Registered Nurse Palantina Hughes."
         />
         <meta property="og:title" content="NovaCare Nursing | Premium Home Nursing in Hobart" />
-        <meta
-          property="og:description"
-          content="Premium, skilled, and heartfelt private nursing in the comfort of your home."
-        />
+        <meta property="og:description" content="Premium Nursing, Heartfelt Care — at home." />
         <meta property="og:image" content="/NovaCare_Logo.svg" />
         <meta property="og:url" content="https://www.novacarenursing.com.au" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-gray-50 text-gray-800">
-        {/* Header with Centered Logo */}
-        <header className="bg-white shadow-md">
-          <div className="mx-auto max-w-6xl px-4 py-6 flex justify-center">
-            <Image
-              src="/NovaCare_Logo.svg"
-              alt="NovaCare Nursing Logo"
-              width={200}
-              height={90}
-              priority
-            />
+      <div className="min-h-screen" style={{ backgroundColor: brand.bg, color: brand.text }}>
+        {/* Header: logo centered absolutely */}
+        <header className="relative bg-white shadow-sm">
+          {/* Centered logo container */}
+          <div className="mx-auto max-w-6xl px-4 py-5">
+            <div className="relative h-[80px]">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Image
+                  src="/NovaCare_Logo.svg"
+                  alt="NovaCare Nursing Logo"
+                  width={200}
+                  height={90}
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </header>
 
-        {/* Dark Blue Hero Section (clean top bar) */}
-        <section
-          className="h-[40vh] flex items-center justify-center"
-          style={{ backgroundColor: "#0B2D5C" }}
-        ></section>
+        {/* Top blue band with no text */}
+        <section className="h-[36vh]" style={{ backgroundColor: brand.blue }} />
 
-        {/* Meet Your Consultant */}
-        <main className="max-w-4xl mx-auto p-6">
-          <section id="about" className="text-center py-12">
-            <h2 className="text-3xl font-bold text-blue-900">Meet Your Consultant</h2>
-            <p className="mt-4 font-semibold">Palantina Hughes, RN</p>
-            <p className="italic">Clinical Home Care Nurse Consultant</p>
-            <p className="mt-4">
-              Dedicated to providing compassionate, skilled, and personalized care
-              in the comfort of your home. With professionalism, warmth, and
-              clinical excellence, NovaCare Nursing ensures dignity, independence,
-              and peace of mind for you and your loved ones.
+        {/* Hero (light section) */}
+        <section className="mx-auto max-w-6xl px-4 -mt-16">
+          <div className="rounded-2xl bg-white shadow-sm border border-gray-100 p-8 md:p-12">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-center" style={{ color: brand.blue }}>
+              Premium Nursing, Heartfelt Care — at Home
+            </h1>
+            <p className="mt-4 text-center text-lg opacity-90">
+              Discreet, skilled, and compassionate home care in Hobart &amp; surrounds.
             </p>
-          </section>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href="mailto:info@novacarenursing.com.au?subject=Consultation Request"
+                className="rounded-xl px-6 py-3 font-semibold"
+                style={{ backgroundColor: brand.gold, color: brand.blue }}
+              >
+                Book a Consultation
+              </a>
+              <a
+                href="#services"
+                className="rounded-xl px-6 py-3 font-semibold border"
+                style={{ borderColor: brand.blue, color: brand.blue }}
+              >
+                View Services
+              </a>
+            </div>
 
-          {/* Services Section */}
-          <section id="services" className="py-12">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Our Services</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow border">
-                <h3 className="font-semibold text-xl text-blue-900">Post-Operative Care</h3>
-                <p className="mt-2 text-sm">
-                  Recovery support including wound care, pain management, and safe mobility at home.
-                </p>
+            {/* Trust badges */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              {[
+                "AHPRA Registered Nurse",
+                "Fully Insured & Police Checked",
+                "Locally Based in Hobart",
+              ].map((t) => (
+                <div key={t} className="rounded-xl border border-gray-100 p-4 bg-[#FAFAFA]">
+                  <p className="text-sm font-medium" style={{ color: brand.blue }}>
+                    {t}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section id="services" className="mx-auto max-w-6xl px-4 py-12">
+          <h2 className="text-3xl font-bold font-serif text-center" style={{ color: brand.blue }}>
+            Services
+          </h2>
+          <p className="opacity-80 mt-2 text-center">Skilled, private nursing at home — tailored to you.</p>
+
+          <div className="mt-8 grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Post-Operative Support",
+                desc: "Monitoring, medication management, wound care, pain control, safe mobility.",
+              },
+              {
+                title: "Chronic & Complex Care",
+                desc: "Diabetes, cardiac, respiratory, neuro care with personalised plans.",
+              },
+              {
+                title: "Palliative & Respite",
+                desc: "Comfort-focused care, symptom management, and family support.",
+              },
+            ].map((s) => (
+              <div key={s.title} className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100">
+                <h3 className="font-semibold text-xl" style={{ color: brand.blue }}>
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm opacity-90">{s.desc}</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow border">
-                <h3 className="font-semibold text-xl text-blue-900">Chronic & Complex Care</h3>
-                <p className="mt-2 text-sm">
-                  Personalised care for diabetes, cardiac, respiratory, and neurological conditions.
+            ))}
+          </div>
+        </section>
+
+        {/* About */}
+        <section id="about" className="mx-auto max-w-6xl px-4 pb-12">
+          <div className="rounded-2xl bg-white shadow-sm border border-gray-100 p-8 md:p-10">
+            <h2 className="text-3xl font-bold font-serif text-center" style={{ color: brand.blue }}>
+              Meet Your Consultant
+            </h2>
+            <div className="mt-6 grid md:grid-cols-2 gap-10 items-center">
+              <div>
+                <p className="font-semibold">Palantina Hughes, Registered Nurse</p>
+                <p className="italic">Clinical Home Care Nurse Consultant</p>
+                <p className="mt-4 opacity-90">
+                  I provide premium, compassionate nursing in the comfort of your home—balancing clinical excellence
+                  with genuine warmth. Every visit is personalised to protect dignity, independence, and peace of mind.
                 </p>
+                <ul className="mt-4 text-sm list-disc pl-5 opacity-90">
+                  <li>AHPRA registered, fully insured & police checked</li>
+                  <li>NDIS & private clients welcome</li>
+                  <li>Hobart & Surrounds, Tasmania</li>
+                </ul>
+                <div className="mt-6">
+                  <a
+                    href="mailto:info@novacarenursing.com.au?subject=Consultation Request"
+                    className="rounded-xl px-5 py-3 font-semibold"
+                    style={{ backgroundColor: brand.gold, color: brand.blue }}
+                  >
+                    Enquire Now
+                  </a>
+                </div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow border">
-                <h3 className="font-semibold text-xl text-blue-900">Palliative & Respite Care</h3>
-                <p className="mt-2 text-sm">
-                  Compassionate support focused on comfort, dignity, and family peace of mind.
-                </p>
+              <div className="relative h-64 md:h-72 rounded-2xl overflow-hidden shadow">
+                <Image
+                  src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop"
+                  alt="Nurse providing care at home"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Contact Section */}
-          <section id="contact" className="mt-12 p-6 bg-blue-50 border-l-4 border-blue-900 rounded-lg">
-            <h3 className="text-xl font-bold text-blue-900">Contact NovaCare Nursing</h3>
-            <p className="mt-2"><strong>Location:</strong> Hobart and surrounds, Tasmania</p>
-            <p>
-              <strong>Phone:</strong>{" "}
-              <a href="tel:+61488086271" className="text-blue-700 underline">
-                0488 086 271
-              </a>
-            </p>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a href="mailto:info@novacarenursing.com.au" className="text-blue-700 underline">
+        {/* CTA strip */}
+        <section id="contact" className="py-10" style={{ backgroundColor: brand.blue, color: "white" }}>
+          <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 className="text-2xl font-serif font-bold">Ready to talk?</h3>
+              <p className="opacity-90">Email or call to book a private consultation.</p>
+            </div>
+            <div className="flex gap-3">
+              <a
+                href="mailto:info@novacarenursing.com.au"
+                className="rounded-xl px-5 py-3 font-semibold"
+                style={{ backgroundColor: brand.gold, color: brand.blue }}
+              >
                 info@novacarenursing.com.au
               </a>
-            </p>
-          </section>
-        </main>
+              <a href="tel:+61488086271" className="rounded-xl px-5 py-3 font-semibold border border-white">
+                0488 086 271
+              </a>
+            </div>
+          </div>
+        </section>
 
-        {/* Footer with Transparent Logo */}
-        <footer className="bg-blue-900 text-white mt-12">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between p-6 gap-4">
-            <div className="flex items-center gap-4">
+        {/* Footer */}
+        <footer className="bg-white">
+          <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-3">
               <Image
                 src="/NovaCare_Logo_Transparent.svg"
                 alt="NovaCare Nursing Logo"
-                width={140}
-                height={60}
+                width={150}
+                height={64}
               />
-              <p className="text-sm opacity-90">Premium Nursing, Heartfelt Care</p>
+              <span className="text-sm" style={{ color: brand.blue }}>
+                Premium Nursing, Heartfelt Care
+              </span>
             </div>
-            <div className="text-sm opacity-90">
-              © {new Date().getFullYear()} NovaCare Nursing. All Rights Reserved.
+            <div className="text-sm opacity-80">
+              © {new Date().getFullYear()} NovaCare Nursing — Hobart &amp; Surrounds, Tasmania
             </div>
           </div>
         </footer>
@@ -122,4 +209,3 @@ export default function Home() {
     </>
   );
 }
-
