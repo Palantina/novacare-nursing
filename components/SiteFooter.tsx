@@ -4,11 +4,14 @@ import Image from "next/image";
 const brandBlue = "#0B2D5C";
 const brandGold = "#C6A662";
 
-export default function SiteFooter() {
+type Props = {
+  hideContactInfo?: boolean; // 👈 new prop
+};
+
+export default function SiteFooter({ hideContactInfo = false }: Props) {
   return (
     <footer style={{ backgroundColor: brandBlue }} className="py-8 mt-12">
       <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-6">
-        
         {/* Logo (left) */}
         <div className="flex items-center gap-2">
           <Image
@@ -19,12 +22,14 @@ export default function SiteFooter() {
           />
         </div>
 
-        {/* Contact info (right, in gold) */}
-        <div className="text-center md:text-right text-sm" style={{ color: brandGold }}>
-          <p>📍 Hobart and surrounds, Tasmania</p>
-          <p>📞 <a href="tel:+61488086271" className="hover:underline">0488 086 271</a></p>
-          <p>✉ <a href="mailto:info@novacarenursing.com.au" className="hover:underline">info@novacarenursing.com.au</a></p>
-        </div>
+        {/* Contact info (right, in gold) — can be hidden */}
+        {!hideContactInfo && (
+          <div className="text-center md:text-right text-sm" style={{ color: brandGold }}>
+            <p>📍 Hobart and surrounds, Tasmania</p>
+            <p>📞 <a href="tel:+61488086271" className="hover:underline">0488 086 271</a></p>
+            <p>✉ <a href="mailto:info@novacarenursing.com.au" className="hover:underline">info@novacarenursing.com.au</a></p>
+          </div>
+        )}
       </div>
 
       {/* Bottom bar */}
@@ -34,3 +39,4 @@ export default function SiteFooter() {
     </footer>
   );
 }
+
