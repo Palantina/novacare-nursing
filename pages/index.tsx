@@ -20,10 +20,12 @@ export default function Home() {
           content="Premium, discreet and compassionate private nursing in Hobart & surrounds. Post-op care, chronic & complex care, and palliative support by Registered Nurse Palantina Hughes."
         />
         <link rel="icon" href="/favicon.ico" />
+        {/* Remove this line if favicon-32x32.png is not in your /public folder */}
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       </Head>
 
       <div className="min-h-screen" style={{ backgroundColor: brand.bg, color: brand.text }}>
+        {/* ✅ New header with bigger logo + nav on the right */}
         <SiteHeader />
 
         {/* Hero */}
@@ -63,7 +65,10 @@ export default function Home() {
               { title: "Home Comfort", desc: "Care tailored to you." },
               { title: "Local to Hobart", desc: "Flexible & reliable." },
             ].map((item) => (
-              <div key={item.title} className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100 text-center">
+              <div
+                key={item.title}
+                className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100 text-center"
+              >
                 <h3 className="font-semibold" style={{ color: brand.blue }}>{item.title}</h3>
                 <p className="mt-2 text-sm opacity-80">{item.desc}</p>
               </div>
@@ -71,6 +76,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Footer */}
         <SiteFooter />
 
         {/* Sticky mobile CTA */}
