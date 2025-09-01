@@ -22,48 +22,42 @@ export default function Home() {
       </Head>
 
       <div className="min-h-screen" style={{ backgroundColor: brand.bg, color: brand.text }}>
-        {/* HEADER — grid layout ensures logo left, nav right */}
+        {/* ===== HEADER (float-based, cannot wrap under) ===== */}
         <header style={{ backgroundColor: brand.blue }} className="shadow-sm">
-          <div
-            className="mx-auto max-w-6xl px-4 py-4"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "auto 1fr",
-              alignItems: "center",
-              columnGap: "24px",
-            }}
-          >
-            {/* Left: Logo (no shrink) */}
-            <Link href="/" className="flex items-center gap-2" style={{ minWidth: 0 }}>
-              <img
-                src="/NovaCare_Logo.svg"
-                alt="NovaCare Nursing Logo"
-                width={230}
-                height={104}
-                style={{ display: "block" }}
-              />
-            </Link>
+          <div className="mx-auto max-w-6xl px-4 py-4">
+            {/* clearfix */}
+            <div style={{ zoom: 1, overflow: "hidden" }}>
+              {/* Logo (left) */}
+              <div style={{ float: "left" }}>
+                <Link href="/" className="flex items-center gap-2">
+                  <img
+                    src="/NovaCare_Logo.svg"
+                    alt="NovaCare Nursing Logo"
+                    width={230}
+                    height={104}
+                    style={{ display: "block" }}
+                  />
+                </Link>
+              </div>
 
-            {/* Right: Nav (always right-aligned, single line) */}
-            <nav
-              style={{
-                justifySelf: "end",
-                display: "flex",
-                alignItems: "center",
-                gap: "48px",          // wide gaps on desktop
-                whiteSpace: "nowrap", // never wrap under the logo
-                fontWeight: 700,
-                fontSize: "20px",     // desktop size
-                color: "white",
-              }}
-              className="sm:gap-8 sm:text-lg md:gap-12 md:text-xl"
-            >
-              <Link href="/about" className="hover:opacity-80 transition">About</Link>
-              <Link href="/services" className="hover:opacity-80 transition">Services</Link>
-              <Link href="/contact" className="hover:opacity-80 transition">Contact</Link>
-            </nav>
+              {/* Nav (right) */}
+              <nav
+                style={{
+                  float: "right",
+                  whiteSpace: "nowrap",
+                  display: "block",
+                  marginTop: "20px",   // vertically align with logo
+                }}
+                className="text-white font-semibold"
+              >
+                <Link href="/about" className="hover:opacity-80 transition" style={{ fontSize: "20px", marginLeft: "40px" }}>About</Link>
+                <Link href="/services" className="hover:opacity-80 transition" style={{ fontSize: "20px", marginLeft: "40px" }}>Services</Link>
+                <Link href="/contact" className="hover:opacity-80 transition" style={{ fontSize: "20px", marginLeft: "40px" }}>Contact</Link>
+              </nav>
+            </div>
           </div>
         </header>
+        {/* ===== /HEADER ===== */}
 
         {/* Hero */}
         <section className="mx-auto max-w-6xl px-4 mt-8">
@@ -113,7 +107,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
         <SiteFooter />
 
         {/* Sticky mobile CTA */}
