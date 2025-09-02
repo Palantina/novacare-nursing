@@ -1,7 +1,6 @@
-// pages/index.tsx
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
 import Hero from "../components/Hero";
 
 export default function Home() {
@@ -13,21 +12,21 @@ export default function Home() {
           name="description"
           content="NovaCare Nursing — private in-home nursing care. Premium Nursing, Heartfelt Care."
         />
-        {/* Social sharing (optional) */}
+        {/* Social sharing (for previews on Facebook, LinkedIn, etc.) */}
         <meta property="og:title" content="NovaCare Nursing" />
         <meta property="og:description" content="Premium Nursing, Heartfelt Care." />
         <meta property="og:image" content="/hero-novacare.jpg" />
         <meta property="og:type" content="website" />
       </Head>
 
-      <Header />
+      <SiteHeader />
 
       <main>
         <Hero />
-        {/* You can add more sections below… */}
+        {/* Add more sections here later (e.g. Services preview, testimonials, etc.) */}
       </main>
 
-      <Footer />
+      <SiteFooter />
     </>
   );
 }
