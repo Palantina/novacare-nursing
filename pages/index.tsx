@@ -12,7 +12,7 @@ export default function Home() {
           name="description"
           content="NovaCare Nursing — private in-home nursing care. Premium Nursing, Heartfelt Care."
         />
-        {/* Social sharing (for previews on Facebook, LinkedIn, etc.) */}
+        {/* Social sharing */}
         <meta property="og:title" content="NovaCare Nursing" />
         <meta property="og:description" content="Premium Nursing, Heartfelt Care." />
         <meta property="og:image" content="/hero-novacare.jpg" />
@@ -23,7 +23,7 @@ export default function Home() {
 
       <main>
         <Hero />
-        {/* Add more sections here later (e.g. Services preview, testimonials, etc.) */}
+        {/* Add future homepage sections here, e.g. Services preview */}
       </main>
 
       <SiteFooter />
