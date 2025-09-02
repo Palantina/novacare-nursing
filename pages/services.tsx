@@ -1,8 +1,9 @@
 import Head from "next/head";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import ContactCta from "../components/ContactCta";
 
-const brand = { blue: "#0B2D5C", gold: "#C6A662", cream: "#F7F4EF" };
+const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
 const services = [
   {
@@ -47,7 +48,16 @@ const services = [
       "Oversight by a Registered Nurse (RN): NDIS SIL management & complex case oversight",
       "Education, supervision, and governance to ensure the highest standard of safe, capable care",
     ],
-    highlight: true, // 👈 we'll use this to style differently
+    highlight: true,
+  },
+  {
+    title: "Subcontracted Nursing for Aged Care Providers",
+    points: [
+      "RN/EN staffing for residential & community providers",
+      "Short-notice, reliable coverage with clear documentation",
+      "Policy-aligned practice, fully insured & compliant",
+      "Friendly, professional team with strong communication",
+    ],
   },
 ];
 
@@ -58,37 +68,29 @@ export default function Services() {
         <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative & respite care, and high intensity nursing supports including RN oversight."
+          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative & respite care, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
         />
       </Head>
 
       <SiteHeader />
 
       <main className="mx-auto max-w-6xl px-4 py-12">
-        <h1
-          className="text-3xl md:text-4xl font-bold text-center"
-          style={{ color: brand.blue }}
-        >
+        <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: brand.blue }}>
           Our Services
         </h1>
         <p className="text-center opacity-80 mt-3">
-          Skilled, premium home nursing — tailored to your needs.
+          Skilled, premium nursing — for NDIS participants, private clients, and aged care providers.
         </p>
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           {services.map((s) => (
             <div
               key={s.title}
-              className={`rounded-2xl p-6 shadow-sm border ${
-                s.highlight
-                  ? "bg-[#F7F4EF] border-[#C6A662]"
-                  : "bg-white border-gray-100"
-              }`}
+              className={`rounded-2xl p-6 shadow-sm border transition
+                ${s.highlight ? "bg-[#F7F4EF] border-[#C6A662]" : "bg-white border-gray-100"}
+              `}
             >
-              <h3
-                className="font-semibold text-xl"
-                style={{ color: brand.blue }}
-              >
+              <h3 className="font-semibold text-xl" style={{ color: brand.blue }}>
                 {s.title}
               </h3>
               <ul className="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
@@ -99,17 +101,10 @@ export default function Services() {
             </div>
           ))}
         </div>
-
-        <div className="mt-10 text-center">
-          <a
-            href="/contact"
-            className="inline-block rounded-xl px-6 py-3 font-semibold border"
-            style={{ borderColor: brand.blue, color: brand.blue }}
-          >
-            Enquire about availability
-          </a>
-        </div>
       </main>
+
+      {/* CTA banner */}
+      <ContactCta />
 
       <SiteFooter />
     </>
