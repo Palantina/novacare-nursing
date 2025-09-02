@@ -1,17 +1,13 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function NovaCareWebsite() {
-  const [date, setDate] = useState("");
-
   return (
     <div className="font-serif text-gray-800 bg-[#F7F4EF]">
-
       {/* Header with Logo */}
       <header className="flex items-center justify-between p-4 bg-white shadow-md">
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/NovaCare_Logo.svg"
             alt="NovaCare Nursing Logo"
@@ -28,31 +24,50 @@ export default function NovaCareWebsite() {
         </nav>
       </header>
 
-      {/* Hero section */}
-      <section
-        className="relative bg-cover bg-center h-[80vh] flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "url('https://source.unsplash.com/1600x900/?nurse,care,home')",
-        }}
-      >
-        <div
-          className="bg-black bg-opacity-40 absolute inset-0"
-          aria-hidden="true"
-        ></div>
+      {/* Hero section with local image and overlay */}
+      <section className="relative h-[80vh] flex items-center">
+        {/* background image */}
+        <Image
+          src="/hero-novacare.jpg"
+          alt="Nurse holding a patient's hands at home during warm sunset"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* overlays for readability */}
+        <div className="absolute inset-0 bg-[#0F2438]/40" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0F2438]/60 via-[#0F2438]/20 to-transparent" aria-hidden />
+
+        {/* content */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="relative text-center text-white p-8 max-w-2xl"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative z-10 px-6 w-full max-w-6xl mx-auto"
         >
-          <h1 className="text-5xl font-bold mb-4">NovaCare Nursing</h1>
-          <p className="text-xl mb-6">
-            Premium Nursing, Heartfelt Care in Hobart and Surrounds, Tasmania
-          </p>
-          <button className="bg-[#D4AF37] text-[#1C2A39] px-6 py-3 rounded-2xl shadow-lg">
-            Book a Consultation
-          </button>
+          <div className="max-w-2xl text-white">
+            <h1 className="text-5xl font-bold mb-4">
+              NovaCare Nursing
+            </h1>
+            <p className="text-xl mb-6 text-white/90">
+              Premium Nursing, Heartfelt Care in Hobart and Surrounds, Tasmania
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="bg-[#D4AF37] text-[#1C2A39] px-6 py-3 rounded-2xl shadow-lg hover:opacity-90 transition"
+              >
+                Book a Consultation
+              </Link>
+              <Link
+                href="/services"
+                className="border border-white/70 text-white px-6 py-3 rounded-2xl hover:bg-white/10 transition"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -79,15 +94,13 @@ export default function NovaCareWebsite() {
             />
             <p className="text-sm mt-2">Premium Nursing, Heartfelt Care</p>
           </div>
-          <div>
-            <p className="text-sm">📍 Hobart and surrounds, Tasmania</p>
-            <p className="text-sm">📞 0488 086 271</p>
-            <p className="text-sm">✉ info@novacarenursing.com.au</p>
+          <div className="text-sm">
+            <p>📍 Hobart and surrounds, Tasmania</p>
+            <p>📞 0488 086 271</p>
+            <p>✉ info@novacarenursing.com.au</p>
           </div>
-          <div>
-            <p className="text-sm">
-              © {new Date().getFullYear()} NovaCare Nursing. All Rights Reserved.
-            </p>
+          <div className="text-sm">
+            <p>© {new Date().getFullYear()} NovaCare Nursing. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
