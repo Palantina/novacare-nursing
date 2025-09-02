@@ -1,43 +1,20 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden h-[75vh] md:h-[80vh] flex items-center">
-      {/* Background image (covers without stretching) */}
-      <Image
-        src="/hero-novacare.jpg"
-        alt="Compassionate in-home nursing care"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-
-      {/* Dark overlay for readability */}
+    <section
+      className="
+        relative min-h-[75vh] md:min-h-[80vh]
+        flex items-center
+        bg-center bg-cover
+      "
+      style={{ backgroundImage: "url('/hero-novacare.jpg')" }}
+    >
+      {/* dark overlay */}
       <div className="absolute inset-0 bg-black/45" aria-hidden />
 
-      {/* Optional gradient from left (looks premium, hides banding on edges) */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(11,45,92,0.55) 0%, rgba(11,45,92,0.25) 45%, rgba(0,0,0,0) 80%)",
-        }}
-        aria-hidden
-      />
-
-      {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative z-10 w-full mx-auto max-w-6xl px-4"
-      >
+      {/* content */}
+      <div className="relative z-10 w-full mx-auto max-w-6xl px-4">
         <div className="max-w-2xl text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            NovaCare Nursing
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">NovaCare Nursing</h1>
           <p className="text-lg md:text-xl mb-6 text-white/95">
             Premium Nursing, Heartfelt Care in Hobart and Surrounds, Tasmania
           </p>
@@ -56,7 +33,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
