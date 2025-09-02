@@ -25,7 +25,7 @@ const services = [
     ],
   },
   {
-    title: "Palliative & Respite",
+    title: "Palliative Care & Respite",
     points: [
       "Comfort-focused symptom management",
       "Dignified end-of-life support",
@@ -67,7 +67,7 @@ export default function Services() {
         <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative & respite care, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
+          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
         />
       </Head>
 
