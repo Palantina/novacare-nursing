@@ -70,7 +70,11 @@ export default function About() {
             <li><strong>Private Nursing:</strong> Premium in-home clinical care, recovery support, and health management.</li>
             <li><strong>Palliative Care:</strong> Compassionate, family-centred support with dignified symptom management.</li>
             <li><strong>High Intensity & Specialist Nursing Supports:</strong> Advanced procedures and complex care under RN governance.</li>
-            <li><strong>Subcontracting for Aged Care Providers:</strong> RN/EN staffing and clinical services for residential or community settings.</li>
+            <li>
+              <strong>Subcontracting for Aged Care Providers:</strong> At present, NovaCare Nursing provides this service personally,
+              offering reliable and professional coverage. As demand increases, additional staff will be added to expand
+              support for residential and community providers.
+            </li>
           </ul>
         </section>
       </main>
