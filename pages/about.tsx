@@ -71,9 +71,7 @@ export default function About() {
             <li><strong>Palliative Care:</strong> Compassionate, family-centred support with dignified symptom management.</li>
             <li><strong>High Intensity & Specialist Nursing Supports:</strong> Advanced procedures and complex care under RN governance.</li>
             <li>
-              <strong>Subcontracting for Aged Care Providers:</strong> At present, NovaCare Nursing provides this service personally,
-              offering reliable and professional coverage. As demand increases, additional staff will be added to expand
-              support for residential and community providers.
+              <strong>Subcontracting for Aged Care Providers:</strong> NovaCare Nursing provides personal, reliable and professional coverage for Home and Community Care providers.
             </li>
           </ul>
         </section>
