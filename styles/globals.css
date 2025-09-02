@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-blue: #0B2D5C;
+  --brand-gold: #C6A662;
+  --brand-sage: #6B7C77;
+  --brand-cream: #F7F4EF;
+}
+
 body {
   font-family: 'Georgia', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--brand-cream);
+  color: var(--brand-blue);
+}
+
+@layer components {
+  .heading-1 {
+    @apply text-3xl md:text-4xl font-bold text-[var(--brand-blue)];
+  }
+  .heading-2 {
+    @apply text-2xl font-semibold text-[var(--brand-blue)];
+  }
 }
