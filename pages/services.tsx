@@ -55,7 +55,7 @@ const services = [
     points: [
       "Short-notice, reliable coverage with clear documentation",
       "Policy-aligned practice, fully insured & compliant",
-      "Kind, skilled and professional — provided personally by NovaCare Nursing (staff will be added as demand grows)",
+      "Personal, reliable and professional nursing care for Home and Community Care providers",
     ],
   },
 ];
