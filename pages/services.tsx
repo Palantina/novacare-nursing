@@ -51,12 +51,11 @@ const services = [
     highlight: true,
   },
   {
-    title: "Subcontracted Nursing for Aged Care Providers",
+    title: "Subcontracted Nursing Care for Aged Care Providers",
     points: [
-      "RN/EN staffing for residential & community providers",
       "Short-notice, reliable coverage with clear documentation",
       "Policy-aligned practice, fully insured & compliant",
-      "Friendly, professional team with strong communication",
+      "Kind, skilled and professional — provided personally by NovaCare Nursing (staff will be added as demand grows)",
     ],
   },
 ];
