@@ -1,6 +1,7 @@
 import Head from "next/head";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import ContactCta from "../components/ContactCta";
 
 const brand = { blue: "#0B2D5C" };
 
@@ -24,13 +25,14 @@ export default function About() {
 
         <section className="mt-6 space-y-4 text-[1.05rem] leading-7">
           <p>
-            NovaCare Nursing provides premium, discreet and compassionate nursing in the comfort of your home across
-            Hobart and surrounds. We combine clinical excellence with a warm, respectful approach so you feel safe,
-            supported, and cared for.
+            NovaCare Nursing provides premium, discreet and compassionate nursing in the comfort
+            of your home across Hobart and surrounds. We combine clinical excellence with a warm,
+            respectful approach so you feel safe, supported, and cared for.
           </p>
           <p>
-            Led by Registered Nurse <strong>Palantina Hughes</strong>, NovaCare specialises in tailored clinical home care — 
-            working closely with you, your family, and your healthcare team to achieve the best outcomes.
+            Led by Registered Nurse <strong>Palantina Hughes</strong>, NovaCare specialises in tailored
+            clinical home care — working closely with you, your family, and your healthcare team to
+            achieve the best outcomes.
           </p>
         </section>
 
@@ -48,7 +50,9 @@ export default function About() {
         </section>
 
         <section className="mt-10">
-          <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>Credentials & Safeguards</h2>
+          <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
+            Credentials & Safeguards
+          </h2>
           <ul className="mt-4 list-disc pl-5 space-y-2">
             <li>AHPRA Registered Nurse</li>
             <li>Current Police Check & Working with Vulnerable People (WWVP)</li>
@@ -56,7 +60,7 @@ export default function About() {
           </ul>
         </section>
 
-        {/* New highlights section */}
+        {/* Who we support */}
         <section className="mt-12">
           <h2 className="text-2xl font-semibold mb-4" style={{ color: brand.blue }}>
             Who We Support
@@ -64,12 +68,15 @@ export default function About() {
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>NDIS Clients:</strong> Tailored supports, with RN oversight for complex needs.</li>
             <li><strong>Private Nursing:</strong> Premium in-home clinical care, recovery support, and health management.</li>
-            <li><strong>Palliative Care:</strong> Compassionate, family-centred end-of-life support.</li>
+            <li><strong>Palliative Care:</strong> Compassionate, family-centred support with dignified symptom management.</li>
             <li><strong>High Intensity & Specialist Nursing Supports:</strong> Advanced procedures and complex care under RN governance.</li>
             <li><strong>Subcontracting for Aged Care Providers:</strong> RN/EN staffing and clinical services for residential or community settings.</li>
           </ul>
         </section>
       </main>
+
+      {/* CTA banner */}
+      <ContactCta />
 
       <SiteFooter />
     </>
