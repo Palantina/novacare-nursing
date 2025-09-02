@@ -10,12 +10,12 @@ module.exports = {
         "brand-blue": "#0B2D5C",
         "brand-gold": "#C6A662",
         "brand-sage": "#6B7C77",
-        "brand-cream": "#F7F4EF",
+        "brand-cream": "#F7F4EF"
       },
       fontFamily: {
-        serif: ["Georgia", "serif"],
-      },
-    },
+        serif: ["Georgia", "serif"]
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
