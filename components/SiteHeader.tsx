@@ -1,60 +1,65 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { useRouter } from "next/router";
 
 const brandBlue = "#0B2D5C";
 const brandGold = "#C6A662";
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const { pathname } = useRouter();
-
-  const linkBase =
-    "transition-colors hover:underline underline-offset-4 decoration-[2px] text-[1rem] md:text-[1.05rem] font-semibold";
-  const active = (href: string) =>
-    pathname === href ? "opacity-100" : "opacity-90 hover:opacity-100";
 
   return (
     <header
-      className="sticky top-0 z-50 border-t-4"
+      className="sticky top-0 z-50 shadow-sm border-t-4"
       style={{ backgroundColor: brandBlue, borderColor: brandGold }}
-      role="banner"
     >
-      <div className="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between">
-        {/* Always show the GOLD wordmark on dark header */}
-        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Go to homepage">
+      <div className="mx-auto max-w-6xl px-6 py-2 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
-            src="/NovaCare_Logo_Dark.svg"   // <- gold wordmark, stays visible
+            src="/NovaCare_Logo.svg"
             alt="NovaCare Nursing"
             width={200}
             height={90}
-            priority
+            loading="lazy"
+            decoding="async"
           />
         </Link>
 
         {/* Desktop nav */}
         <nav
-          aria-label="Primary"
-          className="hidden md:flex flex-1 justify-center items-center gap-8"
+          className="hidden md:flex flex-1 justify-center items-center space-x-8 font-bold"
           style={{ color: brandGold }}
+          aria-label="Primary"
         >
-          <Link href="/" className={`${linkBase} ${active("/")}`}>Home</Link>
-          <Link href="/about" className={`${linkBase} ${active("/about")}`}>About</Link>
-          <Link href="/services" className={`${linkBase} ${active("/services")}`}>Services</Link>
-          <Link href="/contact" className={`${linkBase} ${active("/contact")}`}>Contact</Link>
+          <Link href="/" className="hover:underline underline-offset-4 decoration-[2px] text-lg">
+            Home
+          </Link>
+          <Link href="/about" className="hover:underline underline-offset-4 decoration-[2px] text-lg">
+            About
+          </Link>
+          <Link href="/services" className="hover:underline underline-offset-4 decoration-[2px] text-lg">
+            Services
+          </Link>
+          <Link href="/contact" className="hover:underline underline-offset-4 decoration-[2px] text-lg">
+            Contact
+          </Link>
         </nav>
 
         {/* Spacer to keep nav centered */}
         <div className="hidden md:block w-[200px]" />
 
-        {/* Mobile menu button */}
+        {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white pl-3 pr-1 py-1 rounded focus:outline-none focus:ring-2 focus:ring-white/60"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen(v => !v)}
-          style={{ fontSize: 28, lineHeight: 1, background: "transparent", border: "none" }}
+          className="md:hidden text-white"
+          aria-label="Open menu"
+          onClick={() => setOpen(!open)}
+          style={{
+            fontSize: 28,
+            lineHeight: 1,
+            background: "transparent",
+            border: "none",
+          }}
         >
           ☰
         </button>
@@ -63,17 +68,24 @@ export default function SiteHeader() {
       {/* Mobile menu */}
       {open && (
         <nav
-          aria-label="Mobile primary"
-          className="md:hidden px-6 pb-5 flex flex-col gap-3"
+          className="md:hidden px-6 pb-4 flex flex-col gap-3 font-bold"
           style={{ color: brandGold }}
+          aria-label="Mobile primary"
         >
-          <Link href="/" onClick={() => setOpen(false)} className={`${linkBase} ${active("/")}`}>Home</Link>
-          <Link href="/about" onClick={() => setOpen(false)} className={`${linkBase} ${active("/about")}`}>About</Link>
-          <Link href="/services" onClick={() => setOpen(false)} className={`${linkBase} ${active("/services")}`}>Services</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className={`${linkBase} ${active("/contact")}`}>Contact</Link>
+          <Link href="/" onClick={() => setOpen(false)}>
+            Home
+          </Link>
+          <Link href="/about" onClick={() => setOpen(false)}>
+            About
+          </Link>
+          <Link href="/services" onClick={() => setOpen(false)}>
+            Services
+          </Link>
+          <Link href="/contact" onClick={() => setOpen(false)}>
+            Contact
+          </Link>
         </nav>
       )}
     </header>
   );
 }
-
