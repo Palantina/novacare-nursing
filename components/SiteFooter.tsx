@@ -16,8 +16,8 @@ export default function SiteFooter() {
               className="h-10 w-auto mt-1"
             />
             <div>
-              <div className="text-lg font-semibold">NovaCare</div>
-              <div className="text-sm opacity-90 -mt-1">Nursing</div>
+              <div className="text-lg font-semibold text-white">NovaCare</div>
+              <div className="text-sm -mt-1" style={{ color: brandGold }}>Nursing</div>
               <div className="mt-3 font-semibold" style={{ color: brandGold }}>
                 Premium Nursing, Heartfelt Care
               </div>
