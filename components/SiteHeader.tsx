@@ -11,7 +11,6 @@ export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useRouter();
 
-  // Swap subtle styling on scroll and allow future logo changes if desired
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll);
@@ -34,10 +33,10 @@ export default function SiteHeader() {
       role="banner"
     >
       <div className="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between">
-        {/* Logo (kept same visual weight as footer) */}
+        {/* Logo — show GOLD on dark header initially, swap to LIGHT on scroll */}
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Go to homepage">
           <Image
-            src={scrolled ? "/NovaCare_Logo_Dark.svg" : "/NovaCare_Logo_Light.svg"}
+            src={scrolled ? "/NovaCare_Logo_Light.svg" : "/NovaCare_Logo_Dark.svg"}
             alt="NovaCare Nursing"
             width={200}
             height={90}
@@ -45,7 +44,7 @@ export default function SiteHeader() {
           />
         </Link>
 
-        {/* Desktop nav – centered */}
+        {/* Desktop nav */}
         <nav
           aria-label="Primary"
           className="hidden md:flex flex-1 justify-center items-center gap-8"
@@ -57,7 +56,7 @@ export default function SiteHeader() {
           <Link href="/contact" className={`${linkBase} ${active("/contact")}`}>Contact</Link>
         </nav>
 
-        {/* Spacer keeps centered nav balanced */}
+        {/* Spacer keeps nav centered */}
         <div className="hidden md:block w-[200px]" />
 
         {/* Mobile menu button */}
