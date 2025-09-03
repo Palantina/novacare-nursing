@@ -7,22 +7,25 @@ export default function SiteHeader() {
   return (
     <header style={{ backgroundColor: brandBlue }}>
       <div className="mx-auto max-w-6xl px-4 md:px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo + wordmark */}
+        {/* a touch taller, like the original */}
+        <div className="flex items-center justify-between h-18 md:h-20 py-2">
+          {/* Logo + wordmark stacked exactly like the original */}
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/NovaCare_Logo.svg"
               alt="NovaCare Nursing"
-              className="h-8 w-auto md:h-9"
+              className="h-9 w-auto md:h-10"
             />
-            <div className="leading-tight text-white">
-              <div className="text-lg md:text-xl font-semibold">NovaCare</div>
-              <div className="text-[12px] opacity-90 -mt-1">Nursing</div>
+            <div className="leading-tight">
+              <div className="text-white text-xl md:text-2xl font-semibold">NovaCare</div>
+              <div className="text-[12px] md:text-[13px]" style={{ color: brandGold, marginTop: -2 }}>
+                Nursing
+              </div>
             </div>
           </Link>
 
-          {/* Navigation */}
-          <nav className="flex items-center gap-6 md:gap-8">
+          {/* Navigation – all gold like the original (not just the active item) */}
+          <nav className="flex items-center gap-7 md:gap-9">
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About" },
@@ -32,7 +35,7 @@ export default function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm md:text-base font-semibold transition-opacity"
+                className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
                 style={{ color: brandGold }}
               >
                 {item.label}
