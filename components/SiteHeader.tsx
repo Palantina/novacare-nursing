@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 
 const brandBlue = "#0B2D5C";
@@ -8,14 +8,7 @@ const brandGold = "#C6A662";
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useRouter();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const linkBase =
     "transition-colors hover:underline underline-offset-4 decoration-[2px] text-[1rem] md:text-[1.05rem] font-semibold";
@@ -25,18 +18,14 @@ export default function SiteHeader() {
   return (
     <header
       className="sticky top-0 z-50 border-t-4"
-      style={{
-        backgroundColor: brandBlue,
-        borderColor: brandGold,
-        boxShadow: scrolled ? "0 2px 8px rgba(0,0,0,0.18)" : "none",
-      }}
+      style={{ backgroundColor: brandBlue, borderColor: brandGold }}
       role="banner"
     >
       <div className="mx-auto max-w-6xl px-6 py-3 flex items-center justify-between">
-        {/* Logo — show GOLD on dark header initially, swap to LIGHT on scroll */}
+        {/* Always show the GOLD wordmark on dark header */}
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Go to homepage">
           <Image
-            src={scrolled ? "/NovaCare_Logo_Light.svg" : "/NovaCare_Logo_Dark.svg"}
+            src="/NovaCare_Logo_Dark.svg"   // <- gold wordmark, stays visible
             alt="NovaCare Nursing"
             width={200}
             height={90}
@@ -56,7 +45,7 @@ export default function SiteHeader() {
           <Link href="/contact" className={`${linkBase} ${active("/contact")}`}>Contact</Link>
         </nav>
 
-        {/* Spacer keeps nav centered */}
+        {/* Spacer to keep nav centered */}
         <div className="hidden md:block w-[200px]" />
 
         {/* Mobile menu button */}
@@ -64,7 +53,7 @@ export default function SiteHeader() {
           className="md:hidden text-white pl-3 pr-1 py-1 rounded focus:outline-none focus:ring-2 focus:ring-white/60"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen(v => !v)}
           style={{ fontSize: 28, lineHeight: 1, background: "transparent", border: "none" }}
         >
           ☰
@@ -87,3 +76,4 @@ export default function SiteHeader() {
     </header>
   );
 }
+
