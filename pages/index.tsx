@@ -1,31 +1,38 @@
 import Head from "next/head";
 import SiteHeader from "../components/SiteHeader";
-import SiteFooter from "../components/SiteFooter";
 import Hero from "../components/Hero";
+import SiteFooter from "../components/SiteFooter";
+// If you’d like to keep a call-to-action section under the hero, uncomment this:
+// import ContactCta from "../components/ContactCta";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>NovaCare Nursing</title>
+        <title>NovaCare Nursing | Premium Nursing in Hobart</title>
         <meta
           name="description"
-          content="NovaCare Nursing — private in-home nursing care. Premium Nursing, Heartfelt Care."
+          content="NovaCare Nursing — premium, private, and heartfelt nursing care in Hobart and surrounds, Tasmania."
         />
-        {/* Social sharing */}
-        <meta property="og:title" content="NovaCare Nursing" />
-        <meta property="og:description" content="Premium Nursing, Heartfelt Care." />
-        <meta property="og:image" content="/hero-novacare.jpg" />
-        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* Header */}
       <SiteHeader />
 
-      <main>
-        <Hero />
-        {/* Add future homepage sections here, e.g. Services preview */}
-      </main>
+      {/* Hero (restored original style, no delay) */}
+      <Hero />
 
+      {/* Optional CTA Section (commented out for now) */}
+      {/*
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-6">
+          <ContactCta />
+        </div>
+      </section>
+      */}
+
+      {/* Footer */}
       <SiteFooter />
     </>
   );
