@@ -1,53 +1,56 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
-const brand = { blue: "#0B2D5C", gold: "#C6A662" };
+// ✅ STATIC import lets Next auto-make a tiny blur + perfect sizes
+import hero from "../public/hero-novacare.webp";
+
+const brandBlue = "#0B2D5C";
+const brandGold = "#C6A662";
 
 export default function Hero() {
   return (
-    <section className="relative h-[90vh] w-full overflow-hidden">
-      {/* Background image */}
+    <section className="relative h-[78vh] min-h-[520px] flex items-center">
+      {/* Optimized hero image */}
       <Image
-        src="/hero-novacare.jpg"
-        alt="Compassionate in-home nursing care"
+        src={hero}                 // local static import (webp)
+        alt="Compassionate nursing care at home"
         fill
-        priority
-        className="object-cover object-center"
+        priority                   // preload: hero is above-the-fold
+        quality={60}               // small but crisp thanks to overlay
+        placeholder="blur"         // uses hero.blurDataURL automatically
+        sizes="100vw"
+        style={{ objectFit: "cover", objectPosition: "center" }}
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Subtle overlay improves readability + allows stronger compression */}
+      <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
 
       {/* Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4"
-      >
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center text-white">
+        <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
           NovaCare Nursing
         </h1>
-        <p className="text-lg md:text-2xl mb-8 max-w-2xl">
+        <p className="mt-4 text-lg md:text-xl font-medium drop-shadow">
           Premium Nursing, Heartfelt Care in Hobart and Surrounds, Tasmania
         </p>
-
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="mt-8 flex gap-4 justify-center">
           <Link
             href="/contact"
-            className="bg-[#C6A662] text-[#0B2D5C] px-6 py-3 rounded-xl font-semibold shadow-lg hover:opacity-90 transition"
+            className="rounded-xl px-5 py-3 font-semibold shadow-lg"
+            style={{ backgroundColor: brandGold, color: brandBlue }}
           >
             Book a Consultation
           </Link>
           <Link
             href="/services"
-            className="border border-white text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-[#0B2D5C] transition"
+            className="rounded-xl px-5 py-3 font-semibold border shadow-lg"
+            style={{ borderColor: "rgba(255,255,255,0.85)" }}
           >
             Explore Services
           </Link>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }
+
