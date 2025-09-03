@@ -1,0 +1,28 @@
+<svg width="720" height="200" viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NovaCare Nursing logo (light background)">
+  <defs>
+    <!-- Gold gradient -->
+    <linearGradient id="gold-light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D8C58A"/>
+      <stop offset="55%" stop-color="#C6A662"/>
+      <stop offset="100%" stop-color="#AC8F4E"/>
+    </linearGradient>
+
+    <!-- Nova Star -->
+    <g id="nova-star">
+      <circle cx="0" cy="0" r="48" fill="none" stroke="url(#gold-light)" stroke-width="1.6" opacity="0.85"/>
+      <path d="M0,-78 L5,-30 L48,-58 L20,-15 L78,0 L20,15 L48,58 L5,30 L0,78 L-5,30 L-48,58 L-20,15 L-78,0 L-20,-15 L-48,-58 L-5,-30 Z"
+            fill="url(#gold-light)"/>
+    </g>
+  </defs>
+
+  <!-- Wordmark -->
+  <g font-family="'Merriweather', Georgia, serif" fill="#0B2D5C">
+    <text x="220" y="100" font-size="60" font-weight="700" letter-spacing="0.5px">NovaCare</text>
+    <text x="220" y="140" font-size="34" opacity="0.95">Nursing</text>
+  </g>
+
+  <!-- Mark -->
+  <g transform="translate(110,100)">
+    <use href="#nova-star"/>
+  </g>
+</svg>
