@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// ✅ Use public URL instead of importing from /public
+// Use public folder path instead of importing
 const heroSrc = "/hero-novacare.webp";
 
 const brandBlue = "#0B2D5C";
@@ -9,47 +9,62 @@ const brandGold = "#C6A642";
 
 export default function Hero() {
   return (
-    <section className="relative h-[78vh] min-h-[528px] flex items-center">
-      {/* Optimized hero image */}
+    <section className="relative h-[78vh] min-h-[560px] flex items-center">
+      {/* Background image */}
       <Image
-        src={heroSrc} // public image path
-        alt="Compassionate nursing care at home"
+        src={heroSrc}
+        alt="NovaCare Nursing"
         fill
-        priority // preload: hero is above-the-fold
-        quality={60} // small but crisp thanks to overlay
-        placeholder="empty" // skip blurDataURL (no import needed)
+        priority // ensures no delay in hero load
+        quality={70}
         sizes="100vw"
         style={{ objectFit: "cover", objectPosition: "center" }}
       />
 
-      {/* Subtle overlay improves readability + allows stronger compression */}
+      {/* Overlay for contrast */}
       <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
 
-      {/* Hero text content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-        <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg">
-          Compassionate Home Nursing in Hobart
+      {/* Hero content */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center text-white">
+        <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
+          NovaCare Nursing
         </h1>
-        <p className="mt-6 text-lg md:text-xl drop-shadow-md">
-          Premium, private, and respectful nursing care tailored to you and your family.
+
+        <p className="mt-5 text-lg md:text-2xl leading-snug drop-shadow-md">
+          Premium Nursing, Heartfelt Care in Hobart and Surrounds,
+          <br className="hidden md:block" />
+          Tasmania
         </p>
-        <div className="mt-8 flex justify-center gap-4">
+
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Gold filled button */}
           <Link
             href="/contact"
-            className="rounded-xl px-6 py-3 font-semibold border shadow-md"
-            style={{ borderColor: brandGold, color: brandGold }}
+            className="rounded-xl px-6 py-3 font-semibold shadow-md border"
+            style={{
+              backgroundColor: brandGold,
+              borderColor: brandGold,
+              color: "#0B0B0B",
+            }}
           >
-            Contact Us
+            Book a Consultation
           </Link>
+
+          {/* Navy outline button */}
           <Link
-            href="/about"
-            className="rounded-xl px-6 py-3 font-semibold border shadow-md"
-            style={{ borderColor: brandBlue, color: brandBlue }}
+            href="/services"
+            className="rounded-xl px-6 py-3 font-semibold shadow-md border"
+            style={{
+              borderColor: brandBlue,
+              color: brandBlue,
+              background: "transparent",
+            }}
           >
-            Learn More
+            Explore Services
           </Link>
         </div>
       </div>
     </section>
   );
 }
+
