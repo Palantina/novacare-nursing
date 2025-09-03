@@ -5,57 +5,6 @@ import SiteFooter from "../components/SiteFooter";
 const brand = { blue: "#0B2D5C" };
 
 export default function About() {
-  // --- JSON-LD (schema.org) ---
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.novacarenursing.com.au/#website",
-        "url": "https://www.novacarenursing.com.au/",
-        "name": "NovaCare Nursing",
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.novacarenursing.com.au/#organization",
-        "name": "NovaCare Nursing",
-        "url": "https://www.novacarenursing.com.au/",
-        "areaServed": {
-          "@type": "Place",
-          "name": "Hobart & Surrounds, Tasmania, Australia"
-        },
-        "sameAs": [
-          // Add social/profile URLs here later if you have them
-        ]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.novacarenursing.com.au/#palantina-hughes",
-        "name": "Palantina Hughes",
-        "jobTitle": "Clinical Nursing Home Care Consultant",
-        "worksFor": { "@id": "https://www.novacarenursing.com.au/#organization" },
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "Professional certification",
-            "name": "AHPRA Registered Nurse"
-          }
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://www.novacarenursing.com.au/#home-nursing-service",
-        "serviceType": "Clinical nursing home care",
-        "provider": { "@id": "https://www.novacarenursing.com.au/#organization" },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Hobart & Surrounds, Tasmania, Australia"
-        },
-        "url": "https://www.novacarenursing.com.au/"
-      }
-    ]
-  };
-
   return (
     <>
       <Head>
@@ -63,12 +12,6 @@ export default function About() {
         <meta
           name="description"
           content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
-        />
-        {/* schema.org JSON-LD */}
-        <script
-          type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
 
