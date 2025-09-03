@@ -2,13 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 
 const heroSrc = "/hero-novacare.webp";
-const brandBlue = "#0B2D5C";
 const brandGold = "#C6A642";
 
 export default function Hero() {
   return (
     <>
-      {/* Preload hero image to avoid any flash/delay */}
+      {/* Preload hero image */}
       <Head>
         <link rel="preload" as="image" href={heroSrc} />
       </Head>
@@ -24,10 +23,10 @@ export default function Hero() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Soft overlay for contrast */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
 
-        {/* Content */}
+        {/* Hero content */}
         <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg">
             NovaCare Nursing
@@ -53,7 +52,7 @@ export default function Hero() {
               Book a Consultation
             </Link>
 
-            {/* White outline button (matches original look) */}
+            {/* White outline button */}
             <Link
               href="/services"
               className="rounded-xl px-5 py-3 font-semibold shadow-md border"
