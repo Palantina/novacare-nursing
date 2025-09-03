@@ -1,17 +1,74 @@
-import Head from "next/head";
+import Head from "next/head"; 
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
 const brand = { blue: "#0B2D5C" };
 
 export default function About() {
+  // --- JSON-LD (schema.org) ---
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.novacarenursing.com.au/#website",
+        "url": "https://www.novacarenursing.com.au/",
+        "name": "NovaCare Nursing",
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.novacarenursing.com.au/#organization",
+        "name": "NovaCare Nursing",
+        "url": "https://www.novacarenursing.com.au/",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Hobart & Surrounds, Tasmania, Australia"
+        },
+        "sameAs": [
+          // Add social/profile URLs here later if you have them
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.novacarenursing.com.au/#palantina-hughes",
+        "name": "Palantina Hughes",
+        "jobTitle": "Clinical Nursing Home Care Consultant",
+        "worksFor": { "@id": "https://www.novacarenursing.com.au/#organization" },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Professional certification",
+            "name": "AHPRA Registered Nurse"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.novacarenursing.com.au/#home-nursing-service",
+        "serviceType": "Clinical nursing home care",
+        "provider": { "@id": "https://www.novacarenursing.com.au/#organization" },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Hobart & Surrounds, Tasmania, Australia"
+        },
+        "url": "https://www.novacarenursing.com.au/"
+      }
+    ]
+  };
+
   return (
     <>
       <Head>
         <title>About | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Registered Nurse & Clinical Nursing Home Care Consultant."
+          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
+        />
+        {/* schema.org JSON-LD */}
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
 
@@ -29,7 +86,7 @@ export default function About() {
             approach so you feel safe, supported, and cared for.
           </p>
           <p>
-            Led by <strong>Palantina Hughes</strong>, <strong>Registered Nurse &amp; Clinical Nursing Home Care Consultant</strong>,
+            Led by <strong>Palantina Hughes</strong>, <strong>Clinical Nursing Home Care Consultant</strong>,
             NovaCare specialises in tailored clinical home care — working closely with you, your family,
             and your healthcare team to achieve the best outcomes.
           </p>
@@ -60,7 +117,6 @@ export default function About() {
           </ul>
         </section>
 
-        {/* Brief service context so visitors see your focus areas */}
         <section className="mt-10 space-y-3">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
             Focus Areas
@@ -73,7 +129,6 @@ export default function About() {
           </p>
         </section>
 
-        {/* Gentle call to action */}
         <section className="mt-12">
           <a
             href="/contact"
