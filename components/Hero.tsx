@@ -7,7 +7,7 @@ const brandGold = "#C6A642";
 export default function Hero() {
   return (
     <>
-      {/* Preload hero image */}
+      {/* Preload to avoid any flash/delay */}
       <Head>
         <link rel="preload" as="image" href={heroSrc} />
       </Head>
@@ -23,10 +23,10 @@ export default function Hero() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Overlay */}
+        {/* Soft overlay for contrast */}
         <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
 
-        {/* Hero content */}
+        {/* Content */}
         <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg">
             NovaCare Nursing
@@ -39,7 +39,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
-            {/* Gold filled button */}
+            {/* Gold filled button (as in original) */}
             <Link
               href="/contact"
               className="rounded-xl px-5 py-3 font-semibold shadow-md border"
@@ -52,12 +52,13 @@ export default function Hero() {
               Book a Consultation
             </Link>
 
-            {/* White outline button */}
+            {/* White outline button (2px border like original) */}
             <Link
               href="/services"
               className="rounded-xl px-5 py-3 font-semibold shadow-md border"
               style={{
                 borderColor: "#FFFFFF",
+                borderWidth: 2,
                 color: "#FFFFFF",
                 background: "transparent",
               }}
@@ -70,3 +71,4 @@ export default function Hero() {
     </>
   );
 }
+
