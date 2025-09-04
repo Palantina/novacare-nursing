@@ -104,7 +104,7 @@ export default function Contact() {
       </main>
 
       {/* Keeps footer succinct since contact info is above */}
-      <SiteFooter hideContactInfo />
+      <SiteFooter />
     </>
   );
 }
