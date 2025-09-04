@@ -1,64 +1,32 @@
-import Link from "next/link";
+import React from "react";
 
-const brandBlue = "#0B2D5C";
-const brandGold = "#C6A642";
+type SiteFooterProps = {
+  hideContactInfo?: boolean;
+};
 
-export default function SiteFooter() {
+const brand = { blue: "#0B2D5C" };
+
+export default function SiteFooter({ hideContactInfo = false }: SiteFooterProps) {
   return (
-    <footer style={{ backgroundColor: brandBlue }}>
-      <div className="mx-auto max-w-6xl px-4 md:px-6 py-10 text-white">
-        <div className="grid gap-8 md:grid-cols-3">
-          {/* Left: logo + tagline */}
-          <div className="flex items-start gap-3">
-            <img
-              src="/NovaCare_Logo.svg"
-              alt="NovaCare Nursing"
-              className="h-10 w-auto mt-1"
-            />
-            <div>
-              <div className="text-lg font-semibold text-white">NovaCare</div>
-              <div className="text-sm -mt-1" style={{ color: brandGold }}>Nursing</div>
-              <div className="mt-3 font-semibold" style={{ color: brandGold }}>
-                Premium Nursing, Heartfelt Care
-              </div>
-            </div>
-          </div>
-
-          {/* Middle: contact info */}
-          <div>
-            <ul className="space-y-2">
-              <li>Hobart and surrounds, Tasmania</li>
-              <li>
-                <a href="tel:+61488086271" className="hover:underline">
-                  0488 086 271
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@novacarenursing.com.au" className="hover:underline">
-                  info@novacarenursing.com.au
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Right: quick links */}
-          <div>
-            <div className="font-semibold mb-3" style={{ color: brandGold }}>
-              Quick Links
-            </div>
-            <ul className="space-y-2">
-              <li><Link href="/" className="hover:underline">Home</Link></li>
-              <li><Link href="/about" className="hover:underline">About</Link></li>
-              <li><Link href="/services" className="hover:underline">Services</Link></li>
-              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
-            </ul>
-          </div>
+    <footer className="mt-16 border-t border-gray-200 py-8 text-center text-sm opacity-80">
+      {!hideContactInfo && (
+        <div className="mb-4">
+          <p>📍 Hobart & Surrounds, Tasmania</p>
+          <p>
+            📞{" "}
+            <a href="tel:+61488086271" className="underline">
+              0488 086 271
+            </a>{" "}
+            &nbsp; | &nbsp; ✉{" "}
+            <a href="mailto:info@novacarenursing.com.au" className="underline">
+              info@novacarenursing.com.au
+            </a>
+          </p>
         </div>
-
-        <div className="mt-10 text-center text-xs opacity-80">
-          © {new Date().getFullYear()} NovaCare Nursing. All Rights Reserved.
-        </div>
-      </div>
+      )}
+      <p style={{ color: brand.blue }}>
+        © {new Date().getFullYear()} NovaCare Nursing. All rights reserved.
+      </p>
     </footer>
   );
 }
