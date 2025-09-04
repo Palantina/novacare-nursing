@@ -29,9 +29,9 @@ export default function About() {
             approach so you feel safe, supported, and cared for.
           </p>
           <p>
-            Led by <strong>Registered Nurse Palantina Hughes</strong>, NovaCare specialises in tailored
-            clinical home care — working closely with you, your family, and your healthcare team to
-            achieve the best outcomes.
+            Led by <strong>Clinical Nursing Home Care Consultant | Registered Nurse Palantina Hughes</strong>,
+            NovaCare specialises in tailored clinical home care — working closely with you, your family,
+            and your healthcare team to achieve the best outcomes.
           </p>
         </section>
 
