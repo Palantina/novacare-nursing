@@ -13,10 +13,8 @@ export default function Hero() {
       </Head>
 
       <section
-        className="relative flex items-center"
+        className="relative flex items-center min-h-[100svh] md:min-h-screen"
         style={{
-          height: "78vh",
-          minHeight: 560,
           backgroundImage: `url(${heroSrc})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -32,30 +30,25 @@ export default function Hero() {
             NovaCare Nursing
           </h1>
 
-          <p className="mt-5 text-lg md:text-2xl leading-snug drop-shadow-md">
-            Premium Nursing, Heartfelt Care in Hobart and Surrounds,
-            <br className="hidden md:block" />
-            Tasmania
+          <p className="mt-4 text-lg md:text-xl opacity-95">
+            Premium Nursing, Heartfelt Care in Hobart and Surrounds, Tasmania
           </p>
 
-          <div className="mt-8 flex items-center justify-center gap-4">
-            {/* Gold filled button (as in original) */}
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/contact"
-              className="rounded-xl px-5 py-3 font-semibold shadow-md border"
+              className="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold"
               style={{
                 backgroundColor: brandGold,
-                borderColor: brandGold,
-                color: "#0B0B0B",
+                color: "#0B2D5C",
               }}
             >
               Book a Consultation
             </Link>
 
-            {/* White outline button (2px border like original) */}
             <Link
               href="/services"
-              className="rounded-xl px-5 py-3 font-semibold shadow-md border"
+              className="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold border"
               style={{
                 borderColor: "#FFFFFF",
                 borderWidth: 2,
