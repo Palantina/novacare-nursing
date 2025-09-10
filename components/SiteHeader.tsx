@@ -1,46 +1,56 @@
 import Link from "next/link";
+import Image from "next/image";
 
-const brandBlue = "#0B2D5C";
-const brandGold = "#C6A642";
+const brandBlue = "var(--brand-blue)";
+const brandGold = "var(--brand-gold)";
 
 export default function SiteHeader() {
   return (
-    <header style={{ backgroundColor: brandBlue }}>
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
-        {/* a touch taller, like the original */}
-        <div className="flex items-center justify-between h-18 md:h-20 py-2">
-          {/* Logo + wordmark stacked exactly like the original */}
-          <Link href="/" className="flex items-center gap-3">
-            <img
-              src="/NovaCare_Logo.svg"
-              alt="NovaCare Nursing"
-              className="h-9 w-auto md:h-10"
-            />
-            <div className="leading-tight">
-              <div className="text-white text-xl md:text-2xl font-semibold">NovaCare</div>
-              <div className="text-[12px] md:text-[13px]" style={{ color: brandGold, marginTop: -2 }}>
-                Nursing
-              </div>
-            </div>
-          </Link>
-
-          {/* Navigation – all gold like the original (not just the active item) */}
-          <nav className="flex items-center gap-7 md:gap-9">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/about", label: "About" },
-              { href: "/services", label: "Services" },
-              { href: "/contact", label: "Contact" },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
-                style={{ color: brandGold }}
+    <header className="bg-[color:var(--brand-blue)] shadow-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo + Brand */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/NovaCare_Logo.svg"
+                alt="NovaCare Nursing"
+                width={160}   // ⬅️ Option A (slightly larger)
+                height={50}
+                priority
+              />
+              <span
+                className="ml-3 text-xl font-bold tracking-tight" // ⬅️ bumped from text-lg
+                style={{ color: brandBlue }}
               >
-                {item.label}
-              </Link>
-            ))}
+                NovaCare Nursing
+              </span>
+            </Link>
+          </div>
+
+          {/* Navigation */}
+          <nav className="flex space-x-6">
+            <Link
+              href="/about"
+              className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
+              style={{ color: brandGold }}
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
+              style={{ color: brandGold }}
+            >
+              Services
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
+              style={{ color: brandGold }}
+            >
+              Contact
+            </Link>
           </nav>
         </div>
       </div>
