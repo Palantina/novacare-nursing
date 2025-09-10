@@ -1,10 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const brandBlue = "var(--brand-blue)";
 const brandGold = "var(--brand-gold)";
 
+const navItems = [
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Contact" },
+];
+
 export default function SiteHeader() {
+  const { pathname } = useRouter();
+
   return (
     <header className="bg-[color:var(--brand-blue)] shadow-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -15,12 +24,12 @@ export default function SiteHeader() {
               <Image
                 src="/NovaCare_Logo.svg"
                 alt="NovaCare Nursing"
-                width={160}   // ⬅️ Option A (slightly larger)
+                width={160}
                 height={50}
                 priority
               />
               <span
-                className="ml-3 text-xl font-bold tracking-tight" // ⬅️ bumped from text-lg
+                className="ml-3 text-xl font-bold tracking-tight"
                 style={{ color: brandBlue }}
               >
                 NovaCare Nursing
@@ -30,27 +39,19 @@ export default function SiteHeader() {
 
           {/* Navigation */}
           <nav className="flex space-x-6">
-            <Link
-              href="/about"
-              className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
-              style={{ color: brandGold }}
-            >
-              About
-            </Link>
-            <Link
-              href="/services"
-              className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
-              style={{ color: brandGold }}
-            >
-              Services
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm md:text-base font-semibold hover:opacity-80 transition-opacity"
-              style={{ color: brandGold }}
-            >
-              Contact
-            </Link>
+            {navItems.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`text-sm md:text-base font-semibold hover:opacity-80 transition-opacity ${
+                  pathname === href ? "underline" : ""
+                }`}
+                style={{ color: brandGold }}
+                aria-current={pathname === href ? "page" : undefined}
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>
