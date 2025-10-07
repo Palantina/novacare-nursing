@@ -55,8 +55,12 @@ export default function SiteHeader() {
                 About
               </Link>
 
-              {/* Dropdown menu */}
-              <div className="absolute left-0 mt-2 hidden group-hover:block group-focus:block z-50">
+              {/* Dropdown menu (hover fix applied) */}
+              <div
+                className="absolute left-0 mt-2 hidden group-hover:block group-focus-within:block z-50"
+                onMouseEnter={(e) => e.currentTarget.classList.add("block")}
+                onMouseLeave={(e) => e.currentTarget.classList.remove("block")}
+              >
                 <div
                   className="rounded-md shadow-lg border backdrop-blur p-2"
                   style={{
@@ -76,7 +80,7 @@ export default function SiteHeader() {
                     className="block whitespace-nowrap px-4 py-2 text-sm hover:opacity-90"
                     style={{ color: brandGold }}
                   >
-                    About Palantina
+                    About Palantina Hughes
                   </Link>
                 </div>
               </div>
