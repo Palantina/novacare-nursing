@@ -24,6 +24,10 @@ export default function About() {
         >
           About NovaCare Nursing
         </h1>
+        {/* ✅ New: credentials line for consistency & SEO */}
+        <p className="mt-1 text-lg font-medium">
+          Palantina Hughes — Clinical Nursing Home Care Consultant | Registered Nurse
+        </p>
 
         <section className="mt-6 space-y-4 text-[1.05rem] leading-7">
           <p>
@@ -51,7 +55,6 @@ export default function About() {
           </p>
         </section>
 
-        {/* Link to bio page (kept as-is) */}
         <p className="mt-6">
           Learn more about{" "}
           <a
