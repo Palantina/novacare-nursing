@@ -1,6 +1,18 @@
 import Head from "next/head";
 
-const faqs = [
+// Accept both shapes: { q, a } or { question, answer }
+type FaqLoose =
+  | { q: string; a: string }
+  | { question: string; answer: string };
+
+type Faq = { q: string; a: string };
+
+function normalize(f: FaqLoose): Faq {
+  if ("q" in f && "a" in f) return { q: f.q, a: f.a };
+  return { q: (f as any).question, a: (f as any).answer };
+}
+
+const defaultFaqs: Faq[] = [
   {
     q: "Do you provide NDIS high-intensity supports?",
     a: "Yes. Supports are delivered and supervised by a Registered Nurse (RN), with governance, education and documentation aligned to NDIS Practice Standards.",
@@ -23,12 +35,14 @@ const faqs = [
   },
 ];
 
-export default function ServicesFaq() {
+export default function ServicesFaq({ faqs }: { faqs?: FaqLoose[] }) {
+  const list: Faq[] = (faqs?.map(normalize)) ?? defaultFaqs;
+
   // FAQPage schema for richer Google results
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map((f) => ({
+    "mainEntity": list.map((f) => ({
       "@type": "Question",
       "name": f.q,
       "acceptedAnswer": { "@type": "Answer", "text": f.a },
@@ -53,7 +67,7 @@ export default function ServicesFaq() {
         </h2>
 
         <div className="mt-8 space-y-4">
-          {faqs.map((item) => (
+          {list.map((item) => (
             <details
               key={item.q}
               className="rounded-xl bg-white border border-gray-200 p-4 open:shadow-sm"
