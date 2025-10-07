@@ -2,7 +2,7 @@ import Head from "next/head";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import ContactCta from "../components/ContactCta";
-import ServicesFaq from "../components/ServicesFaq"; // ✅ added
+import ServicesFaq from "../components/ServicesFaq";
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
@@ -78,6 +78,11 @@ export default function Services() {
         <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: brand.blue }}>
           Our Services
         </h1>
+        {/* ✅ Added credentials line to match other pages */}
+        <p className="mt-1 text-lg font-medium text-center">
+          Clinical Nursing Home Care Consultant | Registered Nurse
+        </p>
+
         <p className="text-center opacity-80 mt-3">
           Skilled, premium nursing — for NDIS participants, private clients, and aged care providers.
         </p>
@@ -102,7 +107,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* ✅ New FAQ section (uses defaults; no props required) */}
+        {/* FAQ section */}
         <ServicesFaq />
       </main>
 
