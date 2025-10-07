@@ -1,4 +1,4 @@
-import Head from "next/head"; 
+import Head from "next/head";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 
@@ -11,76 +11,57 @@ export default function About() {
         <title>About | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant | Registered Nurse."
+          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
         />
       </Head>
 
       <SiteHeader />
 
       <main className="mx-auto max-w-5xl px-4 py-12">
-        <h1 className="text-3xl md:text-4xl font-bold" style={{ color: brand.blue }}>
+        <h1
+          className="text-3xl md:text-4xl font-bold"
+          style={{ color: brand.blue }}
+        >
           About NovaCare Nursing
         </h1>
 
         <section className="mt-6 space-y-4 text-[1.05rem] leading-7">
           <p>
-            NovaCare Nursing provides premium, discreet and compassionate care in the comfort of your
-            home across Hobart and surrounds. We combine clinical excellence with a warm, respectful
-            approach so you feel safe, supported, and cared for.
+            NovaCare Nursing provides premium, discreet and compassionate
+            home-based nursing care in Hobart and surrounding regions. Led by{" "}
+            <strong>Palantina Hughes</strong>, Clinical Nursing Home Care
+            Consultant and Registered Nurse, NovaCare is built on a foundation
+            of professionalism, empathy, and excellence.
           </p>
+
           <p>
-            Led by <strong>Clinical Nursing Home Care Consultant | Registered Nurse Palantina Hughes</strong>,
-            NovaCare specialises in tailored clinical home care — working closely with you, your family,
-            and your healthcare team to achieve the best outcomes.
+            Our mission is to deliver private, personalised nursing care that
+            supports independence, dignity, and comfort — all in the familiar
+            surroundings of your own home. We offer a range of premium nursing
+            services tailored to meet each client’s individual needs, from
+            clinical care and wound management to palliative and post-operative
+            support.
           </p>
-        </section>
 
-        <section className="mt-10 grid md:grid-cols-3 gap-6">
-          {[
-            { title: "AHPRA Registered", desc: "Professional, accountable clinical standards." },
-            { title: "Premium & Discreet", desc: "Confidential, respectful, and reliable care." },
-            { title: "Local to Hobart", desc: "Flexible availability across Hobart & surrounds." },
-          ].map((card) => (
-            <div key={card.title} className="rounded-2xl bg-white p-6 shadow-sm border border-gray-100">
-              <h3 className="font-semibold" style={{ color: brand.blue }}>{card.title}</h3>
-              <p className="mt-2 text-sm opacity-90">{card.desc}</p>
-            </div>
-          ))}
-        </section>
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
-            Credentials &amp; Safeguards
-          </h2>
-          <ul className="mt-4 list-disc pl-5 space-y-2">
-            <li>AHPRA Registered Nurse</li>
-            <li>Clinical Nursing Home Care Consultant</li>
-            <li>Current Police Check &amp; Working with Vulnerable People (WWVP)</li>
-            <li>Fully insured for private practice</li>
-          </ul>
-        </section>
-
-        <section className="mt-10 space-y-3">
-          <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
-            Focus Areas
-          </h2>
           <p>
-            NovaCare supports <strong>NDIS participants</strong>, <strong>private nursing clients</strong>,
-            and provides <strong>specialist &amp; high-intensity supports</strong> (e.g., complex wound care,
-            catheter care, enteral feeding, seizure support) as well as dignified <strong>palliative care</strong>.
-            We also offer <strong>subcontracted nursing</strong> for Home &amp; Community Care providers.
+            At NovaCare Nursing, we believe that exceptional care begins with
+            genuine compassion and clinical excellence. Our care philosophy
+            centres on trust, respect, and professional integrity, ensuring
+            every client receives not only expert nursing but heartfelt care.
           </p>
         </section>
 
-        <section className="mt-12">
+        {/* ✅ New addition — safe and minimal */}
+        <p className="mt-6">
+          Learn more about{" "}
           <a
-            href="/contact"
-            className="inline-block rounded-xl px-6 py-3 font-semibold border"
-            style={{ borderColor: brand.blue, color: brand.blue }}
+            href="/about-palantina"
+            className="text-[color:var(--brand-gold)] hover:underline"
           >
-            Ready to discuss your care needs?
+            Palantina Hughes
           </a>
-        </section>
+          .
+        </p>
       </main>
 
       <SiteFooter />
