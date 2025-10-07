@@ -32,6 +32,17 @@ export default function SiteHeader() {
 
           {/* Navigation */}
           <nav className="flex space-x-6 items-center">
+            {/* ✅ Home (added) */}
+            <Link
+              href="/"
+              className={`text-sm md:text-base font-semibold hover:opacity-80 transition-opacity ${
+                pathname === "/" ? "underline" : ""
+              }`}
+              style={{ color: brandGold }}
+            >
+              Home
+            </Link>
+
             {/* About dropdown */}
             <div className="relative group" tabIndex={0}>
               <Link
@@ -60,7 +71,6 @@ export default function SiteHeader() {
                   >
                     About NovaCare Nursing
                   </Link>
-                  {/* single new link */}
                   <Link
                     href="/about-palantina"
                     className="block whitespace-nowrap px-4 py-2 text-sm hover:opacity-90"
