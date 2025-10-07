@@ -31,16 +31,46 @@ export default function SiteHeader() {
           </div>
 
           {/* Navigation */}
-          <nav className="flex space-x-6">
-            <Link
-              href="/about"
-              className={`text-sm md:text-base font-semibold hover:opacity-80 transition-opacity ${
-                pathname === "/about" ? "underline" : ""
-              }`}
-              style={{ color: brandGold }}
-            >
-              About
-            </Link>
+          <nav className="flex space-x-6 items-center">
+            {/* About dropdown */}
+            <div className="relative group" tabIndex={0}>
+              <Link
+                href="/about"
+                className={`text-sm md:text-base font-semibold hover:opacity-80 transition-opacity ${
+                  pathname === "/about" ? "underline" : ""
+                }`}
+                style={{ color: brandGold }}
+              >
+                About
+              </Link>
+
+              {/* Dropdown menu */}
+              <div className="absolute left-0 mt-2 hidden group-hover:block group-focus:block z-50">
+                <div
+                  className="rounded-md shadow-lg border backdrop-blur p-2"
+                  style={{
+                    backgroundColor: "rgba(11,45,92,0.95)", // navy overlay
+                    borderColor: brandGold,
+                  }}
+                >
+                  <Link
+                    href="/about"
+                    className="block whitespace-nowrap px-4 py-2 text-sm hover:opacity-90"
+                    style={{ color: brandGold }}
+                  >
+                    About NovaCare Nursing
+                  </Link>
+                  <Link
+                    href="/about-palantina"
+                    className="block whitespace-nowrap px-4 py-2 text-sm hover:opacity-90"
+                    style={{ color: brandGold }}
+                  >
+                    About Palantina
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <Link
               href="/services"
               className={`text-sm md:text-base font-semibold hover:opacity-80 transition-opacity ${
@@ -50,6 +80,7 @@ export default function SiteHeader() {
             >
               Services
             </Link>
+
             <Link
               href="/contact"
               className={`text-sm md:text-base font-semibold hover:opacity-80 transition-opacity ${
