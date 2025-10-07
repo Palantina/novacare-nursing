@@ -64,10 +64,10 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Services | NovaCare Nursing</title>
+        <title>Home Nursing Services | Post-Operative, Palliative & Complex Care | NovaCare Nursing Hobart</title>
         <meta
           name="description"
-          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
+          content="Explore NovaCare Nursing’s private home care services in Hobart — including post-operative recovery, palliative support, complex wound care & NDIS high-intensity supports delivered by a Registered Nurse."
         />
       </Head>
 
