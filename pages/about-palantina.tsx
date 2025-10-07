@@ -9,11 +9,11 @@ export default function AboutPalantina() {
         <title>About Palantina Hughes | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Profile of Palantina Hughes — Clinical Nursing Home Care Consultant and Registered Nurse."
+          content="Learn more about Palantina Hughes — Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania."
         />
       </Head>
 
-      {/* Uses your existing, original header and footer */}
+      {/* uses your existing header/footer exactly as-is */}
       <SiteHeader />
 
       <main className="mx-auto max-w-5xl px-4 py-12 text-[1.05rem] leading-7">
@@ -30,12 +30,14 @@ export default function AboutPalantina() {
             Response Service. I also spent several years working in the beautiful Georgetown
             community as a nurse, working in both the community and the local hospital.
           </p>
+
           <p>
             My extensive clinical nursing background includes ventilation management, trauma care,
             palliative care, complex bowel and urinary care, complex wound care, mental health care,
             and post-surgical care. I am also highly skilled in cannulation and intravenous (IV)
             infusion.
           </p>
+
           <p>
             Throughout my career, I have had the privilege of working with a diverse range of
             individuals from various backgrounds. I have been a part of the lives of many people at
@@ -44,6 +46,7 @@ export default function AboutPalantina() {
             mental health, which has enhanced my emotional awareness and made me a more empathetic
             and practical nurse.
           </p>
+
           <p>
             In recent years, I have transitioned into the home care sector as a Clinical Lead and
             Care Manager, providing high-quality care to both aged care and disability clients.
