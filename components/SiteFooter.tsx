@@ -21,7 +21,12 @@ export default function SiteFooter() {
       <p style={{ color: brand.blue }}>
         © {new Date().getFullYear()} NovaCare Nursing. All rights reserved.
       </p>
+      {/* ✅ New: small privacy link */}
+      <p className="mt-2">
+        <a href="/privacy" className="underline">
+          Privacy Policy
+        </a>
+      </p>
     </footer>
   );
 }
-
