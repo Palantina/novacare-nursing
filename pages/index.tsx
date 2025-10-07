@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>NovaCare Nursing | Premium Nursing in Hobart</title>
+        <title>NovaCare Nursing | Premium Private Home Nursing in Hobart & Surrounds</title>
         <meta
           name="description"
-          content="NovaCare Nursing — premium, private, and heartfelt nursing care in Hobart and surrounds, Tasmania."
+          content="NovaCare Nursing provides premium, discreet, and compassionate in-home nursing services across Hobart & surrounds. Registered Nurse Palantina Hughes delivers tailored, professional care with a heartfelt touch."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
