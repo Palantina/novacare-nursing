@@ -51,7 +51,7 @@ export default function About() {
           </p>
         </section>
 
-        {/* ✅ New addition — safe and minimal */}
+        {/* ✅ Added link below — this is the only modification */}
         <p className="mt-6">
           Learn more about{" "}
           <a
