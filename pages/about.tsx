@@ -8,10 +8,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About | NovaCare Nursing</title>
+        <title>About NovaCare Nursing | Private Home Nursing in Hobart</title>
         <meta
           name="description"
-          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
+          content="Learn about NovaCare Nursing — a Tasmanian private home-care service offering professional, compassionate nursing in the comfort of your home. Led by Clinical Nursing Home Care Consultant Palantina Hughes, RN."
         />
       </Head>
 
@@ -51,7 +51,7 @@ export default function About() {
           </p>
         </section>
 
-        {/* ✅ Added link below — this is the only modification */}
+        {/* Link to bio page (kept as-is) */}
         <p className="mt-6">
           Learn more about{" "}
           <a
