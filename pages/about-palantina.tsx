@@ -6,10 +6,10 @@ export default function AboutPalantina() {
   return (
     <>
       <Head>
-        <title>About Palantina Hughes | NovaCare Nursing</title>
+        <title>About Palantina Hughes | Registered Nurse & Clinical Nursing Consultant | NovaCare Nursing Hobart</title>
         <meta
           name="description"
-          content="Learn more about Palantina Hughes — Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania."
+          content="Meet Palantina Hughes, Registered Nurse & Clinical Nursing Home Care Consultant with over 17 years of experience across Tasmania. Delivering premium private nursing care with expertise and empathy."
         />
       </Head>
 
