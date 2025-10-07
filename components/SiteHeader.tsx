@@ -60,13 +60,13 @@ export default function SiteHeader() {
                   >
                     About NovaCare Nursing
                   </Link>
-                  {/* ✅ New link added below */}
+                  {/* ✅ Single new line added below — nothing else changed */}
                   <Link
                     href="/about-palantina"
                     className="block whitespace-nowrap px-4 py-2 text-sm hover:opacity-90"
                     style={{ color: brandGold }}
                   >
-                    About Palantina
+                    About Palantina Hughes
                   </Link>
                 </div>
               </div>
