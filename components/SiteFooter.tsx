@@ -18,13 +18,34 @@ export default function SiteFooter() {
           </a>
         </p>
       </div>
+
       <p style={{ color: brand.blue }}>
         © {new Date().getFullYear()} NovaCare Nursing. All rights reserved.
       </p>
-      {/* ✅ New: small privacy link */}
+
       <p className="mt-2">
-        <a href="/privacy" className="underline">
-          Privacy Policy
+        <a href="/privacy" className="underline">Privacy Policy</a>
+      </p>
+
+      {/* Social links */}
+      <p className="mt-2 space-x-4">
+        <a
+          href="https://www.facebook.com/NovaCareNursing01/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+          aria-label="NovaCare Nursing on Facebook"
+        >
+          Facebook
+        </a>
+        <a
+          href="https://www.instagram.com/novacarenursing01/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+          aria-label="NovaCare Nursing on Instagram"
+        >
+          Instagram
         </a>
       </p>
     </footer>
