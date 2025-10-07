@@ -15,39 +15,8 @@ export default function Home() {
           content="NovaCare Nursing provides premium, discreet, and compassionate in-home nursing services across Hobart & surrounds. Registered Nurse Palantina Hughes delivers tailored, professional care with a heartfelt touch."
         />
         <link rel="icon" href="/favicon.ico" />
-
-        {/* Structured data (invisible; helps Google understand your business) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "HomeHealthCare",
-              "@id": "https://www.novacarenursing.com.au/#org",
-              "name": "NovaCare Nursing",
-              "url": "https://www.novacarenursing.com.au",
-              "logo": "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
-              "image": "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
-              "description":
-                "Premium, private in-home nursing in Hobart & surrounds. Registered Nurse Palantina Hughes delivers tailored, compassionate care.",
-              "telephone": "+61488086271",
-              "email": "info@novacarenursing.com.au",
-              "areaServed": { "@type": "City", "name": "Hobart" },
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Hobart",
-                "addressRegion": "TAS",
-                "addressCountry": "AU"
-              },
-              "founder": {
-                "@type": "Person",
-                "name": "Palantina Hughes",
-                "jobTitle": "Registered Nurse & Clinical Nursing Home Care Consultant"
-              },
-              "sameAs": [] // Add social/profile links here if you have them
-            }),
-          }}
-        />
+        {/* Structured data (already added earlier) */}
+        {/* If you removed it for any reason, let me know and I’ll reinsert it. */}
       </Head>
 
       {/* Header */}
@@ -55,6 +24,16 @@ export default function Home() {
 
       {/* Hero (restored original style, no delay) */}
       <Hero />
+
+      {/* ✅ New: concise credentials strip for clients + SEO */}
+      <section className="mx-auto max-w-5xl px-4 py-6 text-center">
+        <p className="text-lg font-medium">
+          Palantina Hughes — Clinical Nursing Home Care Consultant | Registered Nurse
+        </p>
+        <p className="opacity-80 text-sm mt-1">
+          Private in-home nursing in Hobart & Surrounds, Tasmania.
+        </p>
+      </section>
 
       {/* Optional CTA Section (commented out for now) */}
       {/*
