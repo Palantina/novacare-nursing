@@ -60,6 +60,7 @@ export default function SiteHeader() {
                   >
                     About NovaCare Nursing
                   </Link>
+                  {/* ✅ New link added below */}
                   <Link
                     href="/about-palantina"
                     className="block whitespace-nowrap px-4 py-2 text-sm hover:opacity-90"
