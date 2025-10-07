@@ -53,8 +53,9 @@ export default function Contact() {
         >
           Contact Palantina Hughes
         </h1>
+        {/* ✅ Order & presentation updated to match other pages */}
         <p className="text-center opacity-80 mt-2">
-          Registered Nurse &amp; Clinical Nursing Home Care Consultant
+          Clinical Nursing Home Care Consultant | Registered Nurse
         </p>
         <p className="text-center opacity-80 mt-1">
           We’ll respond promptly and confidentially.
@@ -124,7 +125,7 @@ export default function Contact() {
           )}
         </form>
 
-        {/* ✅ Removed duplicate contact details section */}
+        {/* no duplicate contact details here */}
       </main>
 
       <SiteFooter />
