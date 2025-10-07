@@ -2,7 +2,7 @@ import Head from "next/head";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import ContactCta from "../components/ContactCta";
-import ServicesFaq from "../components/ServicesFaq"; // FAQ component
+import ServicesFaq from "../components/ServicesFaq"; // ✅ added
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
@@ -46,8 +46,7 @@ const services = [
       "Complex Wound Care Support",
       "Subcutaneous & Intramuscular Injections",
       "Urinary & Suprapubic Catheter Support",
-      // ⬇︎ RN reference updated
-      "Oversight by a Clinical Nursing Home Care Consultant (Registered Nurse): NDIS SIL management & complex case oversight",
+      "Oversight by a Registered Nurse (RN): NDIS SIL management & complex case oversight",
       "Education, supervision, and governance to ensure the highest standard of safe, capable care",
     ],
     highlight: true,
@@ -62,35 +61,6 @@ const services = [
   },
 ];
 
-// FAQs (and schema) with RN references updated
-const faqs = [
-  {
-    question: "Do I need a GP referral to book private home nursing?",
-    answer:
-      "No referral is required. You can contact us directly to discuss your needs. We can liaise with your GP or specialists if helpful for your care plan.",
-  },
-  {
-    question: "Do you support NDIS participants, including high-intensity needs?",
-    answer:
-      "Yes. We support NDIS participants and provide high-intensity supports delivered or supervised by a Clinical Nursing Home Care Consultant (Registered Nurse), including tracheostomy care, enteral feeding, complex wound care and more.",
-  },
-  {
-    question: "What areas do you service?",
-    answer:
-      "Hobart & surrounding regions. If you’re unsure whether we can reach your area, contact us — we’ll confirm availability.",
-  },
-  {
-    question: "How do I book and how quickly can you start?",
-    answer:
-      "Use our contact form or call 0488 086 271 to discuss your needs. Start times depend on your support level and schedule, but we aim to arrange care promptly.",
-  },
-  {
-    question: "What happens in the first visit?",
-    answer:
-      "A Clinical Nursing Home Care Consultant (Registered Nurse) reviews your goals, medical history and current supports, then plans safe, tailored care with clear documentation.",
-  },
-];
-
 export default function Services() {
   return (
     <>
@@ -98,23 +68,7 @@ export default function Services() {
         <title>Home Nursing Services | Post-Operative, Palliative & Complex Care | NovaCare Nursing Hobart</title>
         <meta
           name="description"
-          content="Explore NovaCare Nursing’s private home care services in Hobart — including post-operative recovery, palliative support, complex wound care & NDIS high-intensity supports delivered by a Clinical Nursing Home Care Consultant (Registered Nurse)."
-        />
-
-        {/* FAQ schema mirrors the Q&A content above */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": faqs.map((f) => ({
-                "@type": "Question",
-                "name": f.question,
-                "acceptedAnswer": { "@type": "Answer", "text": f.answer },
-              })),
-            }),
-          }}
+          content="Explore NovaCare Nursing’s private home care services in Hobart — including post-operative recovery, palliative support, complex wound care & NDIS high-intensity supports delivered by a Registered Nurse."
         />
       </Head>
 
@@ -147,10 +101,10 @@ export default function Services() {
             </div>
           ))}
         </div>
-      </main>
 
-      {/* FAQ section */}
-      <ServicesFaq faqs={faqs} />
+        {/* ✅ New FAQ section (uses defaults; no props required) */}
+        <ServicesFaq />
+      </main>
 
       {/* CTA banner */}
       <ContactCta />
