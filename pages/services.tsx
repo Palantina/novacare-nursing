@@ -44,6 +44,7 @@ const services = [
       "Complex Bowel Care",
       "Epilepsy & Seizure Support",
       "Complex Wound Care Support",
+      "Cannulation & Intravenous (IV) Infusions", // ✅ added
       "Subcutaneous & Intramuscular Injections",
       "Urinary & Suprapubic Catheter Support",
       "Oversight by a Registered Nurse (RN): NDIS SIL management & complex case oversight",
@@ -78,7 +79,7 @@ export default function Services() {
         <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: brand.blue }}>
           Our Services
         </h1>
-        {/* ✅ Added credentials line to match other pages */}
+        {/* Credentials line to match other pages */}
         <p className="mt-1 text-lg font-medium text-center">
           Clinical Nursing Home Care Consultant | Registered Nurse
         </p>
