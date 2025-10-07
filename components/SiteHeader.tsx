@@ -10,6 +10,7 @@ export default function SiteHeader() {
   const { pathname } = useRouter();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // Close dropdown when route changes
   useEffect(() => setIsDropdownOpen(false), [pathname]);
 
   return (
@@ -49,12 +50,7 @@ export default function SiteHeader() {
             </Link>
 
             {/* About dropdown */}
-            <div
-              className="relative group"
-              tabIndex={0}
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
-            >
+            <div className="relative flex items-center">
               <button
                 onClick={() => setIsDropdownOpen((v) => !v)}
                 className={`text-xs sm:text-sm md:text-base font-semibold hover:opacity-80 transition-opacity ${
@@ -65,6 +61,7 @@ export default function SiteHeader() {
                 About
               </button>
 
+              {/* Dropdown menu — now single-tap friendly */}
               {isDropdownOpen && (
                 <div
                   className="absolute left-0 top-full pt-1 sm:pt-2 z-50"
@@ -73,7 +70,7 @@ export default function SiteHeader() {
                   <div
                     className="rounded-md shadow-lg border backdrop-blur p-2"
                     style={{
-                      backgroundColor: "rgba(11,45,92,0.95)",
+                      backgroundColor: "rgba(11,45,92,0.95)", // navy overlay
                       borderColor: brandGold,
                     }}
                   >
