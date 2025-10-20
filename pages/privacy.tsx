@@ -13,6 +13,7 @@ export default function Privacy() {
           name="description"
           content="Privacy Policy for NovaCare Nursing — how we collect, use, store, and protect personal information."
         />
+        <link rel="canonical" href="https://www.novacarenursing.com.au/privacy" />
       </Head>
 
       <SiteHeader />
@@ -51,9 +52,7 @@ export default function Privacy() {
             <li>To respond to enquiries and provide nursing services;</li>
             <li>To manage bookings, care planning, and service delivery;</li>
             <li>To improve our services and website;</li>
-            <li>
-              To meet legal, regulatory, or clinical governance obligations.
-            </li>
+            <li>To meet legal, regulatory, or clinical governance obligations.</li>
           </ul>
 
           <h2 className="text-2xl font-semibold mt-6" style={{ color: brand.blue }}>
@@ -94,8 +93,8 @@ export default function Privacy() {
               info@novacarenursing.com.au
             </a>{" "}
             ·{" "}
-            <a href="tel:+61488086271" className="underline">
-              0488 086 271
+            <a href="tel:+61491303671" className="underline">
+              0491 303 671
             </a>
           </p>
 
