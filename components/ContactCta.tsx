@@ -21,10 +21,10 @@ export default function ContactCta() {
             Book a Consultation
           </Link>
           <a
-            href="tel:+61488086271"
+            href="tel:+61491303671"
             className="inline-block rounded-xl border border-white/70 text-white px-5 py-3 font-medium hover:bg-white/10 transition text-center"
           >
-            Call 0488 086 271
+            Call 0491 303 671
           </a>
         </div>
       </div>
