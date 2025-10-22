@@ -11,8 +11,7 @@ export default function AboutUs() {
           name="description"
           content="Learn more about NovaCare Nursing and Palantina Hughes — Owner, Care Manager, Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania."
         />
-        {/* Optional canonical */}
-        {/* <link rel="canonical" href="https://www.novacarenursing.com.au/about-us" /> */}
+        <link rel="canonical" href="https://www.novacarenursing.com.au/about-us" />
       </Head>
 
       <SiteHeader />
