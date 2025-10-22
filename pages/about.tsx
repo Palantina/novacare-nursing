@@ -13,6 +13,7 @@ export default function About() {
           name="description"
           content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
         />
+        <link rel="canonical" href="https://www.novacarenursing.com.au/about" />
       </Head>
 
       <SiteHeader />
