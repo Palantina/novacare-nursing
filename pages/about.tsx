@@ -8,10 +8,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About NovaCare Nursing | Private Home Nursing in Hobart</title>
+        <title>About | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Learn about NovaCare Nursing — a Tasmanian private home-care service offering professional, compassionate nursing in the comfort of your home. Led by Clinical Nursing Home Care Consultant Palantina Hughes, RN."
+          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
         />
       </Head>
 
@@ -24,18 +24,14 @@ export default function About() {
         >
           About NovaCare Nursing
         </h1>
-        {/* ✅ New: credentials line for consistency & SEO */}
-        <p className="mt-1 text-lg font-medium">
-          Palantina Hughes — Clinical Nursing Home Care Consultant | Registered Nurse
-        </p>
 
         <section className="mt-6 space-y-4 text-[1.05rem] leading-7">
           <p>
             NovaCare Nursing provides premium, discreet and compassionate
             home-based nursing care in Hobart and surrounding regions. Led by{" "}
             <strong>Palantina Hughes</strong>, Clinical Nursing Home Care
-            Consultant and Registered Nurse, NovaCare is built on a foundation
-            of professionalism, empathy, and excellence.
+            Consultant and Registered Nurse, <strong>NovaCare Nursing</strong> is
+            built on a foundation of professionalism, empathy, and excellence.
           </p>
 
           <p>
@@ -56,14 +52,14 @@ export default function About() {
         </section>
 
         <p className="mt-6">
-          Learn more about{" "}
+          Learn more on our{" "}
           <a
-            href="/about-palantina"
+            href="/about-us"
             className="text-[color:var(--brand-gold)] hover:underline"
           >
-            Palantina Hughes
-          </a>
-          .
+            About Us
+          </a>{" "}
+          page.
         </p>
       </main>
 
