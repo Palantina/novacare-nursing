@@ -14,6 +14,7 @@ export default function About() {
           content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
         />
         <link rel="canonical" href="https://www.novacarenursing.com.au/about" />
+        <meta name="robots" content="index,follow" />
       </Head>
 
       <SiteHeader />
@@ -26,13 +27,41 @@ export default function About() {
           About NovaCare Nursing
         </h1>
 
+        {/* Compact trust badges — elegant and scannable */}
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
+              AHPRA Registered
+            </div>
+            <p className="text-sm opacity-80">Professional, accountable standards.</p>
+          </div>
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
+              Fully Insured
+            </div>
+            <p className="text-sm opacity-80">Private practice cover in place.</p>
+          </div>
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
+              WWVP & Police Check
+            </div>
+            <p className="text-sm opacity-80">Current clearances held.</p>
+          </div>
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
+              Advanced First Aid &amp; Resuscitation
+            </div>
+            <p className="text-sm opacity-80">Incl. Oxygen Therapy certified.</p>
+          </div>
+        </div>
+
         <section className="mt-6 space-y-4 text-[1.05rem] leading-7">
           <p>
             NovaCare Nursing provides premium, discreet and compassionate
             home-based nursing care in Hobart and surrounding regions. Led by{" "}
             <strong>Palantina Hughes</strong>, Clinical Nursing Home Care
-            Consultant and Registered Nurse, <strong>NovaCare Nursing</strong> is
-            built on a foundation of professionalism, empathy, and excellence.
+            Consultant and Registered Nurse, NovaCare Nursing is built on a foundation
+            of professionalism, empathy, and excellence.
           </p>
 
           <p>
@@ -52,15 +81,16 @@ export default function About() {
           </p>
         </section>
 
+        {/* Keeps your existing link to the full bio */}
         <p className="mt-6">
-          Learn more on our{" "}
+          Learn more about{" "}
           <a
             href="/about-us"
             className="text-[color:var(--brand-gold)] hover:underline"
           >
-            About Us
-          </a>{" "}
-          page.
+            Palantina Hughes
+          </a>
+          .
         </p>
       </main>
 
