@@ -9,9 +9,10 @@ export default function AboutUs() {
         <title>About Us | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Learn more about Palantina Hughes — Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania."
+          content="Learn more about NovaCare Nursing and Palantina Hughes — Owner, Care Manager, Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania."
         />
-        <link rel="canonical" href="https://www.novacarenursing.com.au/about-us" />
+        {/* Optional canonical */}
+        {/* <link rel="canonical" href="https://www.novacarenursing.com.au/about-us" /> */}
       </Head>
 
       <SiteHeader />
@@ -19,7 +20,7 @@ export default function AboutUs() {
       <main className="mx-auto max-w-5xl px-4 py-12 text-[1.05rem] leading-7">
         <h1 className="text-3xl md:text-4xl font-bold">About Us</h1>
         <p className="mt-1 text-lg font-medium">
-          Clinical Nursing Home Care Consultant | Registered Nurse
+          Led by <strong>Palantina Hughes</strong> — Owner &amp; Care Manager, Clinical Nursing Home Care Consultant | Registered Nurse
         </p>
 
         <section className="mt-8 space-y-5">
@@ -56,6 +57,10 @@ export default function AboutUs() {
             Furthermore, I am committed to delivering holistic care tailored to meet your individual
             needs.
           </p>
+
+          {/* Future-ready: simple placeholder you can extend later */}
+          {/* <h2 className="text-2xl font-semibold mt-8">Our Team</h2>
+          <p>As NovaCare Nursing grows, this page will introduce additional qualified nursing staff who share our values of compassion, professionalism, and clinical excellence.</p> */}
         </section>
       </main>
 
