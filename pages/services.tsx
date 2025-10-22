@@ -71,6 +71,7 @@ export default function Services() {
           name="description"
           content="Explore NovaCare Nursing’s private home care services in Hobart — including post-operative recovery, palliative support, complex wound care & NDIS high-intensity supports delivered by a Registered Nurse."
         />
+        <link rel="canonical" href="https://www.novacarenursing.com.au/services" />
       </Head>
 
       <SiteHeader />
