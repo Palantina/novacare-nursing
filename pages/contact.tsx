@@ -69,6 +69,7 @@ export default function Contact() {
             <label className="block text-sm font-medium">Name</label>
             <input
               name="name"
+              autoComplete="name"
               required
               className="mt-1 block w-full rounded-md border border-gray-300 p-2"
             />
@@ -78,6 +79,7 @@ export default function Contact() {
             <input
               type="email"
               name="email"
+              autoComplete="email"
               required
               className="mt-1 block w-full rounded-md border border-gray-300 p-2"
             />
@@ -86,6 +88,7 @@ export default function Contact() {
             <label className="block text-sm font-medium">Phone (optional)</label>
             <input
               name="phone"
+              autoComplete="tel"
               className="mt-1 block w-full rounded-md border border-gray-300 p-2"
             />
           </div>
