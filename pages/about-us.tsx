@@ -9,9 +9,10 @@ export default function AboutUs() {
         <title>About Us | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Learn more about NovaCare Nursing and Palantina Hughes — Owner, Care Manager, Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania."
+          content="Learn more about NovaCare Nursing and Palantina Hughes — Owner & Care Manager, Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania. Certified in Advanced First Aid and Advanced Resuscitation & Oxygen Therapy."
         />
         <link rel="canonical" href="https://www.novacarenursing.com.au/about-us" />
+        <meta name="robots" content="index,follow" />
       </Head>
 
       <SiteHeader />
@@ -57,9 +58,17 @@ export default function AboutUs() {
             needs.
           </p>
 
-          {/* Future-ready: simple placeholder you can extend later */}
-          {/* <h2 className="text-2xl font-semibold mt-8">Our Team</h2>
-          <p>As NovaCare Nursing grows, this page will introduce additional qualified nursing staff who share our values of compassion, professionalism, and clinical excellence.</p> */}
+          {/* Separate, clearly labeled trust section */}
+          <div className="mt-10">
+            <h2 className="text-2xl font-semibold">Credentials &amp; Safeguards</h2>
+            <ul className="mt-3 list-disc pl-5 space-y-1">
+              <li>AHPRA Registered Nurse (RN)</li>
+              <li>Current Police Check &amp; Working with Vulnerable People (WWVP)</li>
+              <li>Fully insured for private practice</li>
+              <li>Certified in Advanced First Aid</li>
+              <li>Certified in Advanced Resuscitation &amp; Oxygen Therapy</li>
+            </ul>
+          </div>
         </section>
       </main>
 
