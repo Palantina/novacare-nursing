@@ -17,6 +17,21 @@ const services = [
     ],
   },
   {
+    title: "Clinical Nursing Assessments",
+    points: [
+      "Comprehensive initial & ongoing clinical assessment",
+      "Medication review and nursing care plan",
+      "Risk screening: falls, pressure injury, nutrition & mental health",
+      "Care plan development with GP/specialist coordination",
+      "Documentation & reporting (including NDIS where applicable)",
+      // ✅ Added items:
+      "Behavioural assessment & support planning",
+      "Cognition testing",
+      "Pain assessment",
+      "Continence screening",
+    ],
+  },
+  {
     title: "Chronic & Complex Care",
     points: [
       "Diabetes, cardiac, respiratory & neuro support",
@@ -68,7 +83,7 @@ export default function Services() {
         <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
+          content="Private home nursing services in Hobart — post-operative care, clinical nursing assessments, chronic & complex support, palliative care & respite, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
         />
       </Head>
 
@@ -81,8 +96,6 @@ export default function Services() {
         <p className="text-center opacity-80 mt-3">
           Skilled, premium nursing — for NDIS participants, private clients, and aged care providers.
         </p>
-
-        {/* (Top Fees link removed as requested) */}
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           {services.map((s) => (
@@ -104,7 +117,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Keep a single link further down (optional). Remove this block if you don’t want any Fees link here either. */}
+        {/* Single Fees link lower on the page (unchanged). Remove if you don’t want any Fees link here. */}
         <div className="mt-10 text-center">
           <Link
             href="/fees"
