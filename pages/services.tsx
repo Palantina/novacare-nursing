@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link"; // ✅ added
+import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import ContactCta from "../components/ContactCta";
@@ -82,16 +82,7 @@ export default function Services() {
           Skilled, premium nursing — for NDIS participants, private clients, and aged care providers.
         </p>
 
-        {/* ✅ Small link to Fees under the intro */}
-        <div className="mt-4 text-center">
-          <Link
-            href="/fees"
-            className="inline-block rounded-xl px-5 py-3 font-semibold hover:opacity-90 transition"
-            style={{ backgroundColor: brand.gold, color: brand.blue }}
-          >
-            Fees &amp; Pricing
-          </Link>
-        </div>
+        {/* (Top Fees link removed as requested) */}
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           {services.map((s) => (
@@ -113,7 +104,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* ✅ Optional second link before the CTA (remove this block if you only want one button) */}
+        {/* Keep a single link further down (optional). Remove this block if you don’t want any Fees link here either. */}
         <div className="mt-10 text-center">
           <Link
             href="/fees"
@@ -125,9 +116,7 @@ export default function Services() {
         </div>
       </main>
 
-      {/* CTA banner */}
       <ContactCta />
-
       <SiteFooter />
     </>
   );
