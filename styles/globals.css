@@ -26,23 +26,69 @@ body {
   }
 }
 
-/* --- mobile stability (minimal) --- */
+/* --- base mobile safety (no visual change to desktop/tablet) --- */
 html, body {
-  overflow-x: hidden; /* prevent sideways scroll on small phones */
-}
-
-img, svg, video, canvas {
-  max-width: 100%;
-  height: auto;       /* keep media inside the screen width */
-}
-
-/* --- mobile polish (stop auto font boosting & cap small-screen sizes) --- */
-html {
+  overflow-x: hidden;
+  width: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-@media (max-width: 400px) {
-  h1 { font-size: clamp(1.9rem, 8vw, 2.3rem); line-height: 1.15; }
-  h2 { font-size: clamp(1.2rem, 5.3vw, 1.5rem); line-height: 1.2; }
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------
+   PORTRAIT-ONLY FIT (phones)
+   - Prevents any single header row from exceeding screen width.
+   - Keeps logo/brand readable; no desktop/tablet change.
+------------------------------------------------------------------- */
+@media (max-width: 480px) and (orientation: portrait) {
+  /* Header height can grow if it wraps (no cropping) */
+  header .h-16 {
+    height: auto !important;
+    min-height: 4rem;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  /* Slightly narrower side padding on very small phones */
+  header > .mx-auto {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Logo stays prominent but never overflows */
+  header img[alt="NovaCare Nursing"] {
+    width: clamp(180px, 40vw, 240px) !important; /* never below 180px */
+    height: auto !important;
+  }
+
+  /* Brand name can wrap; keep it clearly readable */
+  header [class*="tracking-tight"] {
+    font-size: clamp(22px, 5.5vw, 30px) !important;
+    line-height: 1.15 !important;
+    white-space: normal !important; /* allow 2-line wrap if needed */
+    word-break: keep-all;
+  }
+
+  /* Allow nav to wrap to a new line on ultra-narrow phones */
+  header nav {
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem; /* row gap then column gap */
+  }
+
+  /* Keep link text clear and tappable */
+  header nav a {
+    font-size: clamp(14px, 3.8vw, 16px) !important;
+    line-height: 1.25;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 }
