@@ -5,13 +5,14 @@ import Link from "next/link";
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
-// ====== Your base Private/Aged-Care weekday standard fees ======
-const BASE_HOURLY = 150;     // $/hr
-const BASE_30MIN  = 116;     // $/30min
-// Keep your existing 30-min ratio for all bands:
-const HALF_RATIO = BASE_30MIN / BASE_HOURLY; // ≈0.773
+/* =========================
+   Private/Aged-Care settings
+========================= */
+const BASE_HOURLY = 150;     // $/hr (weekday standard)
+const BASE_30MIN  = 116;     // $/30min (weekday standard)
+const HALF_RATIO = BASE_30MIN / BASE_HOURLY; // keep your 30-min relationship across bands (~0.773)
 
-// Suggested multipliers (benchmarked to typical community nursing schedules)
+// Benchmarked multipliers (kept from earlier)
 const MULT = {
   standard: 1.0,        // Weekday 8am–6pm
   nonStandard: 1.049,   // Weekday 6pm–8am
@@ -24,7 +25,9 @@ function money(v: number) {
   return Math.round(v).toLocaleString("en-AU", { minimumFractionDigits: 0 });
 }
 
-// ====== NDIS 2025–26 National price limits (hourly) ======
+/* =========================
+   NDIS 2025–26 Price Limits
+========================= */
 const NDIS_RN3 = {
   weekdayDay: 169.16,
   weekdayEvening: 186.63,
@@ -41,9 +44,7 @@ const NDIS_RN2 = {
   sunday: 234.67,
   publicHoliday: 265.20,
 };
-function halfHour(v: number) {
-  return (v / 2);
-}
+const halfHour = (v: number) => v / 2;
 
 export default function Fees() {
   return (
@@ -52,21 +53,26 @@ export default function Fees() {
         <title>Fees | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Transparent fees for private/aged-care nursing and NDIS Clinical Nursing/Consultancy. Weekday and after-hours rates with clear time bands and allowable NDIS charges."
+          content="Transparent fees for private/aged-care nursing and NDIS Clinical Nursing/Consultancy. Clear time bands, readable tables, and allowable NDIS charges."
         />
       </Head>
 
       <SiteHeader />
 
-      <main className="mx-auto max-w-5xl px-4 py-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: brand.blue }}>
-          Fees
-        </h1>
-        <p className="text-center opacity-80 mt-2">
-          Clear, upfront pricing. No surprises.
-        </p>
+      <main className="mx-auto max-w-5xl px-4 py-12 text-[15px] leading-6 md:leading-7">
+        {/* Page header */}
+        <header className="text-center">
+          <h1 className="text-3xl md:text-4xl font-bold" style={{ color: brand.blue }}>
+            Fees
+          </h1>
+          <p className="opacity-80 mt-2">
+            Clear, upfront pricing for private care and NDIS participants.
+          </p>
+        </header>
 
-        {/* PRIVATE & AGED-CARE TABLE */}
+        {/* =========================
+            PRIVATE & AGED-CARE TABLE
+        ========================== */}
         <section className="mt-10">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
             Private &amp; Aged Care Nursing
@@ -77,15 +83,15 @@ export default function Fees() {
           </p>
 
           <div className="mt-4 overflow-x-auto rounded-2xl border bg-white">
-            <table className="w-full text-left text-[15px]">
-              <thead className="bg-[color:var(--brand-cream)]">
+            <table className="w-full min-w-[720px] text-left">
+              <thead className="bg-[color:var(--brand-cream)] text-[15px]">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Timeband</th>
                   <th className="px-4 py-3 font-semibold">Hourly</th>
                   <th className="px-4 py-3 font-semibold">30 minutes</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="[&>tr:nth-child(even)]:bg-gray-50">
                 <tr className="border-t">
                   <td className="px-4 py-3">Weekday (Standard, 8am–6pm)</td>
                   <td className="px-4 py-3">${money(BASE_HOURLY)}</td>
@@ -116,11 +122,13 @@ export default function Fees() {
           </div>
 
           <p className="mt-3 text-sm opacity-75">
-            Weekend/evening/public holiday multipliers are benchmarked to typical Tasmanian community nursing schedules and reviewed annually.
+            Weekend/evening/public holiday loadings are benchmarked to typical Tasmanian community nursing schedules and reviewed annually.
           </p>
         </section>
 
-        {/* NDIS TABLE (RN3+ vs RN2) */}
+        {/* =========================
+            NDIS TABLE (RN3+ vs RN2)
+        ========================== */}
         <section className="mt-12">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
             NDIS Clinical Nursing &amp; Consultancy (National Price Limits)
@@ -132,8 +140,8 @@ export default function Fees() {
           </p>
 
           <div className="mt-4 overflow-x-auto rounded-2xl border bg-white">
-            <table className="w-full text-left text-[15px]">
-              <thead className="bg-[color:var(--brand-cream)]">
+            <table className="w-full min-w-[780px] text-left">
+              <thead className="bg-[color:var(--brand-cream)] text-[15px]">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Time band</th>
                   <th className="px-4 py-3 font-semibold">RN3+ (Hour)</th>
@@ -142,7 +150,7 @@ export default function Fees() {
                   <th className="px-4 py-3 font-semibold">RN2 (30 min)</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="[&>tr:nth-child(even)]:bg-gray-50">
                 <tr className="border-t">
                   <td className="px-4 py-3">Weekday Daytime</td>
                   <td className="px-4 py-3">${money(NDIS_RN3.weekdayDay)}</td>
@@ -189,23 +197,33 @@ export default function Fees() {
             </table>
           </div>
 
-          {/* ✅ Updated note exactly as requested */}
+          {/* Updated note (your requested wording) */}
           <p className="text-sm opacity-80 mt-3">
             NDIS limits are the maximums for NDIA and plan-managed invoices for 2025–2026; self-managed participants can negotiate their costs.
           </p>
         </section>
 
-        {/* NDIS TIME BANDS & OTHER CHARGES (unchanged) */}
+        {/* =========================
+            NDIS TIME BANDS
+        ========================== */}
         <section className="mt-10">
           <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
             NDIS Nursing Time Bands
           </h3>
           <div className="mt-3 rounded-2xl bg-white border border-gray-100 p-5">
             <ul className="list-disc pl-6 space-y-1">
-              <li><strong>Weekday Daytime (standard):</strong> starts before 12:00 noon and finishes the same day.</li>
-              <li><strong>Weekday Evening (non-standard):</strong> starts at/after 12:00 noon and finishes after 6:00 pm.</li>
-              <li><strong>Weekday Night (non-standard):</strong> starts at/after 6:00 pm and finishes before 7:30 am next day.</li>
-              <li><strong>Saturday / Sunday / Public Holiday:</strong> by calendar day (midnight–midnight).</li>
+              <li>
+                <strong>Weekday Daytime (standard):</strong> starts before 12:00 noon and finishes the same day.
+              </li>
+              <li>
+                <strong>Weekday Evening (non-standard):</strong> starts at/after 12:00 noon and finishes after 6:00 pm.
+              </li>
+              <li>
+                <strong>Weekday Night (non-standard):</strong> starts at/after 6:00 pm and finishes before 7:30 am next day.
+              </li>
+              <li>
+                <strong>Saturday / Sunday / Public Holiday:</strong> by calendar day (midnight–midnight).
+              </li>
             </ul>
             <p className="text-sm opacity-75 mt-3">
               Nursing time bands differ from Disability Support Worker bands.
@@ -213,6 +231,9 @@ export default function Fees() {
           </div>
         </section>
 
+        {/* =========================
+            OTHER NDIS CHARGES
+        ========================== */}
         <section className="mt-8">
           <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
             Other Charges (NDIS)
@@ -252,11 +273,11 @@ export default function Fees() {
           </div>
         </section>
 
-        {/* Call-to-action */}
+        {/* CTA */}
         <div className="mt-10 text-center">
           <a
             href="/contact"
-            className="inline-block rounded-xl px-6 py-3 font-semibold"
+            className="inline-block rounded-xl px-6 py-3 font-semibold hover:opacity-95 transition"
             style={{ background: brand.gold, color: brand.blue }}
           >
             Ask about availability &amp; billing
@@ -266,8 +287,11 @@ export default function Fees() {
           </p>
         </div>
 
+        {/* Optional link back to Services */}
         <div className="text-center mt-6">
-          <Link href="/services" className="underline text-[color:var(--brand-gold)]">View Services</Link>
+          <Link href="/services" className="underline text-[color:var(--brand-gold)]">
+            View Services
+          </Link>
         </div>
       </main>
 
