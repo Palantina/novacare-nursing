@@ -35,3 +35,14 @@ img, svg, video, canvas {
   max-width: 100%;
   height: auto;       /* keep media inside the screen width */
 }
+
+/* --- mobile polish (stop auto font boosting & cap small-screen sizes) --- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (max-width: 400px) {
+  h1 { font-size: clamp(1.9rem, 8vw, 2.3rem); line-height: 1.15; }
+  h2 { font-size: clamp(1.2rem, 5.3vw, 1.5rem); line-height: 1.2; }
+}
