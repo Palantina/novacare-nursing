@@ -25,7 +25,6 @@ function money(v: number) {
 }
 
 // ====== NDIS 2025–26 National price limits (hourly) ======
-// Clinical Nurse Consultant (RN3+) – hour by band:
 const NDIS_RN3 = {
   weekdayDay: 169.16,
   weekdayEvening: 186.63,
@@ -34,7 +33,6 @@ const NDIS_RN3 = {
   sunday: 277.69,
   publicHoliday: 313.86,
 };
-// Clinical Nurse (RN2) – hour by band:
 const NDIS_RN2 = {
   weekdayDay: 143.04,
   weekdayEvening: 157.77,
@@ -44,7 +42,6 @@ const NDIS_RN2 = {
   publicHoliday: 265.20,
 };
 function halfHour(v: number) {
-  // NDIS tables allow 30-min units at exactly half of hourly
   return (v / 2);
 }
 
@@ -69,9 +66,7 @@ export default function Fees() {
           Clear, upfront pricing. No surprises.
         </p>
 
-        {/* =========================
-            PRIVATE & AGED-CARE TABLE
-        ========================== */}
+        {/* PRIVATE & AGED-CARE TABLE */}
         <section className="mt-10">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
             Private &amp; Aged Care Nursing
@@ -125,9 +120,7 @@ export default function Fees() {
           </p>
         </section>
 
-        {/* =========================
-            NDIS TABLE (RN3+ vs RN2)
-        ========================== */}
+        {/* NDIS TABLE (RN3+ vs RN2) */}
         <section className="mt-12">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
             NDIS Clinical Nursing &amp; Consultancy (National Price Limits)
@@ -195,14 +188,14 @@ export default function Fees() {
               </tbody>
             </table>
           </div>
+
+          {/* ✅ Updated note exactly as requested */}
           <p className="text-sm opacity-80 mt-3">
-            NDIS limits are maximums for NDIA/plan-managed invoices; self-managed participants may agree different amounts.
+            NDIS limits are the maximums for NDIA and plan-managed invoices for 2025–2026; self-managed participants can negotiate their costs.
           </p>
         </section>
 
-        {/* =========================
-            NDIS TIME BANDS & OTHER CHARGES
-        ========================== */}
+        {/* NDIS TIME BANDS & OTHER CHARGES (unchanged) */}
         <section className="mt-10">
           <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
             NDIS Nursing Time Bands
@@ -273,7 +266,6 @@ export default function Fees() {
           </p>
         </div>
 
-        {/* Optional link back to Services */}
         <div className="text-center mt-6">
           <Link href="/services" className="underline text-[color:var(--brand-gold)]">View Services</Link>
         </div>
