@@ -25,3 +25,13 @@ body {
     @apply text-2xl font-semibold text-[var(--brand-blue)];
   }
 }
+
+/* --- mobile stability (minimal) --- */
+html, body {
+  overflow-x: hidden; /* prevent sideways scroll on small phones */
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;       /* keep media inside the screen width */
+}
