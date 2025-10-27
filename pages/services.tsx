@@ -1,8 +1,8 @@
 import Head from "next/head";
+import Link from "next/link"; // ✅ added
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import ContactCta from "../components/ContactCta";
-import ServicesFaq from "../components/ServicesFaq";
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
@@ -44,7 +44,6 @@ const services = [
       "Complex Bowel Care",
       "Epilepsy & Seizure Support",
       "Complex Wound Care Support",
-      "Cannulation & Intravenous (IV) Infusions", // ✅ added
       "Subcutaneous & Intramuscular Injections",
       "Urinary & Suprapubic Catheter Support",
       "Oversight by a Registered Nurse (RN): NDIS SIL management & complex case oversight",
@@ -66,12 +65,11 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Home Nursing Services | Post-Operative, Palliative & Complex Care | NovaCare Nursing Hobart</title>
+        <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Explore NovaCare Nursing’s private home care services in Hobart — including post-operative recovery, palliative support, complex wound care & NDIS high-intensity supports delivered by a Registered Nurse."
+          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
         />
-        <link rel="canonical" href="https://www.novacarenursing.com.au/services" />
       </Head>
 
       <SiteHeader />
@@ -80,14 +78,20 @@ export default function Services() {
         <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: brand.blue }}>
           Our Services
         </h1>
-        {/* Credentials line to match other pages */}
-        <p className="mt-1 text-lg font-medium text-center">
-          Clinical Nursing Home Care Consultant | Registered Nurse
-        </p>
-
         <p className="text-center opacity-80 mt-3">
           Skilled, premium nursing — for NDIS participants, private clients, and aged care providers.
         </p>
+
+        {/* ✅ Small link to Fees under the intro */}
+        <div className="mt-4 text-center">
+          <Link
+            href="/fees"
+            className="inline-block rounded-xl px-5 py-3 font-semibold hover:opacity-90 transition"
+            style={{ backgroundColor: brand.gold, color: brand.blue }}
+          >
+            Fees &amp; Pricing
+          </Link>
+        </div>
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           {services.map((s) => (
@@ -109,8 +113,16 @@ export default function Services() {
           ))}
         </div>
 
-        {/* FAQ section */}
-        <ServicesFaq />
+        {/* ✅ Optional second link before the CTA (remove this block if you only want one button) */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/fees"
+            className="inline-block rounded-xl px-5 py-3 font-semibold hover:opacity-90 transition"
+            style={{ backgroundColor: brand.gold, color: brand.blue }}
+          >
+            View Fees &amp; Pricing
+          </Link>
+        </div>
       </main>
 
       {/* CTA banner */}
