@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import ContactCta from "../components/ContactCta";
+import ServicesFaq from "../components/ServicesFaq"; // ✅ added
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
@@ -14,21 +14,6 @@ const services = [
       "Wound care & dressing changes",
       "Medication administration & pain control",
       "Mobility, safety & falls prevention",
-    ],
-  },
-  {
-    title: "Clinical Nursing Assessments",
-    points: [
-      "Comprehensive initial & ongoing clinical assessment",
-      "Medication review and nursing care plan",
-      "Risk screening: falls, pressure injury, nutrition & mental health",
-      "Care plan development with GP/specialist coordination",
-      "Documentation & reporting (including NDIS where applicable)",
-      // ✅ Added items:
-      "Behavioural assessment & support planning",
-      "Cognition testing",
-      "Pain assessment",
-      "Continence screening",
     ],
   },
   {
@@ -61,10 +46,25 @@ const services = [
       "Complex Wound Care Support",
       "Subcutaneous & Intramuscular Injections",
       "Urinary & Suprapubic Catheter Support",
+      "Cannulation & Intravenous (IV) Infusions",
       "Oversight by a Registered Nurse (RN): NDIS SIL management & complex case oversight",
       "Education, supervision, and governance to ensure the highest standard of safe, capable care",
     ],
     highlight: true,
+  },
+  {
+    title: "Clinical Nursing Assessments",
+    points: [
+      "Initial and ongoing clinical assessment to monitor progress and modify care.",
+      "Medication reviews for safety and efficacy.",
+      "Risk assessments for falls, pressure injuries, nutrition, and mental health.",
+      "Coordination of care plans with GPs, Specialists, and Allied Health.",
+      "Record-keeping and NDIS reporting for compliance.",
+      "Behavioural assessments with tailored support strategies (non-NDIS).",
+      "Cognitive function reviews to inform care planning.",
+      "Routine pain assessments for effective management.",
+      "Continence screening to ensure comfort and dignity.",
+    ],
   },
   {
     title: "Subcontracted Nursing Care for Aged Care Providers",
@@ -83,27 +83,34 @@ export default function Services() {
         <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Private home nursing services in Hobart — post-operative care, clinical nursing assessments, chronic & complex support, palliative care & respite, high intensity nursing supports with RN oversight, and subcontracted nursing for aged care providers."
+          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high-intensity nursing supports with RN oversight, clinical assessments, and subcontracted nursing for aged care providers."
         />
       </Head>
 
       <SiteHeader />
 
       <main className="mx-auto max-w-6xl px-4 py-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-center" style={{ color: brand.blue }}>
+        <h1
+          className="text-3xl md:text-4xl font-bold text-center"
+          style={{ color: brand.blue }}
+        >
           Our Services
         </h1>
+
         <p className="text-center opacity-80 mt-3">
-          Skilled, premium nursing — for NDIS participants, private clients, and aged care providers.
+          Skilled, premium nursing — for Aged Care clients, NDIS participants,
+          Private clients and Aged Care Providers.
         </p>
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           {services.map((s) => (
             <div
               key={s.title}
-              className={`rounded-2xl p-6 shadow-sm border transition
-                ${s.highlight ? "bg-[#F7F4EF] border-[#C6A662]" : "bg-white border-gray-100"}
-              `}
+              className={`rounded-2xl p-6 shadow-sm border transition ${
+                s.highlight
+                  ? "bg-[#F7F4EF] border-[#C6A662]"
+                  : "bg-white border-gray-100"
+              }`}
             >
               <h3 className="font-semibold text-xl" style={{ color: brand.blue }}>
                 {s.title}
@@ -117,16 +124,8 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Single Fees link lower on the page (unchanged). Remove if you don’t want any Fees link here. */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/fees"
-            className="inline-block rounded-xl px-5 py-3 font-semibold hover:opacity-90 transition"
-            style={{ backgroundColor: brand.gold, color: brand.blue }}
-          >
-            View Fees &amp; Pricing
-          </Link>
-        </div>
+        {/* ✅ FAQ section now visible on Services page */}
+        <ServicesFaq />
       </main>
 
       <ContactCta />
