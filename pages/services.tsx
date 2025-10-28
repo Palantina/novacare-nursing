@@ -1,8 +1,10 @@
+// pages/services.tsx
 import Head from "next/head";
+import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import ContactCta from "../components/ContactCta";
-import ServicesFaq from "../components/ServicesFaq"; // ✅ added
+import ServicesFaq from "../components/ServicesFaq";
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
@@ -124,8 +126,19 @@ export default function Services() {
           ))}
         </div>
 
-        {/* ✅ FAQ section now visible on Services page */}
+        {/* FAQ section */}
         <ServicesFaq />
+
+        {/* ✅ Fees & Pricing button at the bottom */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/fees"
+            className="inline-block rounded-xl px-5 py-3 font-semibold hover:opacity-90 transition"
+            style={{ backgroundColor: brand.gold, color: brand.blue }}
+          >
+            Fees &amp; Pricing
+          </Link>
+        </div>
       </main>
 
       <ContactCta />
