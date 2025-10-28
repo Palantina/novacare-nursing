@@ -33,6 +33,16 @@ const defaultFaqs: Faq[] = [
     q: "Are you insured and AHPRA registered?",
     a: "Yes. NovaCare Nursing is fully insured for private practice, and care is delivered by an AHPRA-registered nurse.",
   },
+
+  // ✅ New Q&As
+  {
+    q: "Will my Aged Care Package pay for Nursing Services?",
+    a: "Yes, your Aged Care Package will pay for Nursing services.",
+  },
+  {
+    q: "Will Nursing Services still be paid for with Support at Home?",
+    a: "Yes, and the best part is that Nursing Services will be funded separately from your home care package.",
+  },
 ];
 
 export default function ServicesFaq({ faqs }: { faqs?: FaqLoose[] }) {
