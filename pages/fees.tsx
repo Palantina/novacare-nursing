@@ -6,19 +6,21 @@ import Link from "next/link";
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
 /* =========================
-   Private/Aged-Care settings
+   SAH & Private / Provider contracts
+   (Your approved rates)
 ========================= */
-const BASE_HOURLY = 150;     // $/hr (weekday standard)
-const BASE_30MIN  = 116;     // $/30min (weekday standard)
-const HALF_RATIO = BASE_30MIN / BASE_HOURLY; // keep your 30-min relationship across bands (~0.773)
+const DIRECT_BASE_HOURLY = 170;   // $/hr (weekday standard)
+const DIRECT_BASE_30MIN  = 130;   // $/30min (weekday standard, min call-out)
+const INDIRECT_BASE_HOURLY = 105; // $/hr (weekday standard, indirect)
+const HALF_RATIO = DIRECT_BASE_30MIN / DIRECT_BASE_HOURLY; // ~0.7647
 
-// Benchmarked multipliers (kept from earlier)
+// Timeband multipliers (aligned with common AU community nursing practice)
 const MULT = {
-  standard: 1.0,        // Weekday 8am–6pm
-  nonStandard: 1.049,   // Weekday 6pm–8am
-  saturday: 1.320,
-  sunday: 1.661,
-  publicHoliday: 1.973,
+  standard: 1.00,     // Weekday 8am–6pm
+  nonStandard: 1.10,  // Weekday 6pm–8am
+  saturday: 1.35,
+  sunday: 1.75,
+  publicHoliday: 2.10,
 };
 
 function money(v: number) {
@@ -53,7 +55,7 @@ export default function Fees() {
         <title>Fees | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Transparent fees for private/aged-care nursing and NDIS Clinical Nursing/Consultancy. Clear time bands, readable tables, and allowable NDIS charges."
+          content="Transparent fees for Support at Home & Private nursing and NDIS Clinical Nursing/Consultancy. Clear time bands and readable tables."
         />
       </Head>
 
@@ -66,16 +68,16 @@ export default function Fees() {
             Fees
           </h1>
           <p className="opacity-80 mt-2">
-            Clear, upfront pricing for private care and NDIS participants.
+            Clear, upfront pricing for Support at Home (SAH), Private care and NDIS participants.
           </p>
         </header>
 
         {/* =========================
-            PRIVATE & AGED-CARE TABLE
+            SAH & PRIVATE — DIRECT
         ========================== */}
-        <section className="mt-10">
+        <section className="mt-10" id="sah">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
-            Private &amp; Aged Care Nursing
+            Support at Home (SAH) &amp; Private Nursing — <span className="font-bold">Direct</span> (face-to-face)
           </h2>
           <p className="mt-2 opacity-90">
             <strong>Standard Hours:</strong> 8:00am–6:00pm (Mon–Fri).{" "}
@@ -86,7 +88,7 @@ export default function Fees() {
             <table className="w-full min-w-[720px] text-left">
               <thead className="bg-[color:var(--brand-cream)] text-[15px]">
                 <tr>
-                  <th className="px-4 py-3 font-semibold">Timeband</th>
+                  <th className="px-4 py-3 font-semibold">Time band</th>
                   <th className="px-4 py-3 font-semibold">Hourly</th>
                   <th className="px-4 py-3 font-semibold">30 minutes</th>
                 </tr>
@@ -94,42 +96,104 @@ export default function Fees() {
               <tbody className="[&>tr:nth-child(even)]:bg-gray-50">
                 <tr className="border-t">
                   <td className="px-4 py-3">Weekday (Standard, 8am–6pm)</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY)}</td>
-                  <td className="px-4 py-3">${money(BASE_30MIN)}</td>
+                  <td className="px-4 py-3">${money(DIRECT_BASE_HOURLY)}</td>
+                  <td className="px-4 py-3">${money(DIRECT_BASE_30MIN)}</td>
                 </tr>
                 <tr className="border-t">
                   <td className="px-4 py-3">Weekday (Non-Standard, 6pm–8am)</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.nonStandard)}</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.nonStandard * HALF_RATIO)}</td>
+                  <td className="px-4 py-3">${money(DIRECT_BASE_HOURLY * MULT.nonStandard)}</td>
+                  <td className="px-4 py-3">
+                    ${money(DIRECT_BASE_HOURLY * MULT.nonStandard * HALF_RATIO)}
+                  </td>
                 </tr>
                 <tr className="border-t">
                   <td className="px-4 py-3">Saturday</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.saturday)}</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.saturday * HALF_RATIO)}</td>
+                  <td className="px-4 py-3">${money(DIRECT_BASE_HOURLY * MULT.saturday)}</td>
+                  <td className="px-4 py-3">
+                    ${money(DIRECT_BASE_HOURLY * MULT.saturday * HALF_RATIO)}
+                  </td>
                 </tr>
                 <tr className="border-t">
                   <td className="px-4 py-3">Sunday</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.sunday)}</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.sunday * HALF_RATIO)}</td>
+                  <td className="px-4 py-3">${money(DIRECT_BASE_HOURLY * MULT.sunday)}</td>
+                  <td className="px-4 py-3">
+                    ${money(DIRECT_BASE_HOURLY * MULT.sunday * HALF_RATIO)}
+                  </td>
                 </tr>
                 <tr className="border-t">
                   <td className="px-4 py-3">Public Holiday</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.publicHoliday)}</td>
-                  <td className="px-4 py-3">${money(BASE_HOURLY * MULT.publicHoliday * HALF_RATIO)}</td>
+                  <td className="px-4 py-3">${money(DIRECT_BASE_HOURLY * MULT.publicHoliday)}</td>
+                  <td className="px-4 py-3">
+                    ${money(DIRECT_BASE_HOURLY * MULT.publicHoliday * HALF_RATIO)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* =========================
+            SAH & PRIVATE — INDIRECT
+        ========================== */}
+        <section className="mt-10">
+          <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
+            Registered Nurse — <span className="font-bold">Indirect</span> (care planning, documentation, coordination)
+          </h3>
+          <p className="mt-2 opacity-90">
+            Billable under Support at Home when linked to a client’s episode of care. Time bands shown for clarity.
+          </p>
+
+          <div className="mt-4 overflow-x-auto rounded-2xl border bg-white">
+            <table className="w-full min-w-[620px] text-left">
+              <thead className="bg-[color:var(--brand-cream)] text-[15px]">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">Time band</th>
+                  <th className="px-4 py-3 font-semibold">Hourly</th>
+                </tr>
+              </thead>
+              <tbody className="[&>tr:nth-child(even)]:bg-gray-50">
+                <tr className="border-t">
+                  <td className="px-4 py-3">Weekday (Standard, 8am–6pm)</td>
+                  <td className="px-4 py-3">${money(INDIRECT_BASE_HOURLY * MULT.standard)}</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-4 py-3">Weekday (Non-Standard, 6pm–8am)</td>
+                  <td className="px-4 py-3">${money(INDIRECT_BASE_HOURLY * MULT.nonStandard)}</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-4 py-3">Saturday</td>
+                  <td className="px-4 py-3">${money(INDIRECT_BASE_HOURLY * MULT.saturday)}</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-4 py-3">Sunday</td>
+                  <td className="px-4 py-3">${money(INDIRECT_BASE_HOURLY * MULT.sunday)}</td>
+                </tr>
+                <tr className="border-t">
+                  <td className="px-4 py-3">Public Holiday</td>
+                  <td className="px-4 py-3">${money(INDIRECT_BASE_HOURLY * MULT.publicHoliday)}</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p className="mt-3 text-sm opacity-75">
-            Weekend/evening/public holiday loadings are benchmarked to typical Tasmanian community nursing schedules and reviewed annually.
-          </p>
+          {/* SAH notes / disclaimer */}
+          <div className="rounded-2xl bg-white border border-gray-100 p-5 space-y-2 mt-4">
+            <p className="text-sm opacity-80">
+              <strong>Notes:</strong> <em>Direct</em> = face-to-face clinical time. <em>Indirect</em> = documentation,
+              care planning and coordination related to the episode of care (SAH). Time bands apply as listed. Rates shown
+              are for standard metropolitan delivery; regional travel/arrangements are agreed in advance.
+            </p>
+            <p className="text-sm opacity-80">
+              <strong>Disclaimer:</strong> Fees may change and will be confirmed in the Service Agreement before services
+              commence. Support at Home allows both direct and indirect clinical billing when linked to a client’s care.
+            </p>
+          </div>
         </section>
 
         {/* =========================
             NDIS TABLE (RN3+ vs RN2)
         ========================== */}
-        <section className="mt-12">
+        <section className="mt-12" id="ndis">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
             NDIS Clinical Nursing &amp; Consultancy (National Price Limits)
           </h2>
@@ -197,79 +261,16 @@ export default function Fees() {
             </table>
           </div>
 
-          {/* Updated note (your requested wording) */}
-          <p className="text-sm opacity-80 mt-3">
-            NDIS limits are the maximums for NDIA and plan-managed invoices for 2025–2026; self-managed participants can negotiate their costs.
-          </p>
-        </section>
-
-        {/* =========================
-            NDIS TIME BANDS
-        ========================== */}
-        <section className="mt-10">
-          <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
-            NDIS Nursing Time Bands
-          </h3>
-          <div className="mt-3 rounded-2xl bg-white border border-gray-100 p-5">
-            <ul className="list-disc pl-6 space-y-1">
-              <li>
-                <strong>Weekday Daytime (standard):</strong> starts before 12:00 noon and finishes the same day.
-              </li>
-              <li>
-                <strong>Weekday Evening (non-standard):</strong> starts at/after 12:00 noon and finishes after 6:00 pm.
-              </li>
-              <li>
-                <strong>Weekday Night (non-standard):</strong> starts at/after 6:00 pm and finishes before 7:30 am next day.
-              </li>
-              <li>
-                <strong>Saturday / Sunday / Public Holiday:</strong> by calendar day (midnight–midnight).
-              </li>
-            </ul>
-            <p className="text-sm opacity-75 mt-3">
-              Nursing time bands differ from Disability Support Worker bands.
+          {/* NDIS notes / disclaimer */}
+          <div className="rounded-2xl bg-white border border-gray-100 p-5 space-y-2 mt-4">
+            <p className="text-sm opacity-80">
+              <strong>Notes:</strong> NDIS limits shown are the maximums for NDIA and plan-managed invoices (2025–2026).
+              Self-managed participants may negotiate their costs.
             </p>
-          </div>
-        </section>
-
-        {/* =========================
-            OTHER NDIS CHARGES
-        ========================== */}
-        <section className="mt-8">
-          <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
-            Other Charges (NDIS)
-          </h3>
-          <div className="mt-3 rounded-2xl bg-white border border-gray-100 p-5 space-y-3">
-            <div>
-              <p className="font-medium" style={{ color: brand.blue }}>Provider travel — time</p>
-              <p className="text-sm opacity-90">
-                Claimable with agreement, subject to caps: <strong>MMM 1–3: up to 30 minutes</strong>;
-                <strong> MMM 4–5: up to 60 minutes</strong> (apportioned if multiple participants).
-              </p>
-            </div>
-
-            <div>
-              <p className="font-medium" style={{ color: brand.blue }}>Provider travel — non-labour costs</p>
-              <ul className="list-disc pl-6 text-sm opacity-90 space-y-1">
-                <li>Up to <strong>$0.99 per km</strong> (unmodified vehicle).</li>
-                <li>Up to <strong>$2.76 per km</strong> (modified vehicle or bus).</li>
-                <li>Tolls, parking, public transport at <strong>actual cost</strong> (Activity-Based Transport items).</li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-medium" style={{ color: brand.blue }}>Non-face-to-face &amp; reports</p>
-              <ul className="list-disc pl-6 text-sm opacity-90 space-y-1">
-                <li>Directly related non-face-to-face clinical time (e.g., documentation, coordination) — claimable.</li>
-                <li>NDIA-requested reports — claimable.</li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-medium" style={{ color: brand.blue }}>Short-notice cancellation</p>
-              <p className="text-sm opacity-90">
-                Up to <strong>100%</strong> of the agreed fee if less than <strong>2 clear business days’ notice</strong> is given (or no-show), per NDIS rules and your Service Agreement.
-              </p>
-            </div>
+            <p className="text-sm opacity-80">
+              <strong>Disclaimer:</strong> Rates reflect current NDIA price limits for Clinical Nurse Consultant (RN3+) and
+              Clinical Nurse (RN2) nursing supports. Updates to NDIA schedules will be reflected as they are published.
+            </p>
           </div>
         </section>
 
