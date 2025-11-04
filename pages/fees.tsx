@@ -84,7 +84,7 @@ export default function Fees() {
             <strong>Non-Standard Hours:</strong> 6:00pm–8:00am.
           </p>
 
-          {/* SAH funding banner */}
+          {/* SAH funding banner (concise, caring) */}
           <div className="mt-3 rounded-2xl border bg-white p-4">
             <p className="text-[15px] leading-6">
               <span
@@ -94,10 +94,9 @@ export default function Fees() {
                 Support at Home
               </span>
               <strong style={{ color: brand.blue }}>
-                Nursing care under SAH is funded by the Australian Government.
+                If you have a Support at Home (SAH) package and need nursing, your nursing care is fully funded by the Australian Government.
               </strong>{" "}
-              If you’re eligible and your services are approved within an authorised SAH budget, there are{" "}
-              <strong>no out-of-pocket costs</strong> for those nursing services.
+              We provide your approved nursing services with care and dignity — these costs are not taken from your SAH package.
             </p>
           </div>
 
