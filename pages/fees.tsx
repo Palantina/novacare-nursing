@@ -7,7 +7,7 @@ const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
 /* =========================
    SAH & Private / Provider contracts
-   (Your approved rates)
+   (Approved rates)
 ========================= */
 const DIRECT_BASE_HOURLY = 170;   // $/hr (weekday standard)
 const DIRECT_BASE_30MIN  = 130;   // $/30min (weekday standard, min call-out)
@@ -83,6 +83,23 @@ export default function Fees() {
             <strong>Standard Hours:</strong> 8:00am–6:00pm (Mon–Fri).{" "}
             <strong>Non-Standard Hours:</strong> 6:00pm–8:00am.
           </p>
+
+          {/* SAH funding banner */}
+          <div className="mt-3 rounded-2xl border bg-white p-4">
+            <p className="text-[15px] leading-6">
+              <span
+                className="inline-block rounded-md px-2 py-0.5 mr-2 text-xs font-semibold"
+                style={{ background: "#F4F6FA", color: brand.blue, border: "1px solid #E5E7EB" }}
+              >
+                Support at Home
+              </span>
+              <strong style={{ color: brand.blue }}>
+                Nursing care under SAH is funded by the Australian Government.
+              </strong>{" "}
+              If you’re eligible and your services are approved within an authorised SAH budget, there are{" "}
+              <strong>no out-of-pocket costs</strong> for those nursing services.
+            </p>
+          </div>
 
           <div className="mt-4 overflow-x-auto rounded-2xl border bg-white">
             <table className="w-full min-w-[720px] text-left">
@@ -178,6 +195,10 @@ export default function Fees() {
 
           {/* SAH notes / disclaimer */}
           <div className="rounded-2xl bg-white border border-gray-100 p-5 space-y-2 mt-4">
+            <p className="text-sm opacity-90">
+              <strong>Funding (SAH):</strong> For eligible clients under <em>Support at Home</em>, nursing care is funded by the
+              Australian Government. No out-of-pocket charges apply for approved nursing services within an authorised SAH budget.
+            </p>
             <p className="text-sm opacity-80">
               <strong>Notes:</strong> <em>Direct</em> = face-to-face clinical time. <em>Indirect</em> = documentation,
               care planning and coordination related to the episode of care (SAH). Time bands apply as listed. Rates shown
@@ -188,6 +209,39 @@ export default function Fees() {
               commence. Support at Home allows both direct and indirect clinical billing when linked to a client’s care.
             </p>
           </div>
+
+          {/* SAH — FAQ */}
+          <section className="mt-6">
+            <h4 className="text-lg font-semibold" style={{ color: brand.blue }}>
+              Support at Home — quick questions
+            </h4>
+
+            <div className="mt-3 space-y-2">
+              <details className="rounded-xl border bg-white p-4">
+                <summary className="cursor-pointer font-medium">Is all nursing care fully funded under SAH?</summary>
+                <p className="mt-2 text-sm opacity-90">
+                  If you are <em>eligible</em> and your nursing supports are <em>approved</em> within an authorised SAH budget, the
+                  Australian Government funds those nursing services. In that case, there are no out-of-pocket costs for the approved items.
+                </p>
+              </details>
+
+              <details className="rounded-xl border bg-white p-4">
+                <summary className="cursor-pointer font-medium">What’s the difference between Direct and Indirect time?</summary>
+                <p className="mt-2 text-sm opacity-90">
+                  <strong>Direct</strong> is face-to-face clinical time (e.g., wound care, IVs). <strong>Indirect</strong> includes
+                  documentation, care planning and coordination directly related to your episode of care; this is also billable under SAH when linked to approved services.
+                </p>
+              </details>
+
+              <details className="rounded-xl border bg-white p-4">
+                <summary className="cursor-pointer font-medium">How do I get started?</summary>
+                <p className="mt-2 text-sm opacity-90">
+                  Contact us and we’ll guide you through eligibility, assessment and service planning. Once your SAH budget is authorised,
+                  we schedule nursing visits and complete required documentation.
+                </p>
+              </details>
+            </div>
+          </section>
         </section>
 
         {/* =========================
