@@ -274,6 +274,76 @@ export default function Fees() {
           </div>
         </section>
 
+        {/* =========================
+            NDIS TIME BANDS
+        ========================== */}
+        <section className="mt-10">
+          <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
+            NDIS Nursing Time Bands
+          </h3>
+          <div className="mt-3 rounded-2xl bg-white border border-gray-100 p-5">
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                <strong>Weekday Daytime (standard):</strong> starts before 12:00 noon and finishes the same day.
+              </li>
+              <li>
+                <strong>Weekday Evening (non-standard):</strong> starts at/after 12:00 noon and finishes after 6:00 pm.
+              </li>
+              <li>
+                <strong>Weekday Night (non-standard):</strong> starts at/after 6:00 pm and finishes before 7:30 am next day.
+              </li>
+              <li>
+                <strong>Saturday / Sunday / Public Holiday:</strong> by calendar day (midnight–midnight).
+              </li>
+            </ul>
+            <p className="text-sm opacity-75 mt-3">
+              Nursing time bands differ from Disability Support Worker bands.
+            </p>
+          </div>
+        </section>
+
+        {/* =========================
+            OTHER NDIS CHARGES
+        ========================== */}
+        <section className="mt-8">
+          <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
+            Other Charges (NDIS)
+          </h3>
+          <div className="mt-3 rounded-2xl bg-white border border-gray-100 p-5 space-y-3">
+            <div>
+              <p className="font-medium" style={{ color: brand.blue }}>Provider travel — time</p>
+              <p className="text-sm opacity-90">
+                Claimable with agreement, subject to caps: <strong>MMM 1–3: up to 30 minutes</strong>;
+                <strong> MMM 4–5: up to 60 minutes</strong> (apportioned if multiple participants).
+              </p>
+            </div>
+
+            <div>
+              <p className="font-medium" style={{ color: brand.blue }}>Provider travel — non-labour costs</p>
+              <ul className="list-disc pl-6 text-sm opacity-90 space-y-1">
+                <li>Up to <strong>$0.99 per km</strong> (unmodified vehicle).</li>
+                <li>Up to <strong>$2.76 per km</strong> (modified vehicle or bus).</li>
+                <li>Tolls, parking, public transport at <strong>actual cost</strong> (Activity-Based Transport items).</li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-medium" style={{ color: brand.blue }}>Non-face-to-face &amp; reports</p>
+              <ul className="list-disc pl-6 text-sm opacity-90 space-y-1">
+                <li>Directly related non-face-to-face clinical time (e.g., documentation, coordination) — claimable.</li>
+                <li>NDIA-requested reports — claimable.</li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-medium" style={{ color: brand.blue }}>Short-notice cancellation</p>
+              <p className="text-sm opacity-90">
+                Up to <strong>100%</strong> of the agreed fee if less than <strong>2 clear business days’ notice</strong> is given (or no-show), per NDIS rules and your Service Agreement.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <div className="mt-10 text-center">
           <a
