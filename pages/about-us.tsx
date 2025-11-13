@@ -11,7 +11,10 @@ export default function AboutUs() {
           name="description"
           content="Learn more about NovaCare Nursing and Palantina Hughes — Owner & Care Manager, Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania. Certified in Advanced First Aid and Advanced Resuscitation & Oxygen Therapy."
         />
-        <link rel="canonical" href="https://www.novacarenursing.com.au/about-us" />
+        <link
+          rel="canonical"
+          href="https://www.novacarenursing.com.au/about-us"
+        />
         <meta name="robots" content="index,follow" />
       </Head>
 
@@ -20,42 +23,47 @@ export default function AboutUs() {
       <main className="mx-auto max-w-5xl px-4 py-12 text-[1.05rem] leading-7">
         <h1 className="text-3xl md:text-4xl font-bold">About Us</h1>
         <p className="mt-1 text-lg font-medium">
-          Led by <strong>Palantina Hughes</strong> — Owner &amp; Care Manager, Clinical Nursing Home Care Consultant | Registered Nurse
+          Led by <strong>Palantina (&quot;Tina&quot;) Hughes</strong> — Founder,
+          Clinical Nursing Home Care Consultant &amp; Registered Nurse
         </p>
 
         <section className="mt-8 space-y-5">
           <p>
-            I have over 17 years of experience in the nursing profession in Tasmania, primarily
-            serving as an Emergency Nurse at Launceston General Hospital. During my tenure, I
-            participated in a pilot program that led to the establishment of the Community Rapid
-            Response Service. I also spent several years working in the beautiful Georgetown
-            community as a nurse, working in both the community and the local hospital.
+            I am a highly experienced Registered Nurse and Clinical Nursing Home
+            Care Consultant based in Southern Tasmania, and the founder of{" "}
+            <strong>NovaCare Nursing</strong>. With over 15 years of experience
+            across emergency, community and home care, I bring hospital-level
+            clinical skills into the comfort and privacy of your home.
           </p>
 
           <p>
-            My extensive clinical nursing background includes ventilation management, trauma care,
-            palliative care, complex bowel and urinary care, complex wound care, mental health care,
-            and post-surgical care. I am also highly skilled in cannulation and intravenous (IV)
-            infusion.
+            I spent more than a decade working in the Emergency Department at
+            Launceston General Hospital, providing triage, rapid assessment and
+            complex care for people in crisis. My clinical expertise includes
+            advanced wound care, palliative care, venepuncture and cannulation,
+            continence and catheter care, and managing clinically complex,
+            high-risk presentations.
           </p>
 
           <p>
-            Throughout my career, I have had the privilege of working with a diverse range of
-            individuals from various backgrounds. I have been a part of the lives of many people at
-            their best and worst times, and it has been a privilege to provide care for everyone.
-            Additionally, I have a genetic disorder that has presented challenges to my physical and
-            mental health, which has enhanced my emotional awareness and made me a more empathetic
-            and practical nurse.
+            In community and home-based nursing, I have worked as a Community
+            Nurse, Community Rapid Response nurse, Clinical Lead for home care
+            services and Care Manager for private in-home care. In these roles I
+            have led clinical governance, risk and incident management
+            (including SIRS), care planning, quality improvement and mentoring
+            of nurses and care staff, while collaborating closely with GPs,
+            specialists and allied health teams.
           </p>
 
           <p>
-            In recent years, I have transitioned into the home care sector as a Clinical Lead and
-            Care Manager, providing high-quality care to both aged care and disability clients.
-            This role has further enhanced my clinical skills, including behaviour support planning
-            and care package management. I take pride in being a dedicated professional whose
-            primary objective is to ensure that my clients receive evidence-based, best-practice care.
-            Furthermore, I am committed to delivering holistic care tailored to meet your individual
-            needs.
+            Through NovaCare Nursing, I combine this depth of clinical
+            experience with a warm, person-centred approach. Every visit is
+            thorough, evidence-based and tailored to you as an individual, with
+            a strong focus on dignity, independence and safety at home. When you
+            invite NovaCare Nursing into your home, you are cared for by an
+            experienced Registered Nurse who can manage complexity, communicates
+            clearly, and partners with you and your family to achieve the best
+            possible outcomes – <strong>Premium Nursing, Heartfelt Care.</strong>
           </p>
 
           {/* Separate, clearly labeled trust section */}
