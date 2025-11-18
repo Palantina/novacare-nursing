@@ -1,3 +1,32 @@
+import Head from "next/head";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
+
+export default function AboutUs() {
+  return (
+    <>
+      <Head>
+        <title>About Us | NovaCare Nursing</title>
+        <meta
+          name="description"
+          content="Learn more about NovaCare Nursing and Palantina Hughes — Owner & Care Manager, Clinical Nursing Home Care Consultant and Registered Nurse with over 17 years of experience across Tasmania. Certified in Advanced First Aid and Advanced Resuscitation & Oxygen Therapy."
+        />
+        <link rel="canonical" href="https://www.novacarenursing.com.au/about-us" />
+        <meta name="robots" content="index,follow" />
+      </Head>
+
+      <SiteHeader />
+
+      <main className="mx-auto max-w-5xl px-4 py-12 text-[1.05rem] leading-7">
+        <h1 className="text-3xl md:text-4xl font-bold">About Us</h1>
+        <p className="mt-1 text-lg font-medium">
+          Led by <strong>Palantina Hughes</strong> — Owner &amp; Care Manager, Clinical Nursing Home Care Consultant | Registered Nurse
+        </p>
+
+        <section className="mt-8 space-y-5">
+          <p>
+            I have over 17 years of experience in the nursing profession in Tasmania, primarily
+            serving as an Emergency Nurse at Launceston General Hospital. During my tenure, I
             participated in a pilot program that led to the establishment of the Community Rapid
             Response Service. I also spent several years working in the beautiful Georgetown
             community as a nurse, working in both the community and the local hospital.
