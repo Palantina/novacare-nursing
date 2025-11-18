@@ -43,7 +43,7 @@ export default function About() {
           </div>
           <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
             <div className="font-semibold" style={{ color: brand.blue }}>
-              WWVP & Police Check
+              WWVP &amp; Police Check
             </div>
             <p className="text-sm opacity-80">Current clearances held.</p>
           </div>
@@ -81,14 +81,13 @@ export default function About() {
           </p>
         </section>
 
-        {/* Keeps your existing link to the full bio */}
+        {/* Updated link text to staff page */}
         <p className="mt-6">
-          Learn more about{" "}
           <a
             href="/about-us"
             className="text-[color:var(--brand-gold)] hover:underline"
           >
-            Palantina Hughes
+            Learn more about our staff
           </a>
           .
         </p>
