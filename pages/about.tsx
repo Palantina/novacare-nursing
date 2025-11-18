@@ -11,7 +11,7 @@ export default function About() {
         <title>About | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Learn about NovaCare Nursing in Hobart and Southern Tasmania — premium, evidence-based home nursing led by Registered Nurse and Clinical Nursing Home Care Consultant Palantina Hughes."
+          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
         />
         <link rel="canonical" href="https://www.novacarenursing.com.au/about" />
         <meta name="robots" content="index,follow" />
@@ -27,114 +27,68 @@ export default function About() {
           About NovaCare Nursing
         </h1>
 
-        {/* Compact trust / credibility badges */}
-        <div className="mt-4 grid gap-3 text-sm sm:grid-cols-2 md:grid-cols-3">
-          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/70 backdrop-blur px-4 py-3">
+        {/* Compact trust badges — elegant and scannable */}
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
             <div className="font-semibold" style={{ color: brand.blue }}>
-              Experienced Registered Nurse
+              AHPRA Registered
             </div>
-            <p className="opacity-80">
-              Over 15 years across emergency, community and home care.
-            </p>
+            <p className="text-sm opacity-80">Professional, accountable standards.</p>
           </div>
-
-          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/70 backdrop-blur px-4 py-3">
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
             <div className="font-semibold" style={{ color: brand.blue }}>
-              Clinical Nursing Home Care Consultant
+              Fully Insured
             </div>
-            <p className="opacity-80">
-              Expert in complex assessments, care planning and governance.
-            </p>
+            <p className="text-sm opacity-80">Private practice cover in place.</p>
           </div>
-
-          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/70 backdrop-blur px-4 py-3">
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
             <div className="font-semibold" style={{ color: brand.blue }}>
-              Premium Home-Based Care
+              WWVP & Police Check
             </div>
-            <p className="opacity-80">
-              Hospital-level clinical care delivered in the comfort of home.
-            </p>
+            <p className="text-sm opacity-80">Current clearances held.</p>
           </div>
-
-          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/70 backdrop-blur px-4 py-3">
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
             <div className="font-semibold" style={{ color: brand.blue }}>
-              NDIS, Support at Home &amp; Private
+              Advanced First Aid &amp; Resuscitation
             </div>
-            <p className="opacity-80">
-              Flexible options for self-managed, plan-managed and private
-              clients.
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/70 backdrop-blur px-4 py-3">
-            <div className="font-semibold" style={{ color: brand.blue }}>
-              Evidence-Based Practice
-            </div>
-            <p className="opacity-80">
-              Care aligned with current guidelines, safety standards and best
-              practice.
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/70 backdrop-blur px-4 py-3">
-            <div className="font-semibold" style={{ color: brand.blue }}>
-              Advanced Skills
-            </div>
-            <p className="opacity-80">
-              Advanced wound care, cannulation, IV therapy, continence and
-              palliative care.
-            </p>
+            <p className="text-sm opacity-80">Incl. Oxygen Therapy certified.</p>
           </div>
         </div>
 
-        {/* Main about copy */}
         <section className="mt-6 space-y-4 text-[1.05rem] leading-7">
           <p>
             NovaCare Nursing provides premium, discreet and compassionate
             home-based nursing care in Hobart and surrounding regions. Led by{" "}
-            <strong>Palantina (Tina) Hughes</strong>, Clinical Nursing Home Care
-            Consultant and Registered Nurse, NovaCare Nursing is built on a
-            foundation of professionalism, empathy and clinical excellence.
+            <strong>Palantina Hughes</strong>, Clinical Nursing Home Care
+            Consultant and Registered Nurse, NovaCare Nursing is built on a foundation
+            of professionalism, empathy, and excellence.
           </p>
 
           <p>
-            Our focus is on delivering hospital-level clinical care in the
-            comfort and safety of your own home. We work alongside GPs,
-            specialists, allied health providers and support coordinators to
-            ensure that care is safe, coordinated and aligned with your goals.
+            Our mission is to deliver private, personalised nursing care that
+            supports independence, dignity, and comfort — all in the familiar
+            surroundings of your own home. We offer a range of premium nursing
+            services tailored to meet each client’s individual needs, from
+            clinical care and wound management to palliative and post-operative
+            support.
           </p>
 
           <p>
-            We specialise in caring for older people and people living with
-            disability who have complex or changing health needs. Every visit is
-            thorough, evidence-based and individually tailored — whether it is
-            wound care, catheter or continence care, medication management,
-            clinical reviews or general health support.
-          </p>
-
-          <p>
-            At NovaCare Nursing, we believe that truly premium care combines
-            expert clinical skills with time, respect and genuine listening. You
-            are never treated as a number. We take the time to understand your
-            story, your environment and what matters most to you and your
-            family.
-          </p>
-
-          <p>
-            By bringing advanced nursing care into the home, NovaCare Nursing
-            aims to support dignity, independence and safety, while reducing
-            avoidable hospital presentations and supporting people to live well
-            where they feel most comfortable.
+            At NovaCare Nursing, we believe that exceptional care begins with
+            genuine compassion and clinical excellence. Our care philosophy
+            centres on trust, respect, and professional integrity, ensuring
+            every client receives not only expert nursing but heartfelt care.
           </p>
         </section>
 
-        {/* Link through to staff bio page */}
+        {/* Keeps your existing link to the full bio */}
         <p className="mt-6">
+          Learn more about{" "}
           <a
             href="/about-us"
             className="text-[color:var(--brand-gold)] hover:underline"
           >
-            Learn more about our staff
+            Palantina Hughes
           </a>
           .
         </p>
