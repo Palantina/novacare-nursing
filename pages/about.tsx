@@ -33,7 +33,9 @@ export default function About() {
             <div className="font-semibold" style={{ color: brand.blue }}>
               AHPRA Registered
             </div>
-            <p className="text-sm opacity-80">Professional, accountable standards.</p>
+            <p className="text-sm opacity-80">
+              Professional, accountable standards.
+            </p>
           </div>
           <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
             <div className="font-semibold" style={{ color: brand.blue }}>
@@ -51,7 +53,9 @@ export default function About() {
             <div className="font-semibold" style={{ color: brand.blue }}>
               Advanced First Aid &amp; Resuscitation
             </div>
-            <p className="text-sm opacity-80">Incl. Oxygen Therapy certified.</p>
+            <p className="text-sm opacity-80">
+              Incl. Oxygen Therapy certified.
+            </p>
           </div>
         </div>
 
@@ -60,8 +64,8 @@ export default function About() {
             NovaCare Nursing provides premium, discreet and compassionate
             home-based nursing care in Hobart and surrounding regions. Led by{" "}
             <strong>Palantina Hughes</strong>, Clinical Nursing Home Care
-            Consultant and Registered Nurse, NovaCare Nursing is built on a foundation
-            of professionalism, empathy, and excellence.
+            Consultant and Registered Nurse, NovaCare Nursing is built on a
+            foundation of professionalism, empathy, and excellence.
           </p>
 
           <p>
@@ -81,7 +85,7 @@ export default function About() {
           </p>
         </section>
 
-        {/* Updated link text to staff page */}
+        {/* Updated link text to staff page (no trailing full stop) */}
         <p className="mt-6">
           <a
             href="/about-us"
@@ -89,7 +93,6 @@ export default function About() {
           >
             Learn more about our staff
           </a>
-          .
         </p>
       </main>
 
