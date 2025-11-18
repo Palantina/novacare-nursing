@@ -25,7 +25,7 @@ export default function AboutUs() {
           About Palantina (Tina) Hughes
         </h1>
         <p className="mt-1 text-lg font-medium">
-          Registered Nurse &amp; Founder – NovaCare Nursing
+          Clinical Nursing Home Care Consultant | Registered Nurse &amp; Founder – NovaCare Nursing
         </p>
 
         <section className="mt-8 space-y-5">
