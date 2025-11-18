@@ -1,3 +1,54 @@
+import Head from "next/head";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
+
+const brand = { blue: "#0B2D5C" };
+
+export default function About() {
+  return (
+    <>
+      <Head>
+        <title>About | NovaCare Nursing</title>
+        <meta
+          name="description"
+          content="Learn about NovaCare Nursing in Hobart — premium, private, and compassionate home nursing led by Palantina Hughes, Clinical Nursing Home Care Consultant."
+        />
+        <link rel="canonical" href="https://www.novacarenursing.com.au/about" />
+        <meta name="robots" content="index,follow" />
+      </Head>
+
+      <SiteHeader />
+
+      <main className="mx-auto max-w-5xl px-4 py-12">
+        <h1
+          className="text-3xl md:text-4xl font-bold"
+          style={{ color: brand.blue }}
+        >
+          About NovaCare Nursing
+        </h1>
+
+        {/* Compact trust badges — elegant and scannable */}
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
+              AHPRA Registered
+            </div>
+            <p className="text-sm opacity-80">Professional, accountable standards.</p>
+          </div>
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
+              Fully Insured
+            </div>
+            <p className="text-sm opacity-80">Private practice cover in place.</p>
+          </div>
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
+              WWVP & Police Check
+            </div>
+            <p className="text-sm opacity-80">Current clearances held.</p>
+          </div>
+          <div className="rounded-xl border border-[color:var(--brand-gold)]/30 bg-white/60 backdrop-blur px-4 py-3">
+            <div className="font-semibold" style={{ color: brand.blue }}>
               Advanced First Aid &amp; Resuscitation
             </div>
             <p className="text-sm opacity-80">Incl. Oxygen Therapy certified.</p>
