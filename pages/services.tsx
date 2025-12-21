@@ -85,7 +85,7 @@ export default function Services() {
         <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high-intensity nursing supports with RN oversight, clinical assessments, and subcontracted nursing for aged care providers. Support at Home funding may be used for eligible nursing services."
+          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high-intensity nursing supports with RN oversight, clinical assessments, and subcontracted nursing for aged care providers. Support at Home budgets may be used for eligible nursing services."
         />
       </Head>
 
@@ -100,25 +100,32 @@ export default function Services() {
         </h1>
 
         <p className="text-center opacity-80 mt-3">
-          Skilled, premium nursing — for Aged Care clients, NDIS participants,
-          Private clients and Aged Care Providers.
+          Skilled, premium nursing — for Support at Home clients (via your provider),
+          NDIS participants, Private clients and Aged Care Providers.
         </p>
 
         {/* Funding / registration callout */}
         <div className="mt-6 rounded-2xl border border-[#C6A662]/40 bg-[#F7F4EF] p-5">
           <p className="font-semibold" style={{ color: brand.blue }}>
-            Aged Care registration and Support at Home funding
+            Support at Home: funding and provider choice
           </p>
           <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
-            NovaCare Nursing is an{" "}
-            <strong>Aged Care registered service provider</strong> for nursing
-            services.
+            <strong>Support at Home (SAH)</strong> uses a <strong>single-provider</strong> model — one provider holds your
+            service agreement and manages your SAH budget.
           </p>
           <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
-            <strong>Support at Home</strong> is the Australian Government’s
-            in-home aged care funding program. If you are approved for Support
-            at Home and nursing is included in your care plan, your Support at
-            Home funding can be used to pay for NovaCare Nursing services.
+            Under SAH, <strong>nursing is paid from the same overall pooled budget</strong> as other supports (for example,
+            personal care and domestic assistance). There is <strong>no participant co-contribution</strong> for clinical
+            supports such as nursing care, but nursing costs still draw down the pooled SAH budget.
+          </p>
+          <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
+            You can ask your SAH provider to engage <strong>NovaCare Nursing</strong> as an <strong>associated provider</strong>{" "}
+            for nursing services (subject to their contracting and governance requirements), while you continue to use their
+            network for other supports.
+          </p>
+          <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
+            <strong>For Support at Home providers:</strong> NovaCare Nursing is available to contract as an associated provider
+            to deliver expert clinical nursing, documentation and escalation pathways that support safe, high-quality care.
           </p>
         </div>
 
