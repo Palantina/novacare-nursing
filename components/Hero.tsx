@@ -35,8 +35,8 @@ export default function Hero() {
           </p>
 
           <p className="mt-4 inline-block rounded-full bg-white/10 px-4 py-2 text-sm md:text-base backdrop-blur">
-            Aged Care registered provider for nursing services • Support at Home funding
-            can be used for eligible nursing services
+            Support at Home: ask your provider to engage NovaCare Nursing for expert nursing care • NDIS-funded nursing
+            available where included in your plan
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
