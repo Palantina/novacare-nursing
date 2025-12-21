@@ -13,138 +13,227 @@ export default function Providers() {
         <title>For Providers | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Clinical Nurse Consulting (CNC) partnership for Aged Care & NDIS providers: risk management, complex care assessments, governance, staff competency, and audit-ready documentation."
+          content="Specialist clinical nursing partnership for Support at Home and NDIS providers — basic nursing delivery, clinical governance, oversight, education, auditing, and audit-ready documentation."
         />
       </Head>
 
       <SiteHeader />
 
-      <main className="mx-auto max-w-5xl px-4 py-12 text-[15px] leading-6 md:leading-7">
+      <main className="mx-auto max-w-6xl px-4 py-12 md:py-14">
         {/* Page Header */}
         <header className="text-center">
           <h1 className="text-3xl md:text-4xl font-bold" style={{ color: brand.blue }}>
             For Providers
           </h1>
           <p className="opacity-80 mt-2">
-            Business-to-business clinical partnership for the Support at Home era — compliance, capacity, and better outcomes.
+            Business-to-business clinical partnership for the Support at Home era — excellence, governance, and safer outcomes.
           </p>
         </header>
 
         {/* Hero value statement */}
         <section className="mt-8">
-          <div className="rounded-2xl border bg-white p-6">
-            <h2 className="text-2xl font-bold" style={{ color: brand.blue }}>
-              Clinical Nurse Consulting: Specialist Partnership for Home Care Providers
-            </h2>
-            <h3 className="mt-1 text-lg font-bold" style={{ color: brand.blue }}>
-              Elevating Quality &amp; Managing Risk in the Support at Home Era
-            </h3>
+          <div className="rounded-3xl border bg-white p-6 md:p-7 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+              <div className="md:flex-1">
+                <p
+                  className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold"
+                  style={{ borderColor: "#E5E7EB", color: brand.blue, background: "#F7F9FC" }}
+                >
+                  Clinical Nurse Consulting • Subcontracted Delivery
+                </p>
 
-            <p className="mt-3 opacity-90">
-              NovaCare Nursing is your dedicated partner for specialist clinical solutions within the Aged Care and NDIS sectors.
-              As an independent <strong>Clinical Nurse Consultant (CNC)</strong>, we provide the expert oversight, specialised
-              care delivery, and audit-ready documentation your agency needs to manage complex clients and meet evolving
-              <strong> Aged Care Quality Standards</strong> and <strong>Support at Home</strong> requirements.
-            </p>
+                <h2 className="mt-3 text-2xl md:text-3xl font-extrabold" style={{ color: brand.blue }}>
+                  Specialist Nursing, Clinical Governance &amp; Oversight — Delivered Where You Need It
+                </h2>
 
-            {/* SAH funding callout (concise, professional) */}
-            <div className="mt-4 rounded-xl border bg-white p-4">
-              <p className="text-[15px] leading-6">
+                <p className="mt-3 opacity-90 leading-7">
+                  NovaCare Nursing partners with Support at Home and NDIS providers to deliver{" "}
+                  <strong>expert clinical nursing</strong> and <strong>audit-ready documentation</strong>. We reduce risk,
+                  stabilise complex clients, support workforce capability, and strengthen quality systems — while helping you
+                  meet evolving program expectations and the Aged Care Quality Standards.
+                </p>
+              </div>
+
+              {/* Quick highlights */}
+              <div className="md:w-[360px] rounded-2xl border bg-[#F7F4EF] p-5">
+                <p className="font-semibold" style={{ color: brand.blue }}>
+                  What we offer (SAH &amp; Provider contracts)
+                </p>
+                <ul className="mt-2 space-y-2 text-sm opacity-90">
+                  <li>• Basic nursing delivery (wounds, catheters, meds, IV/cannulation, palliative)</li>
+                  <li>• Clinical governance &amp; oversight (risk, escalation, documentation)</li>
+                  <li>• Clinical education &amp; competency validation</li>
+                  <li>• Clinical auditing (care quality, documentation, practice compliance)</li>
+                  <li>• High-intensity &amp; complex case support (incl. NDIS SIL oversight)</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Support at Home callout: clear and correct */}
+            <div className="mt-6 rounded-2xl border bg-white p-5">
+              <p className="text-[15px] leading-7">
                 <span
                   className="inline-block rounded-md px-2 py-0.5 mr-2 text-xs font-semibold"
                   style={{ background: "#F4F6FA", color: brand.blue, border: "1px solid #E5E7EB" }}
                 >
-                  Support at Home
+                  Support at Home (SAH)
                 </span>
-                <strong style={{ color: brand.blue }}>
-                  For eligible clients with an SAH package, nursing care is fully government-funded and not drawn from the client’s SAH budget.
-                </strong>{" "}
-                We partner with providers to deliver compassionate, compliant clinical care without out-of-pocket costs to the client.
+                SAH generally operates on a <strong>single-provider</strong> model (one provider holds the client agreement and
+                manages the budget). Under SAH, <strong>nursing is funded from the client’s overall pooled SAH budget</strong>{" "}
+                (alongside other supports). Clients do not pay a participant co-contribution for clinical supports such as nursing,
+                but service costs still draw down the pooled budget. Providers can engage <strong>NovaCare Nursing</strong> as an{" "}
+                <strong>associated provider</strong> to deliver nursing and clinical governance — helping protect quality while
+                supporting genuine choice of expert clinical care.
               </p>
+            </div>
+
+            {/* Price positioning (simple, readable) */}
+            <div className="mt-4 grid gap-4 md:grid-cols-3">
+              <div className="rounded-2xl border bg-white p-5">
+                <p className="font-semibold" style={{ color: brand.blue }}>Competitive SAH nursing rates</p>
+                <p className="mt-2 text-sm opacity-90 leading-6">
+                  Our weekday (standard hours) nursing rate is <strong>$150/hour</strong> for SAH and private care. This is intentionally
+                  set below many published home-care nursing fee schedules.
+                </p>
+                <p className="mt-3 text-sm">
+                  <Link href="/fees" className="underline" style={{ color: brand.blue }}>
+                    View full time-band rates
+                  </Link>
+                </p>
+              </div>
+
+              <div className="rounded-2xl border bg-white p-5">
+                <p className="font-semibold" style={{ color: brand.blue }}>No “administrative loading”</p>
+                <p className="mt-2 text-sm opacity-90 leading-6">
+                  Transparent clinical billing for direct care and required indirect work (documentation, care planning and coordination)
+                  where appropriate. No inflated add-ons to absorb governance costs.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border bg-white p-5">
+                <p className="font-semibold" style={{ color: brand.blue }}>NDIS remains aligned to price limits</p>
+                <p className="mt-2 text-sm opacity-90 leading-6">
+                  Routine clinical nursing is delivered under RN2 price limits. Consultancy, SIL clinical oversight and high-intensity
+                  governance is delivered under RN3+ where indicated.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Why partner (dot points) */}
+        {/* Why partner */}
         <section className="mt-10">
-          <h3 className="text-xl font-bold" style={{ color: brand.blue }}>
-            Why Partner with NovaCare Nursing?
+          <h3 className="text-2xl font-bold text-center" style={{ color: brand.blue }}>
+            Why providers contract NovaCare Nursing
           </h3>
 
-          <div className="mt-3 rounded-2xl border bg-white p-5">
-            <ul className="list-disc pl-6 space-y-2 opacity-90">
-              <li>
-                <strong>Risk Mitigation:</strong> Reduce clinical incidents, avoid preventable hospital transfers, and minimise
-                non-compliance findings by engaging senior clinical oversight for complex care.
-              </li>
-              <li>
-                <strong>Capacity Building:</strong> Free Care Managers and Coordinators to focus on relationships while we handle
-                high-acuity workloads and produce audit-ready documentation.
-              </li>
-              <li>
-                <strong>Specialist Expertise:</strong> On-demand advanced skills — wound and IV therapy, catheter/continence, complex
-                medication regimens, escalation pathways, and governance support.
-              </li>
-            </ul>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="font-semibold" style={{ color: brand.blue }}>Risk reduction</p>
+              <p className="mt-2 text-sm opacity-90 leading-6">
+                Reduce clinical incidents and avoid preventable deterioration through senior assessment, timely escalation,
+                and consistent documentation.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="font-semibold" style={{ color: brand.blue }}>Audit-ready governance</p>
+              <p className="mt-2 text-sm opacity-90 leading-6">
+                Strengthen compliance with clinical governance inputs, quality checks, and evidence trails that stand up to scrutiny.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="font-semibold" style={{ color: brand.blue }}>Workforce capability</p>
+              <p className="mt-2 text-sm opacity-90 leading-6">
+                Targeted education and competency validation for PCWs and nurses, aligned to the tasks your teams are actually delivering.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Services table */}
         <section className="mt-10">
           <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
-            Specialist Provider Services
+            Specialist Provider Services (SAH, Aged Care &amp; NDIS)
           </h3>
 
           <div className="mt-4 overflow-x-auto rounded-2xl border bg-white">
-            <table className="w-full min-w-[760px] text-left">
+            <table className="w-full min-w-[900px] text-left">
               <thead className="bg-[color:var(--brand-cream)]">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Service Category</th>
-                  <th className="px-4 py-3 font-semibold">Provider Benefit</th>
+                  <th className="px-4 py-3 font-semibold">What NovaCare delivers</th>
+                  <th className="px-4 py-3 font-semibold">Provider benefit</th>
                 </tr>
               </thead>
               <tbody className="[&>tr:nth-child(even)]:bg-gray-50">
                 <tr className="border-t align-top">
-                  <td className="px-4 py-3 font-medium">Complex Care Assessments</td>
+                  <td className="px-4 py-3 font-medium">Basic nursing delivery (SAH/private contracts)</td>
                   <td className="px-4 py-3">
-                    Rapid initial and periodic assessments (e.g., wound, continence, palliative).
-                    <strong> Outcome:</strong> robust, audit-ready clinical records per client.
+                    Wounds &amp; dressings, catheter/continence care, medication support, injections, IV/cannulation, post-op care,
+                    palliative symptom support and escalation.
+                  </td>
+                  <td className="px-4 py-3">
+                    Reliable, high-skill nursing capacity without the overheads of recruiting and supervising short-notice specialist staff.
                   </td>
                 </tr>
+
                 <tr className="border-t align-top">
-                  <td className="px-4 py-3 font-medium">Clinical Governance Support</td>
+                  <td className="px-4 py-3 font-medium">Clinical governance &amp; oversight</td>
                   <td className="px-4 py-3">
-                    Care plan reviews, policy/procedure checks, risk analysis, escalation mapping.
-                    <strong> Outcome:</strong> stronger quality framework and compliance readiness.
+                    Care plan review, risk identification, escalation pathways, documentation standards, quality improvement actions and clinical decision support.
+                  </td>
+                  <td className="px-4 py-3">
+                    Stronger governance controls and reduced compliance exposure across complex or high-risk cohorts.
                   </td>
                 </tr>
+
                 <tr className="border-t align-top">
-                  <td className="px-4 py-3 font-medium">Staff Training &amp; Competency</td>
+                  <td className="px-4 py-3 font-medium">Clinical auditing</td>
                   <td className="px-4 py-3">
-                    Tailored in-service training and competency validation for PCWs and RNs.
-                    <strong> Outcome:</strong> up-skilled teams and verifiable training records.
+                    Targeted audits of care delivery and documentation (wounds, continence, medications, incidents), feedback loops, corrective actions and evidence trails.
+                  </td>
+                  <td className="px-4 py-3">
+                    Measurable quality uplift, early detection of unsafe practice, and defensible continuous improvement records.
                   </td>
                 </tr>
+
                 <tr className="border-t align-top">
-                  <td className="px-4 py-3 font-medium">NDIS Specialist Support</td>
+                  <td className="px-4 py-3 font-medium">Clinical education &amp; competency validation</td>
                   <td className="px-4 py-3">
-                    High-level clinical reports for plan reviews, justification of complex supports,
-                    MDT input and case conferences.
-                    <strong> Outcome:</strong> better outcomes and defensible plan expenditure.
+                    In-service education, task-based competency checks, supervision support and clear documentation of workforce capability.
+                  </td>
+                  <td className="px-4 py-3">
+                    Up-skilled teams and verifiable competency records for audits and incident prevention.
+                  </td>
+                </tr>
+
+                <tr className="border-t align-top">
+                  <td className="px-4 py-3 font-medium">NDIS consultancy / high-intensity oversight</td>
+                  <td className="px-4 py-3">
+                    RN3+ consultancy, clinical reports for plan reviews, SIL clinical oversight, complex case management, and case conference participation.
+                  </td>
+                  <td className="px-4 py-3">
+                    Defensible plan utilisation, improved outcomes, and clear governance across high-intensity supports.
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </section>
 
-          {/* Quick list of typical deliverables */}
-          <div className="mt-4 rounded-2xl border bg-white p-5">
-            <p className="font-medium" style={{ color: brand.blue }}>Typical Deliverables</p>
-            <ul className="list-disc pl-6 mt-2 opacity-90 space-y-1">
-              <li>Assessment + care plan with measurable outcomes and review dates.</li>
-              <li>Escalation pathway and clinical risk register entries where indicated.</li>
-              <li>Progress notes aligned to ACQS and program requirements (SAH/NDIS).</li>
-              <li>Competency records and in-service attendance sheets for your staff.</li>
+        {/* What you receive */}
+        <section className="mt-10">
+          <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
+            What you receive (every engagement)
+          </h3>
+
+          <div className="mt-4 rounded-2xl border bg-white p-6">
+            <ul className="list-disc pl-6 opacity-90 space-y-2">
+              <li>Clinical assessment and plan with measurable outcomes and review dates.</li>
+              <li>Progress notes and documentation aligned to program and quality expectations.</li>
+              <li>Escalation pathway and risk flags where indicated (including clear “when to call” triggers).</li>
+              <li>Competency records and education attendance sheets where training is delivered.</li>
+              <li>Audit tools and corrective actions where auditing is commissioned.</li>
             </ul>
           </div>
         </section>
@@ -152,26 +241,26 @@ export default function Providers() {
         {/* Engagement model */}
         <section className="mt-10">
           <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
-            Engagement Model
+            Engagement model (simple and fast)
           </h3>
 
           <div className="grid gap-4 md:grid-cols-3 mt-4">
-            <div className="rounded-2xl border bg-white p-5">
-              <p className="font-medium" style={{ color: brand.blue }}>1) Referral &amp; Scope</p>
-              <p className="opacity-90 mt-1">
-                You brief us on client goals, risks, and timelines. We confirm scope, time bands, and reporting needs.
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="font-semibold" style={{ color: brand.blue }}>1) Scope</p>
+              <p className="opacity-90 mt-2 text-sm leading-6">
+                You brief us on client goals, risks, service category (delivery/governance/audit), and timelines. We confirm scope and reporting requirements.
               </p>
             </div>
-            <div className="rounded-2xl border bg-white p-5">
-              <p className="font-medium" style={{ color: brand.blue }}>2) Assessment &amp; Delivery</p>
-              <p className="opacity-90 mt-1">
-                Clinical assessment, plan/education, and implementation. Documentation produced concurrently.
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="font-semibold" style={{ color: brand.blue }}>2) Deliver</p>
+              <p className="opacity-90 mt-2 text-sm leading-6">
+                Clinical delivery and/or governance actions are completed with documentation produced concurrently.
               </p>
             </div>
-            <div className="rounded-2xl border bg-white p-5">
-              <p className="font-medium" style={{ color: brand.blue }}>3) Governance &amp; Review</p>
-              <p className="opacity-90 mt-1">
-                Audit-ready documents, outcome reviews, escalation and continuous improvement recommendations.
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="font-semibold" style={{ color: brand.blue }}>3) Review</p>
+              <p className="opacity-90 mt-2 text-sm leading-6">
+                Outcomes, risks and next steps are reported back clearly, with escalation pathways and quality recommendations where required.
               </p>
             </div>
           </div>
@@ -179,12 +268,20 @@ export default function Providers() {
 
         {/* Compliance notes */}
         <section className="mt-10">
-          <div className="rounded-2xl border bg-white p-5">
-            <p className="font-medium" style={{ color: brand.blue }}>Program &amp; Compliance Notes</p>
-            <ul className="list-disc pl-6 mt-2 opacity-90 space-y-1">
-              <li><strong>Support at Home:</strong> Direct and Indirect clinical time are billable when linked to an authorised SAH plan. Approved nursing services are funded for eligible clients.</li>
-              <li><strong>Aged Care Quality Standards (ACQS):</strong> Documentation and care delivery align to ACQS and audit expectations.</li>
-              <li><strong>NDIS:</strong> Clinical nursing adheres to current NDIS price limits and time bands; self-managed participants may negotiate costs.</li>
+          <div className="rounded-2xl border bg-white p-6">
+            <p className="font-semibold" style={{ color: brand.blue }}>
+              Program notes (plain English)
+            </p>
+            <ul className="list-disc pl-6 mt-3 opacity-90 space-y-2 text-sm leading-6">
+              <li>
+                <strong>Support at Home:</strong> Nursing is delivered via provider contracts/associated-provider arrangements. Clients generally engage through a single provider, and nursing is paid from the client’s pooled SAH budget.
+              </li>
+              <li>
+                <strong>Aged Care Quality Standards:</strong> Documentation and delivery are designed to be audit-ready, with clear evidence trails and escalation pathways.
+              </li>
+              <li>
+                <strong>NDIS:</strong> Nursing supports are billed in line with the applicable NDIS support item, time band, and the RN2/RN3+ clinical role delivered.
+              </li>
             </ul>
           </div>
         </section>
@@ -196,10 +293,10 @@ export default function Providers() {
             className="inline-block rounded-xl px-6 py-3 font-semibold hover:opacity-95 transition"
             style={{ background: brand.gold, color: brand.blue }}
           >
-            Book a 15-minute intro consult
+            Book a 15-minute provider intro consult
           </a>
           <p className="text-sm mt-2 opacity-80">
-            Prefer email? <Link href="/contact" className="underline">Send details</Link> and we’ll respond with availability and next steps.
+            Prefer email? <Link href="/contact" className="underline">Send provider details</Link> and we’ll respond with availability and next steps.
           </p>
         </section>
       </main>
