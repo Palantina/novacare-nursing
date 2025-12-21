@@ -70,15 +70,12 @@ export default function ProvidersSupportAtHome() {
 
               <div className="rounded-2xl border bg-[#F7F4EF] p-5">
                 <p className="font-semibold" style={{ color: brand.blue }}>
-                  Pricing that preserves pooled budgets
+                  Pricing (SAH provider contracting)
                 </p>
                 <p className="mt-2 text-sm opacity-90 leading-6">
-                  Our weekday (standard hours) SAH nursing rate is <strong>$150/hour</strong>. This is intentionally set below many
-                  published home-care nursing schedules — helping preserve pooled budgets for other supports.
+                  Our SAH direct nursing rate is clearly set out on the Fees page, including weekday non-standard hours, weekends and public holidays.
                 </p>
-                <p className="mt-3 text-sm opacity-90 leading-6">
-                  Full time-band pricing (weekday non-standard, weekends and public holidays) is shown on the Fees page.
-                </p>
+
                 <div className="mt-4">
                   <Link
                     href="/fees"
@@ -91,11 +88,44 @@ export default function ProvidersSupportAtHome() {
 
                 <div className="mt-5 rounded-xl border bg-white p-4">
                   <p className="text-sm opacity-90 leading-6">
-                    <strong>Operational note:</strong> Nursing draws from the same pooled SAH budget as other supports. Clients do not pay a
-                    participant co-contribution for clinical supports (such as nursing), but service costs still draw down the pooled budget.
+                    <strong>Operational note:</strong> Nursing draws from the same pooled SAH budget as other supports. Clients do not pay a participant
+                    co-contribution for clinical supports (such as nursing), but service costs still draw down the pooled budget.
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Trust & governance block */}
+            <div className="mt-6 rounded-2xl border bg-white p-6">
+              <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
+                Trust &amp; Clinical Governance
+              </h3>
+              <p className="mt-2 text-sm opacity-90 leading-6">
+                NovaCare Nursing is a Registered Nurse–led service focused on clinical excellence in the community setting. We deliver care with
+                clear documentation standards, escalation pathways, and audit-ready evidence trails. Where we provide education, oversight or audits,
+                outputs include competency records, corrective actions, and clear “when to escalate” triggers to support safe, consistent delivery.
+              </p>
+              <ul className="mt-3 list-disc pl-6 text-sm opacity-90 leading-6 space-y-1">
+                <li>Fully insured for private practice and subcontracted clinical delivery</li>
+                <li>Structured documentation and defensible clinical decision-making</li>
+                <li>Clear escalation pathways and risk flagging for high-risk cohorts</li>
+                <li>Professional education and competency validation aligned to real-world tasks</li>
+              </ul>
+            </div>
+
+            {/* Support at Home model note (concise, correct) */}
+            <div className="mt-6 rounded-2xl border bg-white p-5">
+              <p className="text-[15px] leading-7">
+                <span
+                  className="inline-block rounded-md px-2 py-0.5 mr-2 text-xs font-semibold"
+                  style={{ background: "#F4F6FA", color: brand.blue, border: "1px solid #E5E7EB" }}
+                >
+                  Support at Home (SAH)
+                </span>
+                SAH generally operates on a <strong>single-provider</strong> model (one provider holds the client agreement and manages the budget).
+                Nursing is funded from the client’s overall <strong>pooled SAH budget</strong>. Clients can ask their provider to engage{" "}
+                <strong>NovaCare Nursing</strong> as an <strong>associated provider</strong> for nursing services (subject to contracting and governance requirements).
+              </p>
             </div>
           </div>
         </section>
@@ -160,7 +190,7 @@ export default function ProvidersSupportAtHome() {
             className="inline-block rounded-xl px-6 py-3 font-semibold hover:opacity-95 transition"
             style={{ background: brand.gold, color: brand.blue }}
           >
-            Book a 15-minute provider intro consult
+            Book a provider consultation
           </a>
           <p className="text-sm mt-3 opacity-80">
             Want the one-page provider partner pack?{" "}
