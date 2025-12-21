@@ -85,7 +85,7 @@ export default function Services() {
         <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high-intensity nursing supports with RN oversight, clinical assessments, and subcontracted nursing for aged care providers."
+          content="Private home nursing services in Hobart — post-operative care, chronic & complex support, palliative care & respite, high-intensity nursing supports with RN oversight, clinical assessments, and subcontracted nursing for aged care providers. Support at Home funding may be used for eligible nursing services."
         />
       </Head>
 
@@ -103,6 +103,24 @@ export default function Services() {
           Skilled, premium nursing — for Aged Care clients, NDIS participants,
           Private clients and Aged Care Providers.
         </p>
+
+        {/* Funding / registration callout */}
+        <div className="mt-6 rounded-2xl border border-[#C6A662]/40 bg-[#F7F4EF] p-5">
+          <p className="font-semibold" style={{ color: brand.blue }}>
+            Aged Care registration and Support at Home funding
+          </p>
+          <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
+            NovaCare Nursing is an{" "}
+            <strong>Aged Care registered service provider</strong> for nursing
+            services.
+          </p>
+          <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
+            <strong>Support at Home</strong> is the Australian Government’s
+            in-home aged care funding program. If you are approved for Support
+            at Home and nursing is included in your care plan, your Support at
+            Home funding can be used to pay for NovaCare Nursing services.
+          </p>
+        </div>
 
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           {services.map((s) => (
@@ -129,7 +147,7 @@ export default function Services() {
         {/* FAQ section */}
         <ServicesFaq />
 
-        {/* ✅ Fees & Pricing button at the bottom */}
+        {/* Fees & Pricing button at the bottom */}
         <div className="mt-10 text-center">
           <Link
             href="/fees"
