@@ -87,11 +87,29 @@ export default function ProvidersNdis() {
 
                 <div className="mt-5 rounded-xl border bg-white p-4">
                   <p className="text-sm opacity-90 leading-6">
-                    <strong>Note:</strong> NDIS pricing is a constrained environment. The objective is defensible classification (RN2 vs RN3+),
-                    high-quality evidence, and reliable delivery — not “rate gaming.”
+                    <strong>Note:</strong> NDIS pricing is constrained. The priority is defensible classification (RN2 vs RN3+),
+                    high-quality evidence, and reliable delivery.
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Trust & governance block */}
+            <div className="mt-6 rounded-2xl border bg-white p-6">
+              <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
+                Trust &amp; Clinical Governance
+              </h3>
+              <p className="mt-2 text-sm opacity-90 leading-6">
+                NovaCare Nursing provides RN-led clinical delivery and consultancy with clear governance controls. We prioritise audit-ready documentation,
+                defined escalation pathways, and competency validation for high-risk tasks delivered within home and SIL environments. Where reporting is
+                required for plan review or risk management, documentation is structured, defensible and outcomes-focused.
+              </p>
+              <ul className="mt-3 list-disc pl-6 text-sm opacity-90 leading-6 space-y-1">
+                <li>Role clarity: RN2 routine clinical tasks; RN3+ consultancy and governance</li>
+                <li>Evidence trails aligned to participant goals, risks and clinical necessity</li>
+                <li>Education and competency records for support worker-delivered tasks</li>
+                <li>Escalation and incident learning to reduce repeat events</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -129,7 +147,7 @@ export default function ProvidersNdis() {
             className="inline-block rounded-xl px-6 py-3 font-semibold hover:opacity-95 transition"
             style={{ background: brand.gold, color: brand.blue }}
           >
-            Book a 15-minute NDIS provider consult
+            Book a provider consultation
           </a>
           <p className="text-sm mt-3 opacity-80">
             <Link href="/providers" className="underline" style={{ color: brand.blue }}>
