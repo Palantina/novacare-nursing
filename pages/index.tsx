@@ -12,7 +12,7 @@ export default function Home() {
         <title>NovaCare Nursing | Premium Private Home Nursing in Hobart & Surrounds</title>
         <meta
           name="description"
-          content="NovaCare Nursing provides premium, discreet, and compassionate in-home nursing services across Hobart & surrounds. Registered Nurse Palantina Hughes delivers tailored, professional care with a heartfelt touch."
+          content="NovaCare Nursing provides premium, discreet, and compassionate in-home nursing services across Hobart & surrounds. Aged Care registered provider for nursing services, including Support at Home-funded nursing for eligible clients."
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://www.novacarenursing.com.au/" />
@@ -30,7 +30,7 @@ export default function Home() {
               "logo": "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               "image": "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               "description":
-                "Premium, private in-home nursing in Hobart & surrounds. Registered Nurse Palantina Hughes delivers tailored, compassionate care.",
+                "Premium, private in-home nursing in Hobart & surrounds. Aged Care registered provider for nursing services, including Support at Home-funded nursing for eligible clients.",
               "telephone": "+61491303671",
               "email": "info@novacarenursing.com.au",
               "areaServed": { "@type": "City", "name": "Hobart" },
