@@ -140,7 +140,7 @@ export default function Services() {
         {/* Funding / registration callout */}
         <div className="mt-6 rounded-2xl border border-[#C6A662]/40 bg-[#F7F4EF] p-5">
           <p className="font-semibold" style={{ color: brand.blue }}>
-            Support at Home: funding and provider choice
+            Support at Home: funding and provider engagement
           </p>
           <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
             <strong>Support at Home (SAH)</strong> uses a <strong>single-provider</strong> model.
@@ -149,7 +149,7 @@ export default function Services() {
             Nursing is funded from the same pooled budget as other supports under SAH.
           </p>
           <p className="mt-2 text-[0.98rem] leading-7 opacity-90">
-            For <strong>NDIS</strong>, nursing can be funded where it is included in your plan and aligns to your goals and
+            For <strong>NDIS</strong>, nursing can be funded when it is included in your plan and aligns to your goals and
             reasonable and necessary supports.
           </p>
         </div>
