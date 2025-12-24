@@ -31,24 +31,18 @@ export default function SiteHeader() {
   return (
     <header className="bg-[color:var(--brand-blue)] shadow-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo + Brand */}
+        {/* Subtle increase in header height to accommodate a slightly larger logo lockup */}
+        <div className="flex justify-between items-center h-18">
+          {/* Logo lockup only (avoid duplicate brand heading) */}
           <div className="flex items-center min-w-0">
-            <Link href="/" className="flex items-center gap-2 min-w-0">
+            <Link href="/" className="flex items-center min-w-0" aria-label="NovaCare Nursing Home">
               <Image
                 src="/NovaCare_Logo.svg"
                 alt="NovaCare Nursing"
-                width={240}
-                height={70}
+                width={260}
+                height={76}
                 priority
               />
-              {/* Keep text subtle to avoid crowding on smaller screens */}
-              <span
-                className="hidden xl:block text-xl font-bold tracking-tight whitespace-nowrap"
-                style={{ color: brandGold }}
-              >
-                NovaCare Nursing
-              </span>
             </Link>
           </div>
 
@@ -81,7 +75,6 @@ export default function SiteHeader() {
             onClick={() => setOpen((v) => !v)}
             style={{ color: brandGold }}
           >
-            {/* Icon */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
                 d="M4 6h16M4 12h16M4 18h16"
@@ -95,10 +88,7 @@ export default function SiteHeader() {
 
         {/* Mobile navigation panel */}
         {open && (
-          <div
-            id="mobile-nav"
-            className="md:hidden pb-4"
-          >
+          <div id="mobile-nav" className="md:hidden pb-4">
             <div className="mt-2 rounded-2xl border border-white/10 bg-white/5 backdrop-blur px-3 py-2">
               {nav.map((item) => {
                 const active = item.isActive ? item.isActive(pathname) : pathname === item.href;
