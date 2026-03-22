@@ -90,17 +90,16 @@ export default function Fees() {
                 Support at Home
               </span>
               <strong style={{ color: brand.blue }}>
-                Support at Home uses a <strong>single-provider</strong> model — one provider holds your service agreement and manages your budget.
+                SAH uses a <strong>single-provider</strong> model — one provider holds your service agreement and manages your budget.
               </strong>{" "}
               <strong style={{ color: brand.blue }}>
-                Nursing is funded from the same overall SAH budget pool as your other supports
+                Clinical supports such as nursing have no participant co-payment.
               </strong>{" "}
-              (e.g., personal care and domestic assistance), so using more nursing may reduce the budget available for other services.{" "}
+              However, provider service charges for nursing are still paid from your overall SAH budget, so using more nursing may reduce the budget available for other services.{" "}
               <strong style={{ color: brand.blue }}>
-                You do not pay a participant co-contribution for clinical supports such as nursing care.
+                For eligible clients approved for the End-of-Life Pathway, specialised palliative nursing can be funded through the additional $25,000 pathway budget over 12 weeks.
               </strong>{" "}
-              You can ask your SAH provider to engage <strong>NovaCare Nursing</strong> as an <strong>associated provider</strong> for your nursing
-              services (subject to their contracting and governance requirements), while you continue to use your provider’s network for other supports.
+              You can ask your SAH provider to contract <strong>NovaCare Nursing</strong> for your nursing services. Where the arrangement meets the Act, NovaCare Nursing may be engaged as an <strong>associated provider</strong>, subject to contracting and governance requirements.
             </p>
           </div>
 
@@ -210,9 +209,7 @@ export default function Fees() {
             <details className="rounded-xl border bg-white p-4">
               <summary className="cursor-pointer font-medium">Is Support at Home (SAH) nursing “free”?</summary>
               <p className="mt-2 text-sm opacity-90">
-                If you are eligible and nursing is approved within an authorised SAH budget, the Australian Government funds the price of those nursing
-                services and you do not pay a participant co-contribution for clinical supports such as nursing care. However, the cost is still drawn
-                from your overall SAH budget pool.
+                Clinical supports such as nursing have no participant co-payment under Support at Home. However, provider service charges for nursing are still paid from your overall SAH budget. For eligible clients approved for the End-of-Life Pathway, specialised palliative nursing can be funded through the additional $25,000 pathway budget over 12 weeks.
               </p>
             </details>
 
@@ -231,7 +228,7 @@ export default function Fees() {
                 <Link href="/contact" className="underline">
                   Contact
                 </Link>{" "}
-                page to request a call back, or ask your Support at Home provider to engage NovaCare Nursing for your nursing services.
+                page to request a call back, or ask your Support at Home provider to contract NovaCare Nursing for your nursing services.
               </p>
             </details>
           </div>
