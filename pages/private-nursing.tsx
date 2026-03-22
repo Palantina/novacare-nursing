@@ -14,7 +14,7 @@ export default function PrivateNursing() {
         <title>Private Nursing | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Premium private (self-funded) in-home nursing across Hobart & surrounds. Expert wound management, catheter care (IDC/SPC), post-hospital clinical reviews, palliative support and complex clinical oversight. Transparent fees."
+          content="Premium private (self-funded) in-home nursing across Hobart & surrounds. Expert wound management, catheter care (IDC/SPC), post-hospital clinical reviews, specialised clinical palliative nursing support and complex clinical oversight. Transparent fees."
         />
         <link
           rel="canonical"
@@ -94,7 +94,7 @@ export default function PrivateNursing() {
 
             <div className="rounded-2xl border bg-white p-6">
               <h3 className="text-lg font-semibold" style={{ color: brand.blue }}>
-                Palliative and end-of-life support
+                Specialised Clinical Palliative Nursing
               </h3>
               <ul className="mt-3 list-disc pl-5 space-y-1 text-sm opacity-90">
                 <li>Comfort-focused nursing support and symptom monitoring</li>
