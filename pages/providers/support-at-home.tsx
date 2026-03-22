@@ -31,7 +31,7 @@ export default function ProvidersSupportAtHome() {
             Subcontracted Nursing, Clinical Governance &amp; Oversight
           </h1>
           <p className="opacity-80 mt-2">
-            Partner with NovaCare Nursing as an associated provider to strengthen quality, reduce risk, and deliver expert clinical care.
+            Partner with NovaCare Nursing to strengthen quality, reduce risk, and deliver expert clinical care.
           </p>
         </header>
 
@@ -44,14 +44,14 @@ export default function ProvidersSupportAtHome() {
                 </h2>
                 <p className="mt-3 opacity-90 leading-7">
                   Under Support at Home, clients generally engage through a single provider who manages the budget and service agreement.
-                  Providers can engage specialist clinicians to deliver services and strengthen governance. NovaCare Nursing provides
-                  expert clinical delivery and governance inputs designed to stand up to scrutiny.
+                  Providers can contract NovaCare Nursing to deliver specialist nursing services and strengthen governance.
+                  NovaCare Nursing provides expert clinical delivery and governance inputs designed to stand up to scrutiny.
                 </p>
 
                 <ul className="mt-4 list-disc pl-6 space-y-2 text-sm opacity-90 leading-6">
                   <li>
                     <strong>Basic nursing delivery:</strong> wounds &amp; dressings, catheter/continence care, injections, medication support,
-                    IV/cannulation, post-op care, palliative symptom support and escalation.
+                    IV/cannulation, post-op care, specialised clinical palliative nursing and escalation.
                   </li>
                   <li>
                     <strong>Clinical governance:</strong> documentation standards, escalation pathways, risk flags, quality improvement actions and decision support.
@@ -88,14 +88,15 @@ export default function ProvidersSupportAtHome() {
 
                 <div className="mt-5 rounded-xl border bg-white p-4">
                   <p className="text-sm opacity-90 leading-6">
-                    <strong>Operational note:</strong> Nursing draws from the same pooled SAH budget as other supports. Clients do not pay a participant
-                    co-contribution for clinical supports (such as nursing), but service costs still draw down the pooled budget.
+                    <strong>Operational note:</strong> Clinical supports such as nursing have no participant co-payment under Support at Home.
+                    However, provider service charges are still paid from the client’s overall Support at Home budget. For eligible clients
+                    approved for the End-of-Life Pathway, specialised palliative nursing can be funded through the additional $25,000 pathway
+                    budget over 12 weeks.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Trust & governance block */}
             <div className="mt-6 rounded-2xl border bg-white p-6">
               <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
                 Trust &amp; Clinical Governance
@@ -113,7 +114,6 @@ export default function ProvidersSupportAtHome() {
               </ul>
             </div>
 
-            {/* Support at Home model note (concise, correct) */}
             <div className="mt-6 rounded-2xl border bg-white p-5">
               <p className="text-[15px] leading-7">
                 <span
@@ -123,8 +123,11 @@ export default function ProvidersSupportAtHome() {
                   Support at Home (SAH)
                 </span>
                 SAH generally operates on a <strong>single-provider</strong> model (one provider holds the client agreement and manages the budget).
-                Nursing is funded from the client’s overall <strong>pooled SAH budget</strong>. Clients can ask their provider to engage{" "}
-                <strong>NovaCare Nursing</strong> as an <strong>associated provider</strong> for nursing services (subject to contracting and governance requirements).
+                Clients still need their provider to contract <strong>NovaCare Nursing</strong> for nursing services, subject to contracting and
+                governance requirements. Where the arrangement meets the Act, NovaCare Nursing may be engaged as an <strong>associated provider</strong>.
+                Clinical supports such as nursing have no participant co-payment, but provider service charges are still paid from the client’s
+                overall Support at Home budget. For eligible clients approved for the End-of-Life Pathway, specialised palliative nursing can be
+                funded through the additional <strong>$25,000</strong> pathway budget over <strong>12 weeks</strong>.
               </p>
             </div>
           </div>
