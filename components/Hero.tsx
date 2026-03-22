@@ -38,12 +38,20 @@ export default function Hero() {
             <p className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm md:text-base backdrop-blur">
               Proudly Tasmanian owned and operated
             </p>
+          </div>
 
-            <p className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm md:text-base backdrop-blur">
-              Private nursing: book directly • Support at Home: ask your
-              provider to engage NovaCare Nursing for specialist RN care •
-              NDIS: nursing supports available when included in your plan
-            </p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+            <span className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm md:text-base backdrop-blur">
+              Private nursing: book directly
+            </span>
+
+            <span className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm md:text-base backdrop-blur">
+              Support at Home: through your provider
+            </span>
+
+            <span className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm md:text-base backdrop-blur">
+              NDIS: when included in your plan
+            </span>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
