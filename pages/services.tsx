@@ -49,7 +49,7 @@ const services = [
     ],
   },
   {
-    title: "Palliative & End-of-Life Nursing",
+    title: "Specialised Clinical Palliative Nursing",
     bullets: [
       "Comfort-focused nursing support",
       "Symptom monitoring and escalation planning",
@@ -58,13 +58,13 @@ const services = [
     ],
   },
   {
-    title: "Behaviour Support Planning",
+    title: "Behaviour Support Planning for All Types of Dementia",
     bullets: [
       "Dementia-related responsive behaviours (BPSD)",
       "Functional formulation and practical strategies",
       "ABC (Antecedent–Behaviour–Consequence) charts and monitoring tools",
       "Escalation pathways and review cadence",
-      "Least-restrictive practice approach (where applicable)",
+      "Support across all types of dementia",
     ],
   },
   {
@@ -115,7 +115,7 @@ export default function Services() {
             <strong>wound assessment and management</strong>,{" "}
             <strong>urinary catheter care (IDC/SPC)</strong>,{" "}
             <strong>post-hospital clinical reviews</strong> and{" "}
-            <strong>palliative/end-of-life nursing support</strong>.
+            <strong>specialised clinical palliative nursing support</strong>.
           </p>
 
           <div className="mt-4 flex flex-col sm:flex-row gap-3">
