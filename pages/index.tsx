@@ -218,18 +218,31 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brand.blue }}>
                 Professional Endorsement
               </p>
-              <blockquote className="mt-4 text-lg md:text-xl leading-8" style={{ color: brand.blue }}>
-                “I would happily have my own family members under her care.”
+
+              <blockquote
+                className="mt-4 text-sm leading-7 opacity-90"
+                style={{ color: brand.blue }}
+              >
+                “All clients I refer to Tina consistently provide positive feedback
+                about how phenomenal she is. Her bedside manner and clinical
+                knowledge are exceptional; she has a genuine passion and devotion
+                to supporting her clients. Collaborating with her professionally
+                and with a multi-disciplinary team is fantastic. Her communication
+                and recommendations are clear, comprehensive, accurate and timely.
+                I feel complete confidence my clients are in extremely capable
+                hands, and I would happily have my own family members under her
+                care. It is a privilege and a pleasure to work with and learn from
+                her. Any person lucky enough to be supported by Tina will receive
+                excellent, evidence based care delivered with humanity and
+                compassion.”
               </blockquote>
-              <p className="mt-4 text-sm leading-7 opacity-90">
-                Huon Regional Care also described Tina’s bedside manner and clinical
-                knowledge as exceptional, and her communication and recommendations
-                as clear, comprehensive, accurate, and timely.
-              </p>
+
               <p className="mt-4 text-sm font-semibold" style={{ color: brand.blue }}>
                 Laura Pfundt
               </p>
-              <p className="text-sm opacity-80">Huon Regional Care</p>
+              <p className="text-sm opacity-80">
+                Clinical Lead / Clinical Care Partner, Huon Regional Care
+              </p>
             </div>
           </div>
         </section>
