@@ -189,7 +189,7 @@ const services = [
 
 const trustPoints = [
   "17 years of clinical nursing experience",
-  "AHPRA-registered Registered Nurse",
+  "AHPRA-registered nurse",
   "Fully insured sole trader nursing practice",
   "Clinical Nursing Consultant level experience",
   "Hospital, emergency, rapid response, community and home-care background",
@@ -203,7 +203,7 @@ export default function Services() {
         <title>Services | NovaCare Nursing</title>
         <meta
           name="description"
-          content="NovaCare Nursing provides advanced Registered Nurse care and clinical nursing consultancy across Hobart and surrounds, including IV iron infusions at home, complex wound and vascular nursing, palliative nursing, tracheostomy care, PEG feeding, ventilation support, catheter care, dementia support, NDIS provider-partnered nursing and aged care clinical governance."
+          content="NovaCare Nursing provides advanced clinical nursing and consultancy across Hobart and surrounds, including IV iron infusions at home, complex wound and vascular nursing, palliative nursing, tracheostomy care, PEG feeding, ventilation support, catheter care, dementia support, NDIS provider-partnered nursing and aged care clinical governance."
         />
         <link rel="canonical" href="https://www.novacarenursing.com.au/services" />
       </Head>
@@ -216,7 +216,7 @@ export default function Services() {
             className="text-sm font-semibold uppercase tracking-[0.22em]"
             style={{ color: brand.gold }}
           >
-            Advanced Registered Nurse care at home
+            Advanced clinical nursing and consultancy
           </p>
           <h1
             className="mt-3 text-3xl md:text-5xl font-bold"
@@ -225,10 +225,12 @@ export default function Services() {
             NovaCare Nursing Services
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg leading-8 opacity-85">
-            NovaCare Nursing provides specialist Registered Nurse care and clinical nursing consultancy
-            across Hobart and surrounds. Led by Palantina Hughes, an AHPRA-registered Registered Nurse
-            with <strong>17 years of clinical nursing experience</strong>, NovaCare supports people,
-            families and providers who need more than basic home care.
+            NovaCare Nursing delivers advanced clinical nursing and consultancy for people with
+            complex health needs at home, and for providers requiring experienced clinical nursing
+            input. Led by Palantina Hughes, an AHPRA-registered nurse with{" "}
+            <strong>17 years of clinical nursing experience</strong>, NovaCare Nursing provides
+            skilled assessment, practical care planning, documentation, education, coordination and
+            safe escalation.
           </p>
         </section>
 
@@ -239,16 +241,18 @@ export default function Services() {
                 Clinical nursing for complex care at home
               </h2>
               <p className="mt-3 text-[1rem] leading-8 opacity-90">
-                Services are nurse-led, assessment-based, evidence-informed and delivered within Registered
-                Nurse scope of practice. Care may include clinical assessment, wound and skin integrity care,
-                vascular and high-risk foot support, IV infusions under written medical orders, palliative care,
-                medication-related nursing support, continence and catheter care, respiratory and device support,
-                care planning, documentation, education, referrals and clinical coordination.
+                Services are nurse-led, assessment-based, evidence-informed and delivered within
+                Registered Nurse scope of practice. Care may include clinical assessment, wound and
+                skin integrity care, vascular and high-risk foot support, IV infusions under written
+                medical orders, palliative care, medication-related nursing support, continence and
+                catheter care, respiratory and device support, care planning, documentation,
+                education, referrals and clinical coordination.
               </p>
               <p className="mt-3 text-[1rem] leading-8 opacity-90">
-                NovaCare Nursing does not replace the client&apos;s GP, specialist, pharmacist, emergency service,
-                hospital or ambulance service. Medical diagnosis, prescribing and treatment decisions requiring a
-                medical practitioner remain with the appropriate treating clinician.
+                NovaCare Nursing does not replace the client&apos;s GP, specialist, pharmacist,
+                emergency service, hospital or ambulance service. Medical diagnosis, prescribing and
+                treatment decisions requiring a medical practitioner remain with the appropriate
+                treating clinician.
               </p>
             </div>
 
@@ -294,16 +298,17 @@ export default function Services() {
             IV iron infusions at home
           </h2>
           <p className="mt-3 text-[1rem] leading-8 opacity-90">
-            At-home iron infusions may be suitable where the treating medical practitioner has assessed the
-            client, prescribed the medication and provided a valid written drug chart, medication administration
-            order or infusion order. NovaCare Nursing does not prescribe. The Registered Nurse role is to assess,
-            confirm consent, check allergies and the written order, administer the infusion, monitor the client and
-            IV site, document care and escalate any concerns.
+            At-home iron infusions may be suitable where the treating medical practitioner has
+            assessed the client, prescribed the medication and provided a valid written drug chart,
+            medication administration order or infusion order. NovaCare Nursing does not prescribe.
+            The Registered Nurse role is to assess, confirm consent, check allergies and the written
+            order, administer the infusion, monitor the client and IV site, document care and
+            escalate any concerns.
           </p>
           <p className="mt-3 text-[1rem] leading-8 opacity-90">
-            Emergency and escalation pathways are used for adverse reactions, clinical deterioration or
-            anaphylaxis. If a serious reaction occurs, the infusion is stopped, emergency care is commenced,
-            000 is called where required, and the prescribing practitioner is notified.
+            Emergency and escalation pathways are used for adverse reactions, clinical deterioration
+            or anaphylaxis. If a serious reaction occurs, the infusion is stopped, emergency care is
+            commenced, 000 is called where required, and the prescribing practitioner is notified.
           </p>
         </section>
 
@@ -319,8 +324,9 @@ export default function Services() {
               More than standard community nursing
             </h2>
             <p className="mx-auto mt-3 max-w-3xl text-[1rem] leading-8 opacity-85">
-              NovaCare Nursing brings hospital-level assessment, community practicality, palliative care experience,
-              wound expertise, complex-care judgement and provider-facing clinical governance into the home.
+              NovaCare Nursing brings hospital-level assessment, community practicality, palliative
+              care experience, wound expertise, complex-care judgement and provider-facing clinical
+              governance into the home.
             </p>
           </div>
 
@@ -359,10 +365,10 @@ export default function Services() {
             ))}
           </div>
           <p className="mt-5 text-[1rem] leading-8 opacity-90">
-            Care is provided with clinical judgement, clear documentation, dignity, practical risk management
-            and timely escalation. NovaCare Nursing may decline, delay, modify, stop or refer a service if the
-            requested care is outside nursing scope, unsafe, unsupported by required information or clinically
-            inappropriate.
+            Care is provided with clinical judgement, clear documentation, dignity, practical risk
+            management and timely escalation. NovaCare Nursing may decline, delay, modify, stop or
+            refer a service if the requested care is outside nursing scope, unsafe, unsupported by
+            required information or clinically inappropriate.
           </p>
         </section>
 
