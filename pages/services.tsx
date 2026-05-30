@@ -97,12 +97,12 @@ const services = [
   {
     title: "PEG Feeding, Enteral Nutrition & Device Support",
     summary:
-      "Registered Nurse support for clients with feeding tubes, prescribed clinical devices or complex clinical routines requiring skilled assessment and monitoring.",
+      "Registered Nurse support for clients with feeding tubes, enteral nutrition needs or prescribed clinical equipment requiring skilled assessment and monitoring.",
     bullets: [
       "PEG feeding support and enteral nutrition care",
       "Feeding tube site monitoring and skin integrity review",
       "Clinical monitoring for complications, intolerance or deterioration",
-      "Support with prescribed clinical devices where within RN scope",
+      "Nursing support for prescribed enteral feeding equipment and related clinical devices",
       "Documentation, care planning and escalation to the treating team",
       "Education for families, support workers and provider care teams",
     ],
@@ -188,7 +188,7 @@ const services = [
 ];
 
 const trustPoints = [
-  "17 full years of nursing experience, beginning in 2009",
+  "17 years of clinical nursing experience",
   "AHPRA-registered Registered Nurse",
   "Fully insured sole trader nursing practice",
   "Clinical Nursing Consultant level experience",
@@ -227,8 +227,8 @@ export default function Services() {
           <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg leading-8 opacity-85">
             NovaCare Nursing provides specialist Registered Nurse care and clinical nursing consultancy
             across Hobart and surrounds. Led by Palantina Hughes, an AHPRA-registered Registered Nurse
-            with <strong>17 full years of nursing experience, beginning in 2009</strong>, NovaCare supports
-            people, families and providers who need more than basic home care.
+            with <strong>17 years of clinical nursing experience</strong>, NovaCare supports people,
+            families and providers who need more than basic home care.
           </p>
         </section>
 
@@ -270,7 +270,10 @@ export default function Services() {
 
         <section className="mt-8 grid gap-4 md:grid-cols-3">
           {pathways.map((pathway) => (
-            <div key={pathway.title} className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
+            <div
+              key={pathway.title}
+              className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm"
+            >
               <h2 className="text-lg font-semibold" style={{ color: brand.blue }}>
                 {pathway.title}
               </h2>
@@ -347,7 +350,10 @@ export default function Services() {
           </h2>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {trustPoints.map((point) => (
-              <div key={point} className="rounded-xl bg-[#F7F4EF] px-4 py-3 text-sm font-medium opacity-95">
+              <div
+                key={point}
+                className="rounded-xl bg-[#F7F4EF] px-4 py-3 text-sm font-medium opacity-95"
+              >
                 {point}
               </div>
             ))}
