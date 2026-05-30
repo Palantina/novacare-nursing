@@ -56,16 +56,17 @@ const services = [
     ],
   },
   {
-    title: "Complex Wound, Vascular & High-Risk Foot Nursing",
+    title: "Complex Wound Care",
     summary:
-      "Specialist wound and lower-limb nursing for people with wounds, fragile skin, vascular risk, diabetes risk, delayed healing or clinical deterioration concerns.",
+      "Advanced wound care for people with complex, chronic, surgical, pressure-related or delayed-healing wounds, including wounds affected by fragile skin, vascular compromise or advanced dressing requirements.",
     bullets: [
-      "Wound assessment, documentation and dressing plan support",
+      "Comprehensive wound assessment, documentation and care planning",
       "Complex, chronic, surgical and delayed-healing wound care",
-      "Lower-limb, vascular-risk and high-risk foot nursing support",
-      "Pressure injury prevention and skin integrity review",
+      "Negative pressure wound therapy support, including VAC/vacuum dressing management where clinically appropriate",
+      "Pressure injury prevention, skin integrity review and deterioration monitoring",
+      "Lower-limb wound monitoring where vascular compromise may affect healing",
       "Monitoring for infection, exudate, odour, pain, inflammation and delayed healing",
-      "Escalation to the GP, wound specialist or treating team when required",
+      "Escalation to the GP or treating team when further review is required",
     ],
   },
   {
