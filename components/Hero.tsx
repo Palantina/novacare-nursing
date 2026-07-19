@@ -31,24 +31,66 @@ export default function Hero() {
     <section className="overflow-hidden bg-[#F8FCFD] font-sans">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="grid gap-6 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-start lg:gap-8">
-          {/* Real photograph — no text or overlays */}
-          <motion.div
-            initial={imageAnimation.initial}
-            animate={imageAnimation.animate}
-            transition={{ duration: 0.65, ease: "easeOut" }}
-            className="order-1 w-full lg:order-2"
-          >
-            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_70px_rgba(29,57,82,0.14)]">
-              <Image
-                src={heroImage}
-                alt="A nurse discussing medication with a man and woman in their home"
-                fill
-                priority
-                sizes="(max-width: 1023px) 100vw, 52vw"
-                className="scale-[1.12] object-cover object-center"
-              />
-            </div>
-          </motion.div>
+          {/* Photograph and supporting information */}
+          <div className="contents lg:order-2 lg:flex lg:flex-col lg:gap-6">
+            <motion.div
+              initial={imageAnimation.initial}
+              animate={imageAnimation.animate}
+              transition={{ duration: 0.65, ease: "easeOut" }}
+              className="order-1 w-full"
+            >
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-[2rem] bg-white shadow-[0_24px_70px_rgba(29,57,82,0.14)]">
+                <Image
+                  src={heroImage}
+                  alt="A nurse discussing medication with a man and woman in their home"
+                  fill
+                  priority
+                  sizes="(max-width: 1023px) 100vw, 52vw"
+                  className="object-cover object-center"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={textAnimation.initial}
+              animate={textAnimation.animate}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.18 }}
+              className="order-3 grid gap-4 sm:grid-cols-2"
+            >
+              <div className="rounded-2xl border border-[#DCEDEF] bg-[#EAF9FA] p-5 sm:p-6">
+                <h3 className="text-lg font-semibold text-[#1D3952]">
+                  Available 24 hours • 7 days
+                </h3>
+
+                <p className="mt-2 leading-7 text-[#526B7C]">
+                  Experienced nursing support when health needs change or timely
+                  help is difficult to access.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#E3DDFB] bg-[#F2EEFF] p-5 sm:p-6">
+                <h3 className="text-lg font-semibold text-[#1D3952]">
+                  Proudly Tasmanian owned and operated
+                </h3>
+
+                <p className="mt-2 leading-7 text-[#526B7C]">
+                  Serving Hobart, the Huon Valley, the Derwent Valley and
+                  surrounding areas.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-[#DCE8F0] bg-white p-5 shadow-sm sm:col-span-2 sm:p-6">
+                <h3 className="text-lg font-semibold text-[#1D3952]">
+                  Your health. Your home. Your terms.
+                </h3>
+
+                <p className="mt-2 leading-7 text-[#526B7C]">
+                  Experience, choice and availability. That is the NovaCare
+                  difference.
+                </p>
+              </div>
+            </motion.div>
+          </div>
 
           {/* All written content remains separate from the photograph */}
           <motion.div
@@ -82,15 +124,12 @@ export default function Hero() {
               </h2>
 
               <p className="mt-4 text-lg leading-8 text-[#526B7C]">
-                Book NovaCare Nursing privately.
-              </p>
-
-              <p className="mt-4 text-lg leading-8 text-[#526B7C]">
-                If you currently receive Aged Care or NDIS services, you can
-                ask your provider to partner with NovaCare Nursing. We work
-                alongside your existing care team to deliver professional
-                nursing care in the comfort of your home, ensuring your needs,
-                preferences, and choices remain at the heart of every decision.
+                You can book NovaCare Nursing privately, or if you currently
+                receive Aged Care or NDIS services, you can ask your provider to
+                partner with NovaCare Nursing. We work alongside your existing
+                care team to deliver professional nursing care in the comfort of
+                your home, ensuring your needs, preferences, and choices remain
+                at the heart of every decision.
               </p>
             </div>
 
@@ -151,47 +190,6 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
-
-        {/* Supporting information beneath the hero */}
-        <motion.div
-          initial={textAnimation.initial}
-          animate={textAnimation.animate}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.18 }}
-          className="mt-6 grid gap-4 md:grid-cols-3"
-        >
-          <div className="rounded-2xl border border-[#DCEDEF] bg-[#EAF9FA] p-5 sm:p-6">
-            <h3 className="text-lg font-semibold text-[#1D3952]">
-              Available 24 hours • 7 days
-            </h3>
-
-            <p className="mt-2 leading-7 text-[#526B7C]">
-              Experienced nursing support when health needs change or timely
-              help is difficult to access.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-[#E3DDFB] bg-[#F2EEFF] p-5 sm:p-6">
-            <h3 className="text-lg font-semibold text-[#1D3952]">
-              Proudly Tasmanian owned and operated
-            </h3>
-
-            <p className="mt-2 leading-7 text-[#526B7C]">
-              Serving Hobart, the Huon Valley, the Derwent Valley and
-              surrounding areas.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-[#DCE8F0] bg-white p-5 shadow-sm sm:p-6">
-            <h3 className="text-lg font-semibold text-[#1D3952]">
-              Your health. Your home. Your terms.
-            </h3>
-
-            <p className="mt-2 leading-7 text-[#526B7C]">
-              Experience, choice and availability. That is the NovaCare
-              difference.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
