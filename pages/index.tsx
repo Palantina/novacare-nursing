@@ -7,21 +7,90 @@ import SiteFooter from "../components/SiteFooter";
 
 const brand = { blue: "#0B2D5C", gold: "#C6A662" };
 
-const signatureServices = [
+type ServiceIconName =
+  | "home"
+  | "wound"
+  | "recovery"
+  | "dementia"
+  | "palliative"
+  | "telehealth";
+
+type SignatureService = {
+  tag: string;
+  title: string;
+  description: string;
+  icon: ServiceIconName;
+  cardClass: string;
+  iconClass: string;
+  linkClass: string;
+};
+
+const signatureServices: SignatureService[] = [
   {
-    title: "Complex Clinical Nursing & Wound Care",
+    tag: "Care at home",
+    title: "Clinical Nursing at Home",
     description:
-      "Advanced in-home nursing support for wounds, skin integrity, continence, catheters, post-hospital care, and evolving clinical needs.",
+      "Experienced nursing assessment, monitoring, medication and infusion support under written orders, and practical clinical care when health needs change.",
+    icon: "home",
+    cardClass:
+      "border-[#D7EEF0] bg-gradient-to-br from-white via-white to-[#EAF9FA]",
+    iconClass: "bg-[#DDF5F5] text-[#238C93]",
+    linkClass: "text-[#238C93]",
   },
   {
-    title: "Specialised Clinical Palliative Nursing & Consultancy",
+    tag: "Skilled clinical care",
+    title: "Wound, Continence & Device Care",
     description:
-      "Expert palliative nursing support for individuals, families, providers, and residential aged care homes seeking comfort-focused, evidence-based care.",
+      "Advanced wound and skin care, catheter and stoma support, PEG and enteral feeding care, and monitoring of clinical devices.",
+    icon: "wound",
+    cardClass:
+      "border-[#E3DDFB] bg-gradient-to-br from-white via-white to-[#F2EEFF]",
+    iconClass: "bg-[#E9E2FF] text-[#6E3BE8]",
+    linkClass: "text-[#6E3BE8]",
   },
   {
-    title: "Dementia Behaviour Support & Care Planning",
+    tag: "Recovery support",
+    title: "After Hospital, Surgery or Illness",
     description:
-      "Practical, person-centred support for changed and responsive behaviours associated with dementia, grounded in dignity, safety, and clinical judgement.",
+      "Post-hospital and post-operative nursing, wound review, symptom monitoring and early escalation to help recovery stay on track.",
+    icon: "recovery",
+    cardClass:
+      "border-[#DCE8F8] bg-gradient-to-br from-white via-white to-[#EEF4FF]",
+    iconClass: "bg-[#E1EBFF] text-[#5274D8]",
+    linkClass: "text-[#5274D8]",
+  },
+  {
+    tag: "Understanding the person",
+    title: "Dementia & Cognitive Support",
+    description:
+      "Clinical assessment and practical planning for changed behaviours, distress, sleep, routines, safety and family or carer support.",
+    icon: "dementia",
+    cardClass:
+      "border-[#F2DDD5] bg-gradient-to-br from-white via-white to-[#FFF2EC]",
+    iconClass: "bg-[#FFE5DA] text-[#B9654F]",
+    linkClass: "text-[#A95440]",
+  },
+  {
+    tag: "Comfort and dignity",
+    title: "Palliative & End-of-Life Nursing",
+    description:
+      "Calm, skilled and comfort-focused nursing at home, with family guidance and coordination with GPs and palliative care teams.",
+    icon: "palliative",
+    cardClass:
+      "border-[#E4DDF5] bg-gradient-to-br from-white via-white to-[#F5F0FF]",
+    iconClass: "bg-[#EAE1FC] text-[#7652B5]",
+    linkClass: "text-[#7652B5]",
+  },
+  {
+    tag: "Advice and oversight",
+    title: "Telehealth, Consultancy & Provider Support",
+    description:
+      "Telehealth review, complex care planning, clinical governance, documentation, education and experienced nursing guidance for families and providers.",
+    icon: "telehealth",
+    cardClass:
+      "border-[#D6ECEF] bg-gradient-to-br from-white via-white to-[#EDF9FA]",
+    iconClass: "bg-[#DDF3F5] text-[#2B8E99]",
+    linkClass: "text-[#2B8E99]",
   },
 ];
 
@@ -69,6 +138,183 @@ const whyNovaCare = [
   "Compassionate, discreet, professional care that protects dignity and trust",
   "Support for individuals, families, providers, and residential aged care homes",
 ];
+
+function ServiceIcon({ name }: { name: ServiceIconName }) {
+  if (name === "home") {
+    return (
+      <svg
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M3.5 11.2 12 4l8.5 7.2V20H3.5v-8.8Z"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12 10v6M9 13h6"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (name === "wound") {
+    return (
+      <svg
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <rect
+          x="4"
+          y="8"
+          width="16"
+          height="8"
+          rx="4"
+          stroke="currentColor"
+          strokeWidth="1.7"
+        />
+        <path
+          d="M12 9.7v4.6M9.7 12h4.6"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+        <path
+          d="M7 9.2v5.6M17 9.2v5.6"
+          stroke="currentColor"
+          strokeWidth="1.4"
+          strokeLinecap="round"
+          opacity="0.65"
+        />
+      </svg>
+    );
+  }
+
+  if (name === "recovery") {
+    return (
+      <svg
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M19.2 8.2A8 8 0 1 0 20 13"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+        <path
+          d="M16.2 8.2h3V5.1"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12 9.2v5.6M9.2 12h5.6"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (name === "dementia") {
+    return (
+      <svg
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M9.3 19.5H6.8v-3.1a6.7 6.7 0 1 1 7.5 2.7v2.4"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9 9.3h.01M13 8h.01M14.5 12h.01M10.8 13.3h.01"
+          stroke="currentColor"
+          strokeWidth="2.3"
+          strokeLinecap="round"
+        />
+        <path
+          d="M17.8 4.2v2.5M16.55 5.45h2.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (name === "palliative") {
+    return (
+      <svg
+        className="h-7 w-7"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 18.8 5.3 12.5a4.2 4.2 0 0 1 5.9-6l.8.8.8-.8a4.2 4.2 0 0 1 5.9 6L12 18.8Z"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M3.5 19.5c2.5-1.5 4.8-1.7 7-.5l1.5.8 1.5-.8c2.2-1.2 4.5-1 7 .5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      className="h-7 w-7"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect
+        x="3.5"
+        y="4.5"
+        width="17"
+        height="12"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.7"
+      />
+      <path
+        d="M9 20h6M12 16.5V20"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+      <path
+        d="M12 8v5M9.5 10.5h5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
 
 export default function Home() {
   return (
@@ -171,53 +417,126 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 pb-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2
-              className="text-3xl font-bold md:text-4xl"
-              style={{ color: brand.blue }}
-            >
-              Signature Services
-            </h2>
+        {/* Services for all stages of life */}
+        <section className="relative overflow-hidden border-y border-[#E5EFF1] bg-white py-16 sm:py-20">
+          <div
+            aria-hidden="true"
+            className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#DDF5F5]/70 blur-3xl"
+          />
 
-            <p className="mt-3 text-base opacity-85 md:text-lg">
-              A premium, nurse-led service for people who need more than
-              standard care — and for providers seeking trusted clinical
-              support.
-            </p>
-          </div>
+          <div
+            aria-hidden="true"
+            className="absolute -right-20 top-40 h-80 w-80 rounded-full bg-[#EAE1FC]/60 blur-3xl"
+          />
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {signatureServices.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
-              >
-                <h3
-                  className="text-xl font-semibold"
-                  style={{ color: brand.blue }}
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-[#E1EBFF]/60 blur-3xl"
+          />
+
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
+                  Care shaped around you
+                </p>
+
+                <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
+                  Nursing for people,
+                  <span className="block text-[#6E3BE8]">
+                    not categories.
+                  </span>
+                </h2>
+              </div>
+
+              <div>
+                <p className="max-w-3xl text-lg leading-8 text-[#526B7C]">
+                  For children aged six and over, adults and older people,
+                  NovaCare Nursing brings experienced clinical care, practical
+                  support and clear guidance into the comfort of home.
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Children aged 6+",
+                    "Adults",
+                    "Older people",
+                    "Families",
+                    "Service providers",
+                  ].map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-[#DCEDEF] bg-[#F8FCFD] px-4 py-2 text-sm font-semibold text-[#35546B]"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-11 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {signatureServices.map((service) => (
+                <article
+                  key={service.title}
+                  className={`group flex h-full flex-col rounded-[1.75rem] border p-6 shadow-[0_14px_40px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(29,57,82,0.12)] sm:p-7 ${service.cardClass}`}
                 >
-                  {service.title}
-                </h3>
+                  <div className="flex items-start justify-between gap-4">
+                    <span
+                      className={`inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconClass}`}
+                    >
+                      <ServiceIcon name={service.icon} />
+                    </span>
 
-                <p className="mt-3 text-sm leading-7 opacity-90">
-                  {service.description}
+                    <span className="rounded-full border border-white/80 bg-white/75 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[#526B7C] shadow-sm">
+                      {service.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
+                    {service.title}
+                  </h3>
+
+                  <p className="mt-4 flex-1 leading-7 text-[#526B7C]">
+                    {service.description}
+                  </p>
+
+                  <Link
+                    href="/services"
+                    className={`mt-6 inline-flex items-center gap-2 font-semibold ${service.linkClass}`}
+                  >
+                    Learn more
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    >
+                      →
+                    </span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-9 flex flex-col gap-6 rounded-[2rem] border border-[#DCEDEF] bg-white/90 p-6 shadow-[0_18px_50px_rgba(29,57,82,0.08)] backdrop-blur sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p className="text-2xl font-semibold tracking-[-0.025em] text-[#1D3952]">
+                  Not sure what kind of nursing support you need?
+                </p>
+
+                <p className="mt-2 max-w-3xl leading-7 text-[#526B7C]">
+                  Start with a conversation. We can clarify what is needed and
+                  whether care is best arranged privately or through your
+                  current service provider.
                 </p>
               </div>
-            ))}
-          </div>
 
-          <div className="mt-6 text-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold transition hover:opacity-90"
-              style={{
-                backgroundColor: brand.gold,
-                color: brand.blue,
-              }}
-            >
-              View All Services
-            </Link>
+              <Link
+                href="/services"
+                className="inline-flex min-h-[54px] shrink-0 items-center justify-center rounded-2xl bg-[#2FBFC4] px-7 py-3 text-center font-semibold text-[#173B5C] shadow-sm transition hover:bg-[#59D6D0] focus:outline-none focus:ring-4 focus:ring-[#2FBFC4]/25"
+              >
+                Explore all nursing services
+              </Link>
+            </div>
           </div>
         </section>
 
