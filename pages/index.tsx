@@ -56,6 +56,13 @@ const trustPoints = [
   "Advanced first aid and resuscitation",
 ];
 
+const trustIconStyles = [
+  "bg-[#EAF9FA] text-[#2B9FA5]",
+  "bg-[#F2EEFF] text-[#6E3BE8]",
+  "bg-[#EEF4FF] text-[#5274D8]",
+  "bg-[#EAF9FA] text-[#2B9FA5]",
+];
+
 const whyNovaCare = [
   "Clinical consultancy and direct nursing support tailored to complex care at home",
   "Clear documentation, clinical judgement, and timely escalation where needed",
@@ -67,11 +74,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>NovaCare Nursing | Premium Private Home Nursing in Hobart & Surrounds</title>
+        <title>
+          NovaCare Nursing | Premium Private Home Nursing in Hobart & Surrounds
+        </title>
+
         <meta
           name="description"
           content="NovaCare Nursing is a specialised clinical nursing consultancy providing premium private home nursing, palliative nursing, dementia support, and provider-facing clinical support across Hobart and surrounds, Tasmania."
         />
+
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://www.novacarenursing.com.au/" />
 
@@ -90,7 +101,10 @@ export default function Home() {
                 "Specialised clinical nursing consultancy providing premium private home nursing, palliative nursing, dementia support, and provider-facing clinical support across Hobart and surrounds, Tasmania.",
               telephone: "+61491303671",
               email: "info@novacarenursing.com.au",
-              areaServed: { "@type": "City", name: "Hobart" },
+              areaServed: {
+                "@type": "City",
+                name: "Hobart",
+              },
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Hobart",
@@ -112,30 +126,64 @@ export default function Home() {
       <Hero />
 
       <main>
-        <section className="mx-auto max-w-6xl px-4 py-10">
-          <div className="rounded-2xl border border-[#C6A662]/30 bg-[#F7F4EF] p-5 md:p-6">
-            <div className="flex flex-wrap items-center justify-center gap-3 text-center">
-              {trustPoints.map((item) => (
-                <span
+        {/* Professional credentials */}
+        <section className="bg-[#F8FCFD]">
+          <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+            <div className="grid gap-3 rounded-[2rem] border border-[#DCEDEF] bg-white p-4 shadow-[0_18px_50px_rgba(29,57,82,0.07)] sm:grid-cols-2 sm:p-5 lg:grid-cols-4">
+              {trustPoints.map((item, index) => (
+                <div
                   key={item}
-                  className="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm md:text-base shadow-sm"
-                  style={{ color: brand.blue }}
+                  className="flex min-h-[92px] items-center gap-3 rounded-2xl border border-[#E2ECEF] bg-[#F8FCFD] p-4"
                 >
-                  {item}
-                </span>
+                  <span
+                    aria-hidden="true"
+                    className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${
+                      trustIconStyles[index] ?? trustIconStyles[0]
+                    }`}
+                  >
+                    <svg
+                      className="h-5 w-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="m7 12.5 3.2 3.2L17.5 8"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+
+                      <path
+                        d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                      />
+                    </svg>
+                  </span>
+
+                  <p className="text-sm font-semibold leading-6 text-[#1D3952] sm:text-base">
+                    {item}
+                  </p>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pb-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ color: brand.blue }}>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2
+              className="text-3xl font-bold md:text-4xl"
+              style={{ color: brand.blue }}
+            >
               Signature Services
             </h2>
-            <p className="mt-3 text-base md:text-lg opacity-85">
-              A premium, nurse-led service for people who need more than standard
-              care — and for providers seeking trusted clinical support.
+
+            <p className="mt-3 text-base opacity-85 md:text-lg">
+              A premium, nurse-led service for people who need more than
+              standard care — and for providers seeking trusted clinical
+              support.
             </p>
           </div>
 
@@ -145,10 +193,16 @@ export default function Home() {
                 key={service.title}
                 className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm"
               >
-                <h3 className="text-xl font-semibold" style={{ color: brand.blue }}>
+                <h3
+                  className="text-xl font-semibold"
+                  style={{ color: brand.blue }}
+                >
                   {service.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 opacity-90">{service.description}</p>
+
+                <p className="mt-3 text-sm leading-7 opacity-90">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
@@ -156,8 +210,11 @@ export default function Home() {
           <div className="mt-6 text-center">
             <Link
               href="/services"
-              className="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold hover:opacity-90 transition"
-              style={{ backgroundColor: brand.gold, color: brand.blue }}
+              className="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold transition hover:opacity-90"
+              style={{
+                backgroundColor: brand.gold,
+                color: brand.blue,
+              }}
             >
               View All Services
             </Link>
@@ -165,11 +222,15 @@ export default function Home() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-6">
-          <div className="rounded-3xl bg-[#0B2D5C] p-6 md:p-8 text-white">
-            <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold">How to Access Care</h2>
+          <div className="rounded-3xl bg-[#0B2D5C] p-6 text-white md:p-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-bold md:text-4xl">
+                How to Access Care
+              </h2>
+
               <p className="mt-3 text-white/90">
-                Flexible pathways for private clients, families, providers, and residential aged care.
+                Flexible pathways for private clients, families, providers, and
+                residential aged care.
               </p>
             </div>
 
@@ -180,10 +241,14 @@ export default function Home() {
                   className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur"
                 >
                   <h3 className="text-xl font-semibold">{pathway.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/90">{pathway.description}</p>
+
+                  <p className="mt-3 text-sm leading-7 text-white/90">
+                    {pathway.description}
+                  </p>
+
                   <Link
                     href={pathway.href}
-                    className="mt-5 inline-flex items-center font-semibold hover:opacity-85 transition"
+                    className="mt-5 inline-flex items-center font-semibold transition hover:opacity-85"
                     style={{ color: brand.gold }}
                   >
                     {pathway.linkLabel} →
@@ -197,25 +262,35 @@ export default function Home() {
         <section className="mx-auto max-w-6xl px-4 py-10">
           <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: brand.blue }}>
+              <h2
+                className="text-2xl font-bold md:text-3xl"
+                style={{ color: brand.blue }}
+              >
                 Why Choose NovaCare Nursing
               </h2>
+
               <ul className="mt-4 space-y-3">
                 {whyNovaCare.map((point) => (
                   <li key={point} className="flex items-start gap-3">
                     <span
-                      className="mt-1 inline-block h-2.5 w-2.5 rounded-full flex-none"
-                      style={{ backgroundColor: brand.gold }}
                       aria-hidden="true"
+                      className="mt-1 inline-block h-2.5 w-2.5 flex-none rounded-full"
+                      style={{ backgroundColor: brand.gold }}
                     />
-                    <span className="text-sm md:text-base leading-7 opacity-90">{point}</span>
+
+                    <span className="text-sm leading-7 opacity-90 md:text-base">
+                      {point}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="rounded-2xl border border-[#C6A662]/30 bg-[#F7F4EF] p-6 shadow-sm">
-              <p className="text-sm font-semibold uppercase tracking-[0.16em]" style={{ color: brand.blue }}>
+              <p
+                className="text-sm font-semibold uppercase tracking-[0.16em]"
+                style={{ color: brand.blue }}
+              >
                 Professional Endorsement
               </p>
 
@@ -223,23 +298,27 @@ export default function Home() {
                 className="mt-4 text-sm leading-7 opacity-90"
                 style={{ color: brand.blue }}
               >
-                “All clients I refer to Tina consistently provide positive feedback
-                about how phenomenal she is. Her bedside manner and clinical
-                knowledge are exceptional; she has a genuine passion and devotion
-                to supporting her clients. Collaborating with her professionally
-                and with a multi-disciplinary team is fantastic. Her communication
-                and recommendations are clear, comprehensive, accurate and timely.
-                I feel complete confidence my clients are in extremely capable
-                hands, and I would happily have my own family members under her
-                care. It is a privilege and a pleasure to work with and learn from
-                her. Any person lucky enough to be supported by Tina will receive
-                excellent, evidence based care delivered with humanity and
-                compassion.”
+                “All clients I refer to Tina consistently provide positive
+                feedback about how phenomenal she is. Her bedside manner and
+                clinical knowledge are exceptional; she has a genuine passion
+                and devotion to supporting her clients. Collaborating with her
+                professionally and with a multi-disciplinary team is fantastic.
+                Her communication and recommendations are clear, comprehensive,
+                accurate and timely. I feel complete confidence my clients are
+                in extremely capable hands, and I would happily have my own
+                family members under her care. It is a privilege and a pleasure
+                to work with and learn from her. Any person lucky enough to be
+                supported by Tina will receive excellent, evidence based care
+                delivered with humanity and compassion.”
               </blockquote>
 
-              <p className="mt-4 text-sm font-semibold" style={{ color: brand.blue }}>
+              <p
+                className="mt-4 text-sm font-semibold"
+                style={{ color: brand.blue }}
+              >
                 Laura Pfundt
               </p>
+
               <p className="text-sm opacity-80">
                 Clinical Lead / Clinical Care Partner, Huon Regional Care
               </p>
