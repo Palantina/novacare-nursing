@@ -25,6 +25,19 @@ type SignatureService = {
   linkClass: string;
 };
 
+type ClinicalStandardIconName =
+  | "local"
+  | "nursing"
+  | "hospital"
+  | "governance";
+
+type ClinicalStandard = {
+  title: string;
+  description: string;
+  icon: ClinicalStandardIconName;
+  iconClass: string;
+};
+
 const signatureServices: SignatureService[] = [
   {
     tag: "Care at home",
@@ -132,11 +145,35 @@ const trustIconStyles = [
   "bg-[#EAF9FA] text-[#2B9FA5]",
 ];
 
-const whyNovaCare = [
-  "Clinical consultancy and direct nursing support tailored to complex care at home",
-  "Clear documentation, clinical judgement, and timely escalation where needed",
-  "Compassionate, discreet, professional care that protects dignity and trust",
-  "Support for individuals, families, providers, and residential aged care homes",
+const clinicalStandards: ClinicalStandard[] = [
+  {
+    title: "Tasmanian and accountable",
+    description:
+      "Tasmanian owned, clinically led and delivered with direct knowledge of our local hospitals, providers, communities and access challenges.",
+    icon: "local",
+    iconClass: "bg-[#EAF9FA] text-[#238C93]",
+  },
+  {
+    title: "Nursing only",
+    description:
+      "We assess what is happening, identify what is missing and provide the nursing response without selling unrelated services or care packages.",
+    icon: "nursing",
+    iconClass: "bg-[#F2EEFF] text-[#6E3BE8]",
+  },
+  {
+    title: "Hospital-level capability at home",
+    description:
+      "Advanced assessment, post-hospital care, infusions under written orders, complex procedures, deterioration recognition and timely escalation.",
+    icon: "hospital",
+    iconClass: "bg-[#EEF4FF] text-[#5274D8]",
+  },
+  {
+    title: "Clinical governance built in",
+    description:
+      "Assessment, care planning, documentation, risk, escalation, education and review are guided by clear clinical standards and experienced oversight.",
+    icon: "governance",
+    iconClass: "bg-[#FFF2EC] text-[#B9654F]",
+  },
 ];
 
 function ServiceIcon({ name }: { name: ServiceIconName }) {
@@ -311,6 +348,106 @@ function ServiceIcon({ name }: { name: ServiceIconName }) {
         stroke="currentColor"
         strokeWidth="1.8"
         strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function ClinicalStandardIcon({
+  name,
+}: {
+  name: ClinicalStandardIconName;
+}) {
+  if (name === "local") {
+    return (
+      <svg
+        className="h-6 w-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12 12.2a2.4 2.4 0 1 0 0-4.8 2.4 2.4 0 0 0 0 4.8Z"
+          stroke="currentColor"
+          strokeWidth="1.7"
+        />
+      </svg>
+    );
+  }
+
+  if (name === "nursing") {
+    return (
+      <svg
+        className="h-6 w-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
+          stroke="currentColor"
+          strokeWidth="1.7"
+        />
+        <path
+          d="M12 7.8v8.4M7.8 12h8.4"
+          stroke="currentColor"
+          strokeWidth="1.9"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (name === "hospital") {
+    return (
+      <svg
+        className="h-6 w-6"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M3.5 11.2 12 4l8.5 7.2V20H3.5v-8.8Z"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M7.5 14h2l1.2-2.5 2.1 5 1.2-2.5h2.5"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      className="h-6 w-6"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M12 3.5 19 6v5.4c0 4.4-2.7 7.5-7 9.1-4.3-1.6-7-4.7-7-9.1V6l7-2.5Z"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinejoin="round"
+      />
+      <path
+        d="m8.7 12 2.1 2.1 4.5-4.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -578,69 +715,250 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 py-10">
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-              <h2
-                className="text-2xl font-bold md:text-3xl"
-                style={{ color: brand.blue }}
-              >
-                Why Choose NovaCare Nursing
-              </h2>
+        {/* Local clinical leadership and testimonials */}
+        <section className="relative overflow-hidden bg-[#F8FCFD] py-16 sm:py-20">
+          <div
+            aria-hidden="true"
+            className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#DDF5F5]/70 blur-3xl"
+          />
 
-              <ul className="mt-4 space-y-3">
-                {whyNovaCare.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
-                    <span
-                      aria-hidden="true"
-                      className="mt-1 inline-block h-2.5 w-2.5 flex-none rounded-full"
-                      style={{ backgroundColor: brand.gold }}
-                    />
+          <div
+            aria-hidden="true"
+            className="absolute -right-24 bottom-16 h-80 w-80 rounded-full bg-[#EAE1FC]/60 blur-3xl"
+          />
 
-                    <span className="text-sm leading-7 opacity-90 md:text-base">
-                      {point}
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid overflow-hidden rounded-[2.25rem] border border-[#DCEDEF] bg-white shadow-[0_24px_70px_rgba(29,57,82,0.11)] lg:grid-cols-[1.02fr_0.98fr]">
+              <div className="relative overflow-hidden bg-[#173B5C] p-7 text-white sm:p-10 lg:p-12">
+                <div
+                  aria-hidden="true"
+                  className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#2FBFC4]/20 blur-3xl"
+                />
+
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-[#6E3BE8]/25 blur-3xl"
+                />
+
+                <div className="relative">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8FE4E1] sm:text-base">
+                    Tasmanian owned. Clinically led.
+                  </p>
+
+                  <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+                    Local nursing,
+                    <span className="block text-[#AFA0FF]">
+                      built to a higher standard.
                     </span>
-                  </li>
-                ))}
-              </ul>
+                  </h2>
+
+                  <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85">
+                    NovaCare Nursing is a growing Tasmanian clinical nursing
+                    service founded and clinically led by Palantina Hughes. Our
+                    service combines advanced nursing at home with independent
+                    clinical judgement, clear accountability and governance that
+                    works where care is actually delivered.
+                  </p>
+
+                  <div className="mt-8 rounded-[1.75rem] border border-white/15 bg-white/10 p-5 backdrop-blur sm:p-6">
+                    <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+                      <div className="flex h-24 w-24 shrink-0 flex-col items-center justify-center rounded-[1.5rem] bg-white text-[#173B5C] shadow-lg">
+                        <span className="text-4xl font-semibold leading-none">
+                          18
+                        </span>
+
+                        <span className="mt-1 text-sm font-semibold uppercase tracking-[0.12em]">
+                          years
+                        </span>
+                      </div>
+
+                      <div>
+                        <p className="text-2xl font-semibold">
+                          Palantina Hughes
+                        </p>
+
+                        <p className="mt-1 font-semibold text-[#8FE4E1]">
+                          Founder &amp; Clinical Nursing Consultant
+                        </p>
+
+                        <p className="mt-3 leading-7 text-white/80">
+                          Extensive experience across emergency and acute care,
+                          hospital-in-the-home and Community Rapid Response,
+                          complex community nursing, palliative care and clinical
+                          governance.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="mt-7 max-w-2xl leading-7 text-white/85">
+                    Palantina establishes and oversees NovaCare&apos;s clinical
+                    standards for assessment, care planning, documentation,
+                    escalation, education and review. NovaCare is being built to
+                    grow without losing the clinical accountability and personal
+                    care on which the service was founded.
+                  </p>
+
+                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <Link
+                      href="/about"
+                      className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] transition hover:bg-[#59D6D0]"
+                    >
+                      Meet our founder
+                    </Link>
+
+                    <Link
+                      href="/providers"
+                      className="inline-flex min-h-[52px] items-center justify-center rounded-2xl border border-white/50 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
+                    >
+                      Clinical support for providers
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8 lg:p-10">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
+                  The NovaCare difference
+                </p>
+
+                <h3 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
+                  Independent nursing with clinical accountability.
+                </h3>
+
+                <p className="mt-4 text-lg leading-8 text-[#526B7C]">
+                  Because nursing is our service—not one item in a large care
+                  catalogue—we can look at the whole clinical picture and
+                  recommend what is genuinely needed.
+                </p>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {clinicalStandards.map((standard) => (
+                    <article
+                      key={standard.title}
+                      className="rounded-[1.5rem] border border-[#E2ECEF] bg-[#F8FCFD] p-5"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${standard.iconClass}`}
+                      >
+                        <ClinicalStandardIcon name={standard.icon} />
+                      </span>
+
+                      <h4 className="mt-4 text-lg font-semibold text-[#1D3952]">
+                        {standard.title}
+                      </h4>
+
+                      <p className="mt-2 text-sm leading-6 text-[#526B7C]">
+                        {standard.description}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+
+                <div className="mt-6 rounded-[1.5rem] border border-[#D7EEF0] bg-[#EAF9FA] p-5">
+                  <p className="font-semibold text-[#1D3952]">
+                    We review what is missing—not what else we can sell.
+                  </p>
+
+                  <p className="mt-2 leading-7 text-[#526B7C]">
+                    Our recommendation may be nursing from NovaCare, review by a
+                    GP or specialist, coordination with an existing provider, or
+                    urgent hospital care. The clinical need comes first.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="rounded-2xl border border-[#C6A662]/30 bg-[#F7F4EF] p-6 shadow-sm">
-              <p
-                className="text-sm font-semibold uppercase tracking-[0.16em]"
-                style={{ color: brand.blue }}
-              >
-                Professional Endorsement
+            <div className="mx-auto mt-14 max-w-4xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
+                Trusted by families and professionals
               </p>
 
-              <blockquote
-                className="mt-4 text-sm leading-7 opacity-90"
-                style={{ color: brand.blue }}
-              >
-                “All clients I refer to Tina consistently provide positive
-                feedback about how phenomenal she is. Her bedside manner and
-                clinical knowledge are exceptional; she has a genuine passion
-                and devotion to supporting her clients. Collaborating with her
-                professionally and with a multi-disciplinary team is fantastic.
-                Her communication and recommendations are clear, comprehensive,
-                accurate and timely. I feel complete confidence my clients are
-                in extremely capable hands, and I would happily have my own
-                family members under her care. It is a privilege and a pleasure
-                to work with and learn from her. Any person lucky enough to be
-                supported by Tina will receive excellent, evidence based care
-                delivered with humanity and compassion.”
-              </blockquote>
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
+                Experienced care.
+                <span className="block text-[#6E3BE8]">
+                  Remembered for how it felt.
+                </span>
+              </h2>
 
-              <p
-                className="mt-4 text-sm font-semibold"
-                style={{ color: brand.blue }}
-              >
-                Laura Pfundt
+              <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#526B7C]">
+                Clinical skill matters. So do communication, consistency,
+                kindness and the confidence that someone capable is seeing the
+                whole situation.
               </p>
+            </div>
 
-              <p className="text-sm opacity-80">
-                Clinical Lead / Clinical Care Partner, Huon Regional Care
-              </p>
+            <div className="mt-9 grid gap-6 lg:grid-cols-2">
+              <article className="relative overflow-hidden rounded-[2rem] border border-[#E3DDFB] bg-gradient-to-br from-white via-white to-[#F2EEFF] p-7 shadow-[0_18px_50px_rgba(29,57,82,0.07)] sm:p-8">
+                <span
+                  aria-hidden="true"
+                  className="absolute right-6 top-3 font-serif text-8xl leading-none text-[#6E3BE8]/10"
+                >
+                  “
+                </span>
+
+                <div className="relative">
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#6E3BE8]">
+                    Professional endorsement
+                  </p>
+
+                  <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">
+                    “All clients I refer to Tina consistently provide positive
+                    feedback about how phenomenal she is. Her bedside manner and
+                    clinical knowledge are exceptional. Her communication and
+                    recommendations are clear, comprehensive, accurate and
+                    timely. Any person lucky enough to be supported by Tina will
+                    receive excellent, evidence-based care delivered with
+                    humanity and compassion.”
+                  </blockquote>
+
+                  <div className="mt-6 border-t border-[#6E3BE8]/15 pt-5">
+                    <p className="font-semibold text-[#1D3952]">
+                      Laura Pfundt
+                    </p>
+
+                    <p className="mt-1 text-sm leading-6 text-[#526B7C]">
+                      Clinical Lead / Clinical Care Partner
+                      <br />
+                      Huon Regional Care
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <article className="relative overflow-hidden rounded-[2rem] border border-[#F2DDD5] bg-gradient-to-br from-white via-white to-[#FFF2EC] p-7 shadow-[0_18px_50px_rgba(29,57,82,0.07)] sm:p-8">
+                <span
+                  aria-hidden="true"
+                  className="absolute right-6 top-3 font-serif text-8xl leading-none text-[#B9654F]/10"
+                >
+                  “
+                </span>
+
+                <div className="relative">
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#A95440]">
+                    Family testimonial
+                  </p>
+
+                  <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">
+                    “It was immediately apparent that Tina&apos;s considerable
+                    experience in identifying the most effective treatment
+                    necessary, and then administering it, was exceptional.
+                    Rosemary and I were privileged to have experienced
+                    Tina&apos;s support and wisdom.”
+                  </blockquote>
+
+                  <div className="mt-6 border-t border-[#B9654F]/15 pt-5">
+                    <p className="font-semibold text-[#1D3952]">
+                      Robert (Bob) Frost
+                    </p>
+
+                    <p className="mt-1 text-sm leading-6 text-[#526B7C]">
+                      Family member and full-time carer
+                    </p>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>
