@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section className="overflow-hidden bg-[#F8FCFD] font-sans">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-center lg:gap-8">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-start lg:gap-8">
           {/* Real photograph — no text or overlays */}
           <motion.div
             initial={imageAnimation.initial}
