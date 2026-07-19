@@ -753,11 +753,11 @@ export default function Home() {
                   </h2>
 
                   <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85">
-                    NovaCare Nursing is a growing Tasmanian clinical nursing
-                    service founded and clinically led by Palantina Hughes. Our
-                    service combines advanced nursing at home with independent
-                    clinical judgement, clear accountability and governance that
-                    works where care is actually delivered.
+                    NovaCare Nursing is a Tasmanian clinical nursing service
+                    founded and clinically led by Palantina Hughes. Our service
+                    combines advanced nursing at home with independent clinical
+                    judgement, clear accountability and governance that works
+                    where care is actually delivered.
                   </p>
 
                   <div className="mt-8 rounded-[1.75rem] border border-white/15 bg-white/10 p-5 backdrop-blur sm:p-6">
@@ -792,11 +792,11 @@ export default function Home() {
                   </div>
 
                   <p className="mt-7 max-w-2xl leading-7 text-white/85">
-                    Palantina establishes and oversees NovaCare&apos;s clinical
-                    standards for assessment, care planning, documentation,
-                    escalation, education and review. NovaCare is being built to
-                    grow without losing the clinical accountability and personal
-                    care on which the service was founded.
+                    Palantina oversees NovaCare&apos;s clinical standards for
+                    assessment, care planning, documentation, escalation,
+                    education and review, ensuring every episode of care is
+                    delivered with clinical accountability and person-centred
+                    nursing.
                   </p>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -883,8 +883,8 @@ export default function Home() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#526B7C]">
-                Clinical skill matters. So do communication, consistency,
-                kindness and the confidence that someone capable is seeing the
+                Clinical skill matters. So do continuity, kindness, daily
+                presence and the confidence that someone capable is seeing the
                 whole situation.
               </p>
             </div>
@@ -906,11 +906,12 @@ export default function Home() {
                   <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">
                     “All clients I refer to Tina consistently provide positive
                     feedback about how phenomenal she is. Her bedside manner and
-                    clinical knowledge are exceptional. Her communication and
-                    recommendations are clear, comprehensive, accurate and
-                    timely. Any person lucky enough to be supported by Tina will
-                    receive excellent, evidence-based care delivered with
-                    humanity and compassion.”
+                    clinical knowledge are exceptional; she has a genuine
+                    passion and devotion to supporting her clients. … Her
+                    communication and recommendations are clear, comprehensive,
+                    accurate and timely. … Any person lucky enough to be
+                    supported by Tina will receive excellent, evidence based care
+                    delivered with humanity and compassion.”
                   </blockquote>
 
                   <div className="mt-6 border-t border-[#6E3BE8]/15 pt-5">
@@ -942,10 +943,19 @@ export default function Home() {
 
                   <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">
                     “It was immediately apparent that Tina&apos;s considerable
-                    experience in identifying the most effective treatment
-                    necessary, and then administering it, was exceptional.
-                    Rosemary and I were privileged to have experienced
-                    Tina&apos;s support and wisdom.”
+                    experience in both identifying the most effective treatment
+                    necessary; and then administering it; was exceptional.
+                    Tina&apos;s kind and thorough administration and application
+                    of the medications prescribed eased the way forward. As
+                    Rosemary&apos;s condition deteriorated, so Tina diligently
+                    interrelated with Rosemary (and myself as her full-time
+                    carer), along with Dr Shill, Rosemary&apos;s doctor; and her
+                    Huon Valley Home care support staff who daily gave supporting
+                    assistance in the easing and management of her terminal
+                    condition. Tina&apos;s experience and ability to identify and
+                    apply the necessary means of achieving this was very much
+                    appreciated by us all. Rosemary and I were privileged to have
+                    experienced Tina&apos;s support and wisdom.”
                   </blockquote>
 
                   <div className="mt-6 border-t border-[#B9654F]/15 pt-5">
@@ -954,7 +964,7 @@ export default function Home() {
                     </p>
 
                     <p className="mt-1 text-sm leading-6 text-[#526B7C]">
-                      Family member and full-time carer
+                      Rosemary&apos;s husband and full-time carer
                     </p>
                   </div>
                 </div>
