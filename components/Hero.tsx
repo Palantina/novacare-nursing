@@ -145,7 +145,7 @@ export default function Hero() {
                 fill
                 priority
                 sizes="(max-width: 1023px) 100vw, 51vw"
-                className="object-cover object-center"
+                className="scale-[1.12] object-cover object-center"
               />
             </motion.div>
 
