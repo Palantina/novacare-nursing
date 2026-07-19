@@ -1,28 +1,181 @@
-<svg width="720" height="200" viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NovaCare Nursing logo (light background)">
+<svg
+  width="720"
+  height="200"
+  viewBox="0 0 720 200"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-labelledby="novacare-logo-title novacare-logo-desc"
+>
+  <title id="novacare-logo-title">NovaCare Nursing</title>
+  <desc id="novacare-logo-desc">
+    NovaCare Nursing logo for light backgrounds
+  </desc>
+
   <defs>
-    <!-- Gold gradient -->
-    <linearGradient id="gold-light" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#D8C58A"/>
-      <stop offset="55%" stop-color="#C6A662"/>
-      <stop offset="100%" stop-color="#AC8F4E"/>
+    <linearGradient
+      id="nova-star-gradient"
+      gradientUnits="userSpaceOnUse"
+      x1="-78"
+      y1="-78"
+      x2="78"
+      y2="78"
+    >
+      <stop offset="0%" stop-color="#7C3BF7" />
+      <stop offset="52%" stop-color="#6C8DEE" />
+      <stop offset="100%" stop-color="#5EE7E0" />
     </linearGradient>
 
-    <!-- Nova Star -->
-    <g id="nova-star">
-      <circle cx="0" cy="0" r="48" fill="none" stroke="url(#gold-light)" stroke-width="1.6" opacity="0.85"/>
-      <path d="M0,-78 L5,-30 L48,-58 L20,-15 L78,0 L20,15 L48,58 L5,30 L0,78 L-5,30 L-48,58 L-20,15 L-78,0 L-20,-15 L-48,-58 L-5,-30 Z"
-            fill="url(#gold-light)"/>
-    </g>
+    <linearGradient
+      id="nova-word-gradient"
+      gradientUnits="userSpaceOnUse"
+      x1="222"
+      y1="0"
+      x2="420"
+      y2="0"
+    >
+      <stop offset="0%" stop-color="#6E3BE8" />
+      <stop offset="52%" stop-color="#5274D8" />
+      <stop offset="100%" stop-color="#2FBFC4" />
+    </linearGradient>
   </defs>
 
-  <!-- Wordmark -->
-  <g font-family="'Merriweather', Georgia, serif" fill="#0B2D5C">
-    <text x="220" y="100" font-size="60" font-weight="700" letter-spacing="0.5px">NovaCare</text>
-    <text x="220" y="140" font-size="34" opacity="0.95">Nursing</text>
+  <!-- NovaCare star -->
+  <g transform="translate(110 100)" fill="url(#nova-star-gradient)">
+    <circle
+      cx="0"
+      cy="0"
+      r="48"
+      fill="none"
+      stroke="url(#nova-star-gradient)"
+      stroke-width="1.8"
+      opacity="0.92"
+    />
+
+    <path
+      d="M0,-78
+         L5,-30
+         L48,-58
+         L20,-15
+         L78,0
+         L20,15
+         L48,58
+         L5,30
+         L0,78
+         L-5,30
+         L-48,58
+         L-20,15
+         L-78,0
+         L-20,-15
+         L-48,-58
+         L-5,-30
+         Z"
+    />
   </g>
 
-  <!-- Mark -->
-  <g transform="translate(110,100)">
-    <use href="#nova-star"/>
+  <!-- NovaCare wordmark -->
+  <g fill="#1D3952">
+    <path
+      d="M124 0H388V749C388 814 387 942 381 1108C472 947 551 815 593 748L1065 0H1351V1490H1086V678C1086 619 1088 495 1092 383C1033 489 967 603 932 659L409 1490H124Z"
+      transform="translate(218.000 105.000) scale(0.0327148 -0.0327148)"
+    />
+
+    <path
+      d="M584 -24C895 -24 1105 199 1105 527C1105 855 895 1080 584 1080C273 1080 63 855 63 527C63 199 273 -24 584 -24ZM584 187C421 187 318 316 318 527C318 739 422 869 584 869C745 869 849 738 849 527C849 317 746 187 584 187Z"
+      transform="translate(266.250 105.000) scale(0.0327148 -0.0327148)"
+    />
+
+    <path
+      d="M415 0H691L1088 1056H824L634 506C607 423 582 339 557 256C531 339 505 423 478 506L285 1056H18Z"
+      transform="translate(304.422 105.000) scale(0.0327148 -0.0327148)"
+    />
+
+    <path
+      d="M434 -17C606 -17 695 55 745 149H749V0H997V720C997 940 834 1077 559 1077C283 1077 111 938 99 728H342C349 817 431 881 554 881C675 881 747 817 747 727V719C747 647 680 644 484 622C266 599 69 540 69 300C69 89 224 -17 434 -17ZM496 170C386 170 315 219 315 302C315 398 407 437 515 453C619 469 717 485 748 505V391C748 268 661 170 496 170Z"
+      transform="translate(339.359 105.000) scale(0.0327148 -0.0327148)"
+    />
+
+    <path
+      d="M774 -24C1110 -24 1366 184 1416 509H1148C1106 320 966 213 776 213C502 213 338 424 338 744C338 1066 503 1277 776 1277C967 1277 1107 1169 1147 979H1416C1366 1305 1110 1514 774 1514C363 1514 72 1212 72 744C72 279 363 -24 774 -24Z"
+      transform="translate(374.500 105.000) scale(0.0327148 -0.0327148)"
+    />
+
+    <path
+      d="M434 -17C606 -17 695 55 745 149H749V0H997V720C997 940 834 1077 559 1077C283 1077 111 938 99 728H342C349 817 431 881 554 881C675 881 747 817 747 727V719C747 647 680 644 484 622C266 599 69 540 69 300C69 89 224 -17 434 -17ZM496 170C386 170 315 219 315 302C315 398 407 437 515 453C619 469 717 485 748 505V391C748 268 661 170 496 170Z"
+      transform="translate(423.047 105.000) scale(0.0327148 -0.0327148)"
+    />
+
+    <path
+      d="M112 0H364V598C364 763 457 846 577 846C627 846 677 841 696 838V1062C676 1064 648 1066 614 1066C478 1066 397 1002 358 881H355V1056H112Z"
+      transform="translate(459.297 105.000) scale(0.0327148 -0.0327148)"
+    />
+
+    <path
+      d="M578 -24C825 -24 1021 119 1061 326H825C796 236 711 175 584 175C414 175 316 290 310 462H1074V531C1074 855 872 1080 568 1080C272 1080 63 848 63 527C63 207 261 -24 578 -24ZM312 636C329 787 426 880 572 880C718 880 816 787 832 636Z"
+      transform="translate(483.141 105.000) scale(0.0327148 -0.0327148)"
+    />
   </g>
+
+  <!-- Bolder NURSING wordmark mask -->
+  <mask
+    id="nursing-mask"
+    maskUnits="userSpaceOnUse"
+    x="210"
+    y="116"
+    width="235"
+    height="42"
+    style="mask-type: alpha"
+  >
+    <g
+      fill="#FFFFFF"
+      stroke="#FFFFFF"
+      stroke-width="30"
+      stroke-linejoin="round"
+      paint-order="stroke fill"
+    >
+      <path
+        d="M165 0H396V795C396 872 388 1026 379 1213C487 1013 544 910 617 793L1120 0H1384V1490H1153V642C1153 556 1157 417 1168 273C1102 416 1035 529 989 603L428 1490H165Z"
+        transform="translate(222.000 148.000) scale(0.01700 -0.01700)"
+      />
+
+      <path
+        d="M759 -23C1115 -23 1351 199 1351 512V1490H1122V531C1122 330 983 184 759 184C534 184 393 330 393 531V1490H165V512C165 199 400 -23 759 -23Z"
+        transform="translate(251.938 148.000) scale(0.01700 -0.01700)"
+      />
+
+      <path
+        d="M165 0H393V563H697C701 563 706 563 710 563L1012 0H1271L943 602C1124 670 1215 822 1215 1022C1215 1297 1044 1490 699 1490H165ZM393 758V1295H673C893 1295 984 1190 984 1022C984 855 893 758 675 758Z"
+        transform="translate(281.406 148.000) scale(0.01700 -0.01700)"
+      />
+
+      <path
+        d="M665 -25C1015 -25 1217 159 1217 412C1217 681 978 783 788 832L643 870C529 900 375 953 375 1094C375 1220 489 1312 670 1312C839 1312 960 1234 975 1098H1197C1190 1335 981 1510 675 1510C375 1510 147 1339 147 1081C147 877 291 752 535 687L709 639C869 596 992 545 992 415C992 271 853 175 664 175C492 175 348 251 335 414H106C120 142 330 -25 665 -25Z"
+        transform="translate(308.203 148.000) scale(0.01700 -0.01700)"
+      />
+
+      <path
+        d="M393 1490H165V0H393Z"
+        transform="translate(334.938 148.000) scale(0.01700 -0.01700)"
+      />
+
+      <path
+        d="M165 0H396V795C396 872 388 1026 379 1213C487 1013 544 910 617 793L1120 0H1384V1490H1153V642C1153 556 1157 417 1168 273C1102 416 1035 529 989 603L428 1490H165Z"
+        transform="translate(350.844 148.000) scale(0.01700 -0.01700)"
+      />
+
+      <path
+        d="M791 -20C1152 -20 1413 216 1413 593V764H825V576H1190C1185 338 1028 188 792 188C529 188 339 386 339 745C339 1105 532 1302 783 1302C979 1302 1112 1193 1166 1019H1400C1350 1309 1102 1510 781 1510C395 1510 113 1220 113 744C113 273 386 -20 791 -20Z"
+        transform="translate(380.781 148.000) scale(0.01700 -0.01700)"
+      />
+    </g>
+  </mask>
+
+  <!-- Continuous gradient across NURSING -->
+  <rect
+    x="210"
+    y="116"
+    width="235"
+    height="42"
+    fill="url(#nova-word-gradient)"
+    mask="url(#nursing-mask)"
+  />
 </svg>
