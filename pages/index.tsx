@@ -5,8 +5,6 @@ import Hero from "../components/Hero";
 import ContactCta from "../components/ContactCta";
 import SiteFooter from "../components/SiteFooter";
 
-const brand = { blue: "#0B2D5C", gold: "#C6A662" };
-
 type ServiceIconName =
   | "home"
   | "wound"
@@ -128,6 +126,27 @@ const accessPathways = [
       "Consultancy and specialist nursing support for providers, nursing homes, and residential aged care homes.",
     href: "/providers",
     linkLabel: "For Providers",
+  },
+];
+
+const accessPathwayStyles = [
+  {
+    card: "border-[#CFEAEC] bg-gradient-to-br from-white via-white to-[#EAF9FA]",
+    marker: "bg-[#DDF5F5] text-[#238C93]",
+    link: "text-[#238C93]",
+    glow: "bg-[#A9ECE8]/35",
+  },
+  {
+    card: "border-[#E3DDFB] bg-gradient-to-br from-white via-white to-[#F2EEFF]",
+    marker: "bg-[#E9E2FF] text-[#6E3BE8]",
+    link: "text-[#6E3BE8]",
+    glow: "bg-[#D7CEFF]/35",
+  },
+  {
+    card: "border-[#DCE8F8] bg-gradient-to-br from-white via-white to-[#EEF4FF]",
+    marker: "bg-[#E1EBFF] text-[#5274D8]",
+    link: "text-[#5274D8]",
+    glow: "bg-[#C9DAFF]/35",
   },
 ];
 
@@ -677,40 +696,99 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-4 py-6">
-          <div className="rounded-3xl bg-[#0B2D5C] p-6 text-white md:p-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold md:text-4xl">
-                How to Access Care
-              </h2>
+        <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div
+            aria-hidden="true"
+            className="absolute -left-28 top-4 h-72 w-72 rounded-full bg-[#DDF5F5]/60 blur-3xl"
+          />
 
-              <p className="mt-3 text-white/90">
-                Flexible pathways for private clients, families, providers, and
-                residential aged care.
-              </p>
-            </div>
+          <div
+            aria-hidden="true"
+            className="absolute -right-28 bottom-0 h-80 w-80 rounded-full bg-[#EAE1FC]/45 blur-3xl"
+          />
 
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
-              {accessPathways.map((pathway) => (
-                <div
-                  key={pathway.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur"
-                >
-                  <h3 className="text-xl font-semibold">{pathway.title}</h3>
+          <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.25rem] border border-[#DCEDEF] bg-gradient-to-br from-white via-[#FCFEFF] to-[#F6FAFF] p-6 shadow-[0_24px_70px_rgba(29,57,82,0.08)] sm:p-8 lg:p-10">
+            <div
+              aria-hidden="true"
+              className="absolute left-[12%] top-0 h-28 w-28 -translate-y-1/2 rounded-full bg-[#A9ECE8]/25 blur-2xl"
+            />
 
-                  <p className="mt-3 text-sm leading-7 text-white/90">
-                    {pathway.description}
+            <div
+              aria-hidden="true"
+              className="absolute right-[16%] top-10 h-32 w-32 rounded-full bg-[#D7CEFF]/25 blur-2xl"
+            />
+
+            <div className="relative">
+              <div className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
+                    Flexible access. Clear pathways.
                   </p>
 
-                  <Link
-                    href={pathway.href}
-                    className="mt-5 inline-flex items-center font-semibold transition hover:opacity-85"
-                    style={{ color: brand.gold }}
-                  >
-                    {pathway.linkLabel} →
-                  </Link>
+                  <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
+                    How to Access Care
+                  </h2>
+
+                  <div
+                    aria-hidden="true"
+                    className="mt-5 h-1.5 w-28 rounded-full bg-[#2FBFC4]"
+                  />
                 </div>
-              ))}
+
+                <p className="max-w-3xl text-lg leading-8 text-[#526B7C] lg:justify-self-end">
+                  Flexible pathways for private clients, families, providers, and
+                  residential aged care.
+                </p>
+              </div>
+
+              <div className="mt-10 grid gap-5 md:grid-cols-3">
+                {accessPathways.map((pathway, index) => {
+                  const styles =
+                    accessPathwayStyles[index] ?? accessPathwayStyles[0];
+
+                  return (
+                    <article
+                      key={pathway.title}
+                      className={`group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border p-6 shadow-[0_14px_38px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(29,57,82,0.10)] sm:p-7 ${styles.card}`}
+                    >
+                      <div
+                        aria-hidden="true"
+                        className={`absolute -right-10 -top-10 h-32 w-32 rounded-full blur-2xl transition duration-500 group-hover:scale-110 ${styles.glow}`}
+                      />
+
+                      <div className="relative flex h-full flex-col">
+                        <span
+                          aria-hidden="true"
+                          className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold shadow-sm ${styles.marker}`}
+                        >
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
+                          {pathway.title}
+                        </h3>
+
+                        <p className="mt-3 flex-1 leading-7 text-[#526B7C]">
+                          {pathway.description}
+                        </p>
+
+                        <Link
+                          href={pathway.href}
+                          className={`mt-6 inline-flex items-center gap-2 font-semibold ${styles.link}`}
+                        >
+                          {pathway.linkLabel}
+                          <span
+                            aria-hidden="true"
+                            className="transition-transform duration-300 group-hover:translate-x-1"
+                          >
+                            →
+                          </span>
+                        </Link>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
