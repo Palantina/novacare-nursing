@@ -806,144 +806,121 @@ export default function Home() {
           />
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid overflow-hidden rounded-[2.25rem] border border-[#DCEDEF] bg-white shadow-[0_24px_70px_rgba(29,57,82,0.11)] lg:grid-cols-[1.02fr_0.98fr]">
-              <div className="relative overflow-hidden bg-[#173B5C] p-7 text-white sm:p-10 lg:p-12">
-                <div
-                  aria-hidden="true"
-                  className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#2FBFC4]/20 blur-3xl"
-                />
-
-                <div
-                  aria-hidden="true"
-                  className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-[#6E3BE8]/25 blur-3xl"
-                />
-
-                <div className="relative">
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8FE4E1] sm:text-base">
+            <div className="overflow-hidden rounded-[2.25rem] border border-[#DCEDEF] bg-white/95 p-7 shadow-[0_20px_60px_rgba(29,57,82,0.08)] sm:p-10 lg:p-12">
+              <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
                     Tasmanian owned. Clinically led.
                   </p>
 
-                  <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
+                  <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
                     Local nursing,
-                    <span className="block text-[#AFA0FF]">
+                    <span className="block text-[#6E3BE8]">
                       built to a higher standard.
                     </span>
                   </h2>
 
-                  <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85">
-                    NovaCare Nursing is a Tasmanian clinical nursing service
-                    founded and clinically led by Palantina Hughes. Our service
-                    combines advanced nursing at home with independent clinical
-                    judgement, clear accountability and governance that works
-                    where care is actually delivered.
+                  <p className="mt-6 max-w-xl text-lg leading-8 text-[#526B7C]">
+                    NovaCare Nursing is founded and clinically led by Palantina
+                    Hughes, bringing experienced clinical judgement, continuity
+                    and accountability into care at home.
                   </p>
 
-                  <div className="mt-8 rounded-[1.75rem] border border-white/15 bg-white/10 p-5 backdrop-blur sm:p-6">
-                    <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-                      <div className="flex h-24 w-24 shrink-0 flex-col items-center justify-center rounded-[1.5rem] bg-white text-[#173B5C] shadow-lg">
-                        <span className="text-4xl font-semibold leading-none">
-                          18
-                        </span>
+                  <div className="mt-8 flex items-start gap-5">
+                    <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-[1.35rem] bg-[#EAF9FA] text-[#1D3952] shadow-sm ring-1 ring-[#D7EEF0]">
+                      <span className="text-3xl font-semibold leading-none">
+                        18
+                      </span>
 
-                        <span className="mt-1 text-sm font-semibold uppercase tracking-[0.12em]">
-                          years
-                        </span>
-                      </div>
+                      <span className="mt-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#2B8E99]">
+                        years
+                      </span>
+                    </div>
 
-                      <div>
-                        <p className="text-2xl font-semibold">
-                          Palantina Hughes
-                        </p>
+                    <div className="pt-1">
+                      <p className="text-xl font-semibold text-[#1D3952]">
+                        Palantina Hughes
+                      </p>
 
-                        <p className="mt-1 font-semibold text-[#8FE4E1]">
-                          Founder &amp; Clinical Nursing Consultant
-                        </p>
+                      <p className="mt-1 font-semibold text-[#6E3BE8]">
+                        Founder &amp; Clinical Nursing Consultant
+                      </p>
 
-                        <p className="mt-3 leading-7 text-white/80">
-                          Extensive experience across emergency and acute care,
-                          hospital-in-the-home and Community Rapid Response,
-                          complex community nursing, palliative care and clinical
-                          governance.
-                        </p>
-                      </div>
+                      <p className="mt-3 max-w-lg leading-7 text-[#526B7C]">
+                        Experience across emergency and acute care,
+                        hospital-in-the-home and Community Rapid Response,
+                        complex community nursing, palliative care and clinical
+                        governance.
+                      </p>
                     </div>
                   </div>
-
-                  <p className="mt-7 max-w-2xl leading-7 text-white/85">
-                    Palantina oversees NovaCare&apos;s clinical standards for
-                    assessment, care planning, documentation, escalation,
-                    education and review, ensuring every episode of care is
-                    delivered with clinical accountability and person-centred
-                    nursing.
-                  </p>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link
                       href="/about"
-                      className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] transition hover:bg-[#59D6D0]"
+                      className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#59D6D0]"
                     >
                       Meet our founder
                     </Link>
 
                     <Link
                       href="/providers"
-                      className="inline-flex min-h-[52px] items-center justify-center rounded-2xl border border-white/50 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
+                      className="inline-flex min-h-[50px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-[#F7F4FF] px-6 py-3 text-center font-semibold text-[#5C43A8] transition hover:-translate-y-0.5 hover:bg-[#F1ECFF]"
                     >
                       Clinical support for providers
                     </Link>
                   </div>
                 </div>
-              </div>
 
-              <div className="p-6 sm:p-8 lg:p-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
-                  The NovaCare difference
-                </p>
-
-                <h3 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-                  Independent nursing with clinical accountability.
-                </h3>
-
-                <p className="mt-4 text-lg leading-8 text-[#526B7C]">
-                  Because nursing is our service—not one item in a large care
-                  catalogue—we can look at the whole clinical picture and
-                  recommend what is genuinely needed.
-                </p>
-
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  {clinicalStandards.map((standard) => (
-                    <article
-                      key={standard.title}
-                      className="rounded-[1.5rem] border border-[#E2ECEF] bg-[#F8FCFD] p-5"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${standard.iconClass}`}
-                      >
-                        <ClinicalStandardIcon name={standard.icon} />
-                      </span>
-
-                      <h4 className="mt-4 text-lg font-semibold text-[#1D3952]">
-                        {standard.title}
-                      </h4>
-
-                      <p className="mt-2 text-sm leading-6 text-[#526B7C]">
-                        {standard.description}
-                      </p>
-                    </article>
-                  ))}
-                </div>
-
-                <div className="mt-6 rounded-[1.5rem] border border-[#D7EEF0] bg-[#EAF9FA] p-5">
-                  <p className="font-semibold text-[#1D3952]">
-                    We review what is missing—not what else we can sell.
+                <div className="lg:border-l lg:border-[#E5EEF0] lg:pl-14">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
+                    The NovaCare difference
                   </p>
 
-                  <p className="mt-2 leading-7 text-[#526B7C]">
-                    Our recommendation may be nursing from NovaCare, review by a
-                    GP or specialist, coordination with an existing provider, or
-                    urgent hospital care. The clinical need comes first.
+                  <h3 className="mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
+                    Independent nursing with clinical accountability.
+                  </h3>
+
+                  <p className="mt-4 max-w-2xl text-lg leading-8 text-[#526B7C]">
+                    Nursing is our service. We look at the whole clinical
+                    picture, identify what is missing and recommend what is
+                    genuinely needed.
                   </p>
+
+                  <div className="mt-8 grid gap-x-8 gap-y-7 sm:grid-cols-2">
+                    {clinicalStandards.map((standard) => (
+                      <article key={standard.title} className="flex gap-4">
+                        <span
+                          aria-hidden="true"
+                          className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${standard.iconClass}`}
+                        >
+                          <ClinicalStandardIcon name={standard.icon} />
+                        </span>
+
+                        <div>
+                          <h4 className="text-base font-semibold leading-6 text-[#1D3952]">
+                            {standard.title}
+                          </h4>
+
+                          <p className="mt-1 text-sm leading-6 text-[#526B7C]">
+                            {standard.description}
+                          </p>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 rounded-[1.5rem] border border-[#D7EEF0] bg-gradient-to-r from-[#F1FBFB] via-white to-[#F7F4FF] p-5 sm:p-6">
+                    <p className="font-semibold text-[#1D3952]">
+                      We review what is missing—not what else we can sell.
+                    </p>
+
+                    <p className="mt-2 leading-7 text-[#526B7C]">
+                      The right next step may be NovaCare nursing, review by a GP
+                      or specialist, coordination with an existing provider, or
+                      urgent hospital care. The clinical need comes first.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
