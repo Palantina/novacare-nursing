@@ -28,147 +28,112 @@ export default function PrivateNursing() {
 
       <SiteHeader />
 
-      <main className="mx-auto max-w-6xl px-4 py-10 text-[15px] leading-6 sm:px-6 md:leading-7 lg:px-8 lg:py-12">
-        <section className="relative overflow-hidden rounded-[2.25rem] border border-[#DCEDEF] bg-gradient-to-br from-[#EAF9FA] via-white to-[#F2EEFF] p-5 shadow-[0_24px_70px_rgba(29,57,82,0.09)] sm:p-7 lg:p-8">
-          <div
-            aria-hidden="true"
-            className="absolute -left-20 -top-20 h-52 w-52 rounded-full bg-[#A9ECE8]/35 blur-3xl"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute -bottom-24 -right-20 h-56 w-56 rounded-full bg-[#D7CEFF]/35 blur-3xl"
-          />
+      <main className="mx-auto max-w-7xl px-4 py-8 text-[15px] leading-6 sm:px-6 md:leading-7 lg:px-8 lg:py-10">
+        <section className="relative">
+          <motion.div
+            className="group relative h-[330px] overflow-hidden rounded-[2rem] border border-[#DCEDEF] bg-[#EAF9FA] shadow-[0_24px_70px_rgba(29,57,82,0.10)] sm:h-[420px] lg:h-[500px]"
+            initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+            animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.68, ease: "easeOut" }}
+          >
+            <Image
+              src="/novacare-private-nursing-home.jpg"
+              alt="Registered nurse speaking with a client during a home nursing visit"
+              fill
+              priority
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
+            />
 
-          <div className="relative grid gap-7 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
-            <motion.div
-              className="flex flex-col justify-center px-1 py-3 sm:px-2 lg:px-4 lg:py-6"
-              initial={reduceMotion ? false : { opacity: 0, x: -26 }}
-              animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
-              transition={{ duration: 0.62, ease: "easeOut" }}
-            >
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                Nursing at home
-              </p>
-
-              <h1 className="mt-4 text-4xl font-semibold leading-[1.07] tracking-[-0.04em] text-[#1D3952] sm:text-5xl lg:text-[3.35rem]">
-                Private nursing,
-                <span className="block text-[#6E3BE8]">on your terms.</span>
-              </h1>
-
-              <div
-                aria-hidden="true"
-                className="mt-6 h-1.5 w-28 rounded-full bg-[#2FBFC4]"
-              />
-
-              <p className="mt-6 max-w-xl text-lg leading-8 text-[#526B7C]">
-                Direct access to experienced Clinical Nurse Consultant and
-                Registered Nurse care in the comfort of your home.
-              </p>
-
-              <p className="mt-4 max-w-xl leading-7 text-[#526B7C]">
-                Choose the nursing support you need, when you need it, with
-                continuity, experienced clinical judgement and clear
-                communication about what happens next.
-              </p>
-
-              <div className="mt-7 flex flex-wrap gap-2.5">
-                <span className="rounded-full border border-[#CFEAEC] bg-white/85 px-4 py-2 text-sm font-semibold text-[#238C93] shadow-sm">
-                  Book directly
-                </span>
-                <span className="rounded-full border border-[#E3DDFB] bg-white/85 px-4 py-2 text-sm font-semibold text-[#6E3BE8] shadow-sm">
-                  Self-funded care
-                </span>
-                <span className="rounded-full border border-[#DCE8F8] bg-white/85 px-4 py-2 text-sm font-semibold text-[#5274D8] shadow-sm">
-                  Hobart &amp; surrounds
-                </span>
-              </div>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="inline-flex min-h-[52px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#59D6D0] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-[#2FBFC4]/25"
-                >
-                  Book private nursing
-                </Link>
-
-                <Link
-                  href="/fees"
-                  className="inline-flex min-h-[52px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-white px-6 py-3 text-center font-semibold text-[#5C43A8] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#F7F4FF] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-[#6E3BE8]/15"
-                >
-                  View fees
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="relative min-h-[320px] overflow-hidden rounded-[1.8rem] border border-white/80 bg-white shadow-[0_18px_45px_rgba(29,57,82,0.12)] sm:min-h-[390px] lg:min-h-[500px]"
-              initial={reduceMotion ? false : { opacity: 0, x: 28, scale: 0.985 }}
-              animate={
-                reduceMotion ? undefined : { opacity: 1, x: 0, scale: 1 }
-              }
-              transition={{
-                duration: 0.68,
-                delay: 0.08,
-                ease: "easeOut",
-              }}
-            >
-              <Image
-                src="/novacare-private-nursing-home.jpg"
-                alt="Registered nurse speaking with a client during a home nursing visit"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 54vw"
-                className="object-cover object-center transition-transform duration-[1400ms] ease-out hover:scale-[1.025]"
-              />
-
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/10 via-transparent to-transparent"
-              />
-            </motion.div>
-          </div>
-        </section>
-
-        <div className="mt-7 rounded-[1.75rem] border border-[#DCEDEF] bg-white p-6 shadow-[0_14px_38px_rgba(29,57,82,0.06)] sm:p-7">
-          <div className="flex items-start gap-4">
-            <span
+            <div
               aria-hidden="true"
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#EAF9FA] text-[#238C93]"
-            >
-              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                />
-                <path
-                  d="M12 7.5v4.8M12 16.5h.01"
-                  stroke="currentColor"
-                  strokeWidth="1.9"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+              className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/30 via-transparent to-transparent"
+            />
+          </motion.div>
 
-            <div>
-              <p className="text-lg font-semibold text-[#1D3952]">
-                What “Private Nursing” means
-              </p>
+          <motion.div
+            className="relative z-10 mx-3 -mt-14 max-w-3xl rounded-[2rem] border border-white/80 bg-white/95 p-6 shadow-[0_24px_65px_rgba(29,57,82,0.14)] backdrop-blur sm:mx-8 sm:-mt-20 sm:p-8 lg:ml-12 lg:-mt-24 lg:p-10"
+            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+            animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.62, delay: 0.12, ease: "easeOut" }}
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
+              Nursing at home
+            </p>
 
-              <p className="mt-2 leading-7 text-[#526B7C]">
-                Private nursing is <strong>fee-for-service</strong> (self-funded).
-                You can engage NovaCare Nursing directly without needing a
-                funded-program approval or provider contract.
-              </p>
+            <h1 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#1D3952] sm:text-4xl lg:text-[2.8rem]">
+              Private nursing at home,
+              <span className="block text-[#6E3BE8]">built around you.</span>
+            </h1>
 
-              <p className="mt-2 leading-7 text-[#526B7C]">
-                It gives you direct choice over who provides your nursing care,
-                with continuity, experienced clinical judgement and clear
-                communication about what is needed next.
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
+              Direct access to experienced Clinical Nurse Consultant and
+              Registered Nurse care, with continuity, clinical judgement and
+              clear communication from first visit to review.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Link
+                href="/contact"
+                className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#59D6D0] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-[#2FBFC4]/25"
+              >
+                Book private nursing
+              </Link>
+
+              <Link
+                href="/fees"
+                className="inline-flex min-h-[50px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-[#F8F6FF] px-6 py-3 text-center font-semibold text-[#5C43A8] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F2EEFF] focus:outline-none focus:ring-4 focus:ring-[#6E3BE8]/15"
+              >
+                View fees
+              </Link>
+
+              <p className="text-sm font-medium text-[#6B7F8E] sm:ml-2">
+                Self-funded • Hobart &amp; surrounds
               </p>
             </div>
+          </motion.div>
+        </section>
+
+        <motion.div
+          className="mt-8 grid gap-4 rounded-[1.75rem] border border-[#DCEDEF] bg-gradient-to-r from-[#F7FCFC] via-white to-[#FAF8FF] p-6 shadow-[0_12px_32px_rgba(29,57,82,0.05)] sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5 sm:p-7"
+          initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <span
+            aria-hidden="true"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#EAF9FA] text-[#238C93]"
+          >
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
+                stroke="currentColor"
+                strokeWidth="1.7"
+              />
+              <path
+                d="M12 7.5v4.8M12 16.5h.01"
+                stroke="currentColor"
+                strokeWidth="1.9"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+
+          <div>
+            <p className="text-lg font-semibold text-[#1D3952]">
+              What private nursing means
+            </p>
+
+            <p className="mt-2 max-w-4xl leading-7 text-[#526B7C]">
+              Private nursing is fee-for-service, so you can engage NovaCare
+              Nursing directly without waiting for a funded-program approval or
+              provider contract. You choose who provides your nursing care and
+              can continue with the same experienced clinician when ongoing
+              review is needed.
+            </p>
           </div>
-        </div>
+        </motion.div>
 
         <section className="mt-10">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
