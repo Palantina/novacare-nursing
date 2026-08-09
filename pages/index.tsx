@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import SiteHeader from "../components/SiteHeader";
 import Hero from "../components/Hero";
 import ContactCta from "../components/ContactCta";
@@ -473,6 +474,8 @@ function ClinicalStandardIcon({
 }
 
 export default function Home() {
+  const reduceMotion = useReducedMotion();
+
   return (
     <>
       <Head>
@@ -616,44 +619,56 @@ export default function Home() {
             </div>
 
             <div className="mt-11 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {signatureServices.map((service) => (
-                <article
+              {signatureServices.map((service, index) => (
+                <motion.div
                   key={service.title}
-                  className={`group flex h-full flex-col rounded-[1.75rem] border p-6 shadow-[0_14px_40px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(29,57,82,0.12)] sm:p-7 ${service.cardClass}`}
+                  className="h-full"
+                  initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+                  whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.18 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: reduceMotion ? 0 : index * 0.07,
+                    ease: "easeOut",
+                  }}
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <span
-                      className={`inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconClass}`}
-                    >
-                      <ServiceIcon name={service.icon} />
-                    </span>
-
-                    <span className="rounded-full border border-white/80 bg-white/75 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[#526B7C] shadow-sm">
-                      {service.tag}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
-                    {service.title}
-                  </h3>
-
-                  <p className="mt-4 flex-1 leading-7 text-[#526B7C]">
-                    {service.description}
-                  </p>
-
-                  <Link
-                    href="/services"
-                    className={`mt-6 inline-flex items-center gap-2 font-semibold ${service.linkClass}`}
+                  <article
+                    className={`group flex h-full flex-col rounded-[1.75rem] border p-6 shadow-[0_14px_40px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(29,57,82,0.12)] sm:p-7 ${service.cardClass}`}
                   >
-                    Learn more
-                    <span
-                      aria-hidden="true"
-                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    <div className="flex items-start justify-between gap-4">
+                      <span
+                        className={`inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconClass}`}
+                      >
+                        <ServiceIcon name={service.icon} />
+                      </span>
+
+                      <span className="rounded-full border border-white/80 bg-white/75 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[#526B7C] shadow-sm">
+                        {service.tag}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
+                      {service.title}
+                    </h3>
+
+                    <p className="mt-4 flex-1 leading-7 text-[#526B7C]">
+                      {service.description}
+                    </p>
+
+                    <Link
+                      href="/services"
+                      className={`mt-6 inline-flex items-center gap-2 font-semibold ${service.linkClass}`}
                     >
-                      →
-                    </span>
-                  </Link>
-                </article>
+                      Learn more
+                      <span
+                        aria-hidden="true"
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      >
+                        →
+                      </span>
+                    </Link>
+                  </article>
+                </motion.div>
               ))}
             </div>
 
