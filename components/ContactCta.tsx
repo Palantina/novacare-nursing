@@ -1,6 +1,17 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function ContactCta() {
+  const [canCall, setCanCall] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent || "";
+    const phoneLikeDevice =
+      /iPhone|iPod|Windows Phone|Android.*Mobile|Mobi/i.test(userAgent);
+
+    setCanCall(phoneLikeDevice);
+  }, []);
+
   return (
     <section className="bg-[#F8FCFD] px-4 pb-5 pt-10 sm:px-6 sm:pt-12 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -33,26 +44,29 @@ export default function ContactCta() {
                 Book a consultation
               </Link>
 
-              <a
-                href="tel:+61491303671"
-                className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-2xl border border-[#D8D1F4] bg-white px-6 py-3 text-center font-semibold text-[#5C43A8] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#F7F4FF] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-[#6E3BE8]/15"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="h-4.5 w-4.5"
-                  viewBox="0 0 24 24"
-                  fill="none"
+              {canCall && (
+                <a
+                  href="tel:+61491303671"
+                  className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-2xl border border-[#D8D1F4] bg-white px-6 py-3 text-center font-semibold text-[#5C43A8] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#F7F4FF] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-[#6E3BE8]/15"
+                  aria-label="Call NovaCare Nursing on 0491 303 671"
                 >
-                  <path
-                    d="M8.5 3.5 11 8 8.8 9.8c1.1 2.3 3 4.2 5.3 5.3L16 13l4.5 2.5-.7 4c-.1.6-.7 1-1.3 1C10.2 20.5 3.5 13.8 3.5 5.5c0-.6.4-1.2 1-1.3l4-.7Z"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                Call 0491 303 671
-              </a>
+                  <svg
+                    aria-hidden="true"
+                    className="h-4.5 w-4.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M8.5 3.5 11 8 8.8 9.8c1.1 2.3 3 4.2 5.3 5.3L16 13l4.5 2.5-.7 4c-.1.6-.7 1-1.3 1C10.2 20.5 3.5 13.8 3.5 5.5c0-.6.4-1.2 1-1.3l4-.7Z"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  Call 0491 303 671
+                </a>
+              )}
             </div>
           </div>
         </div>
