@@ -88,7 +88,7 @@ export default function PrivateNursing() {
               </Link>
 
               <p className="text-sm font-medium text-[#6B7F8E] sm:ml-2">
-                Self-funded • Hobart &amp; surrounds
+                Fee-for-service • Hobart &amp; surrounds
               </p>
             </div>
           </motion.div>
@@ -126,11 +126,11 @@ export default function PrivateNursing() {
             </p>
 
             <p className="mt-2 max-w-4xl leading-7 text-[#526B7C]">
-              Private nursing is fee-for-service, so you can engage NovaCare
-              Nursing directly without waiting for a funded-program approval or
-              provider contract. You choose who provides your nursing care and
-              can continue with the same experienced clinician when ongoing
-              review is needed.
+              Private nursing is straightforward fee-for-service care. Anyone
+              can book NovaCare Nursing directly for the nursing support they
+              need, when they need it. Care can be one-off or ongoing, with
+              continuity and experienced clinical judgement when review is
+              required.
             </p>
           </div>
         </motion.div>
