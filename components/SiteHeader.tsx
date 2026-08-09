@@ -49,10 +49,19 @@ export default function SiteHeader() {
   const { pathname } = router;
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [canCall, setCanCall] = useState(false);
 
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent || "";
+    const phoneLikeDevice =
+      /iPhone|iPod|Windows Phone|Android.*Mobile|Mobi/i.test(userAgent);
+
+    setCanCall(phoneLikeDevice);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 font-sans">
@@ -87,29 +96,49 @@ export default function SiteHeader() {
             Hobart • Huon Valley • Derwent Valley • Surrounds
           </div>
 
-          <a
-            href="tel:+61491303671"
-            className="flex shrink-0 items-center gap-2 text-sm font-semibold transition-colors hover:text-[#5274D8] sm:text-base"
-            aria-label="Call NovaCare Nursing on 0491 303 671"
-          >
-            <svg
-              aria-hidden="true"
-              className="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="none"
+          {canCall ? (
+            <a
+              href="tel:+61491303671"
+              className="flex shrink-0 items-center gap-2 text-sm font-semibold transition-colors hover:text-[#5274D8] sm:text-base"
+              aria-label="Call NovaCare Nursing on 0491 303 671"
             >
-              <path
-                d="M8.5 3.5 11 8 8.8 9.8c1.1 2.3 3 4.2 5.3 5.3L16 13l4.5 2.5-.7 4c-.1.6-.7 1-1.3 1C10.2 20.5 3.5 13.8 3.5 5.5c0-.6.4-1.2 1-1.3l4-.7Z"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M8.5 3.5 11 8 8.8 9.8c1.1 2.3 3 4.2 5.3 5.3L16 13l4.5 2.5-.7 4c-.1.6-.7 1-1.3 1C10.2 20.5 3.5 13.8 3.5 5.5c0-.6.4-1.2 1-1.3l4-.7Z"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
 
-            <span className="hidden sm:inline">0491 303 671</span>
-            <span className="sm:hidden">Call</span>
-          </a>
+              <span>Call</span>
+            </a>
+          ) : (
+            <div className="flex shrink-0 items-center gap-2 text-sm font-semibold sm:text-base">
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M8.5 3.5 11 8 8.8 9.8c1.1 2.3 3 4.2 5.3 5.3L16 13l4.5 2.5-.7 4c-.1.6-.7 1-1.3 1C10.2 20.5 3.5 13.8 3.5 5.5c0-.6.4-1.2 1-1.3l4-.7Z"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+
+              <span className="hidden sm:inline">0491 303 671</span>
+            </div>
+          )}
         </div>
       </div>
 
