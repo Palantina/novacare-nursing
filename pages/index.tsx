@@ -838,7 +838,7 @@ export default function Home() {
 
                 <div className="lg:border-l lg:border-[#E5EEF0] lg:pl-14">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
-                    The NovaCare difference
+                    The NovaCare Nursing difference
                   </p>
 
                   <h3 className="mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
@@ -880,7 +880,7 @@ export default function Home() {
                     </p>
 
                     <p className="mt-2 leading-7 text-[#526B7C]">
-                      The right next step may be NovaCare nursing, review by a GP
+                      The right next step may be NovaCare Nursing, review by a GP
                       or specialist, coordination with an existing provider, or
                       urgent hospital care. The clinical need comes first.
                     </p>
