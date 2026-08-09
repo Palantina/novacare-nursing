@@ -699,7 +699,12 @@ export default function Home() {
 
             <div className="relative">
               <div className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
-                <div>
+                <motion.div
+                  initial={reduceMotion ? false : { opacity: 0, x: -28 }}
+                  whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.45 }}
+                  transition={{ duration: 0.62, ease: "easeOut" }}
+                >
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
                     Flexible access. Clear pathways.
                   </p>
@@ -712,12 +717,18 @@ export default function Home() {
                     aria-hidden="true"
                     className="mt-5 h-1.5 w-28 rounded-full bg-[#2FBFC4]"
                   />
-                </div>
+                </motion.div>
 
-                <p className="max-w-3xl text-lg leading-8 text-[#526B7C] lg:justify-self-end">
+                <motion.p
+                  className="max-w-3xl text-lg leading-8 text-[#526B7C] lg:justify-self-end"
+                  initial={reduceMotion ? false : { opacity: 0, x: 28 }}
+                  whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.45 }}
+                  transition={{ duration: 0.62, delay: 0.08, ease: "easeOut" }}
+                >
                   Flexible pathways for private clients, families, providers, and
                   residential aged care.
-                </p>
+                </motion.p>
               </div>
 
               <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -726,45 +737,65 @@ export default function Home() {
                     accessPathwayStyles[index] ?? accessPathwayStyles[0];
 
                   return (
-                    <article
+                    <motion.div
                       key={pathway.title}
-                      className={`group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border p-6 shadow-[0_14px_38px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(29,57,82,0.10)] sm:p-7 ${styles.card}`}
+                      className="h-full"
+                      initial={
+                        reduceMotion
+                          ? false
+                          : { opacity: 0, y: 32, scale: 0.985 }
+                      }
+                      whileInView={
+                        reduceMotion
+                          ? undefined
+                          : { opacity: 1, y: 0, scale: 1 }
+                      }
+                      viewport={{ once: true, amount: 0.22 }}
+                      transition={{
+                        duration: 0.58,
+                        delay: reduceMotion ? 0 : 0.12 + index * 0.12,
+                        ease: "easeOut",
+                      }}
                     >
-                      <div
-                        aria-hidden="true"
-                        className={`absolute -right-10 -top-10 h-32 w-32 rounded-full blur-2xl transition duration-500 group-hover:scale-110 ${styles.glow}`}
-                      />
-
-                      <div className="relative flex h-full flex-col">
-                        <span
+                      <article
+                        className={`group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border p-6 shadow-[0_14px_38px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(29,57,82,0.10)] sm:p-7 ${styles.card}`}
+                      >
+                        <div
                           aria-hidden="true"
-                          className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold shadow-sm ${styles.marker}`}
-                        >
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
+                          className={`absolute -right-10 -top-10 h-32 w-32 rounded-full blur-2xl transition duration-500 group-hover:scale-110 ${styles.glow}`}
+                        />
 
-                        <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
-                          {pathway.title}
-                        </h3>
-
-                        <p className="mt-3 flex-1 leading-7 text-[#526B7C]">
-                          {pathway.description}
-                        </p>
-
-                        <Link
-                          href={pathway.href}
-                          className={`mt-6 inline-flex items-center gap-2 font-semibold ${styles.link}`}
-                        >
-                          {pathway.linkLabel}
+                        <div className="relative flex h-full flex-col">
                           <span
                             aria-hidden="true"
-                            className="transition-transform duration-300 group-hover:translate-x-1"
+                            className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold shadow-sm ${styles.marker}`}
                           >
-                            →
+                            {String(index + 1).padStart(2, "0")}
                           </span>
-                        </Link>
-                      </div>
-                    </article>
+
+                          <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
+                            {pathway.title}
+                          </h3>
+
+                          <p className="mt-3 flex-1 leading-7 text-[#526B7C]">
+                            {pathway.description}
+                          </p>
+
+                          <Link
+                            href={pathway.href}
+                            className={`mt-6 inline-flex items-center gap-2 font-semibold ${styles.link}`}
+                          >
+                            {pathway.linkLabel}
+                            <span
+                              aria-hidden="true"
+                              className="transition-transform duration-300 group-hover:translate-x-1"
+                            >
+                              →
+                            </span>
+                          </Link>
+                        </div>
+                      </article>
+                    </motion.div>
                   );
                 })}
               </div>
