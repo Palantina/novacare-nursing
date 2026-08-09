@@ -85,8 +85,8 @@ export default function Hero() {
                 </h3>
 
                 <p className="mt-2 leading-7 text-[#526B7C]">
-                  Experience, choice and availability. That is the NovaCare
-                  difference.
+                  Experience. Choice. Responsive nursing when it matters. That is
+                  the NovaCare Nursing difference.
                 </p>
               </div>
             </motion.div>
