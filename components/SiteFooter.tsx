@@ -2,44 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function SiteFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="border-t border-[#DCEDEF] bg-[#F8FCFD] text-[#1D3952]">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-          <div className="max-w-xl">
-            <Link
-              href="/"
-              className="inline-flex items-center"
-              aria-label="NovaCare Nursing home"
-            >
-              <Image
-                src="/NovaCare_Logo_Light.svg"
-                alt="NovaCare Nursing"
-                width={720}
-                height={200}
-                className="h-auto w-[215px] sm:w-[235px]"
-              />
-            </Link>
+      <div className="mx-auto max-w-7xl px-4 py-9 sm:px-6 lg:px-8 lg:py-10">
+        <div className="flex flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
+          <Link
+            href="/"
+            className="inline-flex w-fit items-center"
+            aria-label="NovaCare Nursing home"
+          >
+            <Image
+              src="/NovaCare_Logo_Light.svg"
+              alt="NovaCare Nursing"
+              width={720}
+              height={200}
+              className="h-auto w-[205px] sm:w-[225px]"
+            />
+          </Link>
 
-            <div
-              aria-hidden="true"
-              className="mt-4 flex h-1.5 w-28 overflow-hidden rounded-full"
-            >
-              <span className="w-1/3 bg-[#2FBFC4]" />
-              <span className="w-1/3 bg-[#6E3BE8]" />
-              <span className="w-1/3 bg-[#5274D8]" />
-            </div>
-
-            <p className="mt-4 max-w-lg text-base leading-7 text-[#526B7C]">
-              Expert nursing at home across Hobart, the Huon Valley, the Derwent
-              Valley and surrounding areas.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-xl lg:justify-end">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
             <a
               href="tel:+61491303671"
-              className="inline-flex min-h-[48px] items-center gap-3 rounded-2xl border border-[#CFEAEC] bg-white px-4 py-3 font-semibold text-[#1D3952] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#A9DDDF] hover:shadow-md"
+              className="inline-flex min-h-[46px] items-center gap-3 rounded-2xl border border-[#CFEAEC] bg-white px-4 py-2.5 font-semibold text-[#1D3952] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
             >
               <span
                 aria-hidden="true"
@@ -59,13 +47,12 @@ export default function SiteFooter() {
                   />
                 </svg>
               </span>
-
               0491 303 671
             </a>
 
             <a
               href="mailto:info@novacarenursing.com.au"
-              className="inline-flex min-h-[48px] items-center gap-3 rounded-2xl border border-[#E3DDFB] bg-white px-4 py-3 font-semibold text-[#1D3952] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#CFC4F5] hover:shadow-md"
+              className="inline-flex min-h-[46px] items-center gap-3 rounded-2xl border border-[#E3DDFB] bg-white px-4 py-2.5 font-semibold text-[#1D3952] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md"
             >
               <span
                 aria-hidden="true"
@@ -94,13 +81,12 @@ export default function SiteFooter() {
                   />
                 </svg>
               </span>
-
               <span className="break-all">info@novacarenursing.com.au</span>
             </a>
           </div>
         </div>
 
-        <div className="mt-9 flex flex-col gap-3 border-t border-[#DCEDEF] pt-5 text-sm text-[#6B7F8E] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-7 flex flex-col gap-3 border-t border-[#DCEDEF] pt-5 text-sm text-[#6B7F8E] sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} NovaCare Nursing. All rights reserved.
           </p>
@@ -118,6 +104,16 @@ export default function SiteFooter() {
             >
               Privacy Policy
             </Link>
+
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-2 rounded-full border border-[#DCEDEF] bg-white px-3.5 py-2 font-semibold text-[#1D3952] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#BFDDE0] hover:text-[#238C93] hover:shadow-md"
+              aria-label="Back to top"
+            >
+              <span aria-hidden="true">↑</span>
+              Back to top
+            </button>
           </div>
         </div>
       </div>
