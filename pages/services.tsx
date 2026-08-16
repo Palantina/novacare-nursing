@@ -163,8 +163,12 @@ const faqs = [
     a: "Yes. Private nursing is fee-for-service and can be booked directly. Care may be one-off or ongoing depending on what you need.",
   },
   {
+    q: "Can NovaCare Nursing work with my Support at Home or NDIS provider?",
+    a: "Yes. NovaCare Nursing can work alongside existing providers to deliver nursing services under an agreed provider arrangement. The exact pathway depends on the program, how your funding is managed and the provider's requirements.",
+  },
+  {
     q: "Do I need a GP referral?",
-    a: "A referral is not generally required to request private nursing. Some treatments, including prescribed medicines and IV therapies, require current written medical orders or other clinical information before care can proceed.",
+    a: "A referral is not generally required to request nursing. Some treatments, including prescribed medicines and IV therapies, require current written medical orders or other clinical information before care can proceed.",
   },
   {
     q: "What areas do you service?",
@@ -172,74 +176,9 @@ const faqs = [
   },
   {
     q: "Do you provide care outside standard business hours?",
-    a: "Yes. Nursing care can be arranged 24 hours a day, 7 days a week, subject to availability and clinical suitability. NovaCare Nursing is not an emergency service.",
-  },
-  {
-    q: "What if I am not sure which service I need?",
-    a: "That is fine. Tell us what is happening and we can clarify the clinical need, urgency and the most appropriate next step.",
+    a: "Yes. Nursing care can be arranged 24 hours a day, 7 days a week, subject to availability, funding or service agreement, and clinical suitability. NovaCare Nursing is not an emergency service.",
   },
 ];
-
-function ClinicalIcon({ index }: { index: number }) {
-  const paths = [
-    <>
-      <path d="M9 4h6v4.6a3 3 0 0 1-6 0V4Z" />
-      <path d="M12 11.6V20M9.5 17.5h5" />
-    </>,
-    <>
-      <rect x="4" y="8" width="16" height="8" rx="4" />
-      <path d="M12 10v4M10 12h4" />
-    </>,
-    <path
-      key="heart"
-      d="M12 19 5.5 12.8a4.1 4.1 0 0 1 5.8-5.8l.7.7.7-.7a4.1 4.1 0 0 1 5.8 5.8L12 19Z"
-    />,
-    <>
-      <path d="M8 4.5h8v5a4 4 0 0 1-8 0v-5Z" />
-      <path d="M12 13.5V20" />
-      <circle cx="18.5" cy="6.5" r="2" />
-    </>,
-    <>
-      <path d="M9 4h6v5a3 3 0 0 1-6 0V4Z" />
-      <path d="M12 12v8M9.5 19h5" />
-    </>,
-    <>
-      <path d="M8.5 5.5c0 2.7-1.4 4.5-3.5 5.5v3c2.1 1 3.5 2.8 3.5 5.5" />
-      <path d="M15.5 5.5c0 2.7 1.4 4.5 3.5 5.5v3c-2.1 1-3.5 2.8-3.5 5.5" />
-      <path d="M12 4v16" />
-    </>,
-    <>
-      <path d="M19 8.5A8 8 0 1 0 20 13" />
-      <path d="M16 8.5h3V5.5M12 9v6M9 12h6" />
-    </>,
-    <>
-      <path d="M9.5 19H7v-3a6.5 6.5 0 1 1 7.5 2.7V21" />
-      <path d="M9 9h.01M13 8h.01M14.5 12h.01M10.5 13h.01" />
-    </>,
-    <>
-      <circle cx="12" cy="12" r="8" />
-      <path d="M12 7.5v4.5l3 2" />
-    </>,
-  ];
-
-  return (
-    <svg
-      className="h-7 w-7"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <g
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        {paths[index]}
-      </g>
-    </svg>
-  );
-}
 
 export default function Services() {
   const reduceMotion = useReducedMotion();
@@ -298,7 +237,9 @@ export default function Services() {
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
+          }}
         />
       </Head>
 
@@ -345,10 +286,10 @@ export default function Services() {
                   </Link>
 
                   <Link
-                    href="/private-nursing"
+                    href="#access-care"
                     className="inline-flex min-h-[50px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-white px-6 py-3 font-semibold text-[#5C43A8] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F7F4FF] hover:shadow-sm"
                   >
-                    How private nursing works
+                    Ways to access care
                   </Link>
                 </div>
 
@@ -482,9 +423,9 @@ export default function Services() {
                   }}
                 >
                   <span
-                    className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${tone.icon}`}
+                    className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold ${tone.icon}`}
                   >
-                    <ClinicalIcon index={index} />
+                    {String(index + 1).padStart(2, "0")}
                   </span>
 
                   <h3 className="mt-5 text-xl font-semibold leading-snug tracking-[-0.02em] text-[#1D3952]">
@@ -526,6 +467,156 @@ export default function Services() {
                 </motion.article>
               );
             })}
+          </div>
+        </section>
+
+        <section
+          id="access-care"
+          className="mt-14 overflow-hidden rounded-[2rem] border border-[#DCEDEF] bg-gradient-to-br from-[#F8FCFD] via-white to-[#F2EEFF] p-6 shadow-[0_18px_50px_rgba(29,57,82,0.06)] sm:p-8 lg:p-10"
+        >
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
+                Ways to access care
+              </p>
+
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
+                One nursing service. Different pathways.
+              </h2>
+            </div>
+
+            <p className="max-w-3xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8 lg:justify-self-end">
+              NovaCare Nursing can be engaged directly or work alongside an
+              existing provider. The clinical service stays focused on the
+              person; the pathway changes according to how care is funded and
+              arranged.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <motion.article
+              className="rounded-[1.6rem] border border-[#CFEAEC] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={
+                reduceMotion ? undefined : { opacity: 1, y: 0 }
+              }
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF9FA] text-sm font-bold text-[#238C93]">
+                01
+              </span>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
+                Private Nursing
+              </h3>
+
+              <p className="mt-3 leading-7 text-[#526B7C]">
+                Book NovaCare Nursing directly for fee-for-service nursing at
+                home, whether care is needed once or over time.
+              </p>
+
+              <Link
+                href="/private-nursing"
+                className="mt-5 inline-flex items-center gap-2 font-semibold text-[#238C93]"
+              >
+                Private nursing
+                <span aria-hidden="true">→</span>
+              </Link>
+            </motion.article>
+
+            <motion.article
+              className="rounded-[1.6rem] border border-[#E3DDFB] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={
+                reduceMotion ? undefined : { opacity: 1, y: 0 }
+              }
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{
+                duration: 0.45,
+                delay: 0.06,
+                ease: "easeOut",
+              }}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F2EEFF] text-sm font-bold text-[#6E3BE8]">
+                02
+              </span>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
+                Support at Home
+              </h3>
+
+              <p className="mt-3 leading-7 text-[#526B7C]">
+                Your registered Support at Home provider can engage NovaCare
+                Nursing to deliver nursing on its behalf as part of your agreed
+                care and services.
+              </p>
+
+              <Link
+                href="/providers"
+                className="mt-5 inline-flex items-center gap-2 font-semibold text-[#6E3BE8]"
+              >
+                Provider pathway
+                <span aria-hidden="true">→</span>
+              </Link>
+            </motion.article>
+
+            <motion.article
+              className="rounded-[1.6rem] border border-[#DCE8F8] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={
+                reduceMotion ? undefined : { opacity: 1, y: 0 }
+              }
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{
+                duration: 0.45,
+                delay: 0.12,
+                ease: "easeOut",
+              }}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EEF4FF] text-sm font-bold text-[#5274D8]">
+                03
+              </span>
+
+              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
+                NDIS
+              </h3>
+
+              <p className="mt-3 leading-7 text-[#526B7C]">
+                Depending on how your plan is managed, nursing may be arranged
+                directly or through a provider. NovaCare Nursing can also work
+                alongside registered NDIS providers for complex clinical
+                support.
+              </p>
+
+              <Link
+                href="/providers"
+                className="mt-5 inline-flex items-center gap-2 font-semibold text-[#5274D8]"
+              >
+                NDIS provider support
+                <span aria-hidden="true">→</span>
+              </Link>
+            </motion.article>
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-white bg-white/75 p-5 sm:flex sm:items-center sm:justify-between sm:gap-5">
+            <div>
+              <p className="font-semibold text-[#1D3952]">
+                For providers and organisations
+              </p>
+
+              <p className="mt-1 leading-7 text-[#526B7C]">
+                NovaCare Nursing also provides clinical consultancy,
+                governance, education, auditing and complex-care support.
+              </p>
+            </div>
+
+            <Link
+              href="/providers"
+              className="mt-4 inline-flex min-h-[46px] items-center justify-center rounded-2xl bg-[#6E3BE8] px-5 py-2.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#5F31CE] sm:mt-0"
+            >
+              For Providers
+            </Link>
           </div>
         </section>
 
@@ -598,80 +689,131 @@ export default function Services() {
           </div>
         </motion.section>
 
-        <section className="mt-14 grid gap-6 lg:grid-cols-2">
-          <motion.article
-            className="overflow-hidden rounded-[2rem] border border-[#E3DDFB] bg-white shadow-[0_18px_50px_rgba(29,57,82,0.07)]"
-            initial={reduceMotion ? false : { opacity: 0, x: -20 }}
-            whileInView={
-              reduceMotion ? undefined : { opacity: 1, x: 0 }
-            }
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <div className="relative h-[260px] overflow-hidden sm:h-[310px]">
-              <Image
-                src="/iStock-1257057623.jpg"
-                alt="Dressing applied to an older person's arm as part of wound care"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center"
-              />
-            </div>
-
-            <div className="p-6 sm:p-7">
+        <motion.section
+          className="mt-14 overflow-hidden rounded-[2rem] border border-[#E3DDFB] bg-gradient-to-br from-white via-white to-[#F7F4FF] shadow-[0_18px_50px_rgba(29,57,82,0.07)]"
+          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          whileInView={
+            reduceMotion ? undefined : { opacity: 1, y: 0 }
+          }
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <div className="grid lg:grid-cols-[1fr_1.05fr] lg:items-stretch">
+            <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
                 Wound & skin integrity
               </p>
 
-              <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-[#1D3952] sm:text-3xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
                 More than changing a dressing.
               </h2>
 
-              <p className="mt-3 leading-7 text-[#526B7C]">
+              <p className="mt-4 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
                 Complex wound care starts with assessment: wound aetiology,
                 tissue, exudate, pain, skin integrity, circulation, pressure,
                 infection risk and the person&apos;s broader clinical context.
               </p>
-            </div>
-          </motion.article>
 
-          <motion.article
-            className="overflow-hidden rounded-[2rem] border border-[#D7EEF0] bg-white shadow-[0_18px_50px_rgba(29,57,82,0.07)]"
-            initial={reduceMotion ? false : { opacity: 0, x: 20 }}
-            whileInView={
-              reduceMotion ? undefined : { opacity: 1, x: 0 }
-            }
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <div className="relative h-[260px] overflow-hidden sm:h-[310px]">
+              <p className="mt-4 max-w-2xl leading-7 text-[#526B7C]">
+                The aim is not simply to apply a product. It is to understand
+                why the wound is present, what is affecting healing and when the
+                wider treating team needs to be involved.
+              </p>
+            </div>
+
+            <div className="relative min-h-[310px] overflow-hidden lg:min-h-[450px]">
+              <Image
+                src="/iStock-1257057623.jpg"
+                alt="Dressing applied to an older person's arm as part of wound care"
+                fill
+                sizes="(max-width: 1024px) 100vw, 52vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+        </motion.section>
+
+        <motion.section
+          className="mt-14 overflow-hidden rounded-[2.1rem] border border-[#D7EEF0] bg-gradient-to-br from-[#F8FCFD] via-white to-[#FFF7F3] shadow-[0_22px_60px_rgba(29,57,82,0.09)]"
+          initial={reduceMotion ? false : { opacity: 0, y: 22 }}
+          whileInView={
+            reduceMotion ? undefined : { opacity: 1, y: 0 }
+          }
+          viewport={{ once: true, amount: 0.24 }}
+          transition={{ duration: 0.52, ease: "easeOut" }}
+        >
+          <div className="grid lg:grid-cols-[1.02fr_0.98fr] lg:items-stretch">
+            <div className="relative min-h-[330px] overflow-hidden lg:min-h-[520px]">
               <Image
                 src="/iStock-2156052335.jpg"
-                alt="Nurse holding an older person's hands during supportive care"
+                alt="Nurse holding an older person's hands during supportive end-of-life care"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
+
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/20 via-transparent to-transparent"
+              />
             </div>
 
-            <div className="p-6 sm:p-7">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#238C93]">
-                Palliative & complex care
+            <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+              <div className="flex flex-wrap gap-2.5">
+                <span className="rounded-full bg-[#EAF9FA] px-4 py-2 text-sm font-semibold text-[#238C93]">
+                  24 hours • 7 days
+                </span>
+
+                <span className="rounded-full bg-[#F2EEFF] px-4 py-2 text-sm font-semibold text-[#6E3BE8]">
+                  Palliative & end-of-life nursing
+                </span>
+              </div>
+
+              <p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#B9654F]">
+                When care cannot wait for business hours
               </p>
 
-              <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-[#1D3952] sm:text-3xl">
-                Clinical skill with humanity.
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
+                End-of-life care deserves continuity.
               </h2>
 
-              <p className="mt-3 leading-7 text-[#526B7C]">
-                Good nursing is not only what is done. It is noticing change,
-                anticipating risk, protecting comfort, communicating clearly
-                and helping people remain where they want to be whenever that
-                can be done safely.
+              <p className="mt-4 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
+                NovaCare Nursing is available 24 hours, 7 days for responsive
+                palliative nursing and clinical coordination at home,
+                supporting comfort, symptom monitoring, medication care under
+                written orders, family guidance and timely escalation.
               </p>
+
+              <p className="mt-4 max-w-2xl leading-7 text-[#526B7C]">
+                With consent, care can be coordinated with the GP, palliative
+                care service, pharmacy and existing provider so families are
+                not left trying to connect the pieces alone.
+              </p>
+
+              <div className="mt-6 rounded-2xl border border-[#E8DDD7] bg-white/85 p-5">
+                <p className="font-semibold text-[#1D3952]">
+                  Support at Home End-of-Life Pathway
+                </p>
+
+                <p className="mt-2 text-sm leading-6 text-[#526B7C]">
+                  For eligible older people who want to remain at home,
+                  NovaCare Nursing can work with the person&apos;s registered
+                  Support at Home provider to deliver nursing within the agreed
+                  support plan and service arrangement.
+                </p>
+              </div>
+
+              <div className="mt-6">
+                <Link
+                  href="/contact"
+                  className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 font-semibold text-[#173B5C] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#59D6D0] hover:shadow-md"
+                >
+                  Discuss end-of-life support
+                </Link>
+              </div>
             </div>
-          </motion.article>
-        </section>
+          </div>
+        </motion.section>
 
         <section className="mt-14">
           <div className="text-center">
@@ -717,9 +859,10 @@ export default function Services() {
               </p>
 
               <p className="mt-2 max-w-3xl leading-7 text-[#526B7C]">
-                Provider partnerships, Support at Home arrangements, NDIS
-                clinical support and clinical governance sit in their own
-                dedicated section so this page stays focused on nursing care.
+                Provider partnerships, Support at Home service arrangements,
+                NDIS clinical support and clinical governance have their own
+                dedicated section for organisations that want to work with
+                NovaCare Nursing.
               </p>
             </div>
 
