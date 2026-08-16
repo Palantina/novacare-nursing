@@ -85,7 +85,7 @@ const services: Service[] = [
     summary:
       "Experienced respiratory and airway nursing with clear monitoring and escalation pathways.",
     details: [
-      "Tracheostomy care and monitoring within Registered Nurse scope",
+      "Tracheostomy care and monitoring within Registered Nurse scope of practice",
       "Respiratory assessment and deterioration recognition",
       "Non-invasive ventilation support where clinically appropriate",
       "Oxygen and respiratory equipment-related nursing support",
@@ -164,7 +164,7 @@ const faqs = [
   },
   {
     q: "Can NovaCare Nursing work with my Support at Home or NDIS provider?",
-    a: "Yes. NovaCare Nursing can work alongside existing providers to deliver nursing services under an agreed provider arrangement. The exact pathway depends on the program, how your funding is managed and the provider's requirements.",
+    a: "Yes. NovaCare Nursing can work alongside existing providers to deliver nursing services under an agreed provider arrangement. The exact pathway depends on the program, how your funding is managed, and the provider's requirements.",
   },
   {
     q: "Do I need a GP referral?",
@@ -176,7 +176,7 @@ const faqs = [
   },
   {
     q: "Do you provide care outside standard business hours?",
-    a: "Yes. Nursing care can be arranged 24 hours a day, 7 days a week, subject to availability, funding or service agreement, and clinical suitability. NovaCare Nursing is not an emergency service.",
+    a: "Yes. Nursing care can be arranged 24 hours a day, 7 days a week, subject to availability, the relevant funding or service arrangements, and clinical suitability. NovaCare Nursing is not an emergency service.",
   },
 ];
 
@@ -274,7 +274,7 @@ export default function Services() {
                 <p className="mt-5 max-w-xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
                   From IV therapy and complex wounds to palliative, respiratory
                   and device care, NovaCare Nursing brings experienced Clinical
-                  Nurse Consultant and Registered Nurse care into the home.
+                  Nurse Consultant-led nursing care into the home.
                 </p>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -335,26 +335,23 @@ export default function Services() {
         <section className="mt-12 grid gap-4 md:grid-cols-3">
           {[
             {
-              number: "01",
               title: "Assess",
               text: "See the whole clinical picture, not just the presenting task.",
-              tone: "bg-[#EAF9FA] text-[#238C93]",
+              bar: "bg-[#2FBFC4]",
             },
             {
-              number: "02",
               title: "Treat",
               text: "Deliver skilled nursing care with clear monitoring and documentation.",
-              tone: "bg-[#F2EEFF] text-[#6E3BE8]",
+              bar: "bg-[#6E3BE8]",
             },
             {
-              number: "03",
               title: "Coordinate",
               text: "Escalate, communicate and connect care when more input is needed.",
-              tone: "bg-[#EEF4FF] text-[#5274D8]",
+              bar: "bg-[#5274D8]",
             },
           ].map((item, index) => (
             <motion.div
-              key={item.number}
+              key={item.title}
               className="rounded-[1.6rem] border border-[#DCEDEF] bg-white p-6 shadow-[0_10px_30px_rgba(29,57,82,0.045)]"
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
               whileInView={
@@ -368,10 +365,9 @@ export default function Services() {
               }}
             >
               <span
-                className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl text-sm font-bold ${item.tone}`}
-              >
-                {item.number}
-              </span>
+                aria-hidden="true"
+                className={`block h-1.5 w-14 rounded-full ${item.bar}`}
+              />
 
               <h2 className="mt-5 text-xl font-semibold text-[#1D3952]">
                 {item.title}
@@ -423,10 +419,9 @@ export default function Services() {
                   }}
                 >
                   <span
-                    className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold ${tone.icon}`}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                    aria-hidden="true"
+                    className={`block h-1.5 w-14 rounded-full ${tone.dot}`}
+                  />
 
                   <h3 className="mt-5 text-xl font-semibold leading-snug tracking-[-0.02em] text-[#1D3952]">
                     {service.title}
@@ -503,9 +498,10 @@ export default function Services() {
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF9FA] text-sm font-bold text-[#238C93]">
-                01
-              </span>
+              <span
+                aria-hidden="true"
+                className="block h-1.5 w-14 rounded-full bg-[#2FBFC4]"
+              />
 
               <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
                 Private Nursing
@@ -538,9 +534,10 @@ export default function Services() {
                 ease: "easeOut",
               }}
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#F2EEFF] text-sm font-bold text-[#6E3BE8]">
-                02
-              </span>
+              <span
+                aria-hidden="true"
+                className="block h-1.5 w-14 rounded-full bg-[#6E3BE8]"
+              />
 
               <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
                 Support at Home
@@ -548,8 +545,8 @@ export default function Services() {
 
               <p className="mt-3 leading-7 text-[#526B7C]">
                 Your registered Support at Home provider can engage NovaCare
-                Nursing to deliver nursing on its behalf as part of your agreed
-                care and services.
+                Nursing to deliver nursing services as part of your agreed care
+                and services.
               </p>
 
               <Link
@@ -574,9 +571,10 @@ export default function Services() {
                 ease: "easeOut",
               }}
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EEF4FF] text-sm font-bold text-[#5274D8]">
-                03
-              </span>
+              <span
+                aria-hidden="true"
+                className="block h-1.5 w-14 rounded-full bg-[#5274D8]"
+              />
 
               <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
                 NDIS
@@ -670,14 +668,15 @@ export default function Services() {
                   "Assessment, allergy and consent checks",
                   "Peripheral cannulation or vascular access care",
                   "Monitoring before, during and after treatment",
-                ].map((item, index) => (
+                ].map((item) => (
                   <div
                     key={item}
                     className="flex items-center gap-4 rounded-2xl border border-white/12 bg-white/[0.07] p-4"
                   >
-                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-sm font-bold text-[#A9ECE8]">
-                      {index + 1}
-                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#A9ECE8]"
+                    />
 
                     <span className="font-medium text-white/90">
                       {item}
@@ -778,10 +777,11 @@ export default function Services() {
               </h2>
 
               <p className="mt-4 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
-                NovaCare Nursing is available 24 hours, 7 days for responsive
-                palliative nursing and clinical coordination at home,
-                supporting comfort, symptom monitoring, medication care under
-                written orders, family guidance and timely escalation.
+                NovaCare Nursing is available 24 hours a day, 7 days a week, for
+                responsive palliative nursing and clinical coordination at
+                home. Care can include comfort-focused assessment, symptom
+                monitoring, medication administration and support under written
+                orders, family guidance, and timely escalation.
               </p>
 
               <p className="mt-4 max-w-2xl leading-7 text-[#526B7C]">
@@ -860,7 +860,7 @@ export default function Services() {
 
               <p className="mt-2 max-w-3xl leading-7 text-[#526B7C]">
                 Provider partnerships, Support at Home service arrangements,
-                NDIS clinical support and clinical governance have their own
+                NDIS clinical support and clinical governance are covered in a
                 dedicated section for organisations that want to work with
                 NovaCare Nursing.
               </p>
