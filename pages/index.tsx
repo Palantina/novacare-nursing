@@ -110,21 +110,28 @@ const accessPathways = [
   {
     title: "Private Nursing",
     description:
-      "Book NovaCare Nursing directly for premium clinical care delivered in your home.",
+      "Book NovaCare Nursing directly for fee-for-service clinical nursing in your home.",
     href: "/private-nursing",
     linkLabel: "Explore Private Nursing",
   },
   {
     title: "Support at Home",
     description:
-      "Your chosen provider can engage NovaCare Nursing to deliver clinical supports on their behalf.",
-    href: "/services",
-    linkLabel: "Support at Home Pathway",
+      "If you receive Support at Home, your registered provider can engage NovaCare Nursing to deliver nursing as part of your agreed care and services.",
+    href: "/providers",
+    linkLabel: "Support at Home pathway",
   },
   {
-    title: "Providers & Residential Aged Care",
+    title: "NDIS",
     description:
-      "Consultancy and specialist nursing support for providers, nursing homes, and residential aged care homes.",
+      "Depending on how your plan is managed, nursing may be arranged directly or through a provider. NovaCare Nursing can also work alongside registered NDIS providers.",
+    href: "/providers",
+    linkLabel: "NDIS nursing pathway",
+  },
+  {
+    title: "For Providers & Organisations",
+    description:
+      "Clinical nursing, consultancy, governance, education and complex-care support for organisations that need experienced nursing input.",
     href: "/providers",
     linkLabel: "For Providers",
   },
@@ -133,21 +140,23 @@ const accessPathways = [
 const accessPathwayStyles = [
   {
     card: "border-[#CFEAEC] bg-gradient-to-br from-white via-white to-[#EAF9FA]",
-    marker: "bg-[#DDF5F5] text-[#238C93]",
     link: "text-[#238C93]",
     glow: "bg-[#A9ECE8]/35",
   },
   {
     card: "border-[#E3DDFB] bg-gradient-to-br from-white via-white to-[#F2EEFF]",
-    marker: "bg-[#E9E2FF] text-[#6E3BE8]",
     link: "text-[#6E3BE8]",
     glow: "bg-[#D7CEFF]/35",
   },
   {
     card: "border-[#DCE8F8] bg-gradient-to-br from-white via-white to-[#EEF4FF]",
-    marker: "bg-[#E1EBFF] text-[#5274D8]",
     link: "text-[#5274D8]",
     glow: "bg-[#C9DAFF]/35",
+  },
+  {
+    card: "border-[#F2DDD5] bg-gradient-to-br from-white via-white to-[#FFF2EC]",
+    link: "text-[#A95440]",
+    glow: "bg-[#FFD8C8]/35",
   },
 ];
 
@@ -480,12 +489,12 @@ export default function Home() {
     <>
       <Head>
         <title>
-          NovaCare Nursing | Premium Private Home Nursing in Hobart & Surrounds
+          NovaCare Nursing | Clinical Nursing at Home | Hobart
         </title>
 
         <meta
           name="description"
-          content="NovaCare Nursing is a specialised clinical nursing consultancy providing premium private home nursing, palliative nursing, dementia support, and provider-facing clinical support across Hobart and surrounds, Tasmania."
+          content="NovaCare Nursing provides advanced clinical nursing at home across Hobart and Southern Tasmania, with private nursing, Support at Home and NDIS provider pathways, palliative care, dementia support and clinical consultancy."
         />
 
         <link rel="icon" href="/favicon.ico" />
@@ -503,7 +512,7 @@ export default function Home() {
               logo: "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               image: "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               description:
-                "Specialised clinical nursing consultancy providing premium private home nursing, palliative nursing, dementia support, and provider-facing clinical support across Hobart and surrounds, Tasmania.",
+                "Advanced clinical nursing at home across Hobart and Southern Tasmania, with private nursing, Support at Home and NDIS provider pathways, palliative care, dementia support and clinical consultancy.",
               telephone: "+61491303671",
               email: "info@novacarenursing.com.au",
               areaServed: {
@@ -519,7 +528,7 @@ export default function Home() {
               founder: {
                 "@type": "Person",
                 name: "Palantina Hughes",
-                jobTitle: "Clinical Nursing Consultant",
+                jobTitle: "Clinical Nurse Consultant",
               },
               sameAs: [],
             }),
@@ -726,12 +735,12 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.45 }}
                   transition={{ duration: 0.62, delay: 0.08, ease: "easeOut" }}
                 >
-                  Flexible pathways for private clients, families, providers, and
-                  residential aged care.
+                  Flexible pathways for private clients, Support at Home, NDIS,
+                  providers and organisations.
                 </motion.p>
               </div>
 
-              <div className="mt-10 grid gap-5 md:grid-cols-3">
+              <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
                 {accessPathways.map((pathway, index) => {
                   const styles =
                     accessPathwayStyles[index] ?? accessPathwayStyles[0];
@@ -766,14 +775,7 @@ export default function Home() {
                         />
 
                         <div className="relative flex h-full flex-col">
-                          <span
-                            aria-hidden="true"
-                            className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl text-sm font-bold shadow-sm ${styles.marker}`}
-                          >
-                            {String(index + 1).padStart(2, "0")}
-                          </span>
-
-                          <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
+                          <h3 className="text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
                             {pathway.title}
                           </h3>
 
@@ -853,7 +855,11 @@ export default function Home() {
                       </p>
 
                       <p className="mt-1 font-semibold text-[#6E3BE8]">
-                        Founder &amp; Clinical Nursing Consultant
+                        Founder &amp; Clinical Nurse Consultant
+                      </p>
+
+                      <p className="mt-1 text-sm font-medium text-[#526B7C]">
+                        Registered Nurse
                       </p>
 
                       <p className="mt-3 max-w-lg leading-7 text-[#526B7C]">
@@ -948,9 +954,8 @@ export default function Home() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#526B7C]">
-                Clinical skill matters. So do continuity, kindness, daily
-                presence and the confidence that someone capable is seeing the
-                whole situation.
+                Clinical skill matters. So do continuity, kindness and the
+                confidence that someone experienced is seeing the whole picture.
               </p>
             </div>
 
