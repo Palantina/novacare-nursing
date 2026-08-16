@@ -104,7 +104,7 @@ export default function Hero() {
             </p>
 
             <h1 className="mt-5 text-4xl font-semibold leading-[1.07] tracking-[-0.04em] text-[#1D3952] sm:text-5xl lg:text-[3.4rem]">
-              Expert nursing.
+              Expert nursing.{" "}
               <span className="mt-2 block">Let us partner with you.</span>
             </h1>
 
