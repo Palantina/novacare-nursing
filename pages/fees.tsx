@@ -71,6 +71,66 @@ export default function Fees() {
           </p>
         </header>
 
+        {/* PRIVATE NURSING — SIMPLE VISIT PRICING */}
+        <section className="mt-10" id="private">
+          <div className="overflow-hidden rounded-[2rem] border border-[#DCEDEF] bg-gradient-to-br from-white via-[#FCFEFF] to-[#F2EEFF] shadow-[0_18px_50px_rgba(29,57,82,0.07)]">
+            <div className="p-6 sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2B9FA5]">
+                Private Clinical Nursing
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold tracking-[-0.025em] sm:text-3xl" style={{ color: brand.blue }}>
+                Clear home-visit pricing
+              </h2>
+              <p className="mt-3 max-w-3xl text-base leading-7 opacity-90">
+                Book experienced clinical nursing directly in your home, with straightforward pricing for focused or more comprehensive care.
+              </p>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <article className="rounded-[1.5rem] border border-[#D7EEF0] bg-[#EAF9FA] p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#238C93]">
+                    Focused visit
+                  </p>
+                  <h3 className="mt-2 text-xl font-semibold" style={{ color: brand.blue }}>
+                    Short clinical home visit
+                  </h3>
+                  <p className="mt-1 text-sm font-medium opacity-75">Up to 30 minutes</p>
+                  <p className="mt-4 text-4xl font-bold tracking-[-0.04em]" style={{ color: brand.blue }}>
+                    ${money(DIRECT_BASE_30MIN)}
+                  </p>
+                  <p className="mt-4 leading-7 opacity-90">
+                    Suitable for focused nursing care such as wound review and dressing, catheter care, injections under appropriate orders, or a targeted clinical review.
+                  </p>
+                </article>
+
+                <article className="rounded-[1.5rem] border border-[#E3DDFB] bg-[#F2EEFF] p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#6E3BE8]">
+                    Comprehensive visit
+                  </p>
+                  <h3 className="mt-2 text-xl font-semibold" style={{ color: brand.blue }}>
+                    Clinical home visit
+                  </h3>
+                  <p className="mt-1 text-sm font-medium opacity-75">Up to 60 minutes</p>
+                  <p className="mt-4 text-4xl font-bold tracking-[-0.04em]" style={{ color: brand.blue }}>
+                    ${money(DIRECT_BASE_HOURLY)}
+                  </p>
+                  <p className="mt-4 leading-7 opacity-90">
+                    Suitable when you need more comprehensive assessment, treatment, nursing care, education or clinical planning during the visit.
+                  </p>
+                </article>
+              </div>
+
+              <div className="mt-5 rounded-[1.25rem] border border-white bg-white/80 p-5">
+                <p className="font-semibold" style={{ color: brand.blue }}>
+                  Each visit includes experienced clinical assessment, nursing care and professional judgement in your home.
+                </p>
+                <p className="mt-2 leading-7 opacity-90">
+                  Weekday standard-hour pricing is shown above. After-hours, weekend and public holiday rates are listed below. Where substantial care planning, reports or multidisciplinary coordination are clinically required outside the visit, this may be charged separately and will be discussed with you before it is billed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* SAH & PRIVATE — DIRECT */}
         <section className="mt-10" id="sah">
           <h2 className="text-2xl font-semibold" style={{ color: brand.blue }}>
