@@ -40,7 +40,7 @@ export default function Contact() {
         <title>Contact NovaCare Nursing Hobart | Book Private Home Nursing Care</title>
         <meta
           name="description"
-          content="Get in touch with Palantina Hughes, Registered Nurse & Clinical Nursing Consultant at NovaCare Nursing in Hobart. Book a consultation or call 0491 303 671 for premium private home nursing care."
+          content="Get in touch with Palantina Hughes, Clinical Nurse Consultant and Registered Nurse at NovaCare Nursing in Hobart. Book a consultation or call 0491 303 671 for premium private home nursing care."
         />
         <link rel="canonical" href="https://www.novacarenursing.com.au/contact" />
       </Head>
@@ -55,7 +55,7 @@ export default function Contact() {
           Contact Palantina Hughes
         </h1>
         <p className="text-center opacity-80 mt-2">
-          Clinical Nursing Home Care Consultant | Registered Nurse
+          Clinical Nurse Consultant | Registered Nurse
         </p>
         <p className="text-center opacity-80 mt-1">
           We’ll respond promptly and confidentially.
