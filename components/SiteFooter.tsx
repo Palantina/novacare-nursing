@@ -20,19 +20,24 @@ export default function SiteFooter() {
           />
 
           <div className="relative grid gap-7 md:grid-cols-[1.05fr_1fr_auto] md:items-center md:gap-8">
-            <Link
-              href="/"
-              className="inline-flex w-fit items-center"
-              aria-label="NovaCare Nursing home"
-            >
-              <Image
-                src="/NovaCare_Logo_Light.svg"
-                alt="NovaCare Nursing"
-                width={720}
-                height={200}
-                className="h-auto w-[190px] sm:w-[210px]"
-              />
-            </Link>
+            <div>
+              <Link
+                href="/"
+                className="inline-flex w-fit items-center"
+                aria-label="NovaCare Nursing home"
+              >
+                <Image
+                  src="/NovaCare_Logo_Light.svg"
+                  alt="NovaCare Nursing"
+                  width={720}
+                  height={200}
+                  className="h-auto w-[190px] sm:w-[210px]"
+                />
+              </Link>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#2B9FA5]">
+                Aged Care Specialists
+              </p>
+            </div>
 
             <div className="space-y-3">
               <a
