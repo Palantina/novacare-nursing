@@ -8,7 +8,11 @@ const footerLinks = [
   ["Care at Home", "/staying-at-home-care"],
   ["Live-In Care", "/live-in-care"],
   ["24-Hour Care", "/24-hour-care"],
-  ["Services", "/services"],
+  ["Clinical Services", "/services"],
+  ["Palliative Care", "/services/palliative-care"],
+  ["Dementia Care", "/services/dementia-care"],
+  ["Wound Care", "/services/wound-care"],
+  ["Complex Clinical Care", "/services/complex-clinical-care"],
   ["For Providers", "/providers"],
   ["Careers", "/careers"],
 ];
