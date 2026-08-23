@@ -866,7 +866,7 @@ export default function Home() {
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <Link
-                      href="/about"
+                      href="/about-palantina"
                       className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#59D6D0]"
                     >
                       Meet our founder
