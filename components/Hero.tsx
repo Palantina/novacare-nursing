@@ -100,7 +100,7 @@ export default function Hero() {
             className="order-2 rounded-[2rem] border border-[#E2ECEF] bg-white p-6 shadow-sm sm:p-8 lg:order-1 lg:p-10"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2B9FA5] sm:text-base">
-              Home, Health &amp; Living
+              NovaCare Nursing — Aged Care Specialists
             </p>
 
             <h1 className="mt-5 text-4xl font-semibold leading-[1.07] tracking-[-0.04em] text-[#1D3952] sm:text-5xl lg:text-[3.4rem]">
