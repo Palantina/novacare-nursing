@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.novacarenursing.com.au/</loc>
-  </url>
-  <url>
-    <loc>https://www.novacarenursing.com.au/about</loc>
-  </url>
-  <url>
-    <loc>https://www.novacarenursing.com.au/about-palantina</loc>
-  </url>
-  <url>
-    <loc>https://www.novacarenursing.com.au/services</loc>
-  </url>
-  <url>
-    <loc>https://www.novacarenursing.com.au/contact</loc>
-  </url>
-  <url>
-    <loc>https://www.novacarenursing.com.au/privacy</loc>
-  </url>
+  <url><loc>https://www.novacarenursing.com.au/</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/private-nursing</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/support-at-home</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/staying-at-home-care</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/live-in-care</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/24-hour-care</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/services</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/providers</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/providers/support-at-home</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/about</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/about-palantina</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/careers</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/fees</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/contact</loc></url>
+  <url><loc>https://www.novacarenursing.com.au/privacy</loc></url>
 </urlset>
