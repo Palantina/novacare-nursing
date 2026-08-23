@@ -114,8 +114,8 @@ export default function Hero() {
             />
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#526B7C]">
-              Comprehensive clinical assessment and nursing care at home for
-              older people.
+              Comprehensive clinical assessment and nursing care at home as your
+              needs change.
             </p>
 
             <div className="mt-8">
