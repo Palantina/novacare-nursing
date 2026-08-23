@@ -11,6 +11,11 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
+    href: "/",
+    label: "Home",
+    isActive: (path) => path === "/",
+  },
+  {
     href: "/private-nursing",
     label: "Private Nursing",
     isActive: (path) => path === "/private-nursing",
@@ -118,11 +123,11 @@ export default function SiteHeader() {
             </Link>
 
             <div className="hidden items-center gap-4 lg:flex">
-              <nav className="flex items-center gap-4" aria-label="Primary navigation">
+              <nav className="flex items-center gap-3 xl:gap-4" aria-label="Primary navigation">
                 {navItems.map((item) => {
                   const active = item.isActive(pathname);
                   return (
-                    <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={`relative py-3 text-[14px] font-medium transition-colors ${active ? "text-[#1D3952]" : "text-[#445E72] hover:text-[#1D3952]"}`}>
+                    <Link key={item.href} href={item.href} aria-current={active ? "page" : undefined} className={`relative py-3 text-[13px] font-medium transition-colors xl:text-[14px] ${active ? "text-[#1D3952]" : "text-[#445E72] hover:text-[#1D3952]"}`}>
                       {item.label}
                       {active && <span aria-hidden="true" className="absolute inset-x-0 -bottom-0.5 h-[3px] rounded-full bg-[#2FBFC4]" />}
                     </Link>
@@ -130,7 +135,7 @@ export default function SiteHeader() {
                 })}
               </nav>
 
-              <Link href="/contact" className="inline-flex min-h-[46px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-5 py-2.5 text-[15px] font-semibold text-[#173B5C] shadow-sm transition hover:bg-[#59D6D0] focus:outline-none focus:ring-4 focus:ring-[#2FBFC4]/25">
+              <Link href="/contact" className="inline-flex min-h-[46px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-4 py-2.5 text-[14px] font-semibold text-[#173B5C] shadow-sm transition hover:bg-[#59D6D0] focus:outline-none focus:ring-4 focus:ring-[#2FBFC4]/25 xl:px-5 xl:text-[15px]">
                 Contact us
               </Link>
             </div>
@@ -147,7 +152,6 @@ export default function SiteHeader() {
           {menuOpen && (
             <div id="mobile-navigation" className="border-t border-[#E4EEF1] pb-5 pt-3 lg:hidden">
               <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
-                <Link href="/" className={`rounded-xl px-4 py-3 text-base font-medium transition ${pathname === "/" ? "bg-[#EFFAFC] text-[#1D3952]" : "text-[#445E72] hover:bg-[#F5FAFC] hover:text-[#1D3952]"}`}>Home</Link>
                 {navItems.map((item) => {
                   const active = item.isActive(pathname);
                   return (
