@@ -48,6 +48,10 @@ export default function AboutPalantina() {
             <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
+                  NovaCare Nursing · Aged Care Specialists
+                </p>
+
+                <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
                   Founder &amp; Clinical Lead
                 </p>
 
@@ -60,6 +64,10 @@ export default function AboutPalantina() {
                 </p>
                 <p className="mt-1 font-medium text-[#526B7C]">
                   Registered Nurse • Founder, NovaCare Nursing
+                </p>
+
+                <p className="mt-5 max-w-md font-semibold leading-7 text-[#1D3952]">
+                  Tasmanian owned and operated. Nurse-led. Professional care delivered with genuine kindness.
                 </p>
 
                 <div className="mt-7 inline-flex items-center gap-4 rounded-[1.5rem] border border-[#D7EEF0] bg-[#EAF9FA] px-5 py-4">
@@ -177,10 +185,10 @@ export default function AboutPalantina() {
                   NovaCare Nursing
                 </p>
                 <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
-                  Nurse-led aged care at home.
+                  Aged Care Specialists
                 </h2>
                 <p className="mt-4 max-w-3xl leading-8 text-white/78">
-                  Private nursing and Support at Home provider partnerships across Hobart and Southern Tasmania, with clinical assessment, skilled nursing, care planning, coordination and review built around the older person.
+                  Tasmanian owned and operated. Nurse-led. Professional care delivered with genuine kindness. Private nursing and Support at Home provider partnerships across Hobart and Southern Tasmania, with clinical assessment, skilled nursing, care planning, coordination and review built around the older person.
                 </p>
               </div>
 
