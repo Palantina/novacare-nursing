@@ -107,7 +107,7 @@ const services: Service[] = [
     accent: "blue",
   },
   {
-    title: "Dementia & Behavioural Support",
+    title: "Dementia & Cognitive Support",
     summary:
       "Holistic nursing assessment when behaviour, cognition, comfort or function changes.",
     details: [
@@ -199,47 +199,25 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Clinical Nursing Services Hobart | NovaCare Nursing</title>
+        <title>Aged Care Nursing Services Hobart | NovaCare Nursing</title>
 
         <meta
           name="description"
           content="Advanced clinical nursing across Hobart and Southern Tasmania, including IV therapy and infusions, complex wound care, palliative nursing, catheter and stoma care, PEG support, respiratory care, post-hospital nursing and dementia assessment."
         />
 
-        <link
-          rel="canonical"
-          href="https://www.novacarenursing.com.au/services"
-        />
+        <link rel="canonical" href="https://www.novacarenursing.com.au/services" />
 
-        <meta
-          property="og:title"
-          content="Clinical Nursing Services | NovaCare Nursing"
-        />
-
-        <meta
-          property="og:description"
-          content="Advanced clinical nursing for complex care at home across Hobart and Southern Tasmania."
-        />
-
-        <meta
-          property="og:image"
-          content="https://www.novacarenursing.com.au/iStock-2282022010.jpg"
-        />
-
-        <meta
-          property="og:url"
-          content="https://www.novacarenursing.com.au/services"
-        />
-
+        <meta property="og:title" content="Clinical Nursing Services | NovaCare Nursing" />
+        <meta property="og:description" content="Advanced clinical nursing for complex care at home across Hobart and Southern Tasmania." />
+        <meta property="og:image" content="https://www.novacarenursing.com.au/iStock-2282022010.jpg" />
+        <meta property="og:url" content="https://www.novacarenursing.com.au/services" />
         <meta property="og:type" content="website" />
-
         <meta name="twitter:card" content="summary_large_image" />
 
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </Head>
 
@@ -254,53 +232,28 @@ export default function Services() {
               animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <div
-                aria-hidden="true"
-                className="absolute -left-24 -top-20 h-64 w-64 rounded-full bg-[#DDF5F5]/70 blur-3xl"
-              />
+              <div aria-hidden="true" className="absolute -left-24 -top-20 h-64 w-64 rounded-full bg-[#DDF5F5]/70 blur-3xl" />
 
               <div className="relative">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                  Clinical nursing services
-                </p>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">Clinical nursing services</p>
 
                 <h1 className="mt-3 max-w-xl text-4xl font-semibold leading-[1.04] tracking-[-0.045em] text-[#1D3952] sm:text-5xl lg:text-[3.45rem]">
                   Advanced clinical nursing,
-                  <span className="block text-[#6E3BE8]">
-                    brought home.
-                  </span>
+                  <span className="block text-[#6E3BE8]">brought home.</span>
                 </h1>
 
                 <p className="mt-5 max-w-xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
-                  From IV therapy and complex wounds to palliative, respiratory
-                  and device care, NovaCare Nursing brings experienced Clinical
-                  Nurse Consultant-led nursing care into the home.
+                  From IV therapy and complex wounds to palliative, respiratory and device care, NovaCare Nursing brings experienced Clinical Nurse Consultant-led nursing care into the home.
                 </p>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <Link
-                    href="/contact"
-                    className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 font-semibold text-[#173B5C] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#59D6D0] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-[#2FBFC4]/25"
-                  >
-                    Talk to a nurse
-                  </Link>
-
-                  <Link
-                    href="#access-care"
-                    className="inline-flex min-h-[50px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-white px-6 py-3 font-semibold text-[#5C43A8] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F7F4FF] hover:shadow-sm"
-                  >
-                    Ways to access care
-                  </Link>
+                  <Link href="/contact" className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 font-semibold text-[#173B5C] shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-[#59D6D0] hover:shadow-md focus:outline-none focus:ring-4 focus:ring-[#2FBFC4]/25">Talk to a nurse</Link>
+                  <Link href="#access-care" className="inline-flex min-h-[50px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-white px-6 py-3 font-semibold text-[#5C43A8] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F7F4FF] hover:shadow-sm">Ways to access care</Link>
                 </div>
 
                 <div className="mt-7 flex flex-wrap gap-2.5 text-sm font-semibold">
-                  <span className="rounded-full bg-[#EAF9FA] px-4 py-2 text-[#238C93]">
-                    24 hours • 7 days
-                  </span>
-
-                  <span className="rounded-full bg-[#F2EEFF] px-4 py-2 text-[#6E3BE8]">
-                    Hobart & Southern Tasmania
-                  </span>
+                  <span className="rounded-full bg-[#EAF9FA] px-4 py-2 text-[#238C93]">24 hours • 7 days</span>
+                  <span className="rounded-full bg-[#F2EEFF] px-4 py-2 text-[#6E3BE8]">Hobart & Southern Tasmania</span>
                 </div>
               </div>
             </motion.div>
@@ -309,73 +262,38 @@ export default function Services() {
               className="group relative min-h-[330px] overflow-hidden lg:min-h-[560px]"
               initial={reduceMotion ? false : { opacity: 0, x: 24 }}
               animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.65,
-                delay: 0.08,
-                ease: "easeOut",
-              }}
+              transition={{ duration: 0.65, delay: 0.08, ease: "easeOut" }}
             >
               <Image
                 src="/iStock-2282022010.jpg"
-                alt="Nurse speaking with an older couple during a home nursing visit"
+                alt="Nurse speaking with a couple during a home nursing visit"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
                 className="object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
               />
-
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/20 via-transparent to-transparent"
-              />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/20 via-transparent to-transparent" />
             </motion.div>
           </div>
         </section>
 
         <section className="mt-12 grid gap-4 md:grid-cols-3">
           {[
-            {
-              title: "Assess",
-              text: "See the whole clinical picture, not just the presenting task.",
-              bar: "bg-[#2FBFC4]",
-            },
-            {
-              title: "Treat",
-              text: "Deliver skilled nursing care with clear monitoring and documentation.",
-              bar: "bg-[#6E3BE8]",
-            },
-            {
-              title: "Coordinate",
-              text: "Escalate, communicate and connect care when more input is needed.",
-              bar: "bg-[#5274D8]",
-            },
+            { title: "Assess", text: "See the whole clinical picture, not just the presenting task.", bar: "bg-[#2FBFC4]" },
+            { title: "Treat", text: "Deliver skilled nursing care with clear monitoring and documentation.", bar: "bg-[#6E3BE8]" },
+            { title: "Coordinate", text: "Escalate, communicate and connect care when more input is needed.", bar: "bg-[#5274D8]" },
           ].map((item, index) => (
             <motion.div
               key={item.title}
               className="rounded-[1.6rem] border border-[#DCEDEF] bg-white p-6 shadow-[0_10px_30px_rgba(29,57,82,0.045)]"
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              whileInView={
-                reduceMotion ? undefined : { opacity: 1, y: 0 }
-              }
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{
-                duration: 0.45,
-                delay: reduceMotion ? 0 : index * 0.06,
-                ease: "easeOut",
-              }}
+              transition={{ duration: 0.45, delay: reduceMotion ? 0 : index * 0.06, ease: "easeOut" }}
             >
-              <span
-                aria-hidden="true"
-                className={`block h-1.5 w-14 rounded-full ${item.bar}`}
-              />
-
-              <h2 className="mt-5 text-xl font-semibold text-[#1D3952]">
-                {item.title}
-              </h2>
-
-              <p className="mt-2 leading-7 text-[#526B7C]">
-                {item.text}
-              </p>
+              <span aria-hidden="true" className={`block h-1.5 w-14 rounded-full ${item.bar}`} />
+              <h2 className="mt-5 text-xl font-semibold text-[#1D3952]">{item.title}</h2>
+              <p className="mt-2 leading-7 text-[#526B7C]">{item.text}</p>
             </motion.div>
           ))}
         </section>
@@ -383,77 +301,37 @@ export default function Services() {
         <section className="mt-14">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                What we can help with
-              </p>
-
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-                Clinical capability without the clutter.
-              </h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">What we can help with</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">Clinical capability without the clutter.</h2>
             </div>
-
-            <p className="max-w-3xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8 lg:justify-self-end">
-              Start with the service area that sounds closest to what you need.
-              Open a card for more detail, or contact us if the situation does
-              not fit neatly into a category.
-            </p>
+            <p className="max-w-3xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8 lg:justify-self-end">Start with the service area that sounds closest to what you need. Open a card for more detail, or contact us if the situation does not fit neatly into a category.</p>
           </div>
 
           <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service, index) => {
               const tone = accentClasses[service.accent];
-
               return (
                 <motion.article
                   key={service.title}
                   className={`rounded-[1.7rem] border p-6 shadow-[0_10px_30px_rgba(29,57,82,0.045)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_44px_rgba(29,57,82,0.09)] ${tone.card}`}
                   initial={reduceMotion ? false : { opacity: 0, y: 22 }}
-                  whileInView={
-                    reduceMotion ? undefined : { opacity: 1, y: 0 }
-                  }
+                  whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
-                  transition={{
-                    duration: 0.48,
-                    delay: reduceMotion ? 0 : (index % 3) * 0.06,
-                    ease: "easeOut",
-                  }}
+                  transition={{ duration: 0.48, delay: reduceMotion ? 0 : (index % 3) * 0.06, ease: "easeOut" }}
                 >
-                  <span
-                    aria-hidden="true"
-                    className={`block h-1.5 w-14 rounded-full ${tone.dot}`}
-                  />
-
-                  <h3 className="mt-5 text-xl font-semibold leading-snug tracking-[-0.02em] text-[#1D3952]">
-                    {service.title}
-                  </h3>
-
-                  <p className="mt-3 leading-7 text-[#526B7C]">
-                    {service.summary}
-                  </p>
+                  <span aria-hidden="true" className={`block h-1.5 w-14 rounded-full ${tone.dot}`} />
+                  <h3 className="mt-5 text-xl font-semibold leading-snug tracking-[-0.02em] text-[#1D3952]">{service.title}</h3>
+                  <p className="mt-3 leading-7 text-[#526B7C]">{service.summary}</p>
 
                   <details className="group mt-5 border-t border-[#DFEAED] pt-4">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#238C93]">
                       <span>What this can include</span>
-
-                      <span
-                        aria-hidden="true"
-                        className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/80 text-lg transition-transform duration-200 group-open:rotate-45"
-                      >
-                        +
-                      </span>
+                      <span aria-hidden="true" className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/80 text-lg transition-transform duration-200 group-open:rotate-45">+</span>
                     </summary>
-
                     <ul className="mt-4 space-y-2.5">
                       {service.details.map((detail) => (
-                        <li
-                          key={detail}
-                          className="flex gap-3 text-sm leading-6 text-[#526B7C]"
-                        >
-                          <span
-                            aria-hidden="true"
-                            className={`mt-2 h-2 w-2 shrink-0 rounded-full ${tone.dot}`}
-                          />
-
+                        <li key={detail} className="flex gap-3 text-sm leading-6 text-[#526B7C]">
+                          <span aria-hidden="true" className={`mt-2 h-2 w-2 shrink-0 rounded-full ${tone.dot}`} />
                           <span>{detail}</span>
                         </li>
                       ))}
@@ -471,122 +349,66 @@ export default function Services() {
         >
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                Ways to access care
-              </p>
-
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-                One nursing service. Different pathways.
-              </h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">Ways to access care</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">One clinical foundation. Different pathways.</h2>
             </div>
-
-            <p className="max-w-3xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8 lg:justify-self-end">
-              NovaCare Nursing can be engaged directly or work alongside an
-              existing provider. The clinical service stays focused on the
-              person; the pathway changes according to how care is funded and
-              arranged.
-            </p>
+            <p className="max-w-3xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8 lg:justify-self-end">NovaCare Nursing can be engaged directly, work alongside an existing provider, or build a higher-needs care-at-home model around you. The pathway changes according to what you need and how care is funded and arranged.</p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
             <motion.article
               className="rounded-[1.6rem] border border-[#CFEAEC] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              whileInView={
-                reduceMotion ? undefined : { opacity: 1, y: 0 }
-              }
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
-              <span
-                aria-hidden="true"
-                className="block h-1.5 w-14 rounded-full bg-[#2FBFC4]"
-              />
-
-              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
-                Private Nursing
-              </h3>
-
-              <p className="mt-3 leading-7 text-[#526B7C]">
-                Book NovaCare Nursing directly for fee-for-service nursing at
-                home, whether care is needed once or over time.
-              </p>
-
-              <Link
-                href="/private-nursing"
-                className="mt-5 inline-flex items-center gap-2 font-semibold text-[#238C93]"
-              >
-                Private nursing
-                <span aria-hidden="true">→</span>
-              </Link>
+              <span aria-hidden="true" className="block h-1.5 w-14 rounded-full bg-[#2FBFC4]" />
+              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">Private Nursing</h3>
+              <p className="mt-3 leading-7 text-[#526B7C]">Book NovaCare Nursing directly for fee-for-service nursing at home, whether care is needed once or over time.</p>
+              <Link href="/private-nursing" className="mt-5 inline-flex items-center gap-2 font-semibold text-[#238C93]">Private nursing<span aria-hidden="true">→</span></Link>
             </motion.article>
 
             <motion.article
               className="rounded-[1.6rem] border border-[#E3DDFB] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              whileInView={
-                reduceMotion ? undefined : { opacity: 1, y: 0 }
-              }
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
-              transition={{
-                duration: 0.45,
-                delay: 0.06,
-                ease: "easeOut",
-              }}
+              transition={{ duration: 0.45, delay: 0.06, ease: "easeOut" }}
             >
-              <span
-                aria-hidden="true"
-                className="block h-1.5 w-14 rounded-full bg-[#6E3BE8]"
-              />
-
-              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
-                Support at Home
-              </h3>
-
-              <p className="mt-3 leading-7 text-[#526B7C]">
-                Your registered Support at Home provider can engage NovaCare
-                Nursing to deliver nursing services as part of your agreed care
-                and services.
-              </p>
-
-              <Link
-                href="/providers"
-                className="mt-5 inline-flex items-center gap-2 font-semibold text-[#6E3BE8]"
-              >
-                Provider pathway
-                <span aria-hidden="true">→</span>
-              </Link>
+              <span aria-hidden="true" className="block h-1.5 w-14 rounded-full bg-[#6E3BE8]" />
+              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">Support at Home</h3>
+              <p className="mt-3 leading-7 text-[#526B7C]">You can ask your registered Support at Home provider to engage NovaCare Nursing to deliver nursing as part of your agreed care and services.</p>
+              <Link href="/support-at-home" className="mt-5 inline-flex items-center gap-2 font-semibold text-[#6E3BE8]">Support at Home<span aria-hidden="true">→</span></Link>
             </motion.article>
 
+            <motion.article
+              className="rounded-[1.6rem] border border-[#DCE8F8] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
+              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+              whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45, delay: 0.12, ease: "easeOut" }}
+            >
+              <span aria-hidden="true" className="block h-1.5 w-14 rounded-full bg-[#5274D8]" />
+              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">Higher-needs care at home</h3>
+              <p className="mt-3 leading-7 text-[#526B7C]">When short visits are no longer enough, explore nurse-led Live-In Care, 24-Hour Care and options designed to help you remain at home.</p>
+              <Link href="/staying-at-home-care" className="mt-5 inline-flex items-center gap-2 font-semibold text-[#5274D8]">Care at Home<span aria-hidden="true">→</span></Link>
+            </motion.article>
           </div>
 
           <div className="mt-6 rounded-2xl border border-white bg-white/75 p-5 sm:flex sm:items-center sm:justify-between sm:gap-5">
             <div>
-              <p className="font-semibold text-[#1D3952]">
-                For providers and organisations
-              </p>
-
-              <p className="mt-1 leading-7 text-[#526B7C]">
-                NovaCare Nursing also provides clinical consultancy,
-                governance, education, auditing and complex-care support.
-              </p>
+              <p className="font-semibold text-[#1D3952]">For providers and organisations</p>
+              <p className="mt-1 leading-7 text-[#526B7C]">NovaCare Nursing also provides clinical consultancy, governance, education, auditing and complex-care support.</p>
             </div>
-
-            <Link
-              href="/providers"
-              className="mt-4 inline-flex min-h-[46px] items-center justify-center rounded-2xl bg-[#6E3BE8] px-5 py-2.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#5F31CE] sm:mt-0"
-            >
-              For Providers
-            </Link>
+            <Link href="/providers" className="mt-4 inline-flex min-h-[46px] items-center justify-center rounded-2xl bg-[#6E3BE8] px-5 py-2.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#5F31CE] sm:mt-0">For Providers</Link>
           </div>
         </section>
 
         <motion.section
           className="mt-14 overflow-hidden rounded-[2.1rem] border border-[#CFEAEC] bg-[#173B5C] text-white shadow-[0_22px_60px_rgba(29,57,82,0.15)]"
           initial={reduceMotion ? false : { opacity: 0, y: 22 }}
-          whileInView={
-            reduceMotion ? undefined : { opacity: 1, y: 0 }
-          }
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.52, ease: "easeOut" }}
         >
@@ -599,31 +421,13 @@ export default function Services() {
                 sizes="(max-width: 1024px) 100vw, 48vw"
                 className="object-cover object-center"
               />
-
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/45 via-transparent to-transparent"
-              />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/45 via-transparent to-transparent" />
             </div>
 
             <div className="flex flex-col justify-center px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#A9ECE8]">
-                IV therapy at home
-              </p>
-
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
-                Prescribed treatment.
-                <span className="block text-[#BDB0FF]">
-                  Experienced nursing.
-                </span>
-              </h2>
-
-              <p className="mt-4 max-w-2xl text-base leading-7 text-white/78 sm:text-lg sm:leading-8">
-                Prescribed IV therapies can be provided at home when the
-                required written orders and clinical information are in place.
-                Nursing care includes assessment, vascular access, treatment,
-                observation, documentation and escalation where required.
-              </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#A9ECE8]">IV therapy at home</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Prescribed treatment.<span className="block text-[#BDB0FF]">Experienced nursing.</span></h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-white/78 sm:text-lg sm:leading-8">Prescribed IV therapies can be provided at home when the required written orders and clinical information are in place. Nursing care includes assessment, vascular access, treatment, observation, documentation and escalation where required.</p>
 
               <div className="mt-6 grid gap-3">
                 {[
@@ -632,18 +436,9 @@ export default function Services() {
                   "Peripheral cannulation or vascular access care",
                   "Monitoring before, during and after treatment",
                 ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-4 rounded-2xl border border-white/12 bg-white/[0.07] p-4"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#A9ECE8]"
-                    />
-
-                    <span className="font-medium text-white/90">
-                      {item}
-                    </span>
+                  <div key={item} className="flex items-center gap-4 rounded-2xl border border-white/12 bg-white/[0.07] p-4">
+                    <span aria-hidden="true" className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#A9ECE8]" />
+                    <span className="font-medium text-white/90">{item}</span>
                   </div>
                 ))}
               </div>
@@ -654,39 +449,22 @@ export default function Services() {
         <motion.section
           className="mt-14 overflow-hidden rounded-[2rem] border border-[#E3DDFB] bg-gradient-to-br from-white via-white to-[#F7F4FF] shadow-[0_18px_50px_rgba(29,57,82,0.07)]"
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
-          whileInView={
-            reduceMotion ? undefined : { opacity: 1, y: 0 }
-          }
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <div className="grid lg:grid-cols-[1fr_1.05fr] lg:items-stretch">
             <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
-                Wound & skin integrity
-              </p>
-
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-                More than changing a dressing.
-              </h2>
-
-              <p className="mt-4 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
-                Complex wound care starts with assessment: wound aetiology,
-                tissue, exudate, pain, skin integrity, circulation, pressure,
-                infection risk and the person&apos;s broader clinical context.
-              </p>
-
-              <p className="mt-4 max-w-2xl leading-7 text-[#526B7C]">
-                The aim is not simply to apply a product. It is to understand
-                why the wound is present, what is affecting healing and when the
-                wider treating team needs to be involved.
-              </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">Wound & skin integrity</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">More than changing a dressing.</h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">Complex wound care starts with assessment: wound aetiology, tissue, exudate, pain, skin integrity, circulation, pressure, infection risk and the person&apos;s broader clinical context.</p>
+              <p className="mt-4 max-w-2xl leading-7 text-[#526B7C]">The aim is not simply to apply a product. It is to understand why the wound is present, what is affecting healing and when the wider treating team needs to be involved.</p>
             </div>
 
             <div className="relative min-h-[310px] overflow-hidden lg:min-h-[450px]">
               <Image
                 src="/iStock-1257057623.jpg"
-                alt="Dressing applied to an older person's arm as part of wound care"
+                alt="Nurse applying a wound dressing during home care"
                 fill
                 sizes="(max-width: 1024px) 100vw, 52vw"
                 className="object-cover object-center"
@@ -698,9 +476,7 @@ export default function Services() {
         <motion.section
           className="mt-14 overflow-hidden rounded-[2.1rem] border border-[#D7EEF0] bg-gradient-to-br from-[#F8FCFD] via-white to-[#FFF7F3] shadow-[0_22px_60px_rgba(29,57,82,0.09)]"
           initial={reduceMotion ? false : { opacity: 0, y: 22 }}
-          whileInView={
-            reduceMotion ? undefined : { opacity: 1, y: 0 }
-          }
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.24 }}
           transition={{ duration: 0.52, ease: "easeOut" }}
         >
@@ -708,71 +484,32 @@ export default function Services() {
             <div className="relative min-h-[330px] overflow-hidden lg:min-h-[520px]">
               <Image
                 src="/iStock-2156052335.jpg"
-                alt="Nurse holding an older person's hands during supportive end-of-life care"
+                alt="Nurse providing supportive care at home"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
-
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/20 via-transparent to-transparent"
-              />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#173B5C]/20 via-transparent to-transparent" />
             </div>
 
             <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
               <div className="flex flex-wrap gap-2.5">
-                <span className="rounded-full bg-[#EAF9FA] px-4 py-2 text-sm font-semibold text-[#238C93]">
-                  24 hours • 7 days
-                </span>
-
-                <span className="rounded-full bg-[#F2EEFF] px-4 py-2 text-sm font-semibold text-[#6E3BE8]">
-                  Palliative & end-of-life nursing
-                </span>
+                <span className="rounded-full bg-[#EAF9FA] px-4 py-2 text-sm font-semibold text-[#238C93]">24 hours • 7 days</span>
+                <span className="rounded-full bg-[#F2EEFF] px-4 py-2 text-sm font-semibold text-[#6E3BE8]">Palliative & end-of-life nursing</span>
               </div>
 
-              <p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#B9654F]">
-                When care cannot wait for business hours
-              </p>
-
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-                End-of-life care deserves continuity.
-              </h2>
-
-              <p className="mt-4 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">
-                NovaCare Nursing is available 24 hours a day, 7 days a week, for
-                responsive palliative nursing and clinical coordination at
-                home. Care can include comfort-focused assessment, symptom
-                monitoring, medication administration and support under written
-                orders, family guidance, and timely escalation.
-              </p>
-
-              <p className="mt-4 max-w-2xl leading-7 text-[#526B7C]">
-                With consent, care can be coordinated with the GP, palliative
-                care service, pharmacy and existing provider so families are
-                not left trying to connect the pieces alone.
-              </p>
+              <p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-[#B9654F]">When care cannot wait for business hours</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">End-of-life care deserves continuity.</h2>
+              <p className="mt-4 max-w-2xl text-base leading-7 text-[#526B7C] sm:text-lg sm:leading-8">Palliative nursing can be arranged 24 hours a day, 7 days a week, subject to availability and clinical suitability. Care can include comfort-focused assessment, symptom monitoring, medication administration and support under written orders, family guidance and timely escalation.</p>
+              <p className="mt-4 max-w-2xl leading-7 text-[#526B7C]">With consent, care can be coordinated with the GP, palliative care service, pharmacy and existing provider so families are not left trying to connect the pieces alone.</p>
 
               <div className="mt-6 rounded-2xl border border-[#E8DDD7] bg-white/85 p-5">
-                <p className="font-semibold text-[#1D3952]">
-                  Support at Home End-of-Life Pathway
-                </p>
-
-                <p className="mt-2 text-sm leading-6 text-[#526B7C]">
-                  For eligible older people who want to remain at home,
-                  NovaCare Nursing can work with the person&apos;s registered
-                  Support at Home provider to deliver nursing within the agreed
-                  support plan and service arrangement.
-                </p>
+                <p className="font-semibold text-[#1D3952]">Support at Home End-of-Life Pathway</p>
+                <p className="mt-2 text-sm leading-6 text-[#526B7C]">If you are eligible and want to remain at home, NovaCare Nursing can work with your registered Support at Home provider to deliver nursing within the agreed support plan and service arrangement.</p>
               </div>
 
               <div className="mt-6">
-                <Link
-                  href="/contact"
-                  className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 font-semibold text-[#173B5C] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#59D6D0] hover:shadow-md"
-                >
-                  Discuss end-of-life support
-                </Link>
+                <Link href="/contact" className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 font-semibold text-[#173B5C] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#59D6D0] hover:shadow-md">Discuss end-of-life support</Link>
               </div>
             </div>
           </div>
@@ -780,35 +517,18 @@ export default function Services() {
 
         <section className="mt-14">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-              Common questions
-            </p>
-
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-              The practical things people ask first.
-            </h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">Common questions</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">The practical things people ask first.</h2>
           </div>
 
           <div className="mx-auto mt-8 max-w-4xl space-y-3">
             {faqs.map((faq) => (
-              <details
-                key={faq.q}
-                className="group rounded-[1.4rem] border border-[#DCEDEF] bg-white px-5 py-4 shadow-[0_8px_24px_rgba(29,57,82,0.04)] sm:px-6"
-              >
+              <details key={faq.q} className="group rounded-[1.4rem] border border-[#DCEDEF] bg-white px-5 py-4 shadow-[0_8px_24px_rgba(29,57,82,0.04)] sm:px-6">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-[#1D3952]">
                   <span>{faq.q}</span>
-
-                  <span
-                    aria-hidden="true"
-                    className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAF9FA] text-lg text-[#238C93] transition-transform duration-200 group-open:rotate-45"
-                  >
-                    +
-                  </span>
+                  <span aria-hidden="true" className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAF9FA] text-lg text-[#238C93] transition-transform duration-200 group-open:rotate-45">+</span>
                 </summary>
-
-                <p className="mt-3 max-w-3xl leading-7 text-[#526B7C]">
-                  {faq.a}
-                </p>
+                <p className="mt-3 max-w-3xl leading-7 text-[#526B7C]">{faq.a}</p>
               </details>
             ))}
           </div>
@@ -817,35 +537,17 @@ export default function Services() {
         <section className="mt-12 rounded-[1.75rem] border border-[#E3DDFB] bg-gradient-to-r from-[#F8FCFD] via-white to-[#F2EEFF] p-6 sm:p-8">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-lg font-semibold text-[#1D3952]">
-                Looking for organisational or provider support?
-              </p>
-
-              <p className="mt-2 max-w-3xl leading-7 text-[#526B7C]">
-                Provider partnerships, Support at Home service arrangements
-                and clinical governance are covered in a dedicated section for
-                organisations that want to work with NovaCare Nursing.
-              </p>
+              <p className="text-lg font-semibold text-[#1D3952]">Looking for organisational or provider support?</p>
+              <p className="mt-2 max-w-3xl leading-7 text-[#526B7C]">Provider partnerships, Support at Home service arrangements and clinical governance are covered in a dedicated section for organisations that want to work with NovaCare Nursing.</p>
             </div>
-
-            <Link
-              href="/providers"
-              className="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-2xl bg-[#6E3BE8] px-6 py-3 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#5F31CE] hover:shadow-md"
-            >
-              For Providers
-            </Link>
+            <Link href="/providers" className="inline-flex min-h-[48px] shrink-0 items-center justify-center rounded-2xl bg-[#6E3BE8] px-6 py-3 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#5F31CE] hover:shadow-md">For Providers</Link>
           </div>
         </section>
 
         <div className="mt-8 rounded-[1.5rem] border border-[#F0DDD6] bg-[#FFF8F5] p-5 sm:p-6">
           <p className="text-sm leading-7 text-[#6E554B]">
-            <strong className="text-[#1D3952]">
-              For emergencies:
-            </strong>{" "}
-            NovaCare Nursing provides planned and responsive nursing care but is
-            not an emergency service. If someone is acutely unwell or at
-            immediate risk, call <strong>000</strong> or attend the nearest
-            Emergency Department.
+            <strong className="text-[#1D3952]">For emergencies:</strong>{" "}
+            NovaCare Nursing provides planned and responsive nursing care but is not an emergency service. If someone is acutely unwell or at immediate risk, call <strong>000</strong> or attend the nearest Emergency Department.
           </p>
         </div>
       </main>
