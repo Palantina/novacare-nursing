@@ -612,9 +612,9 @@ export default function Home() {
 
               <div>
                 <p className="max-w-3xl text-lg leading-8 text-[#526B7C]">
-                  For older people, NovaCare Nursing brings experienced
-                  clinical care, practical support and clear guidance into the
-                  comfort of home.
+                  As our needs change with age, NovaCare Nursing brings
+                  experienced clinical care, practical support and clear
+                  guidance into the comfort of home.
                 </p>
 
               </div>
