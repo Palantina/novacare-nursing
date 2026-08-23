@@ -26,7 +26,7 @@ const principles = [
   },
   {
     title: "Choice stays with the person",
-    text: "Older people should remain active participants in decisions about how, when and by whom their care is delivered wherever possible.",
+    text: "As we get older, we should remain active participants in decisions about how, when and by whom our care is delivered wherever possible.",
     tone: "border-[#F2DDD5] bg-[#FFF2EC]",
     accent: "text-[#A95440]",
   },
@@ -75,7 +75,7 @@ export default function About() {
                   </p>
 
                   <p className="mt-6 max-w-xl text-lg leading-8">
-                    NovaCare Nursing is a clinical nursing and aged-care service supporting older people in their own homes across Southern Tasmania.
+                    NovaCare Nursing provides clinical nursing and aged care at home across Southern Tasmania, supporting you as your needs change.
                   </p>
 
                   <p className="mt-4 max-w-xl leading-7">
@@ -125,13 +125,13 @@ export default function About() {
                   Why we exist
                 </p>
                 <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-                  Older people deserve more than task-based care.
+                  As we get older, care should never become a list of tasks.
                 </h2>
               </div>
 
               <div className="space-y-5 text-base leading-8 sm:text-lg">
                 <p>
-                  Home care works best when the person is known, changes are noticed early and everyone involved understands the plan. A wound, a fall, a change in behaviour, reduced appetite or increasing fatigue rarely exists in isolation.
+                  Home care works best when we are known, changes are noticed early and everyone involved understands the plan. A wound, a fall, a change in behaviour, reduced appetite or increasing fatigue rarely exists in isolation.
                 </p>
                 <p>
                   NovaCare Nursing was built around a nursing model that looks beyond the immediate task. We assess what is happening, identify what may be contributing, provide the nursing response and coordinate with the wider healthcare team when more input is needed.
