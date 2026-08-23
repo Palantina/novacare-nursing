@@ -26,11 +26,17 @@ export default function Fees() {
   return (
     <>
       <Head>
-        <title>Fees | NovaCare Nursing</title>
+        <title>Nursing Fees Hobart | Private & Support at Home | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Clear, transparent fees for private clinical nursing and Support at Home nursing through NovaCare Nursing."
+          content="View NovaCare Nursing fees for private clinical nursing and Support at Home nursing across Hobart and Southern Tasmania, including weekday, after-hours, weekend and public holiday rates."
         />
+        <link rel="canonical" href="https://www.novacarenursing.com.au/fees" />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Nursing Fees Hobart | NovaCare Nursing" />
+        <meta property="og:description" content="Clear fees for private clinical nursing and Support at Home nursing across Hobart and Southern Tasmania." />
+        <meta property="og:url" content="https://www.novacarenursing.com.au/fees" />
+        <meta property="og:type" content="website" />
       </Head>
 
       <SiteHeader />
@@ -49,13 +55,16 @@ export default function Fees() {
           <div className="relative mx-auto max-w-6xl">
             <header className="mx-auto max-w-3xl text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
+                NovaCare Nursing — Aged Care Specialists
+              </p>
+              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#6E3BE8]">
                 Clear pricing. No surprises.
               </p>
               <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
-                Fees
+                Nursing Fees
               </h1>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8">
-                Straightforward pricing for private nursing and Support at Home services.
+                Straightforward pricing for private nursing and Support at Home services across Hobart and Southern Tasmania.
               </p>
             </header>
 
