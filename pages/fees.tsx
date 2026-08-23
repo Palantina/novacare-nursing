@@ -22,26 +22,6 @@ function money(v: number) {
   return Math.round(v).toLocaleString("en-AU", { minimumFractionDigits: 0 });
 }
 
-const NDIS_RN3 = {
-  weekdayDay: 169.16,
-  weekdayEvening: 186.63,
-  weekdayNight: 190.12,
-  saturday: 241.52,
-  sunday: 277.69,
-  publicHoliday: 313.86,
-};
-
-const NDIS_RN2 = {
-  weekdayDay: 143.04,
-  weekdayEvening: 157.77,
-  weekdayNight: 160.73,
-  saturday: 204.12,
-  sunday: 234.67,
-  publicHoliday: 265.2,
-};
-
-const halfHour = (v: number) => v / 2;
-
 export default function Fees() {
   return (
     <>
@@ -49,7 +29,7 @@ export default function Fees() {
         <title>Fees | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Clear, transparent fees for private clinical nursing, Support at Home nursing and NDIS clinical nursing and consultancy through NovaCare Nursing."
+          content="Clear, transparent fees for private clinical nursing and Support at Home nursing through NovaCare Nursing."
         />
       </Head>
 
@@ -75,7 +55,7 @@ export default function Fees() {
                 Fees
               </h1>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-8">
-                Straightforward pricing for private nursing, Support at Home and NDIS services.
+                Straightforward pricing for private nursing and Support at Home services.
               </p>
             </header>
 
@@ -91,12 +71,6 @@ export default function Fees() {
                 className="rounded-full border border-[#E3DDFB] bg-white px-4 py-2 text-sm font-semibold text-[#6E3BE8] shadow-sm transition hover:bg-[#F2EEFF]"
               >
                 Support at Home
-              </a>
-              <a
-                href="#ndis"
-                className="rounded-full border border-[#DCE8F8] bg-white px-4 py-2 text-sm font-semibold text-[#5274D8] shadow-sm transition hover:bg-[#EEF4FF]"
-              >
-                NDIS
               </a>
             </nav>
           </div>
@@ -308,65 +282,6 @@ export default function Fees() {
           </div>
         </section>
 
-        <section className="bg-white px-4 py-14 sm:px-6 lg:px-8" id="ndis">
-          <div className="mx-auto max-w-6xl">
-            <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#5274D8]">NDIS</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] sm:text-4xl">NDIS Nursing (Price Limits)</h2>
-              <p className="mt-4 text-lg leading-8">Where nursing supports are included in your NDIS plan, services are funded in line with the applicable NDIS support item and time band.</p>
-            </div>
-
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <div className="rounded-[1.5rem] border border-[#E3DDFB] bg-[#F7F4FF] p-5 sm:p-6">
-                <p className="font-semibold text-[#1D3952]">Clinical Nurse Consultant (RN3+)</p>
-                <p className="mt-2 leading-7">Clinical consultancy, complex case oversight and clinical governance, including SIL clinical oversight, training, supervision and escalation pathways.</p>
-              </div>
-              <div className="rounded-[1.5rem] border border-[#D7EEF0] bg-[#EAF9FA] p-5 sm:p-6">
-                <p className="font-semibold text-[#1D3952]">Clinical Nurse (RN2)</p>
-                <p className="mt-2 leading-7">Clinical nursing for routine nursing requirements such as wounds, dressings, catheter care and general clinical nursing tasks.</p>
-              </div>
-            </div>
-
-            <div className="mt-6 overflow-x-auto rounded-[1.5rem] border border-[#DCEDEF] bg-white shadow-sm">
-              <table className="w-full min-w-[860px] text-left">
-                <thead className="bg-[#F8FCFD] text-[#1D3952]">
-                  <tr>
-                    <th className="px-4 py-3 font-semibold">Time band</th>
-                    <th className="px-4 py-3 font-semibold">RN3+ (Hour)</th>
-                    <th className="px-4 py-3 font-semibold">RN3+ (30 min)</th>
-                    <th className="px-4 py-3 font-semibold">RN2 (Hour)</th>
-                    <th className="px-4 py-3 font-semibold">RN2 (30 min)</th>
-                  </tr>
-                </thead>
-                <tbody className="[&>tr:nth-child(even)]:bg-[#FBFDFE]">
-                  <tr className="border-t border-[#E5EEF0]"><td className="px-4 py-3">Weekday (Day)</td><td className="px-4 py-3">${money(NDIS_RN3.weekdayDay)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN3.weekdayDay))}</td><td className="px-4 py-3">${money(NDIS_RN2.weekdayDay)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN2.weekdayDay))}</td></tr>
-                  <tr className="border-t border-[#E5EEF0]"><td className="px-4 py-3">Weekday (Evening)</td><td className="px-4 py-3">${money(NDIS_RN3.weekdayEvening)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN3.weekdayEvening))}</td><td className="px-4 py-3">${money(NDIS_RN2.weekdayEvening)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN2.weekdayEvening))}</td></tr>
-                  <tr className="border-t border-[#E5EEF0]"><td className="px-4 py-3">Weekday (Night)</td><td className="px-4 py-3">${money(NDIS_RN3.weekdayNight)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN3.weekdayNight))}</td><td className="px-4 py-3">${money(NDIS_RN2.weekdayNight)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN2.weekdayNight))}</td></tr>
-                  <tr className="border-t border-[#E5EEF0]"><td className="px-4 py-3">Saturday</td><td className="px-4 py-3">${money(NDIS_RN3.saturday)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN3.saturday))}</td><td className="px-4 py-3">${money(NDIS_RN2.saturday)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN2.saturday))}</td></tr>
-                  <tr className="border-t border-[#E5EEF0]"><td className="px-4 py-3">Sunday</td><td className="px-4 py-3">${money(NDIS_RN3.sunday)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN3.sunday))}</td><td className="px-4 py-3">${money(NDIS_RN2.sunday)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN2.sunday))}</td></tr>
-                  <tr className="border-t border-[#E5EEF0]"><td className="px-4 py-3">Public Holiday</td><td className="px-4 py-3">${money(NDIS_RN3.publicHoliday)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN3.publicHoliday))}</td><td className="px-4 py-3">${money(NDIS_RN2.publicHoliday)}</td><td className="px-4 py-3">${money(halfHour(NDIS_RN2.publicHoliday))}</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_auto] lg:items-start">
-              <div className="rounded-[1.5rem] border border-[#DCE8F8] bg-[#EEF4FF] p-5 sm:p-6">
-                <h3 className="font-semibold text-[#1D3952]">NDIS nursing time bands</h3>
-                <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
-                  <li><strong>Weekday day:</strong> 6:00am–8:00pm</li>
-                  <li><strong>Weekday evening:</strong> 8:00pm–12:00am</li>
-                  <li><strong>Weekday night:</strong> 12:00am–6:00am</li>
-                  <li><strong>Saturday:</strong> 12:00am–11:59pm</li>
-                  <li><strong>Sunday:</strong> 12:00am–11:59pm</li>
-                  <li><strong>Public holiday:</strong> 12:00am–11:59pm</li>
-                </ul>
-              </div>
-              <div className="rounded-[1.5rem] border border-[#DCEDEF] bg-[#F8FCFD] p-5 text-sm lg:max-w-sm">
-                <strong className="text-[#1D3952]">Note:</strong> NDIS rates are billed in line with the applicable support item, time band and role delivered (RN2 vs RN3+).
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />
