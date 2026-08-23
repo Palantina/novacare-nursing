@@ -122,13 +122,6 @@ const accessPathways = [
     linkLabel: "Support at Home pathway",
   },
   {
-    title: "NDIS",
-    description:
-      "Depending on how your plan is managed, nursing may be arranged directly or through a provider. NovaCare Nursing can also work alongside registered NDIS providers.",
-    href: "/providers",
-    linkLabel: "NDIS nursing pathway",
-  },
-  {
     title: "For Providers & Organisations",
     description:
       "Clinical nursing, consultancy, governance, education and complex-care support for organisations that need experienced nursing input.",
@@ -494,7 +487,7 @@ export default function Home() {
 
         <meta
           name="description"
-          content="NovaCare Nursing provides advanced clinical nursing at home across Hobart and Southern Tasmania, with private nursing, Support at Home and NDIS provider pathways, palliative care, dementia support and clinical consultancy."
+          content="NovaCare Nursing provides nurse-led clinical nursing and aged care at home for older people across Hobart and Southern Tasmania, with private nursing, Support at Home pathways, palliative care, dementia support and clinical consultancy."
         />
 
         <link rel="icon" href="/favicon.ico" />
@@ -512,7 +505,7 @@ export default function Home() {
               logo: "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               image: "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               description:
-                "Advanced clinical nursing at home across Hobart and Southern Tasmania, with private nursing, Support at Home and NDIS provider pathways, palliative care, dementia support and clinical consultancy.",
+                "Nurse-led clinical nursing and aged care at home for older people across Hobart and Southern Tasmania, with private nursing, Support at Home pathways, palliative care, dementia support and clinical consultancy.",
               telephone: "+61491303671",
               email: "info@novacarenursing.com.au",
               areaServed: {
@@ -619,9 +612,9 @@ export default function Home() {
 
               <div>
                 <p className="max-w-3xl text-lg leading-8 text-[#526B7C]">
-                  For children aged six and over, adults and older people,
-                  NovaCare Nursing brings experienced clinical care, practical
-                  support and clear guidance into the comfort of home.
+                  For older people, NovaCare Nursing brings experienced
+                  clinical care, practical support and clear guidance into the
+                  comfort of home.
                 </p>
 
               </div>
@@ -735,12 +728,12 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.45 }}
                   transition={{ duration: 0.62, delay: 0.08, ease: "easeOut" }}
                 >
-                  Flexible pathways for private clients, Support at Home, NDIS,
-                  providers and organisations.
+                  Flexible aged-care pathways for private clients, Support at
+                  Home, providers and organisations.
                 </motion.p>
               </div>
 
-              <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {accessPathways.map((pathway, index) => {
                   const styles =
                     accessPathwayStyles[index] ?? accessPathwayStyles[0];
