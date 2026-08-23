@@ -163,8 +163,8 @@ const faqs = [
     a: "Yes. Private nursing is fee-for-service and can be booked directly. Care may be one-off or ongoing depending on what you need.",
   },
   {
-    q: "Can NovaCare Nursing work with my Support at Home or NDIS provider?",
-    a: "Yes. NovaCare Nursing can work alongside existing providers to deliver nursing services under an agreed provider arrangement. The exact pathway depends on the program, how your funding is managed, and the provider's requirements.",
+    q: "Can NovaCare Nursing work with my Support at Home provider?",
+    a: "Yes. Your registered Support at Home provider can engage NovaCare Nursing to deliver nursing services under an agreed provider arrangement, subject to the provider's contracting and governance requirements.",
   },
   {
     q: "Do I need a GP referral?",
@@ -488,7 +488,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             <motion.article
               className="rounded-[1.6rem] border border-[#CFEAEC] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
               initial={reduceMotion ? false : { opacity: 0, y: 18 }}
@@ -558,43 +558,6 @@ export default function Services() {
               </Link>
             </motion.article>
 
-            <motion.article
-              className="rounded-[1.6rem] border border-[#DCE8F8] bg-white p-6 shadow-[0_10px_28px_rgba(29,57,82,0.05)]"
-              initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-              whileInView={
-                reduceMotion ? undefined : { opacity: 1, y: 0 }
-              }
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{
-                duration: 0.45,
-                delay: 0.12,
-                ease: "easeOut",
-              }}
-            >
-              <span
-                aria-hidden="true"
-                className="block h-1.5 w-14 rounded-full bg-[#5274D8]"
-              />
-
-              <h3 className="mt-5 text-xl font-semibold text-[#1D3952]">
-                NDIS
-              </h3>
-
-              <p className="mt-3 leading-7 text-[#526B7C]">
-                Depending on how your plan is managed, nursing may be arranged
-                directly or through a provider. NovaCare Nursing can also work
-                alongside registered NDIS providers for complex clinical
-                support.
-              </p>
-
-              <Link
-                href="/providers"
-                className="mt-5 inline-flex items-center gap-2 font-semibold text-[#5274D8]"
-              >
-                NDIS provider support
-                <span aria-hidden="true">→</span>
-              </Link>
-            </motion.article>
           </div>
 
           <div className="mt-6 rounded-2xl border border-white bg-white/75 p-5 sm:flex sm:items-center sm:justify-between sm:gap-5">
@@ -859,10 +822,9 @@ export default function Services() {
               </p>
 
               <p className="mt-2 max-w-3xl leading-7 text-[#526B7C]">
-                Provider partnerships, Support at Home service arrangements,
-                NDIS clinical support and clinical governance are covered in a
-                dedicated section for organisations that want to work with
-                NovaCare Nursing.
+                Provider partnerships, Support at Home service arrangements
+                and clinical governance are covered in a dedicated section for
+                organisations that want to work with NovaCare Nursing.
               </p>
             </div>
 
