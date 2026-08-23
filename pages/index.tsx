@@ -117,9 +117,16 @@ const accessPathways = [
   {
     title: "Support at Home",
     description:
-      "If you receive Support at Home, your registered provider can engage NovaCare Nursing to deliver nursing as part of your agreed care and services.",
-    href: "/providers",
-    linkLabel: "Support at Home pathway",
+      "If you receive Support at Home, you can ask your registered provider to engage NovaCare Nursing for your nursing care.",
+    href: "/support-at-home",
+    linkLabel: "Explore Support at Home",
+  },
+  {
+    title: "Care at Home",
+    description:
+      "When care needs increase, explore nurse-led Live-In Care, 24-Hour Care and options designed to help you remain at home.",
+    href: "/staying-at-home-care",
+    linkLabel: "Explore Care at Home",
   },
   {
     title: "For Providers & Organisations",
@@ -176,9 +183,9 @@ const clinicalStandards: ClinicalStandard[] = [
     iconClass: "bg-[#EAF9FA] text-[#238C93]",
   },
   {
-    title: "Nursing only",
+    title: "Nurse-led aged care",
     description:
-      "We assess what is happening, identify what is missing and provide the nursing response without selling unrelated services or care packages.",
+      "Nursing provides the clinical foundation, with care able to grow from specialist RN visits to Live-In Care and 24-Hour Care as needs change.",
     icon: "nursing",
     iconClass: "bg-[#F2EEFF] text-[#6E3BE8]",
   },
@@ -201,276 +208,93 @@ const clinicalStandards: ClinicalStandard[] = [
 function ServiceIcon({ name }: { name: ServiceIconName }) {
   if (name === "home") {
     return (
-      <svg
-        className="h-7 w-7"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M3.5 11.2 12 4l8.5 7.2V20H3.5v-8.8Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 10v6M9 13h6"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3.5 11.2 12 4l8.5 7.2V20H3.5v-8.8Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M12 10v6M9 13h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     );
   }
 
   if (name === "wound") {
     return (
-      <svg
-        className="h-7 w-7"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <rect
-          x="4"
-          y="8"
-          width="16"
-          height="8"
-          rx="4"
-          stroke="currentColor"
-          strokeWidth="1.7"
-        />
-        <path
-          d="M12 9.7v4.6M9.7 12h4.6"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-        />
-        <path
-          d="M7 9.2v5.6M17 9.2v5.6"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          opacity="0.65"
-        />
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="4" y="8" width="16" height="8" rx="4" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M12 9.7v4.6M9.7 12h4.6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M7 9.2v5.6M17 9.2v5.6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity="0.65" />
       </svg>
     );
   }
 
   if (name === "recovery") {
     return (
-      <svg
-        className="h-7 w-7"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M19.2 8.2A8 8 0 1 0 20 13"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-        />
-        <path
-          d="M16.2 8.2h3V5.1"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 9.2v5.6M9.2 12h5.6"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M19.2 8.2A8 8 0 1 0 20 13" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M16.2 8.2h3V5.1" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 9.2v5.6M9.2 12h5.6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     );
   }
 
   if (name === "dementia") {
     return (
-      <svg
-        className="h-7 w-7"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M9.3 19.5H6.8v-3.1a6.7 6.7 0 1 1 7.5 2.7v2.4"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M9 9.3h.01M13 8h.01M14.5 12h.01M10.8 13.3h.01"
-          stroke="currentColor"
-          strokeWidth="2.3"
-          strokeLinecap="round"
-        />
-        <path
-          d="M17.8 4.2v2.5M16.55 5.45h2.5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9.3 19.5H6.8v-3.1a6.7 6.7 0 1 1 7.5 2.7v2.4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 9.3h.01M13 8h.01M14.5 12h.01M10.8 13.3h.01" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round" />
+        <path d="M17.8 4.2v2.5M16.55 5.45h2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     );
   }
 
   if (name === "palliative") {
     return (
-      <svg
-        className="h-7 w-7"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 18.8 5.3 12.5a4.2 4.2 0 0 1 5.9-6l.8.8.8-.8a4.2 4.2 0 0 1 5.9 6L12 18.8Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M3.5 19.5c2.5-1.5 4.8-1.7 7-.5l1.5.8 1.5-.8c2.2-1.2 4.5-1 7 .5"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
+      <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 18.8 5.3 12.5a4.2 4.2 0 0 1 5.9-6l.8.8.8-.8a4.2 4.2 0 0 1 5.9 6L12 18.8Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M3.5 19.5c2.5-1.5 4.8-1.7 7-.5l1.5.8 1.5-.8c2.2-1.2 4.5-1 7 .5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     );
   }
 
   return (
-    <svg
-      className="h-7 w-7"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <rect
-        x="3.5"
-        y="4.5"
-        width="17"
-        height="12"
-        rx="2"
-        stroke="currentColor"
-        strokeWidth="1.7"
-      />
-      <path
-        d="M9 20h6M12 16.5V20"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-      />
-      <path
-        d="M12 8v5M9.5 10.5h5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
+    <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="3.5" y="4.5" width="17" height="12" rx="2" stroke="currentColor" strokeWidth="1.7" />
+      <path d="M9 20h6M12 16.5V20" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      <path d="M12 8v5M9.5 10.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   );
 }
 
-function ClinicalStandardIcon({
-  name,
-}: {
-  name: ClinicalStandardIconName;
-}) {
+function ClinicalStandardIcon({ name }: { name: ClinicalStandardIconName }) {
   if (name === "local") {
     return (
-      <svg
-        className="h-6 w-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 12.2a2.4 2.4 0 1 0 0-4.8 2.4 2.4 0 0 0 0 4.8Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-        />
+      <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M12 12.2a2.4 2.4 0 1 0 0-4.8 2.4 2.4 0 0 0 0 4.8Z" stroke="currentColor" strokeWidth="1.7" />
       </svg>
     );
   }
 
   if (name === "nursing") {
     return (
-      <svg
-        className="h-6 w-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-        />
-        <path
-          d="M12 7.8v8.4M7.8 12h8.4"
-          stroke="currentColor"
-          strokeWidth="1.9"
-          strokeLinecap="round"
-        />
+      <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M12 7.8v8.4M7.8 12h8.4" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" />
       </svg>
     );
   }
 
   if (name === "hospital") {
     return (
-      <svg
-        className="h-6 w-6"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M3.5 11.2 12 4l8.5 7.2V20H3.5v-8.8Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M7.5 14h2l1.2-2.5 2.1 5 1.2-2.5h2.5"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3.5 11.2 12 4l8.5 7.2V20H3.5v-8.8Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+        <path d="M7.5 14h2l1.2-2.5 2.1 5 1.2-2.5h2.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     );
   }
 
   return (
-    <svg
-      className="h-6 w-6"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M12 3.5 19 6v5.4c0 4.4-2.7 7.5-7 9.1-4.3-1.6-7-4.7-7-9.1V6l7-2.5Z"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      />
-      <path
-        d="m8.7 12 2.1 2.1 4.5-4.5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 3.5 19 6v5.4c0 4.4-2.7 7.5-7 9.1-4.3-1.6-7-4.7-7-9.1V6l7-2.5Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+      <path d="m8.7 12 2.1 2.1 4.5-4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -481,15 +305,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          NovaCare Nursing | Clinical Nursing at Home | Hobart
-        </title>
-
+        <title>NovaCare Nursing | Aged Care Specialists | Hobart</title>
         <meta
           name="description"
-          content="NovaCare Nursing provides nurse-led clinical nursing and aged care at home for older people across Hobart and Southern Tasmania, with private nursing, Support at Home pathways, palliative care, dementia support and clinical consultancy."
+          content="NovaCare Nursing provides nurse-led aged care and clinical nursing at home across Hobart and Southern Tasmania, including private nursing, Support at Home, Live-In Care, 24-Hour Care, palliative care and dementia support."
         />
-
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://www.novacarenursing.com.au/" />
 
@@ -505,7 +325,7 @@ export default function Home() {
               logo: "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               image: "https://www.novacarenursing.com.au/NovaCare_Logo.svg",
               description:
-                "Nurse-led clinical nursing and aged care at home for older people across Hobart and Southern Tasmania, with private nursing, Support at Home pathways, palliative care, dementia support and clinical consultancy.",
+                "Nurse-led aged care and clinical nursing at home across Hobart and Southern Tasmania, including private nursing, Support at Home, Live-In Care, 24-Hour Care, palliative care and dementia support.",
               telephone: "+61491303671",
               email: "info@novacarenursing.com.au",
               areaServed: {
@@ -533,261 +353,90 @@ export default function Home() {
       <Hero />
 
       <main>
-        {/* Professional credentials */}
         <section className="bg-[#F8FCFD]">
           <div className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
             <div className="grid gap-3 rounded-[2rem] border border-[#DCEDEF] bg-white p-4 shadow-[0_18px_50px_rgba(29,57,82,0.07)] sm:grid-cols-2 sm:p-5 lg:grid-cols-4">
               {trustPoints.map((item, index) => (
-                <div
-                  key={item}
-                  className="flex min-h-[92px] items-center gap-3 rounded-2xl border border-[#E2ECEF] bg-[#F8FCFD] p-4"
-                >
-                  <span
-                    aria-hidden="true"
-                    className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${
-                      trustIconStyles[index] ?? trustIconStyles[0]
-                    }`}
-                  >
-                    <svg
-                      className="h-5 w-5"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="m7 12.5 3.2 3.2L17.5 8"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-
-                      <path
-                        d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
-                        stroke="currentColor"
-                        strokeWidth="1.7"
-                      />
+                <div key={item} className="flex min-h-[92px] items-center gap-3 rounded-2xl border border-[#E2ECEF] bg-[#F8FCFD] p-4">
+                  <span aria-hidden="true" className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${trustIconStyles[index] ?? trustIconStyles[0]}`}>
+                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                      <path d="m7 12.5 3.2 3.2L17.5 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" strokeWidth="1.7" />
                     </svg>
                   </span>
-
-                  <p className="text-sm font-semibold leading-6 text-[#1D3952] sm:text-base">
-                    {item}
-                  </p>
+                  <p className="text-sm font-semibold leading-6 text-[#1D3952] sm:text-base">{item}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Services for all stages of life */}
         <section className="relative overflow-hidden border-y border-[#E5EFF1] bg-white py-16 sm:py-20">
-          <div
-            aria-hidden="true"
-            className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#DDF5F5]/70 blur-3xl"
-          />
-
-          <div
-            aria-hidden="true"
-            className="absolute -right-20 top-40 h-80 w-80 rounded-full bg-[#EAE1FC]/60 blur-3xl"
-          />
-
-          <div
-            aria-hidden="true"
-            className="absolute bottom-0 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-[#E1EBFF]/60 blur-3xl"
-          />
+          <div aria-hidden="true" className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-[#DDF5F5]/70 blur-3xl" />
+          <div aria-hidden="true" className="absolute -right-20 top-40 h-80 w-80 rounded-full bg-[#EAE1FC]/60 blur-3xl" />
+          <div aria-hidden="true" className="absolute bottom-0 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-[#E1EBFF]/60 blur-3xl" />
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                  Care shaped around you
-                </p>
-
-                <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
-                  Nursing for people,
-                  <span className="block text-[#6E3BE8]">
-                    not categories.
-                  </span>
-                </h2>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">Care shaped around you</p>
+                <h2 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">Nursing for people,<span className="block text-[#6E3BE8]">not categories.</span></h2>
               </div>
-
               <div>
-                <p className="max-w-3xl text-lg leading-8 text-[#526B7C]">
-                  As our needs change with age, NovaCare Nursing brings
-                  experienced clinical care, practical support and clear
-                  guidance into the comfort of home.
-                </p>
-
+                <p className="max-w-3xl text-lg leading-8 text-[#526B7C]">As our needs change with age, NovaCare Nursing brings experienced clinical care, practical support and clear guidance into the comfort of home.</p>
               </div>
             </div>
 
             <div className="mt-11 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {signatureServices.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  className="h-full"
-                  initial={reduceMotion ? false : { opacity: 0, y: 18 }}
-                  whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.18 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: reduceMotion ? 0 : index * 0.07,
-                    ease: "easeOut",
-                  }}
-                >
-                  <article
-                    className={`group flex h-full flex-col rounded-[1.75rem] border p-6 shadow-[0_14px_40px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(29,57,82,0.12)] sm:p-7 ${service.cardClass}`}
-                  >
+                <motion.div key={service.title} className="h-full" initial={reduceMotion ? false : { opacity: 0, y: 18 }} whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.18 }} transition={{ duration: 0.5, delay: reduceMotion ? 0 : index * 0.07, ease: "easeOut" }}>
+                  <article className={`group flex h-full flex-col rounded-[1.75rem] border p-6 shadow-[0_14px_40px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(29,57,82,0.12)] sm:p-7 ${service.cardClass}`}>
                     <div className="flex items-start justify-between gap-4">
-                      <span
-                        className={`inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconClass}`}
-                      >
-                        <ServiceIcon name={service.icon} />
-                      </span>
-
-                      <span className="rounded-full border border-white/80 bg-white/75 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[#526B7C] shadow-sm">
-                        {service.tag}
-                      </span>
+                      <span className={`inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${service.iconClass}`}><ServiceIcon name={service.icon} /></span>
+                      <span className="rounded-full border border-white/80 bg-white/75 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[#526B7C] shadow-sm">{service.tag}</span>
                     </div>
-
-                    <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
-                      {service.title}
-                    </h3>
-
-                    <p className="mt-4 flex-1 leading-7 text-[#526B7C]">
-                      {service.description}
-                    </p>
-
-                    <Link
-                      href="/services"
-                      className={`mt-6 inline-flex items-center gap-2 font-semibold ${service.linkClass}`}
-                    >
-                      Learn more
-                      <span
-                        aria-hidden="true"
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      >
-                        →
-                      </span>
-                    </Link>
+                    <h3 className="mt-6 text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">{service.title}</h3>
+                    <p className="mt-4 flex-1 leading-7 text-[#526B7C]">{service.description}</p>
+                    <Link href="/services" className={`mt-6 inline-flex items-center gap-2 font-semibold ${service.linkClass}`}>Learn more<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span></Link>
                   </article>
                 </motion.div>
               ))}
             </div>
-
           </div>
         </section>
 
         <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div
-            aria-hidden="true"
-            className="absolute -left-28 top-4 h-72 w-72 rounded-full bg-[#DDF5F5]/60 blur-3xl"
-          />
-
-          <div
-            aria-hidden="true"
-            className="absolute -right-28 bottom-0 h-80 w-80 rounded-full bg-[#EAE1FC]/45 blur-3xl"
-          />
+          <div aria-hidden="true" className="absolute -left-28 top-4 h-72 w-72 rounded-full bg-[#DDF5F5]/60 blur-3xl" />
+          <div aria-hidden="true" className="absolute -right-28 bottom-0 h-80 w-80 rounded-full bg-[#EAE1FC]/45 blur-3xl" />
 
           <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.25rem] border border-[#DCEDEF] bg-gradient-to-br from-white via-[#FCFEFF] to-[#F6FAFF] p-6 shadow-[0_24px_70px_rgba(29,57,82,0.08)] sm:p-8 lg:p-10">
-            <div
-              aria-hidden="true"
-              className="absolute left-[12%] top-0 h-28 w-28 -translate-y-1/2 rounded-full bg-[#A9ECE8]/25 blur-2xl"
-            />
-
-            <div
-              aria-hidden="true"
-              className="absolute right-[16%] top-10 h-32 w-32 rounded-full bg-[#D7CEFF]/25 blur-2xl"
-            />
+            <div aria-hidden="true" className="absolute left-[12%] top-0 h-28 w-28 -translate-y-1/2 rounded-full bg-[#A9ECE8]/25 blur-2xl" />
+            <div aria-hidden="true" className="absolute right-[16%] top-10 h-32 w-32 rounded-full bg-[#D7CEFF]/25 blur-2xl" />
 
             <div className="relative">
               <div className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
-                <motion.div
-                  initial={reduceMotion ? false : { opacity: 0, x: -28 }}
-                  whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.45 }}
-                  transition={{ duration: 0.62, ease: "easeOut" }}
-                >
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                    Flexible access. Clear pathways.
-                  </p>
-
-                  <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
-                    How to Access Care
-                  </h2>
-
-                  <div
-                    aria-hidden="true"
-                    className="mt-5 h-1.5 w-28 rounded-full bg-[#2FBFC4]"
-                  />
+                <motion.div initial={reduceMotion ? false : { opacity: 0, x: -28 }} whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.45 }} transition={{ duration: 0.62, ease: "easeOut" }}>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">Flexible access. Clear pathways.</p>
+                  <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">How to Access Care</h2>
+                  <div aria-hidden="true" className="mt-5 h-1.5 w-28 rounded-full bg-[#2FBFC4]" />
                 </motion.div>
 
-                <motion.p
-                  className="max-w-3xl text-lg leading-8 text-[#526B7C] lg:justify-self-end"
-                  initial={reduceMotion ? false : { opacity: 0, x: 28 }}
-                  whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.45 }}
-                  transition={{ duration: 0.62, delay: 0.08, ease: "easeOut" }}
-                >
-                  Flexible aged-care pathways for private clients, Support at
-                  Home, providers and organisations.
+                <motion.p className="max-w-3xl text-lg leading-8 text-[#526B7C] lg:justify-self-end" initial={reduceMotion ? false : { opacity: 0, x: 28 }} whileInView={reduceMotion ? undefined : { opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.45 }} transition={{ duration: 0.62, delay: 0.08, ease: "easeOut" }}>
+                  Flexible aged-care pathways for private nursing, Support at Home, higher-needs care at home and provider partnerships.
                 </motion.p>
               </div>
 
-              <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
                 {accessPathways.map((pathway, index) => {
-                  const styles =
-                    accessPathwayStyles[index] ?? accessPathwayStyles[0];
-
+                  const styles = accessPathwayStyles[index] ?? accessPathwayStyles[0];
                   return (
-                    <motion.div
-                      key={pathway.title}
-                      className="h-full"
-                      initial={
-                        reduceMotion
-                          ? false
-                          : { opacity: 0, y: 32, scale: 0.985 }
-                      }
-                      whileInView={
-                        reduceMotion
-                          ? undefined
-                          : { opacity: 1, y: 0, scale: 1 }
-                      }
-                      viewport={{ once: true, amount: 0.22 }}
-                      transition={{
-                        duration: 0.58,
-                        delay: reduceMotion ? 0 : 0.12 + index * 0.12,
-                        ease: "easeOut",
-                      }}
-                    >
-                      <article
-                        className={`group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border p-6 shadow-[0_14px_38px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(29,57,82,0.10)] sm:p-7 ${styles.card}`}
-                      >
-                        <div
-                          aria-hidden="true"
-                          className={`absolute -right-10 -top-10 h-32 w-32 rounded-full blur-2xl transition duration-500 group-hover:scale-110 ${styles.glow}`}
-                        />
-
+                    <motion.div key={pathway.title} className="h-full" initial={reduceMotion ? false : { opacity: 0, y: 32, scale: 0.985 }} whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }} viewport={{ once: true, amount: 0.22 }} transition={{ duration: 0.58, delay: reduceMotion ? 0 : 0.12 + index * 0.12, ease: "easeOut" }}>
+                      <article className={`group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border p-6 shadow-[0_14px_38px_rgba(29,57,82,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(29,57,82,0.10)] sm:p-7 ${styles.card}`}>
+                        <div aria-hidden="true" className={`absolute -right-10 -top-10 h-32 w-32 rounded-full blur-2xl transition duration-500 group-hover:scale-110 ${styles.glow}`} />
                         <div className="relative flex h-full flex-col">
-                          <h3 className="text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">
-                            {pathway.title}
-                          </h3>
-
-                          <p className="mt-3 flex-1 leading-7 text-[#526B7C]">
-                            {pathway.description}
-                          </p>
-
-                          <Link
-                            href={pathway.href}
-                            className={`mt-6 inline-flex items-center gap-2 font-semibold ${styles.link}`}
-                          >
-                            {pathway.linkLabel}
-                            <span
-                              aria-hidden="true"
-                              className="transition-transform duration-300 group-hover:translate-x-1"
-                            >
-                              →
-                            </span>
-                          </Link>
+                          <h3 className="text-2xl font-semibold leading-snug tracking-[-0.025em] text-[#1D3952]">{pathway.title}</h3>
+                          <p className="mt-3 flex-1 leading-7 text-[#526B7C]">{pathway.description}</p>
+                          <Link href={pathway.href} className={`mt-6 inline-flex items-center gap-2 font-semibold ${styles.link}`}>{pathway.linkLabel}<span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">→</span></Link>
                         </div>
                       </article>
                     </motion.div>
@@ -798,237 +447,89 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Local clinical leadership and testimonials */}
         <section className="relative overflow-hidden bg-[#F8FCFD] py-16 sm:py-20">
-          <div
-            aria-hidden="true"
-            className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#DDF5F5]/70 blur-3xl"
-          />
-
-          <div
-            aria-hidden="true"
-            className="absolute -right-24 bottom-16 h-80 w-80 rounded-full bg-[#EAE1FC]/60 blur-3xl"
-          />
+          <div aria-hidden="true" className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#DDF5F5]/70 blur-3xl" />
+          <div aria-hidden="true" className="absolute -right-24 bottom-16 h-80 w-80 rounded-full bg-[#EAE1FC]/60 blur-3xl" />
 
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="overflow-hidden rounded-[2.25rem] border border-[#DCEDEF] bg-white/95 p-7 shadow-[0_20px_60px_rgba(29,57,82,0.08)] sm:p-10 lg:p-12">
               <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                    Tasmanian owned. Clinically led.
-                  </p>
-
-                  <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
-                    Local nursing,
-                    <span className="block text-[#6E3BE8]">
-                      built to a higher standard.
-                    </span>
-                  </h2>
-
-                  <p className="mt-6 max-w-xl text-lg leading-8 text-[#526B7C]">
-                    NovaCare Nursing is founded and clinically led by Palantina
-                    Hughes, bringing experienced clinical judgement, continuity
-                    and accountability into care at home.
-                  </p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">Tasmanian owned. Clinically led.</p>
+                  <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#1D3952] sm:text-5xl">Local nursing,<span className="block text-[#6E3BE8]">built to a higher standard.</span></h2>
+                  <p className="mt-6 max-w-xl text-lg leading-8 text-[#526B7C]">NovaCare Nursing is founded and clinically led by Palantina Hughes, bringing experienced clinical judgement, continuity and accountability into care at home.</p>
 
                   <div className="mt-8 flex items-start gap-5">
                     <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-[1.35rem] bg-[#EAF9FA] text-[#1D3952] shadow-sm ring-1 ring-[#D7EEF0]">
-                      <span className="text-3xl font-semibold leading-none">
-                        18
-                      </span>
-
-                      <span className="mt-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#2B8E99]">
-                        years
-                      </span>
+                      <span className="text-3xl font-semibold leading-none">18</span>
+                      <span className="mt-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#2B8E99]">years</span>
                     </div>
-
                     <div className="pt-1">
-                      <p className="text-xl font-semibold text-[#1D3952]">
-                        Palantina Hughes
-                      </p>
-
-                      <p className="mt-1 font-semibold text-[#6E3BE8]">
-                        Founder &amp; Clinical Nurse Consultant
-                      </p>
-
-                      <p className="mt-1 text-sm font-medium text-[#526B7C]">
-                        Registered Nurse
-                      </p>
-
-                      <p className="mt-3 max-w-lg leading-7 text-[#526B7C]">
-                        Experience across emergency and acute care,
-                        hospital-in-the-home and Community Rapid Response,
-                        complex community nursing, palliative care and clinical
-                        governance.
-                      </p>
+                      <p className="text-xl font-semibold text-[#1D3952]">Palantina Hughes</p>
+                      <p className="mt-1 font-semibold text-[#6E3BE8]">Founder &amp; Clinical Nurse Consultant</p>
+                      <p className="mt-1 text-sm font-medium text-[#526B7C]">Registered Nurse</p>
+                      <p className="mt-3 max-w-lg leading-7 text-[#526B7C]">Experience across emergency and acute care, hospital-in-the-home and Community Rapid Response, complex community nursing, palliative care and clinical governance.</p>
                     </div>
                   </div>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                    <Link
-                      href="/about-palantina"
-                      className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#59D6D0]"
-                    >
-                      Meet our founder
-                    </Link>
-
-                    <Link
-                      href="/providers"
-                      className="inline-flex min-h-[50px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-[#F7F4FF] px-6 py-3 text-center font-semibold text-[#5C43A8] transition hover:-translate-y-0.5 hover:bg-[#F1ECFF]"
-                    >
-                      Clinical support for providers
-                    </Link>
+                    <Link href="/about-palantina" className="inline-flex min-h-[50px] items-center justify-center rounded-2xl bg-[#2FBFC4] px-6 py-3 text-center font-semibold text-[#173B5C] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#59D6D0]">Meet our founder</Link>
+                    <Link href="/providers" className="inline-flex min-h-[50px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-[#F7F4FF] px-6 py-3 text-center font-semibold text-[#5C43A8] transition hover:-translate-y-0.5 hover:bg-[#F1ECFF]">Clinical support for providers</Link>
                   </div>
                 </div>
 
                 <div className="lg:border-l lg:border-[#E5EEF0] lg:pl-14">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">
-                    The NovaCare Nursing difference
-                  </p>
-
-                  <h3 className="mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.035em] text-[#1D3952] sm:text-4xl">
-                    Independent nursing with clinical accountability.
-                  </h3>
-
-                  <p className="mt-4 max-w-2xl text-lg leading-8 text-[#526B7C]">
-                    Nursing is our service. We look at the whole clinical
-                    picture, identify what is missing and recommend what is
-                    genuinely needed.
-                  </p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#6E3BE8]">The NovaCare Nursing difference</p>
+                  <h3 className="mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-[-0.035em] text-[#1D3952] sm:text-4xl">Independent care with clinical accountability.</h3>
+                  <p className="mt-4 max-w-2xl text-lg leading-8 text-[#526B7C]">Nursing is our clinical foundation. We look at the whole picture, identify what is missing and build the level of nursing and everyday support that is genuinely needed.</p>
 
                   <div className="mt-8 grid gap-x-8 gap-y-7 sm:grid-cols-2">
                     {clinicalStandards.map((standard) => (
                       <article key={standard.title} className="flex gap-4">
-                        <span
-                          aria-hidden="true"
-                          className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${standard.iconClass}`}
-                        >
-                          <ClinicalStandardIcon name={standard.icon} />
-                        </span>
-
+                        <span aria-hidden="true" className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${standard.iconClass}`}><ClinicalStandardIcon name={standard.icon} /></span>
                         <div>
-                          <h4 className="text-base font-semibold leading-6 text-[#1D3952]">
-                            {standard.title}
-                          </h4>
-
-                          <p className="mt-1 text-sm leading-6 text-[#526B7C]">
-                            {standard.description}
-                          </p>
+                          <h4 className="text-base font-semibold leading-6 text-[#1D3952]">{standard.title}</h4>
+                          <p className="mt-1 text-sm leading-6 text-[#526B7C]">{standard.description}</p>
                         </div>
                       </article>
                     ))}
                   </div>
 
                   <div className="mt-8 rounded-[1.5rem] border border-[#D7EEF0] bg-gradient-to-r from-[#F1FBFB] via-white to-[#F7F4FF] p-5 sm:p-6">
-                    <p className="font-semibold text-[#1D3952]">
-                      We review what is missing—not what else we can sell.
-                    </p>
-
-                    <p className="mt-2 leading-7 text-[#526B7C]">
-                      The right next step may be NovaCare Nursing, review by a GP
-                      or specialist, coordination with an existing provider, or
-                      urgent hospital care. The clinical need comes first.
-                    </p>
+                    <p className="font-semibold text-[#1D3952]">We review what is missing—not what else we can sell.</p>
+                    <p className="mt-2 leading-7 text-[#526B7C]">The right next step may be NovaCare Nursing, review by a GP or specialist, coordination with an existing provider, or urgent hospital care. The clinical need comes first.</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="mx-auto mt-14 max-w-4xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                Trusted by families and professionals
-              </p>
-
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#1D3952] sm:text-5xl">
-                Experienced care.
-                <span className="block text-[#6E3BE8]">
-                  Remembered for how it felt.
-                </span>
-              </h2>
-
-              <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#526B7C]">
-                Clinical skill matters. So do continuity, kindness and the
-                confidence that someone experienced is seeing the whole picture.
-              </p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">Trusted by families and professionals</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#1D3952] sm:text-5xl">Experienced care.<span className="block text-[#6E3BE8]">Remembered for how it felt.</span></h2>
+              <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-[#526B7C]">Clinical skill matters. So do continuity, kindness and the confidence that someone experienced is seeing the whole picture.</p>
             </div>
 
             <div className="mt-9 grid gap-6 lg:grid-cols-2">
               <article className="relative overflow-hidden rounded-[2rem] border border-[#E3DDFB] bg-gradient-to-br from-white via-white to-[#F2EEFF] p-7 shadow-[0_18px_50px_rgba(29,57,82,0.07)] sm:p-8">
-                <span
-                  aria-hidden="true"
-                  className="absolute right-6 top-3 font-serif text-8xl leading-none text-[#6E3BE8]/10"
-                >
-                  “
-                </span>
-
+                <span aria-hidden="true" className="absolute right-6 top-3 font-serif text-8xl leading-none text-[#6E3BE8]/10">“</span>
                 <div className="relative">
-                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#6E3BE8]">
-                    Professional endorsement
-                  </p>
-
-                  <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">
-                    “All clients I refer to Tina consistently provide positive
-                    feedback about how phenomenal she is. Her bedside manner and
-                    clinical knowledge are exceptional; she has a genuine
-                    passion and devotion to supporting her clients. … Her
-                    communication and recommendations are clear, comprehensive,
-                    accurate and timely. … Any person lucky enough to be
-                    supported by Tina will receive excellent, evidence based care
-                    delivered with humanity and compassion.”
-                  </blockquote>
-
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#6E3BE8]">Professional endorsement</p>
+                  <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">“All clients I refer to Tina consistently provide positive feedback about how phenomenal she is. Her bedside manner and clinical knowledge are exceptional; she has a genuine passion and devotion to supporting her clients. … Her communication and recommendations are clear, comprehensive, accurate and timely. … Any person lucky enough to be supported by Tina will receive excellent, evidence based care delivered with humanity and compassion.”</blockquote>
                   <div className="mt-6 border-t border-[#6E3BE8]/15 pt-5">
-                    <p className="font-semibold text-[#1D3952]">
-                      Laura Pfundt
-                    </p>
-
-                    <p className="mt-1 text-sm leading-6 text-[#526B7C]">
-                      Clinical Lead / Clinical Care Partner
-                      <br />
-                      Huon Regional Care
-                    </p>
+                    <p className="font-semibold text-[#1D3952]">Laura Pfundt</p>
+                    <p className="mt-1 text-sm leading-6 text-[#526B7C]">Clinical Lead / Clinical Care Partner<br />Huon Regional Care</p>
                   </div>
                 </div>
               </article>
 
               <article className="relative overflow-hidden rounded-[2rem] border border-[#F2DDD5] bg-gradient-to-br from-white via-white to-[#FFF2EC] p-7 shadow-[0_18px_50px_rgba(29,57,82,0.07)] sm:p-8">
-                <span
-                  aria-hidden="true"
-                  className="absolute right-6 top-3 font-serif text-8xl leading-none text-[#B9654F]/10"
-                >
-                  “
-                </span>
-
+                <span aria-hidden="true" className="absolute right-6 top-3 font-serif text-8xl leading-none text-[#B9654F]/10">“</span>
                 <div className="relative">
-                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#A95440]">
-                    Family testimonial
-                  </p>
-
-                  <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">
-                    “It was immediately apparent that Tina&apos;s considerable
-                    experience in both identifying the most effective treatment
-                    necessary; and then administering it; was exceptional.
-                    Tina&apos;s kind and thorough administration and application
-                    of the medications prescribed eased the way forward. As
-                    Rosemary&apos;s condition deteriorated, so Tina diligently
-                    interrelated with Rosemary (and myself as her full-time
-                    carer), along with Dr Shill, Rosemary&apos;s doctor; and her
-                    Huon Valley Home care support staff who daily gave supporting
-                    assistance in the easing and management of her terminal
-                    condition. Tina&apos;s experience and ability to identify and
-                    apply the necessary means of achieving this was very much
-                    appreciated by us all. Rosemary and I were privileged to have
-                    experienced Tina&apos;s support and wisdom.”
-                  </blockquote>
-
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#A95440]">Family testimonial</p>
+                  <blockquote className="mt-5 text-lg leading-8 text-[#35546B]">“It was immediately apparent that Tina&apos;s considerable experience in both identifying the most effective treatment necessary; and then administering it; was exceptional. Tina&apos;s kind and thorough administration and application of the medications prescribed eased the way forward. As Rosemary&apos;s condition deteriorated, so Tina diligently interrelated with Rosemary (and myself as her full-time carer), along with Dr Shill, Rosemary&apos;s doctor; and her Huon Valley Home care support staff who daily gave supporting assistance in the easing and management of her terminal condition. Tina&apos;s experience and ability to identify and apply the necessary means of achieving this was very much appreciated by us all. Rosemary and I were privileged to have experienced Tina&apos;s support and wisdom.”</blockquote>
                   <div className="mt-6 border-t border-[#B9654F]/15 pt-5">
-                    <p className="font-semibold text-[#1D3952]">
-                      Robert (Bob) Frost
-                    </p>
-
-                    <p className="mt-1 text-sm leading-6 text-[#526B7C]">
-                      Rosemary&apos;s husband and full-time carer
-                    </p>
+                    <p className="font-semibold text-[#1D3952]">Robert (Bob) Frost</p>
+                    <p className="mt-1 text-sm leading-6 text-[#526B7C]">Rosemary&apos;s husband and full-time carer</p>
                   </div>
                 </div>
               </article>
