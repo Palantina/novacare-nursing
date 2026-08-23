@@ -6,7 +6,7 @@ import "../styles/globals.css";
 const organisationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "HomeHealthCare"],
-  "@id": "https://www.novacarenursing.com.au/#organisation",
+  "@id": "https://www.novacarenursing.com.au/#org",
   name: "NovaCare Nursing",
   alternateName: "NovaCare Nursing — Aged Care Specialists",
   url: "https://www.novacarenursing.com.au/",
@@ -37,7 +37,7 @@ const websiteSchema = {
   name: "NovaCare Nursing",
   alternateName: "NovaCare Nursing — Aged Care Specialists",
   publisher: {
-    "@id": "https://www.novacarenursing.com.au/#organisation",
+    "@id": "https://www.novacarenursing.com.au/#org",
   },
 };
 
