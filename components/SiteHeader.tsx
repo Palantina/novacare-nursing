@@ -36,7 +36,7 @@ const navItems: NavItem[] = [
   {
     href: "/services",
     label: "Services",
-    isActive: (path) => path === "/services",
+    isActive: (path) => path === "/services" || path.startsWith("/services/"),
   },
   {
     href: "/providers",
