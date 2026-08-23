@@ -16,16 +16,6 @@ const nextConfig = {
       },
     ],
   },
-
-  async redirects() {
-    return [
-      {
-        source: "/about-palantina",
-        destination: "/about-us",
-        permanent: true, // 308/301 for SEO
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;
