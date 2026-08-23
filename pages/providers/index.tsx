@@ -13,7 +13,7 @@ export default function ProvidersIndex() {
         <title>For Providers | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Provider partnerships for Support at Home and NDIS — subcontracted nursing delivery, clinical governance, oversight, education and auditing."
+          content="Provider partnerships for Support at Home and aged care — nursing delivery, clinical governance, oversight, education and auditing."
         />
       </Head>
 
@@ -25,11 +25,11 @@ export default function ProvidersIndex() {
             For Providers
           </h1>
           <p className="opacity-80 mt-2">
-            Choose the pathway you need — Support at Home (SAH) partnerships or NDIS clinical nursing and consultancy.
+            Support at Home partnerships, clinical nursing and aged care consultancy for providers and organisations.
           </p>
         </header>
 
-        <section className="mt-10 grid gap-5 md:grid-cols-2">
+        <section className="mx-auto mt-10 max-w-3xl">
           <div className="rounded-3xl border bg-white p-7 shadow-sm">
             <p
               className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold"
@@ -56,31 +56,6 @@ export default function ProvidersIndex() {
             </div>
           </div>
 
-          <div className="rounded-3xl border bg-white p-7 shadow-sm">
-            <p
-              className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold"
-              style={{ borderColor: "#E5E7EB", color: brand.blue, background: "#F7F9FC" }}
-            >
-              NDIS
-            </p>
-            <h2 className="mt-3 text-2xl font-extrabold" style={{ color: brand.blue }}>
-              Clinical Nursing + Consultancy (RN2 / RN3+)
-            </h2>
-            <p className="mt-3 opacity-90 leading-7">
-              RN2 clinical nursing for routine supports (wounds, catheters, medication support) and RN3+ consultancy for complex
-              care, high-intensity governance, SIL oversight, education and reports — billed in line with NDIS price limits.
-            </p>
-
-            <div className="mt-5">
-              <Link
-                href="/providers/ndis"
-                className="inline-block rounded-xl px-6 py-3 font-semibold hover:opacity-95 transition"
-                style={{ background: brand.gold, color: brand.blue }}
-              >
-                NDIS provider page
-              </Link>
-            </div>
-          </div>
         </section>
 
         <section className="mt-10 text-center">
