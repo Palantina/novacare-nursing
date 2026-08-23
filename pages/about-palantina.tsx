@@ -12,7 +12,7 @@ const experienceAreas = [
   "Continence, catheter and stoma care",
   "IV therapy, cannulation and vascular access",
   "Clinical governance and care planning",
-  "Dementia and behaviour support",
+  "Dementia and cognitive support",
 ];
 
 export default function AboutPalantina() {
@@ -83,7 +83,7 @@ export default function AboutPalantina() {
 
               <div className="rounded-[1.75rem] border border-[#E3DDFB] bg-gradient-to-br from-[#F7F4FF] via-white to-[#F8FCFD] p-6 sm:p-8">
                 <p className="text-lg leading-8 text-[#35546B]">
-                  I built NovaCare Nursing because good care at home needs more than a task list. Older people deserve nursing that notices change, understands the whole clinical picture and responds early—while still protecting dignity, choice and the life they want to keep living.
+                  I built NovaCare Nursing because good care at home needs more than a task list. As we get older, we should be able to rely on nursing that notices change, understands the whole clinical picture and responds early—while still protecting dignity, choice and the life we want to keep living.
                 </p>
 
                 <p className="mt-5 leading-7">
@@ -114,7 +114,7 @@ export default function AboutPalantina() {
                   I have also worked in community nursing and rapid-response models, bringing acute clinical capability into people&apos;s homes and working closely with GPs, hospitals, specialists, pharmacists, allied health professionals and families.
                 </p>
                 <p>
-                  In home-care leadership and clinical roles, my work has included comprehensive assessment, care planning, clinical governance, incident review, quality improvement, staff support and education, and the coordination of complex care for older people with changing health needs.
+                  In home-care leadership and clinical roles, my work has included comprehensive assessment, care planning, clinical governance, incident review, quality improvement, staff support and education, and the coordination of complex care as people&apos;s health needs change.
                 </p>
                 <p>
                   Palliative and end-of-life nursing remains an important part of my practice. I believe comfort, symptom control, family support and honest communication matter enormously when people are nearing the end of life—and that good community nursing can help people remain at home when that is what they want.
@@ -188,7 +188,7 @@ export default function AboutPalantina() {
                   Aged Care Specialists
                 </h2>
                 <p className="mt-4 max-w-3xl leading-8 text-white/78">
-                  Tasmanian owned and operated. Nurse-led. Professional care delivered with genuine kindness. Private nursing and Support at Home provider partnerships across Hobart and Southern Tasmania, with clinical assessment, skilled nursing, care planning, coordination and review built around the older person.
+                  Tasmanian owned and operated. Nurse-led. Professional care delivered with genuine kindness. Private nursing and Support at Home provider partnerships across Hobart and Southern Tasmania, with clinical assessment, skilled nursing, care planning, coordination and review built around the person.
                 </p>
               </div>
 
