@@ -36,7 +36,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About NovaCare Nursing | Nurse-Led Aged Care at Home | Hobart</title>
+        <title>About NovaCare Nursing | Aged Care Specialists | Hobart</title>
         <meta
           name="description"
           content="NovaCare Nursing is a Tasmanian owned, nurse-led aged care and clinical nursing service supporting older people to remain safely and well at home across Hobart and Southern Tasmania."
@@ -63,16 +63,19 @@ export default function About() {
 
                 <div className="relative">
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2B9FA5] sm:text-base">
-                    About NovaCare Nursing
+                    NovaCare Nursing
                   </p>
 
                   <h1 className="mt-4 max-w-xl text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#1D3952] sm:text-5xl lg:text-[3.4rem]">
-                    Nurse-led care,
-                    <span className="block text-[#6E3BE8]">built around the person.</span>
+                    Aged Care Specialists
                   </h1>
 
+                  <p className="mt-4 max-w-xl text-xl font-semibold leading-8 text-[#6E3BE8]">
+                    Tasmanian owned and operated. Nurse-led. Professional care delivered with genuine kindness.
+                  </p>
+
                   <p className="mt-6 max-w-xl text-lg leading-8">
-                    NovaCare Nursing is a Tasmanian owned and operated clinical nursing and aged-care service supporting older people in their own homes across Southern Tasmania.
+                    NovaCare Nursing is a clinical nursing and aged-care service supporting older people in their own homes across Southern Tasmania.
                   </p>
 
                   <p className="mt-4 max-w-xl leading-7">
