@@ -14,8 +14,8 @@ function normalize(f: FaqLoose): Faq {
 
 const defaultFaqs: Faq[] = [
   {
-    q: "Do you provide NDIS high-intensity supports?",
-    a: "Yes. Supports are delivered and supervised by a Registered Nurse (RN), with governance, education and documentation aligned to NDIS Practice Standards.",
+    q: "Can NovaCare Nursing work with my Support at Home provider?",
+    a: "Yes. Your registered Support at Home provider can engage NovaCare Nursing to deliver nursing services under an agreed provider arrangement.",
   },
   {
     q: "What areas do you service?",
