@@ -114,8 +114,8 @@ export default function Hero() {
             />
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#526B7C]">
-              Comprehensive clinical assessment and nursing care at home—for
-              children aged six and over, adults and older people.
+              Comprehensive clinical assessment and nursing care at home for
+              older people.
             </p>
 
             <div className="mt-8">
@@ -124,12 +124,12 @@ export default function Hero() {
               </h2>
 
               <p className="mt-4 text-lg leading-8 text-[#526B7C]">
-                You can book NovaCare Nursing privately, or if you currently
-                receive Aged Care or NDIS services, you can ask your provider to
-                partner with NovaCare Nursing. We work alongside your existing
-                care team to deliver professional nursing care in the comfort of
-                your home, ensuring your needs, preferences, and choices remain
-                at the heart of every decision.
+                You can book NovaCare Nursing privately, or if you receive
+                Support at Home, you can ask your registered provider to partner
+                with NovaCare Nursing. We work alongside your existing care team
+                to deliver professional nursing care in the comfort of your home,
+                ensuring your needs, preferences and choices remain at the heart
+                of every decision.
               </p>
             </div>
 
