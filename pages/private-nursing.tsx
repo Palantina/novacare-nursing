@@ -12,7 +12,7 @@ const serviceExamples = [
   "Complex wound care",
   "Catheter, stoma & PEG care",
   "Post-hospital nursing",
-  "Dementia support",
+  "Dementia & cognitive support",
   "Palliative & end-of-life care",
 ];
 
@@ -40,10 +40,10 @@ export default function PrivateNursing() {
   return (
     <>
       <Head>
-        <title>Private Nursing Hobart | 24/7 Home Nursing | NovaCare Nursing</title>
+        <title>Private Nursing Hobart | Home Nursing | NovaCare Nursing</title>
         <meta
           name="description"
-          content="Fee-for-service private nursing available 24 hours, 7 days across Hobart and surrounds. Clinical Nurse Consultant and Registered Nurse care at home, including IV therapy, wound care, catheter and stoma care, post-hospital nursing, dementia and palliative care."
+          content="Fee-for-service private nursing that can be arranged day, evening or overnight across Hobart and surrounds, including IV therapy, wound care, catheter and stoma care, post-hospital nursing, dementia and palliative care."
         />
         <link
           rel="canonical"
@@ -55,7 +55,7 @@ export default function PrivateNursing() {
         />
         <meta
           property="og:description"
-          content="Experienced fee-for-service nursing at home, available 24 hours, 7 days across Hobart and surrounds."
+          content="Experienced fee-for-service nursing at home across Hobart and surrounds, with visits available across day, evening and overnight periods subject to availability and clinical suitability."
         />
         <meta
           property="og:image"
@@ -151,7 +151,7 @@ export default function PrivateNursing() {
           </motion.div>
 
           <motion.div
-            className="flex min-w-[250px] items-center gap-4 rounded-[1.75rem] border border-[#CFEAEC] bg-[#173B5C] p-6 text-white shadow-[0_14px_34px_rgba(29,57,82,0.12)] sm:p-7"
+            className="flex min-w-[280px] items-center gap-4 rounded-[1.75rem] border border-[#CFEAEC] bg-[#173B5C] p-6 text-white shadow-[0_14px_34px_rgba(29,57,82,0.12)] sm:p-7"
             initial={reduceMotion ? false : { opacity: 0, y: 18 }}
             whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.35 }}
@@ -162,28 +162,19 @@ export default function PrivateNursing() {
               className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-[#A9ECE8] ring-1 ring-white/15"
             >
               <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="8.5"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                />
-                <path
-                  d="M12 7.5V12l3 2"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.7" />
+                <path d="M12 7.5V12l3 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
 
             <div>
-              <p className="text-xl font-semibold">24 hours • 7 days</p>
+              <p className="text-xl font-semibold">Nursing across 24 hours</p>
               <p className="mt-1 text-sm leading-6 text-white/70">
-                Day, evening, overnight, weekends and public holidays.
+                Visits can be arranged day, evening or overnight, including weekends and public holidays, subject to availability and clinical suitability.
               </p>
+              <Link href="/24-hour-care" className="mt-2 inline-flex text-sm font-semibold text-[#A9ECE8]">
+                Need continuous 24-Hour Care? →
+              </Link>
             </div>
           </motion.div>
         </section>
@@ -213,16 +204,9 @@ export default function PrivateNursing() {
                 initial={reduceMotion ? false : { opacity: 0, y: 16 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{
-                  duration: 0.42,
-                  delay: reduceMotion ? 0 : index * 0.05,
-                  ease: "easeOut",
-                }}
+                transition={{ duration: 0.42, delay: reduceMotion ? 0 : index * 0.05, ease: "easeOut" }}
               >
-                <span
-                  aria-hidden="true"
-                  className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#2FBFC4] transition-transform duration-200 group-hover:scale-125"
-                />
+                <span aria-hidden="true" className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#2FBFC4] transition-transform duration-200 group-hover:scale-125" />
                 <span className="font-semibold text-[#1D3952]">{service}</span>
               </motion.div>
             ))}
@@ -234,19 +218,8 @@ export default function PrivateNursing() {
               className="inline-flex min-h-[48px] items-center justify-center rounded-2xl border border-[#D8D1F4] bg-[#F8F6FF] px-6 py-3 font-semibold text-[#5C43A8] transition duration-200 hover:-translate-y-0.5 hover:bg-[#F2EEFF] hover:shadow-sm"
             >
               View all nursing services
-              <svg
-                className="ml-2 h-4 w-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="m9 6 6 6-6 6"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+              <svg className="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m9 6 6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
           </div>
@@ -270,11 +243,7 @@ export default function PrivateNursing() {
                 initial={reduceMotion ? false : { opacity: 0, y: 20 }}
                 whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
-                transition={{
-                  duration: 0.46,
-                  delay: reduceMotion ? 0 : index * 0.08,
-                  ease: "easeOut",
-                }}
+                transition={{ duration: 0.46, delay: reduceMotion ? 0 : index * 0.08, ease: "easeOut" }}
               >
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#EAF9FA] text-sm font-bold text-[#238C93]">
                   {step.number}
@@ -304,22 +273,19 @@ export default function PrivateNursing() {
                 Clear pricing before care begins.
               </h2>
               <p className="mt-3 max-w-2xl leading-7 text-[#526B7C]">
-                Standard weekday direct nursing is $150 per hour, with a
-                30-minute visit rate of $116. Higher time bands apply outside
-                standard hours, on weekends and public holidays.
+                Standard weekday direct nursing is $150 per hour, with a 30-minute visit rate of $116. Higher time bands apply outside standard hours, on weekends and public holidays.
+              </p>
+              <p className="mt-3 max-w-2xl leading-7 text-[#526B7C]">
+                Your fee covers more than time in your home. It includes Registered Nurse assessment, clinical judgement, skilled care, documentation, communication and professional accountability.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               <div className="rounded-2xl border border-white bg-white/85 px-5 py-4 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6B7F8E]">
-                  Standard weekday
-                </p>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6B7F8E]">Standard weekday</p>
                 <p className="mt-1 text-3xl font-semibold text-[#1D3952]">
                   $150
-                  <span className="ml-1 text-base font-medium text-[#6B7F8E]">
-                    / hour
-                  </span>
+                  <span className="ml-1 text-base font-medium text-[#6B7F8E]">/ hour</span>
                 </p>
               </div>
 
