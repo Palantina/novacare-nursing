@@ -3,92 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --brand-blue: #0B2D5C;
-  --brand-gold: #C6A662;
-  --brand-sage: #6B7C77;
-  --brand-cream: #F7F4EF;
+  --brand-navy: #1D3952;
+  --brand-aqua: #2FBFC4;
+  --brand-teal: #238C93;
+  --brand-lavender: #6E3BE8;
+  --brand-blue: #5274D8;
+  --brand-coral: #B9654F;
+  --brand-background: #F8FCFD;
+  --brand-text: #526B7C;
 }
 
+html,
 body {
-  font-family: 'Georgia', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--brand-cream);
-  color: var(--brand-blue);
-}
-
-@layer components {
-  .heading-1 {
-    @apply text-3xl md:text-4xl font-bold text-[var(--brand-blue)];
-  }
-  .heading-2 {
-    @apply text-2xl font-semibold text-[var(--brand-blue)];
-  }
-}
-
-/* --- base mobile safety (no visual change to desktop/tablet) --- */
-html, body {
   overflow-x: hidden;
   width: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
-img, svg, video, canvas {
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--brand-background);
+  color: var(--brand-text);
+}
+
+img,
+svg,
+video,
+canvas {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-/* ------------------------------------------------------------------
-   PORTRAIT-ONLY FIT (phones)
-   - Prevents any single header row from exceeding screen width.
-   - Keeps logo/brand readable; no desktop/tablet change.
-------------------------------------------------------------------- */
+@layer components {
+  .heading-1 {
+    @apply text-3xl font-semibold tracking-[-0.035em] text-[#1D3952] md:text-4xl;
+  }
+
+  .heading-2 {
+    @apply text-2xl font-semibold tracking-[-0.025em] text-[#1D3952];
+  }
+}
+
 @media (max-width: 480px) and (orientation: portrait) {
-  /* Header height can grow if it wraps (no cropping) */
-  header .h-16 {
-    height: auto !important;
-    min-height: 4rem;
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-
-  /* Slightly narrower side padding on very small phones */
-  header > .mx-auto {
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-  }
-
-  /* Logo stays prominent but never overflows */
   header img[alt="NovaCare Nursing"] {
-    width: clamp(180px, 40vw, 240px) !important; /* never below 180px */
+    width: clamp(180px, 54vw, 220px) !important;
     height: auto !important;
   }
 
-  /* Brand name can wrap; keep it clearly readable */
-  header [class*="tracking-tight"] {
-    font-size: clamp(22px, 5.5vw, 30px) !important;
-    line-height: 1.15 !important;
-    white-space: normal !important; /* allow 2-line wrap if needed */
-    word-break: keep-all;
-  }
-
-  /* Allow nav to wrap to a new line on ultra-narrow phones */
-  header nav {
-    flex-wrap: wrap;
-    gap: 0.5rem 0.75rem; /* row gap then column gap */
-  }
-
-  /* Keep link text clear and tappable */
   header nav a {
-    font-size: clamp(14px, 3.8vw, 16px) !important;
     line-height: 1.25;
-    padding-top: 6px;
-    padding-bottom: 6px;
   }
 }
