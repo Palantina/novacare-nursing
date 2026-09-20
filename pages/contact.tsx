@@ -22,6 +22,9 @@ export default function Contact() {
         body: data,
       });
       if (res.ok) {
+        (window as any).gtag?.("event", "conversion", {
+          send_to: "AW-18383775697/80PPCOrOqfYcENHPiL5E",
+        });
         setStatus("success");
         form.reset();
       } else {
