@@ -1,6 +1,7 @@
 // pages/_app.tsx
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
 import "../styles/globals.css";
 
 const organisationSchema = {
@@ -44,6 +45,20 @@ const websiteSchema = {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18383775697"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-18383775697');
+        `}
+      </Script>
+
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:site_name" content="NovaCare Nursing" />
